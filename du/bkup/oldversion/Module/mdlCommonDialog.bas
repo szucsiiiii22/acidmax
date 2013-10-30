@@ -51,10 +51,10 @@ Private Declare Function GetOpenFileName Lib "comdlg32.dll" Alias "GetOpenFileNa
 Private Declare Function GetSaveFileName Lib "comdlg32.dll" Alias "GetSaveFileNameA" (pOpenfilename As OPENFILENAME) As Long
 
 Function SaveDialog(Form1 As Form, Filter As String, Title As String, InitDir As String) As String
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim ofn As OPENFILENAME, a As Long
 ofn.lStructSize = Len(ofn)
-ofn.hwndOwner = Form1.hwnd
+ofn.hwndOwner = Form1.hWnd
 ofn.hInstance = App.hInstance
 If Right$(Filter, 1) <> "|" Then Filter = Filter + "|"
 For a = 1 To Len(Filter)
@@ -74,17 +74,13 @@ If (a) Then
 Else
     SaveDialog = ""
 End If
-Exit Function
-ErrHandler:
-    ProcessError "Function SaveDialog(Form1 As Form, Filter As String, Title As String, InitDir As String) As String", Err.Description
-    Err.Clear
 End Function
 
 Function OpenDialog(Form1 As Form, Filter As String, Title As String, InitDir As String) As String
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim ofn As OPENFILENAME, a As Long
 ofn.lStructSize = Len(ofn)
-ofn.hwndOwner = Form1.hwnd
+ofn.hwndOwner = Form1.hWnd
 ofn.hInstance = App.hInstance
 If Right$(Filter, 1) <> "|" Then Filter = Filter + "|"
 For a = 1 To Len(Filter)
@@ -106,8 +102,4 @@ If (a) Then
 Else
     OpenDialog = ""
 End If
-Exit Function
-ErrHandler:
-    ProcessError "Function OpenDialog(Form1 As Form, Filter As String, Title As String, InitDir As String) As String", Err.Description
-    Err.Clear
 End Function

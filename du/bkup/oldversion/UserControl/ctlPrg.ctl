@@ -13,7 +13,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 Option Explicit
-Private Declare Function BitBlt Lib "gdi32" (ByVal hDestDC As Long, ByVal X As Long, ByVal Y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hSrcDC As Long, ByVal xSrc As Long, ByVal ySrc As Long, ByVal dwRop As Long) As Long
+Private Declare Function BitBlt Lib "gdi32" (ByVal hDestDC As Long, ByVal x As Long, ByVal y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal hSrcDC As Long, ByVal xSrc As Long, ByVal ySrc As Long, ByVal dwRop As Long) As Long
 Private Declare Function CreateCompatibleBitmap Lib "gdi32" (ByVal hDC As Long, ByVal nWidth As Long, ByVal nHeight As Long) As Long
 Private Declare Function CreateCompatibleDC Lib "gdi32" (ByVal hDC As Long) As Long
 Private Declare Function CreateDC Lib "gdi32" Alias "CreateDCA" (ByVal lpDriverName As String, ByVal lpDeviceName As String, ByVal lpOutput As String, lpInitData As Any) As Long
@@ -27,15 +27,15 @@ Private Declare Function DrawText Lib "user32" Alias "DrawTextA" (ByVal hDC As L
 Private Declare Function DrawEdge Lib "user32" (ByVal hDC As Long, qrc As RECT, ByVal edge As Long, ByVal grfFlags As Long) As Long
 Private Declare Function FillRect Lib "user32" (ByVal hDC As Long, lpRect As RECT, ByVal hBrush As Long) As Long
 Private Declare Function FrameRect Lib "user32" (ByVal hDC As Long, lpRect As RECT, ByVal hBrush As Long) As Long
-Private Declare Function GetClientRect Lib "user32" (ByVal hwnd As Long, lpRect As RECT) As Long
+Private Declare Function GetClientRect Lib "user32" (ByVal hWnd As Long, lpRect As RECT) As Long
 Private Declare Function GetSysColor Lib "user32" (ByVal nIndex As Long) As Long
-Private Declare Function LineTo Lib "gdi32" (ByVal hDC As Long, ByVal X As Long, ByVal Y As Long) As Long
-Private Declare Function MoveToEx Lib "gdi32" (ByVal hDC As Long, ByVal X As Long, ByVal Y As Long, lpPoint As POINTAPI) As Long
-Private Declare Function PatBlt Lib "gdi32" (ByVal hDC As Long, ByVal X As Long, ByVal Y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal dwRop As Long) As Long
+Private Declare Function LineTo Lib "gdi32" (ByVal hDC As Long, ByVal x As Long, ByVal y As Long) As Long
+Private Declare Function MoveToEx Lib "gdi32" (ByVal hDC As Long, ByVal x As Long, ByVal y As Long, lpPoint As POINTAPI) As Long
+Private Declare Function PatBlt Lib "gdi32" (ByVal hDC As Long, ByVal x As Long, ByVal y As Long, ByVal nWidth As Long, ByVal nHeight As Long, ByVal dwRop As Long) As Long
 Private Declare Function SelectObject Lib "gdi32" (ByVal hDC As Long, ByVal hObject As Long) As Long
 Private Declare Function SetBkColor Lib "gdi32" (ByVal hDC As Long, ByVal crColor As Long) As Long
 Private Declare Function SetBkMode Lib "gdi32" (ByVal hDC As Long, ByVal nBkMode As Long) As Long
-Private Declare Function SetPixelV Lib "gdi32" (ByVal hDC As Long, ByVal X As Long, ByVal Y As Long, ByVal crColor As Long) As Long
+Private Declare Function SetPixelV Lib "gdi32" (ByVal hDC As Long, ByVal x As Long, ByVal y As Long, ByVal crColor As Long) As Long
 Private Declare Function SetTextColor Lib "gdi32" (ByVal hDC As Long, ByVal crColor As Long) As Long
 Const DT_SINGLELINE   As Long = &H20
 Const DT_CALCRECT     As Long = &H400
@@ -45,8 +45,8 @@ Const BF_RIGHT = &H4
 Const BF_TOP = &H2
 Const BF_RECT = (BF_LEFT Or BF_TOP Or BF_RIGHT Or BF_BOTTOM)
 Private Type POINTAPI
-    X As Long
-    Y As Long
+    x As Long
+    y As Long
 End Type
 Private Type RECT
     Left As Long
@@ -591,8 +591,8 @@ End Sub
 '======================================================================
 'DRAWS A LINE WITH A DEFINED COLOR
 Public Sub DrawLine( _
-           ByVal X As Long, _
-           ByVal Y As Long, _
+           ByVal x As Long, _
+           ByVal y As Long, _
            ByVal Width As Long, _
            ByVal Height As Long, _
            ByVal cHdc As Long, _
@@ -606,7 +606,7 @@ Public Sub DrawLine( _
     Pen1 = CreatePen(0, 1, GetLngColor(Color))
     Pen2 = SelectObject(cHdc, Pen1)
     
-        MoveToEx cHdc, X, Y, POS
+        MoveToEx cHdc, x, y, POS
         LineTo cHdc, Width, Height
           
     SelectObject cHdc, Pen2
@@ -620,30 +620,30 @@ End Sub
 'BLENDS AN SPECIFIED COLOR TO GET XP COLOR LOOK
 Private Function ShiftColorXP(ByVal MyColor As Long, ByVal Base As Long) As Long
 
-    Dim r As Long, g As Long, b As Long, Delta As Long
+    Dim R As Long, G As Long, B As Long, Delta As Long
 
-    r = (MyColor And &HFF)
-    g = ((MyColor \ &H100) Mod &H100)
-    b = ((MyColor \ &H10000) Mod &H100)
+    R = (MyColor And &HFF)
+    G = ((MyColor \ &H100) Mod &H100)
+    B = ((MyColor \ &H10000) Mod &H100)
     
     Delta = &HFF - Base
 
-    b = Base + b * Delta \ &HFF
-    g = Base + g * Delta \ &HFF
-    r = Base + r * Delta \ &HFF
+    B = Base + B * Delta \ &HFF
+    G = Base + G * Delta \ &HFF
+    R = Base + R * Delta \ &HFF
 
-    If r > 255 Then r = 255
-    If g > 255 Then g = 255
-    If b > 255 Then b = 255
+    If R > 255 Then R = 255
+    If G > 255 Then G = 255
+    If B > 255 Then B = 255
 
-    ShiftColorXP = r + 256& * g + 65536 * b
+    ShiftColorXP = R + 256& * G + 65536 * B
 
 End Function
 '======================================================================
 
 '======================================================================
 'DRAWS A 2 COLOR GRADIENT AREA WITH A PREDEFINED DIRECTION
-Public Sub DrawGradient(lEndColor As Long, lStartcolor As Long, ByVal X As Long, ByVal Y As Long, ByVal x2 As Long, ByVal y2 As Long, ByVal hDC As Long, Optional bH As Boolean)
+Public Sub DrawGradient(lEndColor As Long, lStartcolor As Long, ByVal x As Long, ByVal y As Long, ByVal x2 As Long, ByVal y2 As Long, ByVal hDC As Long, Optional bH As Boolean)
     On Error Resume Next
     
     ''Draw a Vertical Gradient in the current HDC
@@ -668,9 +668,9 @@ Public Sub DrawGradient(lEndColor As Long, lStartcolor As Long, ByVal X As Long,
     For ni = 0 To IIf(bH, x2, y2)
         
         If bH Then
-            DrawLine X + ni, Y, X + ni, y2, hDC, RGB(eR + (ni * sR), eG + (ni * sG), eB + (ni * sB))
+            DrawLine x + ni, y, x + ni, y2, hDC, RGB(eR + (ni * sR), eG + (ni * sG), eB + (ni * sB))
         Else
-            DrawLine X, Y + ni, x2, Y + ni, hDC, RGB(eR + (ni * sR), eG + (ni * sG), eB + (ni * sB))
+            DrawLine x, y + ni, x2, y + ni, hDC, RGB(eR + (ni * sR), eG + (ni * sG), eB + (ni * sB))
         End If
         
     Next ni
@@ -820,7 +820,7 @@ Private Sub UserControl_Initialize()
      '----------------------------------------------------------
      'Default Values
      hDC = UserControl.hDC
-     hwnd = UserControl.hwnd
+     hWnd = UserControl.hWnd
      m_Max = 100
      m_Min = 0
      m_Value = 0
@@ -871,11 +871,11 @@ Public Property Let Font(ByRef fnt As IFont)
 Set m_fnt = fnt
 End Property
 
-Public Property Get hwnd() As Long
-hwnd = m_hWnd
+Public Property Get hWnd() As Long
+hWnd = m_hWnd
 End Property
 
-Public Property Let hwnd(ByVal chWnd As Long)
+Public Property Let hWnd(ByVal chWnd As Long)
 m_hWnd = chWnd
 End Property
 
@@ -956,7 +956,7 @@ Value = ((m_Value / 100) * m_Max) / IIf(m_Min > 0, m_Min, 1)
 End Property
 
 Public Property Let Value(ByVal cValue As Long)
-'On Local Error Resume Next
+On Local Error Resume Next
 m_Value = ((cValue * 100) / m_Max) + m_Min
 DrawProgressBar
 End Property
@@ -975,7 +975,7 @@ Call PropBag.WriteProperty("Value", m_Value, 0)
 End Sub
 
 Private Sub UserControl_ReadProperties(PropBag As PropertyBag)
-'On Local Error Resume Next
+On Local Error Resume Next
 m_Brush = PropBag.ReadProperty("BrushStyle", 4)
 Color = PropBag.ReadProperty("Color", vbHighlight)
 Set m_Picture = PropBag.ReadProperty("Image", Nothing)

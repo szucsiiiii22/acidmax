@@ -1903,15 +1903,16 @@ Public Property Get ColumnCount() As Integer
     End If
 End Property
 
-Public Property Get Enabled() As Boolean
-    Enabled = UserControl.Enabled
-End Property
-Public Property Let Enabled(ByVal New_Enabled As Boolean)
-    If (m_hListView) Then
-        UserControl.Enabled = New_Enabled
-        Call EnableWindow(m_hListView, New_Enabled)
-    End If
-End Property
+'Public Property Get Enabled() As Boolean
+    'Enabled = UserControl.Enabled
+'End Property
+
+'Public Property Let Enabled(ByVal New_Enabled As Boolean)
+    'If (m_hListView) Then
+        'UserControl.Enabled = New_Enabled
+        'Call EnableWindow(m_hListView, New_Enabled)
+    'End If
+'End Property
 
 Public Property Get Font() As StdFont
     Set Font = m_oFont
@@ -2546,7 +2547,7 @@ Friend Function frTranslateAccel(pMsg As msg) As Boolean
   
     On Error Resume Next
     
-    Select Case pMsg.Message
+    Select Case pMsg.message
     
         Case WM_KEYDOWN, WM_KEYUP
         
@@ -2567,9 +2568,9 @@ Friend Function frTranslateAccel(pMsg As msg) As Boolean
                      
                     hEdit = pvEdithWnd()
                     If (hEdit) Then
-                        Call SendMessageLong(hEdit, pMsg.Message, pMsg.wParam, pMsg.lParam)
+                        Call SendMessageLong(hEdit, pMsg.message, pMsg.wParam, pMsg.lParam)
                       Else
-                        Call SendMessageLong(m_hListView, pMsg.Message, pMsg.wParam, pMsg.lParam)
+                        Call SendMessageLong(m_hListView, pMsg.message, pMsg.wParam, pMsg.lParam)
                     End If
                     frTranslateAccel = True
             End Select

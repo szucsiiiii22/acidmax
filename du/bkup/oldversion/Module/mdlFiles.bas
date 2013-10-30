@@ -46,140 +46,83 @@ End Type
 Private lFiles As gFiles, lSettings As gSettings, lFinishedCheckingFiles As Boolean, lDirectories As gDirectories
 
 Public Function ReturnVersionINI() As String
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 ReturnVersionINI = ReturnAcidmaxDir & "du\version.ini"
-Exit Function
-ErrHandler:
-    ProcessError "Public Function ReturnVersionINI() As String", Err.Description
-    Err.Clear
 End Function
 
 Public Function ReturnDUINI() As String
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 ReturnDUINI = ReturnAcidmaxDir & "du\du.ini"
-Exit Function
-ErrHandler:
-    ProcessError "Public Function ReturnDUINI() As String", Err.Description
-    Err.Clear
 End Function
 
 Public Function ReturnSettingINI() As String
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 ReturnSettingINI = ReturnAcidmaxDir & "data\setting.ini"
-Exit Function
-ErrHandler:
-    ProcessError "Public Function ReturnSettingINI() As String", Err.Description
-    Err.Clear
 End Function
 
 Public Function ReturnShadowed() As Boolean
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 ReturnShadowed = lSettings.sFilesShadowed
-Exit Function
-ErrHandler:
-    ProcessError "Public Function ReturnShadowed() As Boolean", Err.Description
-    Err.Clear
 End Function
 
 Public Sub SetShadowed(lValue As Boolean)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lSettings.sFilesShadowed = lValue
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SetShadowed(lValue As Boolean)", Err.Description
-    Err.Clear
 End Sub
 
 Public Function ReturnShowDialog() As Boolean
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 ReturnShowDialog = lSettings.sShowDialog
-Exit Function
-ErrHandler:
-    ProcessError "Public Function ReturnShowDialog() As Booleand", Err.Description
-    Err.Clear
 End Function
 
 Public Function ReturnReloadScripts() As Boolean
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 ReturnReloadScripts = lSettings.sReloadScripts
-Exit Function
-ErrHandler:
-    ProcessError "Public Function ReturnReloadScripts() As Boolean", Err.Description
-    Err.Clear
 End Function
 
 Public Sub SetBetaUpdate(lValue As Boolean)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lSettings.sAcidmaxBetaUpdates = lValue
 SetMainFormBetaUpdate lValue
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SetBetaUpdate(lValue As Boolean)", Err.Description
-    Err.Clear
 End Sub
 
 Public Sub SetReloadScripts(lValue As Boolean)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lSettings.sReloadScripts = lValue
 SetMainFormReloadScripts lValue
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SetReloadScripts(lValue As Boolean)", Err.Description
-    Err.Clear
 End Sub
 
 Public Function ReturnAutoUpdate() As Boolean
-On Local Error GoTo ErrHandler
 ReturnAutoUpdate = lSettings.sAutoUpdate
-Exit Function
-ErrHandler:
-    ProcessError "Public Function ReturnAutoUpdate() As Boolean", Err.Description
-    Err.Clear
 End Function
 
 Public Sub SetAutoUpdate(lValue As Boolean)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lSettings.sAutoUpdate = lValue
 SetMainFormAutoUpdate lValue
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SetAutoUpdate(lValue As Boolean)", Err.Description
-    Err.Clear
 End Sub
 
 Public Sub SetAutoCheck(lValue As Boolean)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lSettings.sAutoCheck = lValue
 SetMainFormCheckUpdatesAutomatically lValue
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SetAutoCheck(lValue As Boolean)", Err.Description
-    Err.Clear
 End Sub
 
 Public Sub ClearDirectory(lIndex As Integer)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 With lDirectories.dDir(lIndex)
     .dChecked = False
     .dRemotePath = ""
 End With
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub ClearDirectory(lIndex As Integer)", Err.Description
-    Err.Clear
 End Sub
 
 Public Function ReturnDirectory(lIndex As Integer) As String
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 ReturnDirectory = lDirectories.dDir(lIndex).dRemotePath
-Exit Function
-ErrHandler:
-    ProcessError "Public Function ReturnDirectory(lIndex As Integer) As String", Err.Description
-    Err.Clear
 End Function
 
 Public Sub SaveSettings()
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lSettings.sAutoUpdate = ReturnMainFormAutoUpdate
 lSettings.sAutoCheck = ReturnMainFormAutoCheck
 lSettings.sReloadScripts = ReturnMainFormReloadScripts
@@ -190,38 +133,26 @@ If ReturnSaveAdminInfo = True Then
     WriteINI ReturnDUINI, "Settings", "AdminUsername", ReturnAdminUsername
     WriteINI ReturnDUINI, "Settings", "AdminPassword", ReturnAdminPassword
 End If
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SaveSettings()", Err.Description
-    Err.Clear
 End Sub
 
 Public Sub ApplySettings()
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 SetMainFormReloadScripts lSettings.sReloadScripts
 SetMainFormAutoUpdate lSettings.sAutoUpdate
 SetMainFormAutoCheck lSettings.sAutoCheck
 SetMainFormSavePassword True
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub ApplySettings()", Err.Description
-    Err.Clear
 End Sub
 
 Public Sub LoadSettings()
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lSettings.sReloadScripts = CBool(ReadINI(ReturnDUINI, "Settings", "ReloadScripts", True))
 lSettings.sAutoCheck = CBool(ReadINI(ReturnDUINI, "Settings", "AutoCheck", True))
 lSettings.sAutoUpdate = CBool(ReadINI(ReturnDUINI, "Settings", "AutoUpdate", False))
 lSettings.sShowDialog = True
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub LoadSettings()", Err.Description
-    Err.Clear
 End Sub
 
 Public Function ReturnDirectoryIndex(lDirectory As String) As Integer
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim i As Integer
 For i = 0 To lDirectories.dCount
     If LCase(lDirectories.dDir(i).dRemotePath) = lDirectory Then
@@ -229,75 +160,46 @@ For i = 0 To lDirectories.dCount
         Exit For
     End If
 Next i
-Exit Function
-ErrHandler:
-    ProcessError "Public Function ReturnDirectoryIndex(lDirectory As String) As Integer", Err.Description
-    Err.Clear
 End Function
 
 Public Sub SetDirectoryChecked(lIndex As Integer, lValue As Boolean)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lDirectories.dDir(lIndex).dChecked = lValue
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SetDirectoryChecked(lIndex As Integer, lValue As Boolean)", Err.Description
-    Err.Clear
 End Sub
 
 Public Sub SetMircPath(lPath As String)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lSettings.sAcidmaxDir = lPath
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SetMircPath(lPath As String)", Err.Description
-    Err.Clear
 End Sub
 
 Public Sub SetAcidmaxVersion2(lVersion As String)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lSettings.sAcidmaxVersion = lVersion
 SetMainFormAcidmaxVersion lVersion
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SetAcidmaxVersion2(lVersion As String)", Err.Description
-    Err.Clear
 End Sub
 
 Public Sub SetAcidmaxBetaUpdate(lToggle As Boolean)
-On Local Error GoTo ErrHandler
 Select Case lToggle
 Case True
     lSettings.sAcidmaxBetaUpdates = True
 Case False
     lSettings.sAcidmaxBetaUpdates = False
 End Select
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SetAcidmaxBetaUpdate(lToggle As Boolean)", Err.Description
-    Err.Clear
 End Sub
 
 Public Function ReturnAcidmaxBetaUpdate() As Boolean
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 ReturnAcidmaxBetaUpdate = lSettings.sAcidmaxBetaUpdates
-Exit Function
-ErrHandler:
-    ProcessError "Public Function ReturnAcidmaxBetaUpdate() As Boolean", Err.Description
-    Err.Clear
 End Function
 
 Public Sub SetAcidmaxVersion(lVersion As String)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lSettings.sAcidmaxVersion = lVersion
 SetMainFormAcidmaxVersion lVersion
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SetAcidmaxVersion(lVersion As String)", Err.Description
-    Err.Clear
 End Sub
 
 Public Sub UpdateFiles()
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim i As Integer, msg As String, f As Integer, msg2 As String, msg3 As String, l As Integer, mbox As VbMsgBoxResult
 SetMainFormCheckForUpdatesEnabled False
 SetMainFormUpdateAcidmax3ButtonEnabled False
@@ -387,37 +289,25 @@ If Len(ReturnNewVersion()) <> 0 Then
     MsgBox "Update Complete", vbInformation, "Direct Update"
     WriteINI ReturnSettingINI, "version", "ver", ReturnNewVersion
 End If
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub UpdateFiles()", Err.Description
-    Err.Clear
+If Err.Number <> 0 Then Err.Clear
 End Sub
 
 Public Function SaveFile(lFilename As String, lText As String) As Boolean
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 If Len(lFilename) <> 0 And Len(lText) <> 0 Then
     Open lFilename For Output As #13
     Print #13, lText
     Close #13
 End If
-Exit Function
-
-ErrHandler:
-    ProcessError "Public Function SaveFile(lFilename As String, lText As String) As Boolean", Err.Description
-    Err.Clear
 End Function
 
 Public Sub PlayWav(strPath As String, sndVal As sndConst)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 sndPlaySound strPath, sndVal
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub PlayWav(strPath As String, sndVal As sndConst)", Err.Description
-    Err.Clear
 End Sub
 
 Public Sub DeleteDownloadedFiles()
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim i As Integer
 If i <> 0 Then
     For i = 0 To lFiles.fCount
@@ -432,27 +322,19 @@ NextI:
     Next i
 End If
 DoEvents
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub DeleteDownloadedFiles()", Err.Description
-    Err.Clear
 End Sub
 
 Public Function ReturnDirectoryCount() As Integer
 On Local Error GoTo ErrHandler
 ReturnDirectoryCount = lDirectories.dCount
-Exit Function
 ErrHandler:
-    ProcessError "Public Function ReturnDirectoryCount() As Integer", Err.Description
     Err.Clear
 End Function
 
 Public Function ReturnFinishedCheckingFiles() As Boolean
 On Local Error GoTo ErrHandler
 ReturnFinishedCheckingFiles = lFinishedCheckingFiles
-Exit Function
 ErrHandler:
-    ProcessError "Public Function ReturnFinishedCheckingFiles() As Boolean", Err.Description
     Err.Clear
 End Function
 
@@ -461,7 +343,6 @@ On Local Error GoTo ErrHandler
 ReturnFilesRemotePath = lFiles.fFile(lIndex).fRemotePath
 Exit Function
 ErrHandler:
-    ProcessError "Public Function ReturnFilesRemotePath(lIndex As Integer) As String", Err.Description
     Err.Clear
 End Function
 
@@ -470,7 +351,6 @@ On Local Error GoTo ErrHandler
 ReturnFileNew = lFiles.fFile(lIndex).fNew
 Exit Function
 ErrHandler:
-    ProcessError "Public Function ReturnFileNew(lIndex As Integer) As Boolean", Err.Description
     Err.Clear
 End Function
 
@@ -479,7 +359,6 @@ On Local Error GoTo ErrHandler
 ReturnFileAcidmaxPath = Trim(lFiles.fFile(lIndex).fAcidmaxPath)
 Exit Function
 ErrHandler:
-    ProcessError "Public Function ReturnFileAcidmaxPath(lIndex As Integer) As String", Err.Description
     Err.Clear
 End Function
 
@@ -488,7 +367,6 @@ On Local Error GoTo ErrHandler
 ReturnFileLocalPath = Trim(lFiles.fFile(lIndex).fLocalPath)
 Exit Function
 ErrHandler:
-    ProcessError "Public Function ReturnFileLocalPath(lIndex As Integer) As String", Err.Description
     Err.Clear
 End Function
 
@@ -497,7 +375,6 @@ On Local Error GoTo ErrHandler
 ReturnFileName = lFiles.fFile(lIndex).fFileName
 Exit Function
 ErrHandler:
-    ProcessError "Public Function ReturnFileName(lIndex As Integer) As String", Err.Description
     Err.Clear
 End Function
 
@@ -506,7 +383,6 @@ On Local Error GoTo ErrHandler
 ReturnFileSize = lFiles.fFile(lIndex).fSize
 Exit Function
 ErrHandler:
-    ProcessError "Public Function ReturnFileSize(lIndex As Integer) As String", Err.Description
     Err.Clear
 End Function
 
@@ -515,12 +391,11 @@ On Local Error GoTo ErrHandler
 ReturnFileCount = lFiles.fCount
 Exit Function
 ErrHandler:
-    ProcessError "Public Function ReturnFileCount() As Integer", Err.Description
     Err.Clear
 End Function
 
 Public Sub ClearAllFiles()
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim i As Integer
 lFiles.fCount = 0
 lFinishedCheckingFiles = False
@@ -541,14 +416,10 @@ For i = 0 To lDirectories.dCount = 0
         .dRemotePath = ""
     End With
 Next i
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub ClearAllFiles()", Err.Description
-    Err.Clear
 End Sub
 
 Public Sub ClearFileIndex(lIndex As Integer)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 With lFiles.fFile(lIndex)
     .fAcidmaxPath = ""
     .fFileName = ""
@@ -558,38 +429,26 @@ With lFiles.fFile(lIndex)
     .fSize = ""
     .fSizeLow = ""
 End With
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub ClearFileIndex(lIndex As Integer)", Err.Description
-    Err.Clear
 End Sub
 
 Public Function GetFileTitle(lFilename As String) As String
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim msg() As String
 If Len(lFilename) <> 0 Then
     msg = Split(lFilename, "\", -1, vbTextCompare)
     GetFileTitle = msg(UBound(msg))
 End If
-Exit Function
-ErrHandler:
-    ProcessError "Public Function GetFileTitle(lFilename As String) As String", Err.Description
-    Err.Clear
 End Function
 
 Public Function DoesDirectoryExist(lDirectory) As Boolean
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim msg As String
 msg = Dir(lDirectory)
 If Len(msg) <> 0 Then DoesDirectoryExist = True
-Exit Function
-ErrHandler:
-    ProcessError "Public Function DoesDirectoryExist(lDirectory) As Boolean", Err.Description
-    Err.Clear
 End Function
 
 Public Function BrowseNextDirectory() As Boolean
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim i As Integer
 Pause 0.2
 If ReturnShadowed = True Then GoTo Fec
@@ -621,14 +480,10 @@ Else
     AddToStatus "Up to date"
     ClearAllFiles
 End If
-Exit Function
-ErrHandler:
-    ProcessError "Public Function BrowseNextDirectory() As Boolean", Err.Description
-    Err.Clear
 End Function
 
 Public Sub ListFiles()
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim i As Integer, b As Boolean, msg As String, msg2 As String, msg3 As String
 For i = 0 To 1500
     With lFiles.fFile(i)
@@ -674,10 +529,6 @@ Else
 End If
 SetUpdateBusy False
 RefreshFTPDirectoryListBox
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub ListFiles()", Err.Description
-    Err.Clear
 End Sub
 
 Public Function DoesFileExist(lFilename As String) As Boolean
@@ -691,12 +542,11 @@ Else
 End If
 Exit Function
 ErrHandler:
-    ProcessError "Public Function DoesFileExist(lFilename As String) As Boolean", Err.Description
     Err.Clear
 End Function
 
 Public Sub CreateMultiDirectory(lDir As String)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim NewLen As Integer, DirLen As Integer, MaxLen As Integer
 NewLen = 4
 MaxLen = Len(lDir)
@@ -713,23 +563,16 @@ If NewLen >= MaxLen Then Exit Sub
 GoTo MakeNext
 DirError:
 Resume Next
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub CreateMultiDirectory(lDir As String)", Err.Description
-    Err.Clear
+If Err.Number <> 0 Then Err.Clear
 End Sub
 
 Public Function ReturnAutoCheck() As Boolean
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 ReturnAutoCheck = lSettings.sAutoCheck
-Exit Function
-ErrHandler:
-    ProcessError "Public Sub CreateMultiDirectory(lDir As String)", Err.Description
-    Err.Clear
 End Function
 
 Public Function AddFile(lFile As String, lModified As String, lSize As String, lRemotePath As String) As Boolean
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 If Len(lFile) <> 0 Then
     If InStr(lFile, "\") Then
         AddDirectory lFile, ""
@@ -796,10 +639,6 @@ If Len(lFile) <> 0 Then
     End If
 End If
 DoEvents
-Exit Function
-ErrHandler:
-    ProcessError "Public Function AddFile(lFile As String, lModified As String, lSize As String, lRemotePath As String) As Boolean", Err.Description
-    Err.Clear
 End Function
 
 Public Function DoesFileExistInType(lFilename As String) As Boolean
@@ -813,8 +652,8 @@ For i = 0 To lFiles.fCount
 Next i
 Exit Function
 ErrHandler:
-    ProcessError "Public Function DoesFileExistInType(lFilename As String) As Boolean", Err.Description
     Err.Clear
+    DoesFileExistInType = False
 End Function
 
 Public Function FindFileIndex(lFilename As String) As Integer
@@ -828,18 +667,13 @@ For i = 0 To lFiles.fCount
 Next i
 Exit Function
 ErrHandler:
-    ProcessError "Public Function FindFileIndex(lFilename As String) As Integer", Err.Description
     Err.Clear
     FindFileIndex = 0
 End Function
 
 Public Sub SetFileName(lIndex As Integer, lFilename As String)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lFiles.fFile(lIndex).fFileName = lFilename
-Exit Sub
-ErrHandler:
-    ProcessError "Public Function FindFileIndex(lFilename As String) As Integer", Err.Description
-    Err.Clear
 End Sub
 
 Public Function AddDirectory(lDirectory As String, lPassword As String) As Boolean
@@ -860,17 +694,12 @@ If Len(lDirectory) <> 0 Then
 End If
 Exit Function
 ErrHandler:
-    ProcessError "Public Function AddDirectory(lDirectory As String, lPassword As String) As Boolean", Err.Description
-    Err.Clear
+    AddDirectory = False
 End Function
 
 Public Function ReturnAcidmaxDir() As String
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 ReturnAcidmaxDir = lSettings.sAcidmaxDir
-Exit Function
-ErrHandler:
-    ProcessError "Public Function ReturnAcidmaxDir() As String", Err.Description
-    Err.Clear
 End Function
 
 Public Sub SetFileNew(lFileIndex As Integer, lNew As Boolean)
@@ -878,6 +707,5 @@ On Local Error GoTo ErrHandler
 lFiles.fFile(lFileIndex).fNew = lNew
 Exit Sub
 ErrHandler:
-    ProcessError "Public Sub SetFileNew(lFileIndex As Integer, lNew As Boolean)", Err.Description
     Err.Clear
 End Sub

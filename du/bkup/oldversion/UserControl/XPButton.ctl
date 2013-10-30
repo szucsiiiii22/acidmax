@@ -184,7 +184,7 @@ Public Event MouseOver()
 Public Event MOUSEOUT()
 
 Private Sub OverTimer_Timer()
-''On Local Error Resume Next
+On Local Error Resume Next
 If Not isMouseOver Then
     OverTimer.Enabled = False
     isOver = False
@@ -194,13 +194,13 @@ End If
 End Sub
 
 Private Sub UserControl_AccessKeyPress(KeyAscii As Integer)
-''On Local Error Resume Next
+On Local Error Resume Next
 LastButton = 1
 Call UserControl_Click
 End Sub
 
 Private Sub UserControl_AmbientChanged(PropertyName As String)
-''On Local Error Resume Next
+On Local Error Resume Next
 If Not MyColorType = [Custom] Then
     Call SetColors
     Call Redraw(lastStat, True)
@@ -208,7 +208,7 @@ End If
 End Sub
 
 Private Sub UserControl_Click()
-''On Local Error Resume Next
+On Local Error Resume Next
 If LastButton = 1 And isEnabled Then
     If isCheckbox Then cValue = Not cValue
     Call Redraw(0, True)
@@ -218,7 +218,7 @@ End If
 End Sub
 
 Private Sub UserControl_DblClick()
-''On Local Error Resume Next
+On Local Error Resume Next
 If LastButton = 1 Then
     Call UserControl_MouseDown(1, 0, 0, 0)
     SetCapture hwnd
@@ -226,23 +226,23 @@ End If
 End Sub
 
 Private Sub UserControl_GotFocus()
-''On Local Error Resume Next
+On Local Error Resume Next
 hasFocus = True
 Call Redraw(lastStat, True)
 End Sub
 
 Private Sub UserControl_Hide()
-''On Local Error Resume Next
+On Local Error Resume Next
 isShown = False
 End Sub
 
 Private Sub UserControl_Initialize()
-''On Local Error Resume Next
+On Local Error Resume Next
 isShown = True
 End Sub
 
 Private Sub UserControl_KeyDown(KeyCode As Integer, Shift As Integer)
-''On Local Error Resume Next
+On Local Error Resume Next
 RaiseEvent KeyDown(KeyCode, Shift)
 LastKeyDown = KeyCode
 Select Case KeyCode
@@ -256,12 +256,12 @@ End Select
 End Sub
 
 Private Sub UserControl_KeyPress(KeyAscii As Integer)
-''On Local Error Resume Next
+On Local Error Resume Next
 RaiseEvent KeyPress(KeyAscii)
 End Sub
 
 Private Sub UserControl_KeyUp(KeyCode As Integer, Shift As Integer)
-''On Local Error Resume Next
+On Local Error Resume Next
 RaiseEvent KeyUp(KeyCode, Shift)
 If (KeyCode = 32) And (LastKeyDown = 32) Then
     If isCheckbox Then cValue = Not cValue
@@ -272,13 +272,13 @@ End If
 End Sub
 
 Private Sub UserControl_LostFocus()
-''On Local Error Resume Next
+On Local Error Resume Next
 hasFocus = False
 Call Redraw(lastStat, True)
 End Sub
 
 Private Sub UserControl_InitProperties()
-''On Local Error Resume Next
+On Local Error Resume Next
 MyColorType = 1
 isEnabled = True: showFocusR = True: useMask = True
 elTex = Ambient.DisplayName
@@ -296,7 +296,7 @@ m_ImageIndex = m_def_ImageIndex
 End Sub
 
 Private Sub UserControl_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
-''On Local Error Resume Next
+On Local Error Resume Next
 RaiseEvent MouseDown(Button, Shift, X, Y)
 LastButton = Button
 If Button <> 2 Then Call Redraw(2, False)
@@ -304,7 +304,7 @@ End Sub
 
 Private Sub UserControl_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
 
-''On Local Error Resume Next
+On Local Error Resume Next
 RaiseEvent MouseMove(Button, Shift, X, Y)
 If Button < 2 Then
     If Not isMouseOver Then
@@ -325,7 +325,7 @@ End If
 End Sub
 
 Private Sub UserControl_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
-''On Local Error Resume Next
+On Local Error Resume Next
 RaiseEvent MouseUp(Button, Shift, X, Y)
 If Button <> 2 Then Call Redraw(0, False)
 End Sub
@@ -333,12 +333,12 @@ End Sub
 Public Property Get BackColor() As OLE_COLOR
 Attribute BackColor.VB_ProcData.VB_Invoke_Property = ";Appearance"
 Attribute BackColor.VB_UserMemId = -501
-''On Local Error Resume Next
+On Local Error Resume Next
 BackColor = BackC
 End Property
 
 Public Property Let BackColor(ByVal theCol As OLE_COLOR)
-''On Local Error Resume Next
+On Local Error Resume Next
 BackC = theCol
 If Not Ambient.UserMode Then BackO = theCol
 Call SetColors
@@ -348,12 +348,12 @@ End Property
 
 Public Property Get BackOver() As OLE_COLOR
 Attribute BackOver.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 BackOver = BackO
 End Property
 
 Public Property Let BackOver(ByVal theCol As OLE_COLOR)
-''On Local Error Resume Next
+On Local Error Resume Next
 BackO = theCol
 Call SetColors
 Call Redraw(lastStat, True)
@@ -363,12 +363,12 @@ End Property
 Public Property Get ForeColor() As OLE_COLOR
 Attribute ForeColor.VB_ProcData.VB_Invoke_Property = ";Appearance"
 Attribute ForeColor.VB_UserMemId = -513
-''On Local Error Resume Next
+On Local Error Resume Next
 ForeColor = ForeC
 End Property
 
 Public Property Let ForeColor(ByVal theCol As OLE_COLOR)
-''On Local Error Resume Next
+On Local Error Resume Next
 ForeC = theCol
 If Not Ambient.UserMode Then ForeO = theCol
 Call SetColors
@@ -378,12 +378,12 @@ End Property
 
 Public Property Get ForeOver() As OLE_COLOR
 Attribute ForeOver.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 ForeOver = ForeO
 End Property
 
 Public Property Let ForeOver(ByVal theCol As OLE_COLOR)
-''On Local Error Resume Next
+On Local Error Resume Next
 ForeO = theCol
 Call SetColors
 Call Redraw(lastStat, True)
@@ -392,12 +392,12 @@ End Property
 
 Public Property Get MaskColor() As OLE_COLOR
 Attribute MaskColor.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 MaskColor = MaskC
 End Property
 
 Public Property Let MaskColor(ByVal theCol As OLE_COLOR)
-''On Local Error Resume Next
+On Local Error Resume Next
 MaskC = theCol
 Call SetColors
 Call Redraw(lastStat, True)
@@ -406,12 +406,12 @@ End Property
 
 Public Property Get ButtonType() As ButtonTypes
 Attribute ButtonType.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 ButtonType = MyButtonType
 End Property
 
 Public Property Let ButtonType(ByVal newValue As ButtonTypes)
-''On Local Error Resume Next
+On Local Error Resume Next
 MyButtonType = newValue
 If MyButtonType = [Java metal] And Not Ambient.UserMode Then
     UserControl.FontBold = True
@@ -425,12 +425,12 @@ End Property
 Public Property Get Caption() As String
 Attribute Caption.VB_ProcData.VB_Invoke_Property = ";Text"
 Attribute Caption.VB_UserMemId = 0
-''On Local Error Resume Next
+On Local Error Resume Next
 Caption = elTex
 End Property
 
 Public Property Let Caption(ByVal newValue As String)
-''On Local Error Resume Next
+On Local Error Resume Next
 elTex = newValue
 Call SetAccessKeys
 Call CalcTextRects
@@ -441,12 +441,12 @@ End Property
 Public Property Get Enabled() As Boolean
 Attribute Enabled.VB_ProcData.VB_Invoke_Property = ";Behavior"
 Attribute Enabled.VB_UserMemId = -514
-''On Local Error Resume Next
+On Local Error Resume Next
 Enabled = isEnabled
 End Property
 
 Public Property Let Enabled(ByVal newValue As Boolean)
-''On Local Error Resume Next
+On Local Error Resume Next
 isEnabled = newValue
 Call Redraw(0, True)
 UserControl.Enabled = isEnabled
@@ -456,12 +456,12 @@ End Property
 Public Property Get Font() As Font
 Attribute Font.VB_ProcData.VB_Invoke_Property = ";Font"
 Attribute Font.VB_UserMemId = -512
-''On Local Error Resume Next
+On Local Error Resume Next
 Set Font = UserControl.Font
 End Property
 
 Public Property Set Font(ByRef newFont As Font)
-''On Local Error Resume Next
+On Local Error Resume Next
 Set UserControl.Font = newFont
 Call CalcTextRects
 Call Redraw(0, True)
@@ -470,12 +470,12 @@ End Property
 
 Public Property Get FontBold() As Boolean
 Attribute FontBold.VB_MemberFlags = "400"
-''On Local Error Resume Next
+On Local Error Resume Next
 FontBold = UserControl.FontBold
 End Property
 
 Public Property Let FontBold(ByVal newValue As Boolean)
-''On Local Error Resume Next
+On Local Error Resume Next
 UserControl.FontBold = newValue
 Call CalcTextRects
 Call Redraw(0, True)
@@ -483,12 +483,12 @@ End Property
 
 Public Property Get FontItalic() As Boolean
 Attribute FontItalic.VB_MemberFlags = "400"
-''On Local Error Resume Next
+On Local Error Resume Next
 FontItalic = UserControl.FontItalic
 End Property
 
 Public Property Let FontItalic(ByVal newValue As Boolean)
-''On Local Error Resume Next
+On Local Error Resume Next
 UserControl.FontItalic = newValue
 Call CalcTextRects
 Call Redraw(0, True)
@@ -496,12 +496,12 @@ End Property
 
 Public Property Get FontUnderline() As Boolean
 Attribute FontUnderline.VB_MemberFlags = "400"
-''On Local Error Resume Next
+On Local Error Resume Next
 FontUnderline = UserControl.FontUnderline
 End Property
 
 Public Property Let FontUnderline(ByVal newValue As Boolean)
-''On Local Error Resume Next
+On Local Error Resume Next
 UserControl.FontUnderline = newValue
 Call CalcTextRects
 Call Redraw(0, True)
@@ -509,12 +509,12 @@ End Property
 
 Public Property Get FontSize() As Integer
 Attribute FontSize.VB_MemberFlags = "400"
-''On Local Error Resume Next
+On Local Error Resume Next
 FontSize = UserControl.FontSize
 End Property
 
 Public Property Let FontSize(ByVal newValue As Integer)
-''On Local Error Resume Next
+On Local Error Resume Next
 UserControl.FontSize = newValue
 Call CalcTextRects
 Call Redraw(0, True)
@@ -522,12 +522,12 @@ End Property
 
 Public Property Get FontName() As String
 Attribute FontName.VB_MemberFlags = "400"
-''On Local Error Resume Next
+On Local Error Resume Next
 FontName = UserControl.FontName
 End Property
 
 Public Property Let FontName(ByVal newValue As String)
-''On Local Error Resume Next
+On Local Error Resume Next
 UserControl.FontName = newValue
 Call CalcTextRects
 Call Redraw(0, True)
@@ -535,12 +535,12 @@ End Property
 
 Public Property Get ColorScheme() As ColorTypes
 Attribute ColorScheme.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 ColorScheme = MyColorType
 End Property
 
 Public Property Let ColorScheme(ByVal newValue As ColorTypes)
-''On Local Error Resume Next
+On Local Error Resume Next
 MyColorType = newValue
 Call SetColors
 Call Redraw(0, True)
@@ -549,12 +549,12 @@ End Property
 
 Public Property Get ShowFocusRect() As Boolean
 Attribute ShowFocusRect.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 ShowFocusRect = showFocusR
 End Property
 
 Public Property Let ShowFocusRect(ByVal newValue As Boolean)
-''On Local Error Resume Next
+On Local Error Resume Next
 showFocusR = newValue
 Call Redraw(lastStat, True)
 PropertyChanged "FOCUSR"
@@ -562,42 +562,42 @@ End Property
 
 Public Property Get MousePointer() As MousePointerConstants
 Attribute MousePointer.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 MousePointer = UserControl.MousePointer
 End Property
 
 Public Property Let MousePointer(ByVal newPointer As MousePointerConstants)
-''On Local Error Resume Next
+On Local Error Resume Next
 UserControl.MousePointer = newPointer
 PropertyChanged "MPTR"
 End Property
 
 Public Property Get MouseIcon() As StdPicture
 Attribute MouseIcon.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 Set MouseIcon = UserControl.MouseIcon
 End Property
 
 Public Property Set MouseIcon(ByVal NewIcon As StdPicture)
-''On Local Error Resume Next
+On Local Error Resume Next
 Set UserControl.MouseIcon = NewIcon
 PropertyChanged "MICON"
 End Property
 
 Public Property Get hwnd() As Long
 Attribute hwnd.VB_UserMemId = -515
-''On Local Error Resume Next
+On Local Error Resume Next
 hwnd = UserControl.hwnd
 End Property
 
 Public Property Get SoftBevel() As Boolean
 Attribute SoftBevel.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 SoftBevel = isSoft
 End Property
 
 Public Property Let SoftBevel(ByVal newValue As Boolean)
-''On Local Error Resume Next
+On Local Error Resume Next
 isSoft = newValue
 Call SetColors
 Call Redraw(lastStat, True)
@@ -606,12 +606,12 @@ End Property
 
 Public Property Get PictureNormal() As StdPicture
 Attribute PictureNormal.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 Set PictureNormal = picNormal
 End Property
 
 Public Property Set PictureNormal(ByVal newPic As StdPicture)
-''On Local Error Resume Next
+On Local Error Resume Next
 Set picNormal = newPic
 Call CalcPicSize
 Call CalcTextRects
@@ -621,12 +621,12 @@ End Property
 
 Public Property Get PictureOver() As StdPicture
 Attribute PictureOver.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 Set PictureOver = picHover
 End Property
 
 Public Property Set PictureOver(ByVal newPic As StdPicture)
-''On Local Error Resume Next
+On Local Error Resume Next
 Set picHover = newPic
 If isOver Then Call Redraw(lastStat, True)
 PropertyChanged "PICO"
@@ -634,12 +634,12 @@ End Property
 
 Public Property Get PicturePosition() As PicPositions
 Attribute PicturePosition.VB_ProcData.VB_Invoke_Property = ";Position"
-''On Local Error Resume Next
+On Local Error Resume Next
 PicturePosition = PicPosition
 End Property
 
 Public Property Let PicturePosition(ByVal newPicPos As PicPositions)
-''On Local Error Resume Next
+On Local Error Resume Next
 PicPosition = newPicPos
 PropertyChanged "PICPOS"
 Call CalcTextRects
@@ -648,12 +648,12 @@ End Property
 
 Public Property Get UseMaskColor() As Boolean
 Attribute UseMaskColor.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 UseMaskColor = useMask
 End Property
 
 Public Property Let UseMaskColor(ByVal newValue As Boolean)
-''On Local Error Resume Next
+On Local Error Resume Next
 useMask = newValue
 If Not picNormal Is Nothing Then Call Redraw(lastStat, True)
 PropertyChanged "UMCOL"
@@ -661,12 +661,12 @@ End Property
 
 Public Property Get UseGreyscale() As Boolean
 Attribute UseGreyscale.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 UseGreyscale = useGrey
 End Property
 
 Public Property Let UseGreyscale(ByVal newValue As Boolean)
-''On Local Error Resume Next
+On Local Error Resume Next
 useGrey = newValue
 If Not picNormal Is Nothing Then Call Redraw(lastStat, True)
 PropertyChanged "NGREY"
@@ -674,48 +674,48 @@ End Property
 
 Public Property Get SpecialEffect() As fx
 Attribute SpecialEffect.VB_ProcData.VB_Invoke_Property = ";Appearance"
-''On Local Error Resume Next
+On Local Error Resume Next
 SpecialEffect = SFX
 End Property
 
 Public Property Let SpecialEffect(ByVal newValue As fx)
-''On Local Error Resume Next
+On Local Error Resume Next
 SFX = newValue
 Call Redraw(lastStat, True)
 PropertyChanged "FX"
 End Property
 
 Public Property Get CheckBoxBehaviour() As Boolean
-''On Local Error Resume Next
+On Local Error Resume Next
 CheckBoxBehaviour = isCheckbox
 End Property
 
 Public Property Let CheckBoxBehaviour(ByVal newValue As Boolean)
-''On Local Error Resume Next
+On Local Error Resume Next
 isCheckbox = newValue
 Call Redraw(lastStat, True)
 PropertyChanged "CHECK"
 End Property
 
 Public Property Get Value() As Boolean
-''On Local Error Resume Next
+On Local Error Resume Next
 Value = cValue
 End Property
 
 Public Property Let Value(ByVal newValue As Boolean)
-''On Local Error Resume Next
+On Local Error Resume Next
 cValue = newValue
 If isCheckbox Then Call Redraw(0, True)
 PropertyChanged "VALUE"
 End Property
 
 Public Property Get Version() As String
-''On Local Error Resume Next
+On Local Error Resume Next
 Version = cbVersion
 End Property
 
 Private Sub UserControl_Resize()
-''On Local Error Resume Next
+On Local Error Resume Next
 If inLoop Then Exit Sub
 GetClientRect UserControl.hwnd, rc3
 He = rc3.Bottom: Wi = rc3.Right
@@ -735,7 +735,7 @@ If He Then Call Redraw(0, True)
 End Sub
 
 Private Sub UserControl_ReadProperties(PropBag As PropertyBag)
-''On Local Error Resume Next
+On Local Error Resume Next
 With PropBag
     MyButtonType = .ReadProperty("BTYPE", 2)
     elTex = .ReadProperty("TX", "")
@@ -768,7 +768,7 @@ End With
 End Sub
 
 Private Sub UserControl_Show()
-''On Local Error Resume Next
+On Local Error Resume Next
 If MyButtonType = 11 Then
     If pDC = 0 Then
         pDC = CreateCompatibleDC(UserControl.hDC): pBM = CreateBitmap(Wi, He, 1, GetDeviceCaps(hDC, 12), ByVal 0&)
@@ -783,7 +783,7 @@ Call Redraw(0, True)
 End Sub
 
 Private Sub UserControl_Terminate()
-''On Local Error Resume Next
+On Local Error Resume Next
 isShown = False
 DeleteObject rgnNorm
 If pDC Then
@@ -793,7 +793,7 @@ End If
 End Sub
 
 Private Sub UserControl_WriteProperties(PropBag As PropertyBag)
-''On Local Error Resume Next
+On Local Error Resume Next
 With PropBag
     Call .WriteProperty("BTYPE", MyButtonType)
     Call .WriteProperty("TX", elTex)
@@ -823,7 +823,7 @@ End With
 End Sub
 
 Private Sub Redraw(ByVal curStat As Byte, ByVal Force As Boolean)
-''On Local Error Resume Next
+On Local Error Resume Next
 If isCheckbox And cValue Then curStat = 2
 If Not Force Then
     If (curStat = lastStat) And (TE = elTex) Then Exit Sub
@@ -1129,7 +1129,7 @@ If isOver And MyColorType = Custom Then BackC = tempCol: SetColors
 End Sub
 
 Private Sub DrawRectangle(ByVal X As Long, ByVal Y As Long, ByVal Width As Long, ByVal Height As Long, ByVal Color As Long, Optional OnlyBorder As Boolean = False)
-''On Local Error Resume Next
+On Local Error Resume Next
 Dim BRect As RECT, hBrush As Long
 BRect.Left = X
 BRect.Top = Y
@@ -1145,7 +1145,7 @@ DeleteObject hBrush
 End Sub
 
 Private Sub DrawEllipse(ByVal X As Long, ByVal Y As Long, ByVal Width As Long, ByVal Height As Long, ByVal BorderColor As Long, ByVal FillColor As Long)
-''On Local Error Resume Next
+On Local Error Resume Next
 Dim pBrush As Long, pPen As Long
 pBrush = SelectObject(hDC, CreateSolidBrush(FillColor))
 pPen = SelectObject(hDC, CreatePen(PS_SOLID, 2, BorderColor))
@@ -1155,7 +1155,7 @@ Call DeleteObject(SelectObject(hDC, pPen))
 End Sub
 
 Private Sub DrawLine(ByVal x1 As Long, ByVal y1 As Long, ByVal x2 As Long, ByVal y2 As Long, ByVal Color As Long)
-''On Local Error Resume Next
+On Local Error Resume Next
 Dim pt As POINTAPI, oldPen As Long, hPen As Long
 With UserControl
     hPen = CreatePen(PS_SOLID, 1, Color)
@@ -1168,7 +1168,7 @@ End With
 End Sub
 
 Private Sub DrawFrame(ByVal ColHigh As Long, ByVal ColDark As Long, ByVal ColLight As Long, ByVal ColShadow As Long, ByVal ExtraOffset As Boolean, Optional ByVal Flat As Boolean = False)
-''On Local Error Resume Next
+On Local Error Resume Next
 Dim pt As POINTAPI
 Dim frHe As Long, frWi As Long, frXtra As Long
 frHe = He - 1 + ExtraOffset: frWi = Wi - 1 + ExtraOffset: frXtra = Abs(ExtraOffset)
@@ -1192,12 +1192,12 @@ End With
 End Sub
 
 Private Sub mSetPixel(ByVal X As Long, ByVal Y As Long, ByVal Color As Long)
-''On Local Error Resume Next
+On Local Error Resume Next
 Call SetPixel(UserControl.hDC, X, Y, Color)
 End Sub
 
 Private Sub DrawFocusR()
-''On Local Error Resume Next
+On Local Error Resume Next
 If showFocusR And hasFocus Then
     SetTextColor UserControl.hDC, cText
     DrawFocusRect UserControl.hDC, rc3
@@ -1205,7 +1205,7 @@ End If
 End Sub
 
 Private Sub SetColors()
-''On Local Error Resume Next
+On Local Error Resume Next
 If MyColorType = Custom Then
     cFace = ConvertFromSystemColor(BackC)
     cFaceO = ConvertFromSystemColor(BackO)
@@ -1256,7 +1256,7 @@ XPFace = ShiftColor(cFace, &H30, MyButtonType = [Windows XP])
 End Sub
 
 Private Sub MakeRegion()
-''On Local Error Resume Next
+On Local Error Resume Next
 Dim rgn1 As Long, rgn2 As Long
 DeleteObject rgnNorm
 rgnNorm = CreateRectRgn(0, 0, Wi, He)
@@ -1310,7 +1310,7 @@ DeleteObject rgn2
 End Sub
 
 Private Sub SetAccessKeys()
-''On Local Error Resume Next
+On Local Error Resume Next
 Dim ampersandPos As Long
 UserControl.AccessKeys = ""
 If Len(elTex) > 1 Then
@@ -1329,7 +1329,7 @@ End If
 End Sub
 
 Private Function ShiftColor(ByVal Color As Long, ByVal Value As Long, Optional isXP As Boolean = False) As Long
-''On Local Error Resume Next
+On Local Error Resume Next
 Dim Red As Long, Blue As Long, Green As Long
 If isSoft Then Value = Value \ 2
 If Not isXP Then
@@ -1353,7 +1353,7 @@ ShiftColor = Red + 256& * Green + 65536 * Blue
 End Function
 
 Private Function ShiftColorOXP(ByVal theColor As Long, Optional ByVal Base As Long = &HB0) As Long
-''On Local Error Resume Next
+On Local Error Resume Next
 Dim Red As Long, Blue As Long, Green As Long, Delta As Long
 Blue = ((theColor \ &H10000) Mod &H100)
 Green = ((theColor \ &H100) Mod &H100)
@@ -1369,7 +1369,7 @@ ShiftColorOXP = Red + 256& * Green + 65536 * Blue
 End Function
 
 Private Sub CalcTextRects()
-''On Local Error Resume Next
+On Local Error Resume Next
 Select Case PicPosition
 Case 0
     rc2.Left = 1 + picSZ.X: rc2.Right = Wi - 2: rc2.Top = 1: rc2.Bottom = He - 2
@@ -1399,12 +1399,12 @@ Call CalcPicPos
 End Sub
 
 Public Sub DisableRefresh()
-''On Local Error Resume Next
+On Local Error Resume Next
 isShown = False
 End Sub
 
 Public Sub Refresh()
-''On Local Error Resume Next
+On Local Error Resume Next
 If MyButtonType = 11 Then Call GetParentPic
 Call SetColors
 Call CalcTextRects
@@ -1413,12 +1413,12 @@ Call Redraw(lastStat, True)
 End Sub
 
 Private Function ConvertFromSystemColor(ByVal theColor As Long) As Long
-''On Local Error Resume Next
+On Local Error Resume Next
 Call OleTranslateColor(theColor, 0, ConvertFromSystemColor)
 End Function
 
 Private Sub DrawCaption(ByVal State As Byte)
-''On Local Error Resume Next
+On Local Error Resume Next
 captOpt = State
 With UserControl
 Select Case State
@@ -1454,7 +1454,7 @@ End With
 End Sub
 
 Private Sub DrawPictures(ByVal State As Byte)
-''On Local Error Resume Next
+On Local Error Resume Next
 If picNormal Is Nothing Then Exit Sub
 With UserControl
 Select Case State
@@ -1500,7 +1500,7 @@ If PicPosition = cbBackground Then Call DrawCaption(captOpt)
 End Sub
 
 Private Sub DoFX(ByVal offset As Long, ByVal thePic As StdPicture)
-''On Local Error Resume Next
+On Local Error Resume Next
 If SFX > cbNone Then
     Dim curFace As Long
     If MyButtonType = [Windows XP] Then curFace = XPFace Else If offset = -1 And MyColorType <> Custom Then curFace = OXPf Else curFace = cFace
@@ -1510,7 +1510,7 @@ End If
 End Sub
 
 Private Sub txtFX(ByRef theRect As RECT)
-''On Local Error Resume Next
+On Local Error Resume Next
 If SFX > cbNone Then
 With UserControl
     Dim curFace As Long
@@ -1533,7 +1533,7 @@ End If
 End Sub
 
 Private Sub CalcPicSize()
-''On Local Error Resume Next
+On Local Error Resume Next
 If Not picNormal Is Nothing Then
     picSZ.X = UserControl.ScaleX(picNormal.Width, 8, UserControl.ScaleMode)
     picSZ.Y = UserControl.ScaleY(picNormal.Height, 8, UserControl.ScaleMode)
@@ -1543,7 +1543,7 @@ End If
 End Sub
 
 Private Sub CalcPicPos()
-''On Local Error Resume Next
+On Local Error Resume Next
 If picNormal Is Nothing And picHover Is Nothing Then Exit Sub
 If (Trim$(elTex) <> "") And (PicPosition <> 4) Then
     Select Case PicPosition
@@ -1567,7 +1567,7 @@ End If
 End Sub
 
 Private Sub TransBlt(ByVal DstDC As Long, ByVal DstX As Long, ByVal DstY As Long, ByVal DstW As Long, ByVal DstH As Long, ByVal SrcPic As StdPicture, Optional ByVal TransColor As Long = -1, Optional ByVal BrushColor As Long = -1, Optional ByVal MonoMask As Boolean = False, Optional ByVal isGreyscale As Boolean = False, Optional ByVal XPBlend As Boolean = False)
-''On Local Error Resume Next
+On Local Error Resume Next
 If DstW = 0 Or DstH = 0 Then Exit Sub
 Dim b As Long, H As Long, f As Long, i As Long, newW As Long
 Dim TmpDC As Long, TmpBmp As Long, TmpObj As Long
@@ -1653,14 +1653,14 @@ DeleteObject tObj: DeleteObject ttt: DeleteDC SrcDC
 End Sub
 
 Private Function isMouseOver() As Boolean
-''On Local Error Resume Next
+On Local Error Resume Next
 Dim pt As POINTAPI
 GetCursorPos pt
 isMouseOver = (WindowFromPoint(pt.X, pt.Y) = hwnd)
 End Function
 
 Private Sub GetParentPic()
-''On Local Error Resume Next
+On Local Error Resume Next
 inLoop = True
 UserControl.Height = 0
 DoEvents
@@ -1670,12 +1670,12 @@ inLoop = False
 End Sub
 
 Public Property Get ImageIndex() As Integer
-''On Local Error Resume Next
+On Local Error Resume Next
 ImageIndex = m_ImageIndex
 End Property
 
 Public Property Let ImageIndex(ByVal New_ImageIndex As Integer)
-''On Local Error Resume Next
+On Local Error Resume Next
 m_ImageIndex = New_ImageIndex
 PropertyChanged "ImageIndex"
 If New_ImageIndex > frmImages.Img.ListImages.Count Then

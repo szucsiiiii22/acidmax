@@ -28,8 +28,8 @@ Begin VB.Form frmChooseFiles
       TabIndex        =   1
       Top             =   120
       Width           =   2415
-      _extentx        =   4260
-      _extenty        =   5318
+      _ExtentX        =   4260
+      _ExtentY        =   5318
    End
    Begin DU.isButton cmdOK 
       Default         =   -1  'True
@@ -38,19 +38,27 @@ Begin VB.Form frmChooseFiles
       TabIndex        =   0
       Top             =   3240
       Width           =   735
-      _extentx        =   1296
-      _extenty        =   529
-      icon            =   "frmChooseFiles.frx":0CCA
-      style           =   8
-      caption         =   "OK"
-      inonthemestyle  =   0
-      tooltiptitle    =   ""
-      tooltipicon     =   0
-      tooltiptype     =   1
-      ttforecolor     =   0
-      font            =   "frmChooseFiles.frx":0CE6
-      maskcolor       =   0
-      roundedbordersbytheme=   0   'False
+      _ExtentX        =   1296
+      _ExtentY        =   529
+      Icon            =   "frmChooseFiles.frx":0CCA
+      Style           =   8
+      Caption         =   "OK"
+      iNonThemeStyle  =   0
+      Tooltiptitle    =   ""
+      ToolTipIcon     =   0
+      ToolTipType     =   1
+      ttForeColor     =   0
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MaskColor       =   0
+      RoundedBordersByTheme=   0   'False
    End
    Begin DU.isButton cmdSelect 
       Height          =   300
@@ -58,19 +66,27 @@ Begin VB.Form frmChooseFiles
       TabIndex        =   2
       Top             =   3240
       Width           =   735
-      _extentx        =   1296
-      _extenty        =   529
-      icon            =   "frmChooseFiles.frx":0D0E
-      style           =   8
-      caption         =   "All"
-      inonthemestyle  =   0
-      tooltiptitle    =   ""
-      tooltipicon     =   0
-      tooltiptype     =   1
-      ttforecolor     =   0
-      font            =   "frmChooseFiles.frx":0D2A
-      maskcolor       =   0
-      roundedbordersbytheme=   0   'False
+      _ExtentX        =   1296
+      _ExtentY        =   529
+      Icon            =   "frmChooseFiles.frx":0CE6
+      Style           =   8
+      Caption         =   "All"
+      iNonThemeStyle  =   0
+      Tooltiptitle    =   ""
+      ToolTipIcon     =   0
+      ToolTipType     =   1
+      ttForeColor     =   0
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MaskColor       =   0
+      RoundedBordersByTheme=   0   'False
    End
    Begin DU.isButton cmdNone 
       Height          =   300
@@ -78,19 +94,27 @@ Begin VB.Form frmChooseFiles
       TabIndex        =   3
       Top             =   3240
       Width           =   735
-      _extentx        =   1296
-      _extenty        =   529
-      icon            =   "frmChooseFiles.frx":0D52
-      style           =   8
-      caption         =   "None"
-      inonthemestyle  =   0
-      tooltiptitle    =   ""
-      tooltipicon     =   0
-      tooltiptype     =   1
-      ttforecolor     =   0
-      font            =   "frmChooseFiles.frx":0D6E
-      maskcolor       =   0
-      roundedbordersbytheme=   0   'False
+      _ExtentX        =   1296
+      _ExtentY        =   529
+      Icon            =   "frmChooseFiles.frx":0D02
+      Style           =   8
+      Caption         =   "None"
+      iNonThemeStyle  =   0
+      Tooltiptitle    =   ""
+      ToolTipIcon     =   0
+      ToolTipType     =   1
+      ttForeColor     =   0
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      MaskColor       =   0
+      RoundedBordersByTheme=   0   'False
    End
 End
 Attribute VB_Name = "frmChooseFiles"
@@ -104,19 +128,15 @@ Private lFileCount As Integer
 Private lFileListCount As Integer
 
 Private Sub cmdNone_Click()
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim i As Integer
 For i = 0 To lvwFiles.Count
     lvwFiles.ItemChecked(i) = False
 Next i
-Exit Sub
-ErrHandler:
-    ProcessError "Private Sub cmdNone_Click()", Err.Description
-    Err.Clear
 End Sub
 
 Private Sub cmdOK_Click()
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim i As Integer, n As Integer, msg As String
 ClearMainFormFileList
 For i = 0 To lvwFiles.Count
@@ -132,26 +152,19 @@ For i = 0 To lvwFiles.Count
         End If
     End If
 Next i
-Exit Sub
-ErrHandler:
-    ProcessError "Private Sub cmdOK_Click()", Err.Description
-    Err.Clear
+Unload Me
 End Sub
 
 Private Sub cmdSelect_Click()
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim i As Integer
 For i = 0 To lvwFiles.Count
     lvwFiles.ItemChecked(i) = True
 Next i
-Exit Sub
-ErrHandler:
-    ProcessError "Private Sub cmdSelect_Click()", Err.Description
-    Err.Clear
 End Sub
 
 Private Sub Form_Load()
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim i As Integer, c As Integer
 lvwFiles.Initialize
 lvwFiles.BorderStyle = bsThin
@@ -170,14 +183,10 @@ For i = 0 To c
         AddListView ReturnFileName(i), ReturnFileSize(i), ReturnFileNew(i)
     End If
 Next i
-Exit Sub
-ErrHandler:
-    ProcessError "Private Sub Form_Load()", Err.Description
-    Err.Clear
 End Sub
 
 Public Sub AddListView(lData As String, lSize, lChecked As Boolean)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim i As Integer
 With lvwFiles
     lFileListCount = lFileListCount + 1
@@ -194,8 +203,4 @@ With lvwFiles
         End If
     Next i
 End With
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub AddListView(lData As String, lSize, lChecked As Boolean)", Err.Description
-    Err.Clear
 End Sub

@@ -283,7 +283,6 @@ Private Declare Function GlobalAlloc Lib "kernel32" (ByVal flags As Long, ByVal 
 Private Declare Function GlobalFree Lib "kernel32" (ByVal Mem As Long) As Long
 Private Declare Function MoveMemory Lib "kernel32" Alias "RtlMoveMemory" (ByRef Dest As Any, ByRef Src As Any, ByVal Size As Long) As Long
 Private Const GMEM_FIXED As Long = 0&
-Public Event ProcessError(lSub As String, lError As String)
 
 Private Function CallFuncPtr(FuncPtr As Long, ParamArray Params() As Variant) As Long
 Const MAX_CODESIZE  As Long = 65536
@@ -340,46 +339,50 @@ CallFuncPtr = RetValue
 End Function
 
 Private Sub AddByte(ByRef PC As Long, ByVal ByteValue As Byte)
-On Local Error GoTo ErrHandler
 MoveMemory ByVal PC, ByteValue, 1
 PC = PC + 1
-Exit Sub
-ErrHandler:
-    RaiseEvent ProcessError("Private Sub AddByte(ByRef PC As Long, ByVal ByteValue As Byte)", Err.Description)
 End Sub
 
 Private Sub AddInt(ByRef PC As Long, ByVal IntValue As Integer)
-On Local Error GoTo ErrHandler
 MoveMemory ByVal PC, IntValue, 2
 PC = PC + 2
-Exit Sub
-ErrHandler:
-    RaiseEvent ProcessError("Private Sub AddInt(ByRef PC As Long, ByVal IntValue As Integer)", Err.Description)
 End Sub
 
 Private Sub AddLong(ByRef PC As Long, ByVal LongValue As Long)
-On Local Error GoTo ErrHandler
 MoveMemory ByVal PC, LongValue, 4
 PC = PC + 4
-Exit Sub
-ErrHandler:
-    RaiseEvent ProcessError("Private Sub AddLong(ByRef PC As Long, ByVal LongValue As Long)", Err.Description)
 End Sub
 
+Public Function ReturnThread(lModule As String, lProcName As String, lParam1 As Variant, lParam2 As Variant, lUseParam1 As Boolean, lUseParam2 As Boolean) As Long
+'On Local Error GoTo ErrHandler
+'Dim l As Long
+'l = GetProcAddress(LoadLibrary(lModule), lProcName)
+'If lUseParam1 = True And lUseParam2 = True Then
+'    ReturnThread = CallFuncPtr(l, 0, lParam1, lParam2)
+'ElseIf lUseParam1 = True And lUseParam2 = False Then
+'    ReturnThread = CallFuncPtr(l, 0, lParam1)
+'End If
+
+'l = GetProcAddress(LoadLibrary("user32"), "MessageBoxA")
+'If CallFuncPtr(l, 0, "MessageBoxA test", "Title", 1) = 1 Then
+'    MsgBox "You pressed OK"
+'Else
+'    MsgBox "You pressed cancel"
+'End If
+'Exit Function
+'ErrHandler:
+'    MsgBox "ReturnThread " & Err.Description
+'    Err.Clear
+End Function
+
 Public Sub SetConnected(lValue As Boolean)
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 lConnected = lValue
-Exit Sub
-ErrHandler:
-    RaiseEvent ProcessError("Public Sub SetConnected(lValue As Boolean)", Err.Description)
 End Sub
 
 Public Function ReturnConnected() As Boolean
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 ReturnConnected = lConnected
-Exit Function
-ErrHandler:
-    RaiseEvent ProcessError("Public Function ReturnConnected() As Boolean", Err.Description)
 End Function
 
 Public Function ReturnAdr() As String
@@ -387,7 +390,7 @@ On Local Error GoTo ErrHandler
 ReturnAdr = adr
 Exit Function
 ErrHandler:
-    RaiseEvent ProcessError("Public Function ReturnAdr() As String", Err.Description)
+    Err.Clear
 End Function
 
 Public Function LoginToFTP() As Boolean
@@ -398,24 +401,35 @@ AddToStatus "Connecting to Server"
 SetUpdateBusy True
 SetMainFormTimeoutEnabled True
 SetMainFormDoEventsTimerEnabled True
-If FTPConnect("Team Nexgen", "ftp.team-nexgen.org", "21", "acidmax2updates", "f3rh431j76#", True, True) = True Then
-    LoginToFTP = True
-Else
-    LoginToFTP = False
-End If
+Select Case ReturnAcidmaxBetaUpdate
+Case False
+    If FTPConnect("Team Nexgen", "team-nexgen.org", "21", "acidmax", "torpedo#1", True, True) = True Then
+        LoginToFTP = True
+    Else
+        LoginToFTP = False
+    End If
+Case True
+    If FTPConnect("Team Nexgen", "team-nexgen.org", "21", "acidmax", "torpedo#1", True, True) = True Then
+        LoginToFTP = True
+    Else
+        LoginToFTP = False
+    End If
+End Select
 SetMainFormDoEventsTimerEnabled False
 SetMainFormTimeoutEnabled False
 Exit Function
 ErrHandler:
-    RaiseEvent ProcessError("Public Function LoginToFTP() As Boolean", Err.Description)
+    Err.Clear
 End Function
 
 Private Function FTPConnect(lSiteName As String, lServer As String, lPort As String, lUserId As String, lPassword As String, lBinary As Boolean, lPassive As Boolean) As Boolean
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim Service As Long, l As Long, o As Long
 If Len(lServer) <= 6 Then
+'    AddToStatus "Address Incorrect"
     Exit Function
 End If
+'AddToStatus "Address OK"
 Adresa = lServer
 ID = lUserId
 Pass = lPassword
@@ -468,14 +482,10 @@ Else
     InternetCloseHandle session
     Exit Function
 End If
-Exit Function
-ErrHandler:
-    RaiseEvent ProcessError("Private Function FTPConnect(lSiteName As String, lServer As String, lPort As String, lUserId As String, lPassword As String, lBinary As Boolean, lPassive As Boolean) As Boolean", Err.Description)
-    Err.Clear
 End Function
 
 Public Sub ListFTPDirectory()
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim hFile As Long, udtWFD As WIN32_FIND_DATA, strFile As String, Img As Integer, r As Integer, l&, sTime As SYSTEMTIME, lTime As FILETIME, lExit As Boolean, msg As String
 'Dim f As Long
 EnableCheckDirectory False
@@ -524,14 +534,10 @@ InternetCloseHandle hFile
 If ReturnFinishedCheckingFiles = False Then
     If ReturnDirectoryCount <> 0 Then EnableCheckDirectory True
 End If
-Exit Sub
-ErrHandler:
-    RaiseEvent ProcessError("Public Sub ListFTPDirectory()", Err.Description)
-    Err.Clear
 End Sub
 
 Public Function EnterFTPDirectory(lDirectory As String) As Boolean
-On Local Error GoTo ErrHandler
+On Local Error Resume Next
 Dim l As Long
 If lDirectory = ".." Then
     Klic = "/"
@@ -544,10 +550,6 @@ adr = Replace(adr, "*.**.*", "*.*")
 FtpSetCurrentDirectory session, adr
 SetMainFormStatusLabel "Checking Directory '" & lDirectory & "'"
 ListFTPDirectory
-Exit Function
-ErrHandler:
-    RaiseEvent ProcessError("Public Function EnterFTPDirectory(lDirectory As String) As Boolean", Err.Description)
-    Err.Clear
 End Function
 
 Private Function CalcFTime(FTime As SYSTEMTIME) As String
@@ -562,12 +564,11 @@ With FTime
 End With
 Exit Function
 ErrHandler:
-    RaiseEvent ProcessError("Private Function CalcFTime(FTime As SYSTEMTIME) As String", Err.Description)
     Err.Clear
 End Function
 
 Public Function DownloadFile(lFilename As String) As Boolean
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim sBuffer As String, FileData As String, Ret As Long, SentBytes As Long, sAllBytes As Long, z As Long, i As Integer, FF As Integer, Kam As String, Ode As String, Fs As Long, StartT As Long, t As Long, Cnt As Long, p As Long, spRate As Single, hFile As Long, f As Integer ', lAntiFreeze As Integer
 Dim l As Long, j As Long, o As Long
 'lAntiFreeze = ReturnMainFormAntiFreeze
@@ -666,7 +667,7 @@ ErrHandler:
 End Function
 
 Public Function RemoveDirectory(lDirectory As String) As Boolean
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 SetUpdateBusy True
 If FtpRemoveDirectory(server, lDirectory) = False Then
     AddToStatus "Error removing directory"
@@ -682,7 +683,7 @@ ErrHandler:
 End Function
 
 Public Sub CloseConnection()
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 SetConnected False
 SetUpdateBusy False
 InternetCloseHandle server
@@ -693,7 +694,7 @@ ErrHandler:
 End Sub
 
 Public Function CreateDirectory(lRemoteDir As String) As Boolean
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 SetUpdateBusy True
 If FtpCreateDirectory(server, lRemoteDir) = False Then
     AddToStatus "Error creating directory"
@@ -709,7 +710,7 @@ ErrHandler:
 End Function
 
 Public Function DeleteFile(lFilename As String, lRemotePath As String) As Boolean
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 SetUpdateBusy True
 EnterFTPDirectory lRemotePath
 If FtpDeleteFile(server, lRemotePath & lFilename) = False Then
@@ -725,7 +726,7 @@ ErrHandler:
 End Function
 
 Public Sub UploadFile(lFilePath As String, lFilename As String, lRemotePath As String)
-'On Local Error Resume Next
+On Local Error Resume Next
 Dim Cnt As Long, nFileLen As Long, nRet As Long, nTotFileLen As Long, sBuffer As String * 1024, Ret As Long, SentBytes As Long, sAllBytes As Long, z As Long, i As Integer, Kam As String, Ode As String, Fs As Long, StartT As Long, t As Long, p As Long, spRate As Single, hFile As Long
 If ReturnConnected = False Then
     SetMainFormStatusLabel "Not connected, unable to upload file"
@@ -775,3 +776,4 @@ Close
 InternetCloseHandle hFile
 SetUpdateBusy False
 End Sub
+

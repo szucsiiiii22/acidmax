@@ -6,7 +6,7 @@ BEGIN
   DataSourceBehavior  = 0  'vbNone
   MTSTransactionMode  = 0  'NotAnMTSObject
 END
-Attribute VB_Name = "clsDU298"
+Attribute VB_Name = "clsDU299"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
@@ -23,7 +23,7 @@ ErrHandler:
 End Sub
 
 Public Function DoStartup(lData As String)
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim msg() As String, i As Integer, lVersion As String
 msg = Split(lData, " : ")
 SetAcidmaxBetaUpdate False
@@ -51,7 +51,7 @@ ErrHandler:
 End Function
 
 Public Function DoBetaStartup(lData As String)
-'On Local Error Resume Next
+On Local Error Resume Next
 Dim msg() As String, i As Integer, lVersion As String
 msg = Split(lData, " : ")
 SetAcidmaxBetaUpdate True
@@ -77,19 +77,19 @@ ShowMainFormAdmin True
 End Function
 
 Public Function ShowAdmin(lData As String)
-'On Local Error Resume Next
+On Local Error Resume Next
 ShowMainFormAdmin True
 End Function
 
 Public Function Run() As String
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Exit Function
 ErrHandler:
     Err.Clear
 End Function
 
 Private Sub Class_Terminate()
-'On Local Error Resume Next
+On Local Error Resume Next
 WriteINI ReturnDUINI, "Settings", "Loaded", "False"
 SaveSettings
 DeleteDownloadedFiles

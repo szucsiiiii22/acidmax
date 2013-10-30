@@ -9,7 +9,7 @@ Private sBoxInvInit(32, 15) As Byte
 Private lProbaPassword As String
 
 Public Sub SetProbaPassword(lPassword As String)
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 lProbaPassword = lPassword
 Exit Sub
 ErrHandler:
@@ -18,7 +18,7 @@ ErrHandler:
 End Sub
 
 Public Function ReturnProbaPassword() As String
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 ReturnProbaPassword = lProbaPassword
 Exit Function
 ErrHandler:
@@ -27,7 +27,7 @@ ErrHandler:
 End Function
 
 Public Function EncodeString(aText As String, ByVal aKey As String, expandKey As Boolean) As String
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim i As Double
 If expandKey = False Then
     Call PROBAsetKey(aKey)
@@ -44,7 +44,7 @@ ErrHandler:
 End Function
 
 Public Function DecodeString(aText As String, ByVal aKey As String, expandKey As Boolean) As String
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim i As Double
 If expandKey = False Then
     Call PROBAsetKey(aKey)
@@ -61,7 +61,7 @@ ErrHandler:
 End Function
 
 Private Sub PROBAinitKey()
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim i As Byte, b As Byte
 sBoxInit(0) = Array(12, 8, 9, 1, 2, 4, 10, 13, 11, 3, 0, 15, 7, 6, 14, 5)
 sBoxInit(1) = Array(4, 0, 10, 11, 3, 14, 9, 8, 13, 1, 2, 7, 5, 6, 12, 15)
@@ -92,7 +92,7 @@ ErrHandler:
 End Sub
 
 Private Sub PROBAsetKey(aKey As String)
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim i As Byte, n(32) As Byte
 Dim Key() As Byte
 Key() = StrConv(aKey, vbFromUnicode)
@@ -112,7 +112,7 @@ ErrHandler:
 End Sub
 
 Private Sub PROBAsetExpandedKey(aKey As String)
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim i As Integer, n(255) As Integer, t As Integer, e As Integer, g As Integer, r As Integer, k() As Byte, b As Byte
 For i = 0 To 255
     n(i) = i
@@ -141,7 +141,7 @@ ErrHandler:
 End Sub
 
 Private Function PROBAencodeByte(aByte As Byte) As Byte
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 sBoxOut(1) = sBoxEncode((Int(aByte / 16)), 1)
 sBoxOut(2) = sBoxEncode((sBoxOut(1)), 2)
 sBoxOut(3) = sBoxEncode((sBoxOut(2)), 3)
@@ -183,8 +183,8 @@ ErrHandler:
 End Function
 
 Private Function PROBAdecodeByte(aByte As Byte) As Byte
-'On Local Error GoTo ErrHandler
-Dim b As Byte, Y As Byte
+On Local Error GoTo ErrHandler
+Dim b As Byte, y As Byte
 sBoxOut(16) = Int(aByte / 16)
 sBoxOut(15) = sBoxDecode((sBoxOut(16)), 16)
 sBoxOut(14) = sBoxDecode((sBoxOut(15)), 15)
@@ -218,8 +218,8 @@ sBoxOut(20) = sBoxDecode((sBoxOut(21)), 21)
 sBoxOut(19) = sBoxDecode((sBoxOut(20)), 20)
 sBoxOut(18) = sBoxDecode((sBoxOut(19)), 19)
 sBoxOut(17) = sBoxDecode((sBoxOut(18)), 18)
-Y = sBoxDecode((sBoxOut(17)), 17)
-PROBAdecodeByte = (b * 16) + Y
+y = sBoxDecode((sBoxOut(17)), 17)
+PROBAdecodeByte = (b * 16) + y
 Call PROBAturnBoxes
 Exit Function
 ErrHandler:
@@ -228,7 +228,7 @@ ErrHandler:
 End Function
 
 Private Function sBoxEncode(aByte As Byte, aBox As Byte) As Byte
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim b As Byte
 b = aByte + sBoxPos(aBox)
 If b > 15 Then b = b - 16
@@ -240,7 +240,7 @@ ErrHandler:
 End Function
 
 Private Function sBoxDecode(aByte As Byte, aBox As Byte) As Byte
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim i As Integer
 i = sBoxInvInit(sBox(aBox), aByte)
 i = i - sBoxPos(aBox)
@@ -253,7 +253,7 @@ ErrHandler:
 End Function
 
 Private Sub PROBAturnBoxes()
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim i As Byte
 Rotate (1)
 For i = 1 To 15
@@ -307,7 +307,7 @@ ErrHandler:
 End Sub
 
 Private Sub Rotate(aPos As Byte)
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 sBoxPos(aPos) = sBoxPos(aPos) + 1
 If sBoxPos(aPos) > 15 Then sBoxPos(aPos) = sBoxPos(aPos) - 16
 Exit Sub
