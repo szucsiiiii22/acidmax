@@ -19,14 +19,13 @@ On Local Error GoTo ErrHandler
 LoadSettings
 Exit Sub
 ErrHandler:
-    Err.Clear
+    ProcessError "Private Sub Class_Initialize()", Err.Description
 End Sub
 
 Public Function DoStartup(lData As String)
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim msg() As String, i As Integer, lVersion As String
 msg = Split(lData, " : ")
-SetAcidmaxBetaUpdate False
 For i = 0 To UBound(msg)
     msg(i) = Trim(msg(i))
     Select Case i
@@ -44,60 +43,37 @@ For i = 0 To UBound(msg)
     End Select
     DoEvents
 Next i
-'DoStartup = "1"
 Exit Function
 ErrHandler:
-    MsgBox Err.Description
-End Function
-
-Public Function DoBetaStartup(lData As String)
-'On Local Error Resume Next
-Dim msg() As String, i As Integer, lVersion As String
-msg = Split(lData, " : ")
-SetAcidmaxBetaUpdate True
-'ShowNewSplash
-For i = 0 To UBound(msg)
-    msg(i) = Trim(msg(i))
-    Select Case i
-    Case 0
-        SetMainFormButtonType Int(Trim(msg(i)))
-    Case 1
-        LoadMainForm CLng(Trim(msg(i)))
-    Case 2
-        SetMircPath Replace(Trim(msg(i)), "mirc.exe", "")
-    Case 3
-        lVersion = "2.1."
-    Case 4
-        lVersion = lVersion & Trim(msg(i))
-        SetAcidmaxVersion2 ReadINI(ReturnAcidmaxDir & "data\setting.ini", "version", "ver", "")
-    End Select
-Next i
-ShowMainFormAdmin True
-'DoBetaStartup = "1"
+    ProcessError "Public Function DoStartup(lData As String)", Err.Description
 End Function
 
 Public Function ShowAdmin(lData As String)
-'On Local Error Resume Next
-ShowMainFormAdmin True
+On Local Error GoTo ErrHandler
+Exit Function
+ErrHandler:
+    ProcessError "Public Function ShowAdmin(lData As String)", Err.Description
 End Function
 
 Public Function Run() As String
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Exit Function
 ErrHandler:
-    Err.Clear
+    ProcessError "Public Function Run() As String", Err.Description
 End Function
 
 Private Sub Class_Terminate()
-'On Local Error Resume Next
-WriteINI ReturnDUINI, "Settings", "Loaded", "False"
-SaveSettings
-DeleteDownloadedFiles
-FTP_CloseConnection
-CloseMainForm
-ClearWindowStuff
-ClearAllFiles
-CoFreeUnusedLibraries
-DoEvents
-If Err.Number <> 0 Then Err.Clear
+On Local Error GoTo ErrHandler
+'WriteINI ReturnDUINI, "Settings", "Loaded", "False"
+'SaveSettings
+'DeleteDownloadedFiles
+'FTP_CloseConnection
+'CloseMainForm
+'ClearWindowStuff
+'ClearAllFiles
+'CoFreeUnusedLibraries
+'DoEvents
+Exit Sub
+ErrHandler:
+    ProcessError "Private Sub Class_Terminate()", Err.Description
 End Sub

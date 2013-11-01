@@ -657,7 +657,6 @@ Else
 End If
 DownloadFile = True
 SetMainFormDoEventsTimerEnabled False
-SetMainFormTimerFocusOnceEnabled True
 SetMainFormProgressVisible False
 Exit Function
 ErrHandler:

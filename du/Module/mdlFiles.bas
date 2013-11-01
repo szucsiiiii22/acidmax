@@ -34,7 +34,6 @@ Private Type gDirectories
 End Type
 Private Type gSettings
     sReloadScripts As Boolean
-    sAcidmaxBetaUpdates As Boolean
     sAcidmaxVersion As String
     sAcidmaxDir As String
     sAutoCheck As Boolean
@@ -107,16 +106,6 @@ ErrHandler:
     ProcessError "Public Function ReturnReloadScripts() As Boolean", Err.Description
     Err.Clear
 End Function
-
-Public Sub SetBetaUpdate(lValue As Boolean)
-On Local Error GoTo ErrHandler
-lSettings.sAcidmaxBetaUpdates = lValue
-SetMainFormBetaUpdate lValue
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SetBetaUpdate(lValue As Boolean)", Err.Description
-    Err.Clear
-End Sub
 
 Public Sub SetReloadScripts(lValue As Boolean)
 On Local Error GoTo ErrHandler
@@ -262,29 +251,6 @@ ErrHandler:
     ProcessError "Public Sub SetAcidmaxVersion2(lVersion As String)", Err.Description
     Err.Clear
 End Sub
-
-Public Sub SetAcidmaxBetaUpdate(lToggle As Boolean)
-On Local Error GoTo ErrHandler
-Select Case lToggle
-Case True
-    lSettings.sAcidmaxBetaUpdates = True
-Case False
-    lSettings.sAcidmaxBetaUpdates = False
-End Select
-Exit Sub
-ErrHandler:
-    ProcessError "Public Sub SetAcidmaxBetaUpdate(lToggle As Boolean)", Err.Description
-    Err.Clear
-End Sub
-
-Public Function ReturnAcidmaxBetaUpdate() As Boolean
-On Local Error GoTo ErrHandler
-ReturnAcidmaxBetaUpdate = lSettings.sAcidmaxBetaUpdates
-Exit Function
-ErrHandler:
-    ProcessError "Public Function ReturnAcidmaxBetaUpdate() As Boolean", Err.Description
-    Err.Clear
-End Function
 
 Public Sub SetAcidmaxVersion(lVersion As String)
 On Local Error GoTo ErrHandler

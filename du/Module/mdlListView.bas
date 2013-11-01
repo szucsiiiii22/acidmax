@@ -38,7 +38,7 @@ Private m_PRECEDE As Long
 Private m_FOLLOW As Long
 
 Private Function pvCompareIndex(ByVal lParam1 As Long, ByVal lParam2 As Long, ByVal hwnd As Long) As Long
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 If (lParam1 > lParam2) Then
     pvCompareIndex = m_PRECEDE
 ElseIf (lParam1 < lParam2) Then
@@ -51,7 +51,7 @@ ErrHandler:
 End Function
 
 Private Function pvCompareText(ByVal lParam1 As Long, ByVal lParam2 As Long, ByVal hwnd As Long) As Long
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim msg As String, msg2 As String
 msg = LCase$(pvGetItemText(hwnd, lParam1))
 msg2 = LCase$(pvGetItemText(hwnd, lParam2))
@@ -67,7 +67,7 @@ ErrHandler:
 End Function
 
 Private Function pvCompareTextSensitive(ByVal lParam1 As Long, ByVal lParam2 As Long, ByVal hwnd As Long) As Long
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim msg As String, msg2 As String
 msg = pvGetItemText(hwnd, lParam1)
 msg2 = pvGetItemText(hwnd, lParam2)
@@ -83,7 +83,7 @@ ErrHandler:
 End Function
 
 Private Function pvCompareValue(ByVal lParam1 As Long, ByVal lParam2 As Long, ByVal hwnd As Long) As Long
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim msg As Double, d As Double
 msg = pvGetItemValue(hwnd, lParam1)
 d = pvGetItemValue(hwnd, lParam2)
@@ -99,7 +99,7 @@ ErrHandler:
 End Function
 
 Private Function pvCompareDate(ByVal lParam1 As Long, ByVal lParam2 As Long, ByVal hwnd As Long) As Long
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim a As Date, t As Date
 a = pvGetItemDate(hwnd, lParam1)
 t = pvGetItemDate(hwnd, lParam2)
@@ -115,7 +115,7 @@ ErrHandler:
 End Function
 
 Private Function pvGetItemText(ByVal hwnd As Long, ByVal lParam As Long) As String
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim l As Long, b(261) As Byte, o As Long
 With m_uLVI
     .mask = LVIF_TEXT
@@ -132,7 +132,7 @@ ErrHandler:
 End Function
 
 Private Function pvGetItemValue(ByVal hwnd As Long, ByVal lParam As Long) As Double
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim l As Long, b(261) As Byte, o As Long
 With m_uLVI
     .mask = LVIF_TEXT
@@ -153,7 +153,7 @@ ErrHandler:
 End Function
 
 Private Function pvGetItemDate(ByVal hwnd As Long, ByVal lParam As Long) As Date
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim lIdx As Long, a(261) As Byte, sText As String, lLen As Long
 With m_uLVI
     .mask = LVIF_TEXT
@@ -173,7 +173,7 @@ ErrHandler:
 End Function
 
 Private Function AddressOfFunction(lpfn As Long) As Long
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 AddressOfFunction = lpfn
 Exit Function
 ErrHandler:
@@ -182,7 +182,7 @@ ErrHandler:
 End Function
 
 Public Function Sort(ByVal hListView As Long, ByVal Column As Integer, ByVal SortOrder As eSortOrderConstants, ByVal SortType As eSortTypeConstants) As Boolean
-'On Local Error GoTo ErrHandler
+On Local Error GoTo ErrHandler
 Dim l As Long
 m_lColumn = CLng(Column)
 Select Case SortOrder
@@ -210,4 +210,3 @@ ErrHandler:
     MsgBox Err.Description
     Err.Clear
 End Function
-

@@ -1,5 +1,5 @@
 VERSION 5.00
-Begin VB.Form frmMain 
+Begin VB.Form t 
    BorderStyle     =   0  'None
    ClientHeight    =   6840
    ClientLeft      =   15
@@ -36,12 +36,6 @@ Begin VB.Form frmMain
       Left            =   3600
       Top             =   0
    End
-   Begin VB.Timer tmrSetFocusOnce 
-      Enabled         =   0   'False
-      Interval        =   50
-      Left            =   4080
-      Top             =   0
-   End
    Begin VB.Timer tmrLoginToFTPDelay 
       Enabled         =   0   'False
       Interval        =   200
@@ -57,8 +51,8 @@ Begin VB.Form frmMain
    Begin DU.ctlFTP ctlFTP1 
       Left            =   120
       Top             =   120
-      _ExtentX        =   450
-      _ExtentY        =   450
+      _extentx        =   450
+      _extenty        =   450
    End
    Begin VB.Frame fraFrames 
       BorderStyle     =   0  'None
@@ -236,431 +230,6 @@ Begin VB.Form frmMain
       Width           =   8055
       Begin VB.Frame fraFrames 
          BorderStyle     =   0  'None
-         Caption         =   "User Mods"
-         ForeColor       =   &H8000000F&
-         Height          =   5400
-         Index           =   3
-         Left            =   0
-         TabIndex        =   22
-         Top             =   290
-         Visible         =   0   'False
-         Width           =   7815
-         Begin VB.TextBox txtPassword 
-            BackColor       =   &H00FFFFFF&
-            Enabled         =   0   'False
-            Height          =   285
-            IMEMode         =   3  'DISABLE
-            Left            =   1200
-            PasswordChar    =   "*"
-            TabIndex        =   24
-            Top             =   480
-            Width           =   6375
-         End
-         Begin VB.TextBox txtUsername 
-            BackColor       =   &H00FFFFFF&
-            Enabled         =   0   'False
-            Height          =   285
-            Left            =   1200
-            TabIndex        =   23
-            Top             =   120
-            Width           =   6375
-         End
-         Begin DU.isButton cmdLogin 
-            Height          =   300
-            Left            =   6600
-            TabIndex        =   36
-            Top             =   840
-            Width           =   975
-            _ExtentX        =   1720
-            _ExtentY        =   529
-            Icon            =   "frmMain.frx":56A6
-            Style           =   8
-            Caption         =   "Login"
-            iNonThemeStyle  =   0
-            Tooltiptitle    =   ""
-            ToolTipIcon     =   0
-            ToolTipType     =   1
-            ttForeColor     =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Tahoma"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            MaskColor       =   0
-            RoundedBordersByTheme=   0   'False
-         End
-         Begin VB.Frame fraAdmin 
-            BorderStyle     =   0  'None
-            ForeColor       =   &H00000000&
-            Height          =   4095
-            Left            =   120
-            TabIndex        =   25
-            Top             =   1200
-            Visible         =   0   'False
-            Width           =   7575
-            Begin VB.TextBox txtCurrentVersion 
-               Height          =   285
-               Left            =   1080
-               TabIndex        =   28
-               Top             =   0
-               Width           =   5295
-            End
-            Begin VB.ListBox lstDirectories 
-               Height          =   3300
-               IntegralHeight  =   0   'False
-               Left            =   1080
-               TabIndex        =   27
-               Top             =   360
-               Width           =   2055
-            End
-            Begin VB.ListBox lstFTPFiles 
-               Height          =   3300
-               IntegralHeight  =   0   'False
-               Left            =   3240
-               TabIndex        =   26
-               Top             =   360
-               Width           =   4215
-            End
-            Begin DU.isButton cmdUpdate 
-               Height          =   300
-               Left            =   6480
-               TabIndex        =   37
-               Top             =   0
-               Width           =   975
-               _ExtentX        =   1720
-               _ExtentY        =   529
-               Icon            =   "frmMain.frx":56C2
-               Style           =   8
-               Caption         =   "Update"
-               iNonThemeStyle  =   0
-               Tooltiptitle    =   ""
-               ToolTipIcon     =   0
-               ToolTipType     =   1
-               ttForeColor     =   0
-               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "Tahoma"
-                  Size            =   8.25
-                  Charset         =   0
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
-               MaskColor       =   0
-               RoundedBordersByTheme=   0   'False
-            End
-            Begin DU.isButton cmdMakeFolder 
-               Height          =   300
-               Left            =   1080
-               TabIndex        =   38
-               Top             =   3720
-               Width           =   975
-               _ExtentX        =   1720
-               _ExtentY        =   529
-               Icon            =   "frmMain.frx":56DE
-               Style           =   8
-               Caption         =   "MK Dir"
-               iNonThemeStyle  =   0
-               Tooltiptitle    =   ""
-               ToolTipIcon     =   0
-               ToolTipType     =   1
-               ttForeColor     =   0
-               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "Tahoma"
-                  Size            =   8.25
-                  Charset         =   0
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
-               MaskColor       =   0
-               RoundedBordersByTheme=   0   'False
-            End
-            Begin DU.isButton cmdAdd 
-               Height          =   300
-               Left            =   3240
-               TabIndex        =   39
-               Top             =   3720
-               Width           =   855
-               _ExtentX        =   1508
-               _ExtentY        =   529
-               Icon            =   "frmMain.frx":56FA
-               Style           =   8
-               Caption         =   "Upload"
-               iNonThemeStyle  =   0
-               Tooltiptitle    =   ""
-               ToolTipIcon     =   0
-               ToolTipType     =   1
-               ttForeColor     =   0
-               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "Tahoma"
-                  Size            =   8.25
-                  Charset         =   0
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
-               MaskColor       =   0
-               RoundedBordersByTheme=   0   'False
-            End
-            Begin DU.isButton cmdDelete 
-               Height          =   300
-               Left            =   4200
-               TabIndex        =   40
-               Top             =   3720
-               Width           =   855
-               _ExtentX        =   1508
-               _ExtentY        =   529
-               Icon            =   "frmMain.frx":5716
-               Style           =   8
-               Caption         =   "Delete"
-               iNonThemeStyle  =   0
-               Tooltiptitle    =   ""
-               ToolTipIcon     =   0
-               ToolTipType     =   1
-               ttForeColor     =   0
-               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "Tahoma"
-                  Size            =   8.25
-                  Charset         =   0
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
-               MaskColor       =   0
-               RoundedBordersByTheme=   0   'False
-            End
-            Begin DU.isButton cmdRMDir 
-               Height          =   300
-               Left            =   2160
-               TabIndex        =   41
-               Top             =   3720
-               Width           =   975
-               _ExtentX        =   1720
-               _ExtentY        =   529
-               Icon            =   "frmMain.frx":5732
-               Style           =   8
-               Caption         =   "RM Dir"
-               iNonThemeStyle  =   0
-               Tooltiptitle    =   ""
-               ToolTipIcon     =   0
-               ToolTipType     =   1
-               ttForeColor     =   0
-               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "Tahoma"
-                  Size            =   8.25
-                  Charset         =   0
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
-               MaskColor       =   0
-               RoundedBordersByTheme=   0   'False
-            End
-            Begin DU.isButton cmdPasswordProtectDir 
-               Height          =   300
-               Left            =   5160
-               TabIndex        =   50
-               Top             =   3720
-               Width           =   2295
-               _ExtentX        =   4048
-               _ExtentY        =   529
-               Icon            =   "frmMain.frx":574E
-               Style           =   8
-               Caption         =   "Password Protect Directory"
-               iNonThemeStyle  =   0
-               Tooltiptitle    =   ""
-               ToolTipIcon     =   0
-               ToolTipType     =   1
-               ttForeColor     =   0
-               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-                  Name            =   "Tahoma"
-                  Size            =   8.25
-                  Charset         =   0
-                  Weight          =   400
-                  Underline       =   0   'False
-                  Italic          =   0   'False
-                  Strikethrough   =   0   'False
-               EndProperty
-               MaskColor       =   0
-               RoundedBordersByTheme=   0   'False
-            End
-            Begin VB.Line Line21 
-               BorderColor     =   &H00FFFFFF&
-               X1              =   0
-               X2              =   840
-               Y1              =   1575
-               Y2              =   1575
-            End
-            Begin VB.Label lblWriteAcidmaxMrc 
-               Caption         =   "Write version information to acidmax1.mrc"
-               ForeColor       =   &H00FF0000&
-               Height          =   780
-               Left            =   0
-               MouseIcon       =   "frmMain.frx":576A
-               MousePointer    =   99  'Custom
-               TabIndex        =   47
-               Top             =   1680
-               Width           =   975
-            End
-            Begin VB.Line Line20 
-               X1              =   0
-               X2              =   840
-               Y1              =   1560
-               Y2              =   1560
-            End
-            Begin VB.Label lblWriteVersionINI 
-               Caption         =   "Write file list to 'version.ini'"
-               ForeColor       =   &H00FF0000&
-               Height          =   585
-               Left            =   0
-               MouseIcon       =   "frmMain.frx":58BC
-               MousePointer    =   99  'Custom
-               TabIndex        =   46
-               Top             =   840
-               Width           =   975
-            End
-            Begin VB.Label Label10 
-               BackStyle       =   0  'Transparent
-               Caption         =   "&Version:"
-               ForeColor       =   &H00000000&
-               Height          =   255
-               Left            =   0
-               TabIndex        =   31
-               Top             =   0
-               Width           =   735
-            End
-            Begin VB.Label lblFTPFileSize 
-               Alignment       =   1  'Right Justify
-               Height          =   255
-               Left            =   4560
-               TabIndex        =   30
-               Top             =   1440
-               Width           =   1215
-            End
-            Begin VB.Label Label11 
-               BackStyle       =   0  'Transparent
-               Caption         =   "&Files:"
-               ForeColor       =   &H00000000&
-               Height          =   255
-               Left            =   0
-               TabIndex        =   29
-               Top             =   360
-               Width           =   735
-            End
-         End
-         Begin DU.isButton cmdChange 
-            Height          =   300
-            Left            =   5520
-            TabIndex        =   49
-            Top             =   840
-            Width           =   975
-            _ExtentX        =   1720
-            _ExtentY        =   529
-            Icon            =   "frmMain.frx":5A0E
-            Style           =   8
-            Caption         =   "Change"
-            iNonThemeStyle  =   0
-            Tooltiptitle    =   ""
-            ToolTipIcon     =   0
-            ToolTipType     =   1
-            ttForeColor     =   0
-            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-               Name            =   "Tahoma"
-               Size            =   8.25
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            MaskColor       =   0
-            RoundedBordersByTheme=   0   'False
-         End
-         Begin VB.Image imgSavePassword 
-            Height          =   195
-            Left            =   1200
-            Picture         =   "frmMain.frx":5A2A
-            Top             =   840
-            Width           =   195
-         End
-         Begin VB.Label lblSavePassword 
-            BackStyle       =   0  'Transparent
-            Caption         =   "&Save Password"
-            Height          =   255
-            Left            =   1485
-            MouseIcon       =   "frmMain.frx":5C74
-            MousePointer    =   99  'Custom
-            TabIndex        =   48
-            Top             =   840
-            Width           =   1215
-         End
-         Begin VB.Label Label9 
-            BackStyle       =   0  'Transparent
-            Caption         =   "&Password:"
-            ForeColor       =   &H00000000&
-            Height          =   255
-            Left            =   120
-            TabIndex        =   33
-            Top             =   480
-            Width           =   855
-         End
-         Begin VB.Label lblUsername 
-            BackStyle       =   0  'Transparent
-            Caption         =   "&Username:"
-            ForeColor       =   &H00000000&
-            Height          =   255
-            Left            =   120
-            TabIndex        =   32
-            Top             =   120
-            Width           =   855
-         End
-         Begin VB.Line Line4 
-            BorderColor     =   &H00FFFFFF&
-            X1              =   0
-            X2              =   1210
-            Y1              =   5
-            Y2              =   5
-         End
-         Begin VB.Line Line5 
-            BorderColor     =   &H00FFFFFF&
-            X1              =   2400
-            X2              =   7905
-            Y1              =   0
-            Y2              =   0
-         End
-         Begin VB.Line Line9 
-            BorderColor     =   &H00FFFFFF&
-            X1              =   0
-            X2              =   0
-            Y1              =   0
-            Y2              =   5400
-         End
-         Begin VB.Line Line10 
-            BorderColor     =   &H00808080&
-            X1              =   0
-            X2              =   7800
-            Y1              =   5385
-            Y2              =   5385
-         End
-         Begin VB.Line Line11 
-            BorderColor     =   &H00808080&
-            X1              =   7800
-            X2              =   7800
-            Y1              =   5400
-            Y2              =   0
-         End
-      End
-      Begin VB.Frame fraFrames 
-         BorderStyle     =   0  'None
          Height          =   5400
          Index           =   0
          Left            =   0
@@ -676,7 +245,7 @@ Begin VB.Form frmMain
             Width           =   2295
             _ExtentX        =   4048
             _ExtentY        =   609
-            Icon            =   "frmMain.frx":5DC6
+            Icon            =   "frmMain.frx":56A6
             Style           =   8
             Caption         =   "Check for Updates"
             iNonThemeStyle  =   0
@@ -684,7 +253,6 @@ Begin VB.Form frmMain
             Tooltiptitle    =   ""
             ToolTipIcon     =   0
             ToolTipType     =   1
-            ttForeColor     =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Tahoma"
                Size            =   8.25
@@ -737,7 +305,7 @@ Begin VB.Form frmMain
             Width           =   2295
             _ExtentX        =   4048
             _ExtentY        =   609
-            Icon            =   "frmMain.frx":5DE2
+            Icon            =   "frmMain.frx":56C2
             Style           =   8
             Caption         =   "Update Acidmax"
             iNonThemeStyle  =   0
@@ -745,7 +313,6 @@ Begin VB.Form frmMain
             Tooltiptitle    =   ""
             ToolTipIcon     =   0
             ToolTipType     =   1
-            ttForeColor     =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Tahoma"
                Size            =   8.25
@@ -761,7 +328,7 @@ Begin VB.Form frmMain
          Begin DU.ctlListView lvwFiles 
             Height          =   3975
             Left            =   120
-            TabIndex        =   51
+            TabIndex        =   50
             Top             =   120
             Width           =   2295
             _ExtentX        =   4048
@@ -770,12 +337,12 @@ Begin VB.Form frmMain
          Begin DU.isButton cmdCustomize 
             Height          =   345
             Left            =   120
-            TabIndex        =   52
+            TabIndex        =   51
             Top             =   4560
             Width           =   2295
             _ExtentX        =   4048
             _ExtentY        =   609
-            Icon            =   "frmMain.frx":5DFE
+            Icon            =   "frmMain.frx":56DE
             Style           =   8
             Caption         =   "Choose Files"
             iNonThemeStyle  =   0
@@ -783,7 +350,6 @@ Begin VB.Form frmMain
             Tooltiptitle    =   ""
             ToolTipIcon     =   0
             ToolTipType     =   1
-            ttForeColor     =   0
             BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
                Name            =   "Tahoma"
                Size            =   8.25
@@ -796,32 +362,12 @@ Begin VB.Form frmMain
             MaskColor       =   0
             RoundedBordersByTheme=   0   'False
          End
-         Begin VB.Label lblDUBeta 
-            BackStyle       =   0  'Transparent
-            Caption         =   "Update from Beta Files"
-            Height          =   255
-            Left            =   2805
-            MouseIcon       =   "frmMain.frx":5E1A
-            MousePointer    =   99  'Custom
-            TabIndex        =   45
-            Top             =   825
-            Visible         =   0   'False
-            Width           =   1815
-         End
-         Begin VB.Image imgDUBeta 
-            Height          =   195
-            Left            =   2520
-            Picture         =   "frmMain.frx":5F6C
-            Top             =   840
-            Visible         =   0   'False
-            Width           =   195
-         End
          Begin VB.Label lblReloadDownloadedScripts 
             BackStyle       =   0  'Transparent
             Caption         =   "Reload Downloaded Scripts"
             Height          =   255
             Left            =   2805
-            MouseIcon       =   "frmMain.frx":61B6
+            MouseIcon       =   "frmMain.frx":56FA
             MousePointer    =   99  'Custom
             TabIndex        =   44
             Top             =   585
@@ -830,7 +376,7 @@ Begin VB.Form frmMain
          Begin VB.Image imgReloadDownloadedScripts 
             Height          =   195
             Left            =   2520
-            Picture         =   "frmMain.frx":6308
+            Picture         =   "frmMain.frx":584C
             Top             =   600
             Width           =   195
          End
@@ -839,7 +385,7 @@ Begin VB.Form frmMain
             Caption         =   "Update Automatically"
             Height          =   255
             Left            =   2805
-            MouseIcon       =   "frmMain.frx":6552
+            MouseIcon       =   "frmMain.frx":5A96
             MousePointer    =   99  'Custom
             TabIndex        =   43
             Top             =   345
@@ -848,7 +394,7 @@ Begin VB.Form frmMain
          Begin VB.Image imgUpdateAutomatically 
             Height          =   195
             Left            =   2520
-            Picture         =   "frmMain.frx":66A4
+            Picture         =   "frmMain.frx":5BE8
             Top             =   360
             Width           =   195
          End
@@ -857,7 +403,7 @@ Begin VB.Form frmMain
             Caption         =   "Check for Updates on Start"
             Height          =   255
             Left            =   2805
-            MouseIcon       =   "frmMain.frx":68EE
+            MouseIcon       =   "frmMain.frx":5E32
             MousePointer    =   99  'Custom
             TabIndex        =   42
             Top             =   105
@@ -866,14 +412,14 @@ Begin VB.Form frmMain
          Begin VB.Image imgCheckUpdatesAutomatically 
             Height          =   195
             Left            =   2520
-            Picture         =   "frmMain.frx":6A40
+            Picture         =   "frmMain.frx":5F84
             Top             =   120
             Width           =   195
          End
          Begin VB.Image imgCheckBox_Checked 
             Height          =   195
             Left            =   2760
-            Picture         =   "frmMain.frx":6C8A
+            Picture         =   "frmMain.frx":61CE
             Top             =   4680
             Visible         =   0   'False
             Width           =   195
@@ -881,7 +427,7 @@ Begin VB.Form frmMain
          Begin VB.Image imgCheckBox_UnChecked 
             Height          =   195
             Left            =   2520
-            Picture         =   "frmMain.frx":6ED4
+            Picture         =   "frmMain.frx":6418
             Top             =   4680
             Visible         =   0   'False
             Width           =   195
@@ -973,6 +519,423 @@ Begin VB.Form frmMain
             Y2              =   5380
          End
       End
+      Begin VB.Frame fraFrames 
+         BorderStyle     =   0  'None
+         Caption         =   "User Mods"
+         ForeColor       =   &H8000000F&
+         Height          =   5400
+         Index           =   3
+         Left            =   0
+         TabIndex        =   22
+         Top             =   290
+         Visible         =   0   'False
+         Width           =   7815
+         Begin VB.TextBox txtPassword 
+            BackColor       =   &H00FFFFFF&
+            Enabled         =   0   'False
+            Height          =   285
+            IMEMode         =   3  'DISABLE
+            Left            =   1200
+            PasswordChar    =   "*"
+            TabIndex        =   24
+            Top             =   480
+            Width           =   6375
+         End
+         Begin VB.TextBox txtUsername 
+            BackColor       =   &H00FFFFFF&
+            Enabled         =   0   'False
+            Height          =   285
+            Left            =   1200
+            TabIndex        =   23
+            Top             =   120
+            Width           =   6375
+         End
+         Begin DU.isButton cmdLogin 
+            Height          =   300
+            Left            =   6600
+            TabIndex        =   36
+            Top             =   840
+            Width           =   975
+            _ExtentX        =   1720
+            _ExtentY        =   529
+            Icon            =   "frmMain.frx":6662
+            Style           =   8
+            Caption         =   "Login"
+            iNonThemeStyle  =   0
+            Tooltiptitle    =   ""
+            ToolTipIcon     =   0
+            ToolTipType     =   1
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            MaskColor       =   0
+            RoundedBordersByTheme=   0   'False
+         End
+         Begin DU.isButton cmdChange 
+            Height          =   300
+            Left            =   5520
+            TabIndex        =   48
+            Top             =   840
+            Width           =   975
+            _ExtentX        =   1720
+            _ExtentY        =   529
+            Icon            =   "frmMain.frx":667E
+            Style           =   8
+            Caption         =   "Change"
+            iNonThemeStyle  =   0
+            Tooltiptitle    =   ""
+            ToolTipIcon     =   0
+            ToolTipType     =   1
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            MaskColor       =   0
+            RoundedBordersByTheme=   0   'False
+         End
+         Begin VB.Frame fraAdmin 
+            BorderStyle     =   0  'None
+            ForeColor       =   &H00000000&
+            Height          =   4095
+            Left            =   120
+            TabIndex        =   25
+            Top             =   1200
+            Visible         =   0   'False
+            Width           =   7575
+            Begin VB.TextBox txtCurrentVersion 
+               Height          =   285
+               Left            =   1080
+               TabIndex        =   28
+               Top             =   0
+               Width           =   5295
+            End
+            Begin VB.ListBox lstDirectories 
+               Height          =   3300
+               IntegralHeight  =   0   'False
+               Left            =   1080
+               TabIndex        =   27
+               Top             =   360
+               Width           =   2055
+            End
+            Begin VB.ListBox lstFTPFiles 
+               Height          =   3300
+               IntegralHeight  =   0   'False
+               Left            =   3240
+               TabIndex        =   26
+               Top             =   360
+               Width           =   4215
+            End
+            Begin DU.isButton cmdUpdate 
+               Height          =   300
+               Left            =   6480
+               TabIndex        =   37
+               Top             =   0
+               Width           =   975
+               _ExtentX        =   1720
+               _ExtentY        =   529
+               Icon            =   "frmMain.frx":669A
+               Style           =   8
+               Caption         =   "Update"
+               iNonThemeStyle  =   0
+               Tooltiptitle    =   ""
+               ToolTipIcon     =   0
+               ToolTipType     =   1
+               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "Tahoma"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               MaskColor       =   0
+               RoundedBordersByTheme=   0   'False
+            End
+            Begin DU.isButton cmdMakeFolder 
+               Height          =   300
+               Left            =   1080
+               TabIndex        =   38
+               Top             =   3720
+               Width           =   975
+               _ExtentX        =   1720
+               _ExtentY        =   529
+               Icon            =   "frmMain.frx":66B6
+               Style           =   8
+               Caption         =   "MK Dir"
+               iNonThemeStyle  =   0
+               Tooltiptitle    =   ""
+               ToolTipIcon     =   0
+               ToolTipType     =   1
+               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "Tahoma"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               MaskColor       =   0
+               RoundedBordersByTheme=   0   'False
+            End
+            Begin DU.isButton cmdAdd 
+               Height          =   300
+               Left            =   3240
+               TabIndex        =   39
+               Top             =   3720
+               Width           =   855
+               _ExtentX        =   1508
+               _ExtentY        =   529
+               Icon            =   "frmMain.frx":66D2
+               Style           =   8
+               Caption         =   "Upload"
+               iNonThemeStyle  =   0
+               Tooltiptitle    =   ""
+               ToolTipIcon     =   0
+               ToolTipType     =   1
+               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "Tahoma"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               MaskColor       =   0
+               RoundedBordersByTheme=   0   'False
+            End
+            Begin DU.isButton cmdDelete 
+               Height          =   300
+               Left            =   4200
+               TabIndex        =   40
+               Top             =   3720
+               Width           =   855
+               _ExtentX        =   1508
+               _ExtentY        =   529
+               Icon            =   "frmMain.frx":66EE
+               Style           =   8
+               Caption         =   "Delete"
+               iNonThemeStyle  =   0
+               Tooltiptitle    =   ""
+               ToolTipIcon     =   0
+               ToolTipType     =   1
+               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "Tahoma"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               MaskColor       =   0
+               RoundedBordersByTheme=   0   'False
+            End
+            Begin DU.isButton cmdRMDir 
+               Height          =   300
+               Left            =   2160
+               TabIndex        =   41
+               Top             =   3720
+               Width           =   975
+               _ExtentX        =   1720
+               _ExtentY        =   529
+               Icon            =   "frmMain.frx":670A
+               Style           =   8
+               Caption         =   "RM Dir"
+               iNonThemeStyle  =   0
+               Tooltiptitle    =   ""
+               ToolTipIcon     =   0
+               ToolTipType     =   1
+               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "Tahoma"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               MaskColor       =   0
+               RoundedBordersByTheme=   0   'False
+            End
+            Begin DU.isButton cmdPasswordProtectDir 
+               Height          =   300
+               Left            =   5160
+               TabIndex        =   49
+               Top             =   3720
+               Width           =   2295
+               _ExtentX        =   4048
+               _ExtentY        =   529
+               Icon            =   "frmMain.frx":6726
+               Style           =   8
+               Caption         =   "Password Protect Directory"
+               iNonThemeStyle  =   0
+               Tooltiptitle    =   ""
+               ToolTipIcon     =   0
+               ToolTipType     =   1
+               BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+                  Name            =   "Tahoma"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               MaskColor       =   0
+               RoundedBordersByTheme=   0   'False
+            End
+            Begin VB.Line Line21 
+               BorderColor     =   &H00FFFFFF&
+               X1              =   0
+               X2              =   840
+               Y1              =   1575
+               Y2              =   1575
+            End
+            Begin VB.Label lblWriteAcidmaxMrc 
+               Caption         =   "Write version information to acidmax1.mrc"
+               ForeColor       =   &H00FF0000&
+               Height          =   780
+               Left            =   0
+               MouseIcon       =   "frmMain.frx":6742
+               MousePointer    =   99  'Custom
+               TabIndex        =   46
+               Top             =   1680
+               Width           =   975
+            End
+            Begin VB.Line Line20 
+               X1              =   0
+               X2              =   840
+               Y1              =   1560
+               Y2              =   1560
+            End
+            Begin VB.Label lblWriteVersionINI 
+               Caption         =   "Write file list to 'version.ini'"
+               ForeColor       =   &H00FF0000&
+               Height          =   585
+               Left            =   0
+               MouseIcon       =   "frmMain.frx":6894
+               MousePointer    =   99  'Custom
+               TabIndex        =   45
+               Top             =   840
+               Width           =   975
+            End
+            Begin VB.Label Label10 
+               BackStyle       =   0  'Transparent
+               Caption         =   "&Version:"
+               ForeColor       =   &H00000000&
+               Height          =   255
+               Left            =   0
+               TabIndex        =   31
+               Top             =   0
+               Width           =   735
+            End
+            Begin VB.Label lblFTPFileSize 
+               Alignment       =   1  'Right Justify
+               Height          =   255
+               Left            =   4560
+               TabIndex        =   30
+               Top             =   1440
+               Width           =   1215
+            End
+            Begin VB.Label Label11 
+               BackStyle       =   0  'Transparent
+               Caption         =   "&Files:"
+               ForeColor       =   &H00000000&
+               Height          =   255
+               Left            =   0
+               TabIndex        =   29
+               Top             =   360
+               Width           =   735
+            End
+         End
+         Begin VB.Image imgSavePassword 
+            Height          =   195
+            Left            =   1200
+            Picture         =   "frmMain.frx":69E6
+            Top             =   840
+            Width           =   195
+         End
+         Begin VB.Label lblSavePassword 
+            BackStyle       =   0  'Transparent
+            Caption         =   "&Save Password"
+            Height          =   255
+            Left            =   1485
+            MouseIcon       =   "frmMain.frx":6C30
+            MousePointer    =   99  'Custom
+            TabIndex        =   47
+            Top             =   840
+            Width           =   1215
+         End
+         Begin VB.Label Label9 
+            BackStyle       =   0  'Transparent
+            Caption         =   "&Password:"
+            ForeColor       =   &H00000000&
+            Height          =   255
+            Left            =   120
+            TabIndex        =   33
+            Top             =   480
+            Width           =   855
+         End
+         Begin VB.Label lblUsername 
+            BackStyle       =   0  'Transparent
+            Caption         =   "&Username:"
+            ForeColor       =   &H00000000&
+            Height          =   255
+            Left            =   120
+            TabIndex        =   32
+            Top             =   120
+            Width           =   855
+         End
+         Begin VB.Line Line4 
+            BorderColor     =   &H00FFFFFF&
+            X1              =   0
+            X2              =   1210
+            Y1              =   5
+            Y2              =   5
+         End
+         Begin VB.Line Line5 
+            BorderColor     =   &H00FFFFFF&
+            X1              =   2400
+            X2              =   7905
+            Y1              =   0
+            Y2              =   0
+         End
+         Begin VB.Line Line9 
+            BorderColor     =   &H00FFFFFF&
+            X1              =   0
+            X2              =   0
+            Y1              =   0
+            Y2              =   5400
+         End
+         Begin VB.Line Line10 
+            BorderColor     =   &H00808080&
+            X1              =   0
+            X2              =   7800
+            Y1              =   5385
+            Y2              =   5385
+         End
+         Begin VB.Line Line11 
+            BorderColor     =   &H00808080&
+            X1              =   7800
+            X2              =   7800
+            Y1              =   5400
+            Y2              =   0
+         End
+      End
       Begin DU.isButton cmdTopButtons 
          Height          =   300
          Index           =   1
@@ -983,7 +946,7 @@ Begin VB.Form frmMain
          Width           =   1215
          _ExtentX        =   2143
          _ExtentY        =   529
-         Icon            =   "frmMain.frx":711E
+         Icon            =   "frmMain.frx":6D82
          Style           =   1
          Caption         =   "&Admin"
          iNonThemeStyle  =   0
@@ -991,7 +954,6 @@ Begin VB.Form frmMain
          Tooltiptitle    =   ""
          ToolTipIcon     =   0
          ToolTipType     =   1
-         ttForeColor     =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Tahoma"
             Size            =   8.25
@@ -1020,7 +982,6 @@ Begin VB.Form frmMain
          Tooltiptitle    =   ""
          ToolTipIcon     =   0
          ToolTipType     =   1
-         ttForeColor     =   0
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Tahoma"
             Size            =   8.25
@@ -1043,7 +1004,7 @@ Begin VB.Form frmMain
       Begin VB.Image Image2 
          Height          =   225
          Left            =   6960
-         Picture         =   "frmMain.frx":713A
+         Picture         =   "frmMain.frx":6D9E
          Top             =   0
          Width           =   585
       End
@@ -1064,7 +1025,7 @@ Begin VB.Form frmMain
       Height          =   375
       Index           =   0
       Left            =   840
-      MouseIcon       =   "frmMain.frx":72B7
+      MouseIcon       =   "frmMain.frx":6F1B
       MousePointer    =   99  'Custom
       TabIndex        =   11
       Top             =   5040
@@ -1086,7 +1047,7 @@ Begin VB.Form frmMain
       Height          =   375
       Index           =   1
       Left            =   840
-      MouseIcon       =   "frmMain.frx":7409
+      MouseIcon       =   "frmMain.frx":706D
       MousePointer    =   99  'Custom
       TabIndex        =   10
       Top             =   5760
@@ -1108,7 +1069,7 @@ Begin VB.Form frmMain
       Height          =   375
       Index           =   2
       Left            =   840
-      MouseIcon       =   "frmMain.frx":755B
+      MouseIcon       =   "frmMain.frx":71BF
       MousePointer    =   99  'Custom
       TabIndex        =   9
       Top             =   3240
@@ -1130,7 +1091,7 @@ Begin VB.Form frmMain
       Height          =   375
       Index           =   1
       Left            =   840
-      MouseIcon       =   "frmMain.frx":76AD
+      MouseIcon       =   "frmMain.frx":7311
       MousePointer    =   99  'Custom
       TabIndex        =   8
       Top             =   2610
@@ -1152,7 +1113,7 @@ Begin VB.Form frmMain
       Height          =   375
       Index           =   0
       Left            =   840
-      MouseIcon       =   "frmMain.frx":77FF
+      MouseIcon       =   "frmMain.frx":7463
       MousePointer    =   99  'Custom
       TabIndex        =   7
       Top             =   1950
@@ -1186,7 +1147,7 @@ Begin VB.Form frmMain
       End
    End
 End
-Attribute VB_Name = "frmMain"
+Attribute VB_Name = "t"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
@@ -1204,10 +1165,6 @@ Exit Sub
 ErrHandler:
     ProcessError "Public Sub SetClickedFile(lFilename As String)", Err.Description
     Err.Clear
-End Sub
-
-Private Sub ProcessError(lSub As String, lError As String)
-MsgBox ("Error: " & lError & vbCrLf & "Sub: " & lSub)
 End Sub
 
 Private Sub cmdAdd_Click()
@@ -1430,6 +1387,17 @@ ErrHandler:
     Err.Clear
 End Sub
 
+Private Sub DeleteFile(lFile As String)
+On Local Error GoTo ErrHandler
+If DoesFileExist(lFile) Then
+    Kill lFile
+End If
+Exit Sub
+ErrHandler:
+    ProcessError "Private Sub DeleteFile(lFile As String)", Err.Description
+    Err.Clear
+End Sub
+
 Private Sub Form_Load()
 On Local Error GoTo ErrHandler
 Dim i As Integer
@@ -1456,15 +1424,13 @@ For i = 0 To File1.ListCount
     If Len(File1.List(i)) <> 0 Then
         If Left(Trim(LCase(File1.List(i))), 2) <> "du" Then
             If Trim(LCase(File1.List(i))) <> "oleguids3.tlb" Then
-                Kill App.Path & "\" & File1.List(i)
-                If Err.Number <> 0 Then Err.Clear
+                DeleteFile App.Path & "\" & File1.List(i)
             End If
         Else
             If Right(Trim(LCase(File1.List(i))), 4) = ".dll" Then
                 If Trim(LCase(File1.List(i))) <> "du" & Trim(Str(App.Major & App.Minor)) & ".dll" Then
                     If Trim(LCase(File1.List(i))) <> "oleguids3.tlb" Then
-                        Kill App.Path & "\" & File1.List(i)
-                        If Err.Number <> 0 Then Err.Clear
+                        DeleteFile App.Path & "\" & File1.List(i)
                     End If
                 End If
             End If
@@ -1473,12 +1439,11 @@ For i = 0 To File1.ListCount
 Next i
 fraFrames(0).Visible = True
 DoEvents
-tmrSetFocusOnce.Enabled = True
 ApplySettings
 SetMainFormCheckForUpdatesEnabled True
 SetMainFormUpdateAcidmax3ButtonEnabled False
 SetMainFormProgressVisible False
-If ReturnAcidmaxBetaUpdate = False And ReturnAutoCheck = True Then SetMainFormLoginTimerDelayEnabled True
+If ReturnAutoCheck = True Then SetMainFormLoginTimerDelayEnabled True
 Exit Sub
 ErrHandler:
     ProcessError "Private Sub Form_Load()", Err.Description
@@ -1504,15 +1469,16 @@ End Sub
 
 Private Sub Form_Unload(Cancel As Integer)
 On Local Error GoTo ErrHandler
+'MsgBox (ReturnDUINI)
 WriteINI ReturnDUINI, "Settings", "Loaded", "False"
-ctlFTP1.CloseConnection
-tmrCheckDirectory.Enabled = False
-tmrLoginToFTPDelay.Enabled = False
-tmrSetFocusOnce.Enabled = False
-lblA.Caption = ""
-lblAvailableVersion.Caption = ""
-lblYourVersion.Caption = ""
-tmrCheckDirectory.Enabled = False
+'ctlFTP1.CloseConnection
+'tmrCheckDirectory.Enabled = False
+'tmrLoginToFTPDelay.Enabled = False
+'tmrSetFocusOnce.Enabled = False
+'lblA.Caption = ""
+'lblAvailableVersion.Caption = ""
+'lblYourVersion.Caption = ""
+'tmrCheckDirectory.Enabled = False
 Exit Sub
 ErrHandler:
     ProcessError "Private Sub Form_Unload(Cancel As Integer)", Err.Description
@@ -1536,11 +1502,9 @@ lblWriteAcidmaxMrc.Font.Underline = False
 lblCheckUpdatesAutomatically.ForeColor = vbBlack
 lblUpdateAutomatically.ForeColor = vbBlack
 lblReloadDownloadedScripts.ForeColor = vbBlack
-lblDUBeta.ForeColor = vbBlack
 lblCheckUpdatesAutomatically.Font.Underline = False
 lblUpdateAutomatically.Font.Underline = False
 lblReloadDownloadedScripts.Font.Underline = False
-lblDUBeta.Font.Underline = False
 Exit Sub
 ErrHandler:
     ProcessError "Private Sub fraFrames_MouseMove(Index As Integer, Button As Integer, Shift As Integer, X As Single, Y As Single)", Err.Description
@@ -1622,44 +1586,12 @@ On Local Error GoTo ErrHandler
 lblCheckUpdatesAutomatically.ForeColor = vbBlue
 lblUpdateAutomatically.ForeColor = vbBlack
 lblReloadDownloadedScripts.ForeColor = vbBlack
-lblDUBeta.ForeColor = vbBlack
 lblCheckUpdatesAutomatically.Font.Underline = True
 lblUpdateAutomatically.Font.Underline = False
 lblReloadDownloadedScripts.Font.Underline = False
-lblDUBeta.Font.Underline = False
 Exit Sub
 ErrHandler:
     ProcessError "Private Sub lblCheckUpdatesAutomatically_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)", Err.Description
-    Err.Clear
-End Sub
-
-Private Sub lblDUBeta_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
-On Local Error GoTo ErrHandler
-Select Case ReturnAcidmaxBetaUpdate
-Case True
-    SetBetaUpdate False
-Case False
-    SetBetaUpdate True
-End Select
-Exit Sub
-ErrHandler:
-    ProcessError "Private Sub lblDUBeta_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)", Err.Description
-    Err.Clear
-End Sub
-
-Private Sub lblDUBeta_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-On Local Error GoTo ErrHandler
-lblCheckUpdatesAutomatically.ForeColor = vbBlack
-lblUpdateAutomatically.ForeColor = vbBlack
-lblReloadDownloadedScripts.ForeColor = vbBlack
-lblDUBeta.ForeColor = vbBlue
-lblCheckUpdatesAutomatically.Font.Underline = False
-lblUpdateAutomatically.Font.Underline = False
-lblReloadDownloadedScripts.Font.Underline = False
-lblDUBeta.Font.Underline = True
-Exit Sub
-ErrHandler:
-    ProcessError "Private Sub lblDUBeta_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)", Err.Description
     Err.Clear
 End Sub
 
@@ -1675,16 +1607,16 @@ Case 0
         DisplayHelpTopic "Automatic Update Notification", "Automatic Update Prompting is turned OFF", "Your Automatic Updates are turned off. If you wish to enable them, check the autocheck checkbox"
     End Select
 Case 1
-    If ReturnAcidmaxBetaUpdate = True Then
-        Select Case ReturnAcidmaxBetaUpdate
-        Case True
-            DisplayHelpTopic "Beta and PreRelease Updates", "Acidmax 2 Beta Update2 is turned ON", "Direct Update can download beta and prerelease versions of Nexgen Acidmax. Beware, using this option can damage your copy of Nexgen Acidmax. If you are not sure what to do, it is recommended that you do not use this option. To turn it off, close Direct Update, and type in your status or a channel 'DU'"
-        Case False
-            DisplayHelpTopic "Beta and PreRelease Updates", "Acidmax 2 Beta Update2 is turned OFF", "Direct Update can download beta and prerelease versions of Nexgen Acidmax. Beware, using this option can damage your copy of Nexgen Acidmax. If you are unsure on what to do, it is recommended that you do not use this option. To turn it on, close Direct Update, and type in your status or a channel window 'DUBETA'"
-        End Select
-    Else
-        DisplayHelpTopic "Live Help and Support Options", "Support Options", "To get live support, you can reach the development Team of Nexgen Acidmax in #nexgen on undernet. Alternatly, you can post a message on the forum www.team-nexgen.org/forum/"
-    End If
+    'If ReturnAcidmaxBetaUpdate = True Then
+        'Select Case ReturnAcidmaxBetaUpdate
+        'Case True
+            'DisplayHelpTopic "Beta and PreRelease Updates", "Acidmax 2 Beta Update2 is turned ON", "Direct Update can download beta and prerelease versions of Nexgen Acidmax. Beware, using this option can damage your copy of Nexgen Acidmax. If you are not sure what to do, it is recommended that you do not use this option. To turn it off, close Direct Update, and type in your status or a channel 'DU'"
+        'Case False
+            'DisplayHelpTopic "Beta and PreRelease Updates", "Acidmax 2 Beta Update2 is turned OFF", "Direct Update can download beta and prerelease versions of Nexgen Acidmax. Beware, using this option can damage your copy of Nexgen Acidmax. If you are unsure on what to do, it is recommended that you do not use this option. To turn it on, close Direct Update, and type in your status or a channel window 'DUBETA'"
+        'End Select
+    'Else
+    DisplayHelpTopic "Live Help and Support Options", "Support Options", "To get live support, you can reach the development Team of Nexgen Acidmax in #nexgen on undernet. Alternatly, you can post a message on the forum www.team-nexgen.org/forum/"
+    'End If
 Case 2
     DisplayHelpTopic "Changes to Direct Update", "Changes to Direct Update", "Direct Update has been redesigned to better serve Acidmax's need for updates. For questions regaurding Direct Update, e-mail guidex@tnexgen.com"
 End Select
@@ -1753,11 +1685,9 @@ On Local Error GoTo ErrHandler
 lblCheckUpdatesAutomatically.ForeColor = vbBlack
 lblUpdateAutomatically.ForeColor = vbBlack
 lblReloadDownloadedScripts.ForeColor = vbBlue
-lblDUBeta.ForeColor = vbBlack
 lblCheckUpdatesAutomatically.Font.Underline = False
 lblUpdateAutomatically.Font.Underline = False
 lblReloadDownloadedScripts.Font.Underline = True
-lblDUBeta.Font.Underline = False
 Exit Sub
 ErrHandler:
     ProcessError "Private Sub lblReloadDownloadedScripts_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)", Err.Description
@@ -1815,11 +1745,9 @@ On Local Error GoTo ErrHandler
 lblCheckUpdatesAutomatically.ForeColor = vbBlack
 lblUpdateAutomatically.ForeColor = vbBlue
 lblReloadDownloadedScripts.ForeColor = vbBlack
-lblDUBeta.ForeColor = vbBlack
 lblCheckUpdatesAutomatically.Font.Underline = False
 lblUpdateAutomatically.Font.Underline = True
 lblReloadDownloadedScripts.Font.Underline = False
-lblDUBeta.Font.Underline = False
 Exit Sub
 ErrHandler:
     ProcessError "Private Sub lblUpdateAutomatically_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)", Err.Description
@@ -1969,15 +1897,6 @@ ctlFTP1.LoginToFTP
 Exit Sub
 ErrHandler:
     ProcessError "Private Sub tmrLoginToFTPDelay_Timer()", Err.Description
-    Err.Clear
-End Sub
-
-Private Sub tmrSetFocusOnce_Timer()
-On Local Error GoTo ErrHandler
-tmrSetFocusOnce.Enabled = False
-Exit Sub
-ErrHandler:
-    ProcessError "Private Sub tmrTimeOut_Timer()", Err.Description
     Err.Clear
 End Sub
 

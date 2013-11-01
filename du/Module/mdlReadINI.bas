@@ -9,7 +9,7 @@ Private Declare Function GetPrivateProfileString Lib "kernel32" Alias "GetPrivat
 #End If
 
 Public Function ReadINI(ByVal lFile As String, ByVal Section As String, ByVal Key As String, Optional lDefault As String)
-'On Local Error Resume Next
+On Local Error GoTo ErrHandler
 Dim msg As String, RetVal As String, Worked As Integer
 RetVal = String$(255, 0)
 Worked = GetPrivateProfileString(Section, Key, "", RetVal, Len(RetVal), lFile)
@@ -18,9 +18,17 @@ If Worked = 0 Then
 Else
     ReadINI = Left(RetVal, InStr(RetVal, Chr(0)) - 1)
 End If
+Exit Function
+ErrHandler:
+    ProcessError "Public Function ReadINI(ByVal lFile As String, ByVal Section As String, ByVal Key As String, Optional lDefault As String)", Err.Description
+    Err.Clear
 End Function
 
 Public Sub WriteINI(ByVal lFile As String, ByVal Section As String, ByVal Key As String, ByVal Value As String)
-'On Local Error Resume Next
+On Local Error GoTo ErrHandler
 WritePrivateProfileString Section, Key, Value, lFile
+Exit Sub
+ErrHandler:
+    ProcessError "Public Sub WriteINI(ByVal lFile As String, ByVal Section As String, ByVal Key As String, ByVal Value As String)", Err.Description
+    Err.Clear
 End Sub
