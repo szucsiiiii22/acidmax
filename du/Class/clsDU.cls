@@ -71,7 +71,7 @@ On Local Error GoTo ErrHandler
 'CloseMainForm
 'ClearWindowStuff
 'ClearAllFiles
-'CoFreeUnusedLibraries
+CoFreeUnusedLibraries
 'DoEvents
 Exit Sub
 ErrHandler:

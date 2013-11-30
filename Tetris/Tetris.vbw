@@ -1,0 +1,6 @@
+mdlFormStuff = 200, 200, 898, 661, 
+mdlMain = 0, 0, 698, 461, 
+mdlWindowStuff = 100, 100, 798, 561, 
+clsTetris = 50, 50, 748, 511, C
+frmMain = 75, 75, 773, 536, C, 125, 125, 823, 586, C
+mdlTetris = 25, 25, 723, 486, 

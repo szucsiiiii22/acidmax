@@ -1,0 +1,10 @@
+frmMain = 17, -4, 627, 640, , 25, 26, 639, 670, C
+mdlSocket = 88, 88, 702, 732, C
+ctlSocket = 0, 0, 0, 0, C, 66, 66, 680, 710, C
+clsSocket = 242, 242, 856, 886, C
+isButton = 0, 0, 0, 0, C, 66, 87, 607, 573, C
+clsTranslator = 132, 174, 618, 600, C
+mdlWindowStuff = 88, 116, 574, 542, 
+mdlFormStuff = 66, 87, 552, 513, 
+mdlProfileStrings = 0, 0, 0, 0, C
+mdlMain = 0, 0, 0, 0, C

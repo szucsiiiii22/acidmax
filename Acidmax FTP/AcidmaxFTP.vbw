@@ -1,0 +1,11 @@
+frmMain = 121, 100, 891, 755, , 114, 103, 956, 758, C
+mdlFiles = 31, 135, 890, 913, C
+mdlWindowStuff = 181, 122, 831, 883, C
+mdlInet = 206, 227, 849, 864, 
+mdlMain = 88, 88, 743, 732, C
+XPButton = 44, 58, 759, 713, C, 22, 29, 737, 684, C
+mdlFormStuff = 184, 191, 897, 851, 
+mdlReadINI = 110, 145, 825, 800, C
+mdlCommonDialog = 152, 260, 867, 915, C
+clsAF = 66, 87, 836, 742, C
+frmAddServer = 0, 0, 0, 0, C, 73, 110, 480, 456, C

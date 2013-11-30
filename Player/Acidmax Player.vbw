@@ -1,0 +1,15 @@
+clsAcidmaxPlayer13 = 22, 29, 716, 617, C
+frmMain = 20, 50, 712, 578, C, 12, 23, 492, 494, C
+ctlAcidmaxPlayer = 6, 261, 794, 798, C, 66, 87, 760, 682, C
+clsMovieModule = 0, 0, 0, 0, C
+mdlCommonDialog = 0, 0, 0, 0, C
+mdlMain = 0, 0, 0, 0, C
+mdlAcidmaxPlayer = 88, 116, 574, 538, C
+XPButton = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+ucSlider = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+isButton = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+frmConnectToServer = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+mdlProfileStrings = 0, 0, 0, 0, C
+mdlOLE = 0, 0, 0, 0, C
+mdlListViewEx = 0, 0, 0, 0, C
+ctlListView = 0, 0, 0, 0, C, 0, 0, 0, 0, C

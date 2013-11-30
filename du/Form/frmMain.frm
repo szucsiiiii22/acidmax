@@ -1,5 +1,5 @@
 VERSION 5.00
-Begin VB.Form t 
+Begin VB.Form frmMain 
    BorderStyle     =   0  'None
    ClientHeight    =   6840
    ClientLeft      =   15
@@ -27,7 +27,7 @@ Begin VB.Form t
    Begin VB.Timer tmrDoEvents 
       Enabled         =   0   'False
       Interval        =   1000
-      Left            =   5520
+      Left            =   5040
       Top             =   0
    End
    Begin VB.Timer tmrCheckDirectory 
@@ -39,13 +39,13 @@ Begin VB.Form t
    Begin VB.Timer tmrLoginToFTPDelay 
       Enabled         =   0   'False
       Interval        =   200
-      Left            =   4560
+      Left            =   4080
       Top             =   0
    End
    Begin VB.Timer tmrTimeOut 
       Enabled         =   0   'False
       Interval        =   20000
-      Left            =   5040
+      Left            =   4560
       Top             =   0
    End
    Begin DU.ctlFTP ctlFTP1 
@@ -237,6 +237,13 @@ Begin VB.Form t
          Top             =   290
          Visible         =   0   'False
          Width           =   7830
+         Begin VB.ListBox lstFiles 
+            Height          =   3960
+            Left            =   120
+            TabIndex        =   51
+            Top             =   120
+            Width           =   2295
+         End
          Begin DU.isButton cmdCheckForUpdates 
             Height          =   345
             Left            =   120
@@ -325,19 +332,10 @@ Begin VB.Form t
             MaskColor       =   0
             RoundedBordersByTheme=   0   'False
          End
-         Begin DU.ctlListView lvwFiles 
-            Height          =   3975
-            Left            =   120
-            TabIndex        =   50
-            Top             =   120
-            Width           =   2295
-            _ExtentX        =   4048
-            _ExtentY        =   7011
-         End
          Begin DU.isButton cmdCustomize 
             Height          =   345
             Left            =   120
-            TabIndex        =   51
+            TabIndex        =   50
             Top             =   4560
             Width           =   2295
             _ExtentX        =   4048
@@ -1147,7 +1145,7 @@ Begin VB.Form t
       End
    End
 End
-Attribute VB_Name = "t"
+Attribute VB_Name = "frmMain"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
@@ -1869,6 +1867,10 @@ Exit Sub
 ErrHandler:
     ProcessError "Private Sub lstFTPFiles_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)", Err.Description
     Err.Clear
+End Sub
+
+Private Sub lvwFiles_Click()
+
 End Sub
 
 Private Sub tmrCheckDirectory_Timer()

@@ -1,0 +1,9 @@
+frmMain = 97, 223, 914, 862, C, 0, 0, 851, 714, C
+mdlTetris = 52, 18, 831, 675, C
+mdlAcidmax = 192, 22, 974, 677, C
+frmClient = 62, 64, 841, 528, C, 221, 33, 829, 439, C
+frmServer = 201, 194, 983, 849, C, 342, 513, 986, 986, C
+mdlWindowStuff = 22, 29, 805, 684, C
+frmDownloadFile = 198, 261, 980, 916, C, 0, 0, 608, 644, C
+mdlTetrisUpload = 155, 121, 935, 776, C
+mdlINIFiles = 176, 176, 847, 820, C

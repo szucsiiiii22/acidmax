@@ -1,0 +1,14 @@
+frmMain = 124, 182, 610, 604, , 8, 12, 635, 602, C
+mdlListViewEx = 0, 0, 0, 0, C
+mdlOLE = 66, 87, 552, 509, C
+ctlListView = 88, 116, 574, 538, C, 44, 58, 530, 480, C
+clsNexCam10 = 132, 174, 618, 596, C
+XP_ProgressBar = 0, 0, 0, 0, C, 66, 87, 552, 513, C
+Connection = 0, 0, 0, 0, C, 88, 116, 574, 542, C
+Download = 0, 0, 0, 0, C, 110, 145, 596, 571, C
+InternetFile = 154, 203, 640, 629, C, 132, 174, 618, 600, C
+basGlobal = 0, 0, 0, 0, C
+mdlReadINI = 44, 58, 530, 480, C
+XPButton = 0, 0, 0, 0, C, 154, 203, 640, 629, C
+mdlFormStuff = 132, 174, 618, 600, C
+mdlWindowStuff = 154, 203, 640, 629, C

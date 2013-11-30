@@ -720,16 +720,16 @@ If Len(lFile) <> 0 Then
                 If LCase(.fFileName) = "version.ini" Then
                     If FTP_DownloadFile("version.ini") = True Then
                         Dim i As Integer, msg As String, msg2 As String, c As Integer, msg3 As String, msg4 As String
-                        If Trim(ReadINI(App.Path & "\version.ini", "Settings", "DU", "")) <> Trim(Str(App.Major & "." & App.Minor)) Then
-                            Dim mbox As VbMsgBoxResult
-                            mbox = MsgBox("Direct Update appears to be out of date. Would you like to close Direct Update and run the updater?", vbYesNo + vbQuestion, App.Title)
-                            If mbox = vbYes Then
-                                HideMainForm
-                                mIRCStatusSend "//frmDuPreUpdate.Load"
-                                mIRCStatusSend "//frmDU.Unload"
-                                Exit Function
-                            End If
-                        End If
+                        'If Trim(ReadINI(App.Path & "\version.ini", "Settings", "DU", "")) <> Trim(Str(App.Major & "." & App.Minor)) Then
+                            'Dim mbox As VbMsgBoxResult
+                            'mbox = MsgBox("Direct Update appears to be out of date. Would you like to close Direct Update and run the updater?", vbYesNo + vbQuestion, App.Title)
+                            'If mbox = vbYes Then
+                                'HideMainForm
+                                'mIRCStatusSend "//frmDuPreUpdate.Load"
+                                'mIRCStatusSend "//frmDU.Unload"
+                                'Exit Function
+                            'End If
+                        'End If
                         SetMainFormNewVersion ReadINI(App.Path & "\version.ini", "Settings", "Version", ""): DoEvents
                         c = Int(ReadINI(App.Path & "\version.ini", "Settings", "Files", 0))
                         For i = 1 To c

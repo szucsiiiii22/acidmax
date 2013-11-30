@@ -1,0 +1,12 @@
+frmMain = 284, 431, 937, 1014, C, -16, 90, 481, 441, C
+mdlFiles = 18, 137, 877, 915, C
+mdlWindowStuff = 181, 122, 831, 883, C
+mdlInet = 215, 167, 858, 804, C
+mdlMain = 88, 88, 743, 732, C
+XPButton = 44, 58, 759, 713, C, 22, 29, 737, 684, C
+clsDU26 = 53, 127, 768, 782, C
+mdlFormStuff = 152, 228, 865, 888, C
+mdlReadINI = 110, 145, 825, 800, C
+mdlCommonDialog = 152, 260, 867, 915, C
+mdlAddons = 0, 0, 715, 655, C
+mdlRestorePoints = 241, 170, 937, 825, C

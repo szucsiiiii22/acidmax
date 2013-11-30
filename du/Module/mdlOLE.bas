@@ -88,7 +88,11 @@ End Function
 
 Private Function Release(This As IPAOHookStruct) As Long
 On Local Error GoTo ErrHandler
-Release = This.IPAOReal.Release
+'If Not This Is Nothing Then
+If Not This.IPAOReal Is Nothing Then
+    Release = This.IPAOReal.Release
+End If
+'End If
 Exit Function
 ErrHandler:
     ProcessError "Private Function Release(This As IPAOHookStruct) As Long", Err.Description

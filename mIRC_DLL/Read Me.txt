@@ -1,0 +1,12 @@
+[ Installation ]
+
+Requirements: mIRC 6.XX
+
+1. Extract files to <mIRC dir>\mIRCDLL\
+2. Open mIRCDLL.vbp with Visual Basic 6
+3. Compile mIRCDLL.DLL to <mirc dir>\mIRCDLL\
+4. From mIRC, type /load -rs mIRCDLL\mIRCDLL.mrc
+5. From mIRC, Type /mIRCDLL
+
+Credits: Leon Aiossa - guidex@tnexgen.com
+www.tnexgen.com

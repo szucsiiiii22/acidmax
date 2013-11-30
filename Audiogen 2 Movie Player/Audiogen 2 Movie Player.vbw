@@ -1,0 +1,4 @@
+clsMovieModule = 66, 91, 770, 506, C
+ctlMovie = 78, 65, 782, 484, C, 22, 29, 726, 448, C
+mdlMain = 44, 58, 748, 589, 
+mdlCommonDialog = 22, 29, 726, 560, 

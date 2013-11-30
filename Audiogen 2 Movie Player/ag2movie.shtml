@@ -1,0 +1,399 @@
+<html>
+<head>
+<title>Team Nexgen - home</title>
+<style type="text/css">
+<!--
+	body,td
+	{
+		font-family: verdana;
+		font-size: 11px;
+		color: #dddddd;
+	}
+-->
+</style>
+<script language="JavaScript">
+<!--
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images & (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		in_b1_over = newImage("i/inside/b1-over.jpg");
+		in_b2_over = newImage("i/inside/b2-over.jpg");
+		in_b3_over = newImage("i/inside/b3-over.jpg");
+		in_b4_over = newImage("i/inside/b4-over.jpg");
+		in_b5_over = newImage("i/inside/b5-over.jpg");
+		preloadFlag = true;
+	}
+}
+
+// -->
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<STYLE type="text/css">
+<!--
+.Navlink {COLOR: #FFFFFF; TEXT-DECORATION: none; font-family: arial; font-size: 8pt; }
+.link {COLOR: #FFFFFF; TEXT-DECORATION: none; font-family: arial; font-size: 10pt;}
+a:link.Navlink  {color : #FFFFFF;}
+a:visited.Navlink  {color : #FFFFFF;}
+a:active.Navlink  {text-decoration: none;}
+a:hover.Navlink  {color : #FFFFFF; font-family: arial; font-size: 10pt; font-weight: bold;}
+a:hover.link  {color : #FFCC00;}
+a:visited.link  {color : #FFFFFF;}
+reminput         {background-color: #302d4d; font-family: Verdana; font-size: 10pt; color: #FFFFFF;}
+textarea      {background-color: #000000; font-family: Verdana; font-size: 10pt; color: #FFFFFF;}
+select        {background-color: #6F89AE; font-family: Verdana; font-size: 7pt; color: #FFFFFF;}
+
+BODY {
+scrollbar-face-color: #364D70;
+scrollbar-highlight-color: #6F89AE;
+scrollbar-3dlight-color: #6F89AE;
+scrollbar-darkshadow-color: #6F89AE;
+scrollbar-shadow-color: #6F89AE;
+scrollbar-arrow-color: #ffffff;
+scrollbar-track-color: #333333;
+}
+-->
+</STYLE>
+</head>
+<body background="i/inbg.gif" link="#ffffff" vlink="#cccccc" alink="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="preloadImages();">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td width="100%" valign="top">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td background="i/bg.gif" valign="bottom" height="100" colspan="2">
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td> <IMG src="i/btl.gif"></td>
+				<td width="100%" background="i/btbg.gif"> 
+ </td>
+				<td><IMG src="i/btr.gif"></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td background="i/inside/top1bg.jpg"><!--#include file="topnav.shtml" --></td>
+		<td align="right" background="i/inside/top1bg.jpg"><IMG src="i/inside/top1a.jpg"></td>
+	</tr>
+	<tr>
+		  <td valign="top" width="100%" background="i/inbg.gif" colspan="2"> 
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr> 
+                <td width="15%"><IMG src="i/inside/top2.jpg"></td>
+              </tr>
+              <tr> 
+                <td align="left" valign="top" width="15%"><!--#include file="leftnav.shtml" -->
+                </td>
+                <td width="4%"  valign="top" class="inside"><!-- <img src="i/spacer.gif" height="61" width="20"> --></td>
+                <td width="43%" valign="top" class="inside" align="middle"><br><!-- <img src="i/spacer.gif" width="80" height="20"> -->
+                  <table width="75%" border="0">
+                    <tr> 
+                      <td bgcolor="#191919">
+                        <table cellspacing=0 cellpadding=0 width=428 border=0>
+                          <tbody> 
+                          <tr valign=top> 
+
+
+
+                          </tr>
+                          <tr> 
+                            <td width=428 colspan=5 height="2">
+                              <DIV align=left><STRONG>Audiogen 2 Movie Player X - 
+                              |guideX|</STRONG></DIV>
+                              <DIV align=left>&nbsp;</DIV>
+                              <DIV align=left><FONT color=silver>An easy to use 
+                              and powerfull media playback control. Easily 
+                              incorperate Playback for *.m3u, *.m4a, *.avi, 
+                              *.mpg, *.mpeg, *.mpe, *.mp3, *.mp2, *.mp1, *.wav, 
+                              *.aif, *.aiff, *.aifc, *.au, *.mv1, *.mov, 
+                              *.mpa, *.qt, *.snd, *.mpm, *.mpv, *.enc, 
+                              *.mid, *.rmi, *.vob, *.wma, *.wmv into your 
+                              programs written in Visual Basic, Delphi and 
+                              generally any other development environment which will 
+                              accept activex files.</FONT></DIV>
+                              <DIV align=left>&nbsp;</DIV>
+                              <DIV align=left><FONT 
+                              color=yellowgreen><STRONG>Events</STRONG>:</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>AGDoubleClick</STRONG>()</FONT> 
+                              <FONT color=gold>' Triggers when user double 
+                              clicks the movie window</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>AGRightClick</STRONG>()</FONT> 
+                              <FONT color=gold>' Triggers when user right clicks 
+                              on movie window</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>AGMovieOpened</STRONG>(lFileName 
+                              as String)</FONT> <FONT color=gold>' Triggers when 
+                              a media file is opened. lFilename was the file 
+                              that was opened</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>AGMovieClosed</STRONG>()</FONT> 
+                              <FONT color=gold>' Triggered when the movie is 
+                              closed</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>AGMovieStopped</STRONG>()</FONT> 
+                              <FONT color=gold>' Triggered when the movie is 
+                              stopped</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>AGMoviePaused</STRONG>()</FONT> 
+                              <FONT color=gold>' Triggered when the movie is 
+                              paused</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>AGMovieResumed</STRONG>()</FONT><FONT 
+                              color=gold> ' Triggered when the movie is 
+                              unpaused</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>AGMoviePlay</STRONG>()</FONT> 
+                              <FONT color=gold>' Triggered when the movie is 
+                              played</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=gold></FONT>&nbsp;</DIV>
+                              <DIV align=left><STRONG><FONT 
+                              color=yellowgreen>Methods:</FONT></STRONG></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>ChangeMoviePosition</STRONG>(lSecond 
+                              as Long)</FONT>&nbsp;<FONT color=gold>' Changes 
+                              movie position to the second specified in 
+                              lSecond</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>ChangePlayRate</STRONG>(lValue 
+                              as Long)</FONT><FONT color=gold> ' Changes the 
+                              speed which the movie is played back 
+                              at.</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>CloseDoor</STRONG>()</FONT> 
+                              <FONT color=gold>' Closes the CD Door</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>CloseMovie</STRONG>()</FONT> 
+                              <FONT color=gold>' Closes the currently open 
+                              movie</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>ForwardFrames</STRONG>(lNumFrames 
+                              As Long)</FONT><FONT color=gold> ' Goes forward 
+                              the specified number of frames</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>ForwardSeconds</STRONG>(lNumSeconds 
+                              as Long)</FONT> <FONT color=gold>' Goes forward 
+                              the specified number of seconds</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>FullScreen</STRONG>()</FONT> 
+                              <FONT color=gold>' Sets full screen 
+on</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>GetFramesPerSecond</STRONG>()</FONT> 
+                              <FONT color=gold>' Returns rate of frames per 
+                              second</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>GetStatus</STRONG>()</FONT> 
+                              <FONT color=gold>' Returns the status of the 
+                              player</FONT></DIV>
+                              <DIV align=left><FONT color=gold>&nbsp; ' 0 = 
+                              Idle</FONT></DIV>
+                              <DIV align=left><FONT color=gold>&nbsp; ' 1 = 
+                              Playing</FONT></DIV>
+                              <DIV align=left><FONT color=gold>&nbsp; ' 2&nbsp;= 
+                              Open</FONT></DIV>
+                              <DIV align=left><FONT color=gold>&nbsp; ' 3 = 
+                              Paused</FONT></DIV>
+                              <DIV align=left><FONT color=gold>&nbsp; ' 4 = 
+                              Stopped</FONT></DIV>
+                              <DIV align=left><FONT color=gold>&nbsp; ' 5 = 
+                              Error</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>GetVolume</STRONG>()</FONT> 
+                              <FONT color=gold>' Returns the current volume. 
+                              This volume is not either the 'Wave' nor 'Master' 
+                              volume in windows, rather is is the volume of the 
+                              currently playing file</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>Mute(lToggle As 
+                              Boolean)</STRONG></FONT> <FONT color=gold>' Sets 
+                              the audio on or off</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>OpenCDDoor</STRONG></FONT>() 
+                              <FONT color=gold>' Opens the CD rom door of the 
+                              current cd drive </FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>OpenMovie</STRONG>(lFileName 
+                              As String)</FONT> <FONT color=gold>' Opens a media 
+                              file, or movie</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>PauseMovie</STRONG></FONT>() 
+                              <FONT color=gold>' Pauses the currently playing 
+                              movie</FONT> 
+                                   </DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>PlayMovie</STRONG></FONT>() 
+                              <FONT color=gold>' Plays the current movie/media 
+                              file</FONT>  
+                                  </DIV>
+                              <DIV align=left><STRONG><FONT 
+                              color=bisque>ResumeMovie</FONT></STRONG>() 
+                              <FONT color=gold>' Resumes the current movie from 
+                              a paused state</FONT>  
+                                     
+</DIV>
+                              <DIV align=left><STRONG><FONT 
+                              color=bisque>ReturnCurrentPosition</FONT></STRONG>() 
+                              <FONT color=gold>' Returns the possition of 
+                              playback in seconds</FONT> 
+                                     
+                              </DIV>
+                              <DIV align=left><STRONG><FONT 
+                              color=bisque>ReturnMovieFrames</FONT></STRONG>() 
+                              <FONT color=gold>' Returns the number of frames in 
+                              the currently open movie</FONT>  
+                                       
+                              </DIV>
+                              <DIV align=left><STRONG><FONT 
+                              color=bisque>ReturnTotalSeconds</FONT></STRONG>() 
+                              <FONT color=gold>' Returns the total seconds of 
+                              the currently open movie</FONT> 
+                                       
+                              </DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>RewindFrames</STRONG>(lNumFrames 
+                              As Long)</FONT> <FONT color=gold>' Rewinds the 
+                              currently playing movie the specified number of 
+                              frames</FONT>      
+                                   </DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>RewindSeconds</STRONG>(lNumSeconds 
+                              As Long)</FONT> <FONT color=gold>' Rewinds the 
+                              currently playing movie the specified number of 
+                              seconds</FONT>  </DIV>
+                              <DIV 
+                              align=left><STRONG>SetBlackDrop</STRONG>(lTopMargin 
+                              As Integer, lSideMargin As Integer, lSideMargin2 
+                              As Integer, lBottomMargin As Integer) '<FONT 
+                              color=gold>Sets a blackdrop for the image (a 
+                              border on each side)</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=bisque><STRONG>SetMovieWindowByhWnd</STRONG>(lhWnd 
+                              As Long) </FONT><FONT color=gold>' Sets the object 
+                              for the image to be played on</FONT></DIV>
+                              <DIV align=left><STRONG><FONT 
+                              color=bisque>SetSize</FONT></STRONG>(lLeft As 
+                              Long, lTop As Long, lWidth As Long, lHeight As 
+                              Long) <FONT color=gold>Sets the size of the movie 
+                              image, best used in resize events</FONT></DIV>
+                              <DIV align=left><STRONG><FONT 
+                              color=bisque>SetVolume</FONT></STRONG>(lVolume As 
+                              Long) '<FONT color=gold> Sets the volume to the 
+                              specified value</FONT></DIV>
+                              <DIV 
+                    align=left><STRONG>StopMovie</STRONG>() 
+                              <FONT color=gold>' Stops the currently playing 
+                              movie</FONT></DIV>
+                              <DIV align=left><FONT 
+                              color=#ffd700></FONT>&nbsp;</DIV>
+    </td>
+  </tr>
+  </tbody> 
+</table><A 
+                        href="http://www.tnexgen.com/activex/ag2movie.zip"><IMG 
+                        alt="" src="http://www.tnexgen.com/images/disk.gif" 
+                        border=0></A>
+
+
+
+			    </td>
+                          </tr> 
+                        </table>
+                  <table width="428" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td> </td>
+                    </tr>
+                  </table>
+                  
+                  <table width="100%" border="0" height="100%">
+                    <tr>
+                      <td height="20">
+
+                      </td>
+                    </tr>
+                  </table>
+                      </td>
+                <td width="38%" valign="top" class="inside" align="right"> 
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" align="right">
+                    <tr align="right"> 
+                      <td colspan="3" ></td>
+                      <td valign="top" rowspan="3" width="164"><!--#include file="news.shtml" --><!--#include virtual="poll/db/poll_ssi.php?poll_id=6" -->
+                        <br>
+                        <center>Our Sponsor<br> <img src="http://www.gurugaming.com/images/button.gif" border="0"><br>www.gurugaming.com </center>                      
+</td>
+                      <td valign="top" rowspan="3" width="22"><IMG height=60 src="i/spacer.gif" width=20> 
+                      </td>
+                    </tr>
+                    <tr align="right"> 
+                      <td rowspan="2" width="104" ><IMG height=61 src="i/spacer.gif" width=20></td>
+                      <td valign="top" width="212" bgcolor="#000000" align="middle" height="637"> 
+                        <IMG src="images/tab.gif" border=0> 
+                        <table width="185" border="0" bgcolor="#000000" cellspacing="0" cellpadding="5" align="center" height="474">
+                          <tr> 
+                            <td width="13" valign="top" height="474"> </td>
+                            <td width="153" valign="baseline" align="middle" height="474"><!--#include file="release.shtml" -->
+                              <IMG height=40 src="i/spacer.gif" width=60> 
+                            </td>
+                          </tr>
+                        </table>
+                        <table width="75%" border="0" height="81" align="center">
+                          <tr> 
+                            <td align="middle" height="92"><IMG src="images/tn-stamp2.gif" align=absBottom></td>
+                          </tr>
+                          <tr> 
+                            <td height="2"><IMG height=20 src="i/spacer.gif" width=60></td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="top" rowspan="2" width="70"><IMG height=61 src="i/spacer.gif" width=20></td>
+                    </tr>
+                    <tr> 
+                      <td width="212" valign="top"> 
+                        <p> </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+		</td>
+	</tr>
+	</table>
+<br>
+<table width="100%" border="0" bgcolor="#666666">
+  <tr>
+    <td height="35" align="middle" bgcolor="#666666">Best view in Internet Explorer 
+      4.0 or above under 800x600 resolution Copyright 2002. Team Nexgen. All rights 
+      reserved. [Website Disclaimer] </td>
+  </tr>
+</table>
+
+
+
+</body>
+</html>
+
+
+
+
