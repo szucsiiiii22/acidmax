@@ -1,0 +1,91 @@
+[ acidmax control panel - how to ]
+
+This text will give you a description and how to 
+add aliases and external applications to your 
+Control Panel. Please be sure not to add new 
+icons to your the MAIN CONTROL PANEL. Your 
+settings will not be saved on updates. 
+Applications, games, utils, and custom control 
+panel will be safe for you to add your own.
+
+When adding new icons/commands and saving your 
+configuration they will not displayed unless 
+you close your window and running it again.
+
+
+
+[ BASIC CONFIGURATION BELOW ]
+
+[settings]
+sm=images\cpanel16.gif
+
+[cp1]
+title=Control Panel .INI
+tip=Acidmax Control Panel configuration
+command=run notepad.exe cpanel\cp.ini | click
+icon=images\cpanel.gif
+
+[cp2]
+title=How to...  
+tip=A how to edit and make new commands in Control Panel
+command=run notepad.exe controlpanel\howto.txt | click
+icon=images\help.gif
+
+[cp3]
+title=Setup
+tip=Acidmax Setup
+command=setup | click
+icon=images\setup.gif
+
+
+
+[ title ]
+This will display the text beneath icon, usually 
+you want to name your title after an app/util/alias/game.
+Example you want to add a title to an icon to your 
+custom control panel that joins your favorite 
+channel on irc:
+
+
+
+[ titlebar ]
+The titlebar text will be displayed on the panel window title in brackets [titlebar]. Do not confuse this with the icon. Make sure your line is place under [cp0].
+Below is a example of a titlebar:
+
+titlebar=custom control panel
+
+
+
+[ tip ]
+This will display the text below all the icons. 
+A exmaple of a toolip is shown below:
+
+tooltip: My favorite undernet channel, and home of 
+Team Nexgen (#nexgen).
+
+
+
+[ command ]
+Used to execute an alias or external application. 
+If you are wanting to use a external application 
+like a game or application you must use a full path 
+to the application with the mirc command "run" 
+placed in front. You can use mirc variables or 
+aliases for the the command. Examples below:
+
+mirc alias command: command=whois #nexgen
+external command: command=run C:\Program Files\Ahead\Nero\nero.exe
+
+
+
+[ icon ]
+The image displayed in control panel which you can
+double click with your mouse to execute the command.
+You must use: .gif, .jpg, .bmp, .png or the displayed
+image will be black. It is recommended you use a size
+of 32X32. .ico is not supported.
+
+Credits:
+guideX = coder 
+KnightFal = construction
+testers = regulars on undernet #nexgen

@@ -1,0 +1,14 @@
+/fkey 
+/j
+/ignoreall
+/mv
+/numeric
+/awaybox
+/uptime
+/online
+sounds in acidmax
+/acidmax
+op controls
+/mdv
+msg relay
+/font

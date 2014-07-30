@@ -1,0 +1,396 @@
+Aloittelemassa.. 
+Haluat siis Q:n kanavallesi?... On kuitenkin muutama asia, jotka sinun täytyy tehdä ennen kuin kukaan #feds:issä voi lisätä Q:n kanavallesi. Jos et onnistu ohjeiden noudattamisessa, jotka ovat kirjoitettu alapuolelle, vaivaat vain IRCoperaattoreita ja vähennät mahdollisuuksiasi saada Q kanavallesi tulevaisuudessa, eli seuraa ohjeita huolellisesti.. 
+  
+1. Esittäytyminen Q:lle sanomalla 'Hello' 
+
+
+Tärkeimmät asiat ensin, sinun täytyy kertoa Q:lle kuka sinä olet - niin että se voi tunnistaa sinut tulevaisuudessa.
+
+Sen teet kirjoittamalla seuraavan komennon:
+
+/msg Q hello
+
+Voit testata oletko tehnyt sen oikein kirjoittamalla: /msg Q whois (nimesi tässä) (eg. /msg q whois John).
+
+Jos näet viestin Q:lta jossa on rivi:
+-Q(TheQBot@CServe.quakenet.eu.org)- John is indeed John.
+Sitten tiedät että olet sanonut 'hello' oikein.
+
+
+
+
+2. Vaihda Q salasanaasi
+
+
+Kun sanoit 'hello' Q:lle, sait salasanan, jolla voit AUTH:ata itsesi niin että voit käyttää Q:n toimintoja.
+
+Tämä salasana on oletuksena sama kuin nimesi (esim. jos 'John' kirjoitti /msg Q hello - silloin Johnin salasana olisi 'John') - jonka takia salasana on välittömästi vaihdettava. IRCoperaattoreilla ei ole paljoakaan sympatiaa käyttäjille jotka tulevat valittamaan kanavan valtaamisesta, kun kanavan omistaja ei ole vaivautunut vaihtamaan salasanaansa.
+
+Salasana vaihdetaan seuraavalla komennolla:
+
+/msg Q newpass (uusi salasana) (uusi salasana) (esim. /msg Q newpass notjohn notjohn).
+
+Q ilmoittaa vaihtaneensa salasanasi rivillä:
+-Q(TheQBot@CServe.quakenet.eu.org)- OK, password changed.
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+Ok, minulla on Q, mitä nyt?
+ 
+Ok, sait Q:n kanavallesi, mitä nyt?... 
+
+Ensin voit testata, että olet Q:n 'omistaja' kirjoittamalla:
+
+/msg Q chanlev (#kanavasi) (nimesi)  esim. /msg Q chanlev #johnschannel John
+
+Olettaen, että #johnschannel on kanava mille Q on sijoitettu, vastaanotat seuraavan todistuksen, jos olet Botin 'omistaja':
+
+-Q(TheQBot@CServe.quakenet.eu.org)- Known users on the channel are:
+-Q(TheQBot@CServe.quakenet.eu.org)-          John     Modes: +amnov
+-Q(TheQBot@CServe.quakenet.eu.org)- End of list.
+
+ 
+  
+Kuinka saan auto-op:it ? 
+
+Oletuksena sinulla on auto-op:it (+a) valmiiksi asetettuna, niin kauan kuin olet AUTH:attu etukäteen, saat automaattisesti OPit Q:lta kanavalle tullessasi. Q EI automaattisesti anna sinulle OP:eja ennen kuin olet AUTH:annut itsesi. Jos katkaiset yhteyden serveriin tai Q palaa netsplit:in jälkeen, sinun täytyy uudelleen AUTH:ata itsesi.
+
+Voit antaa toisille käyttäjille auto-op:it käyttämällä CHANLEV toimintoa. (vain kanavan isännät ja omistajat)
+
+Jos olet kanavan käyttäjä ja haluat auto-op:it itsellesi, sinun täytyy kysyä joltain kanavan isännältä tai omistajalta, että hän antaisi sinulle +ao. Älä kysy IRCop:eilta että he lisäisivät nämä 'liput' sinulle, koska he eivät sitä tee. On kanavan isäntien/omistajien tehtävä lisätä, poistaa ja ylläpitää kanavan käyttäjä listaa.
+
+--------------------------------------------------------------------------------
+
+
+
+
+ 
+Komentoja käytettävissä, ja mitä ne tekevät 
+Tässä on täysi lista käytettävistä komennoista.
+ 
+  
+Hello 
+
+Perus hello komento.
+
+Tekee uuden käyttäjän botille. Huomaa botilla ei ole HOSTMASKeja. Jotkut botit tunnistavat sinut jos tiedät salasanan, eli Q käyttää pelkästään salasanaa ja hylkää hostmaskit.
+
+Käyttö:
+/msg Q hello
+
+
+
+AUTH 
+
+Aina AUTH:aa itsesi kun yhdistät Quakenetiin.
+
+Tällä komennolla tunnistutat itsesi botille, kunnes seuraavan kerran suljet yhteyden tai botti menettää yhteyden.
+
+Käyttö:
+/msg Q@cserve.quakenet.org auth (nimesi) (salasanasi) esim. /msg Q@cserve.quakenet.org auth John 8h2xkd
+
+
+
+IDENT 
+
+Tunnistaa sinut tietyksi botin käyttäjäksi.
+
+Tunnistaa sinut Q:lle, käytä auth:ia identin asemasta, kuten listattu yläpuolella
+
+
+
+HELP 
+
+Antaa apua tietyissä botin komennoissa.
+
+Käyttö:
+/msg Q help (komento) esim. /msg Q help op
+
+
+
+SHOWCOMMANDS 
+
+Lista kaikista botin komennoista.
+
+Käyttö:
+/msg Q showcommands
+
+
+
+WHOAMI 
+
+Antaa botin kertoa kuka olet.
+
+Botti kertoo sinulle tämänhetkisen auth tasosi (vastaava #cservice tasojen kanssa) ja jotain muuta infoa.
+
+Käyttö:
+/msg Q whoami
+
+
+
+ADDUSER 
+
+Lisää käyttäjän kanavalle.
+
+Sinun pitäisi käyttää CHANLEV komentoa katsoaksesi/asettaaksesi 'lippuja', mutta tämä komento lisää käyttäjälle oletus 'liput' +aot
+
+Käyttö:
+/msg Q ADDUSER (#kanava) (nimi) Lisää AUTH:attu käyttäjä. esim. /msg Q adduser #johnschannel John
+
+/msg Q ADDUSER (#kanava) (#nimi) Lisää käyttäjä (jos ei ole AUTH:attu). esim. /msg Q adduser #johnschannel #John
+
+Huom: Nimi parametri voi myös olla annettu #idnick:inä missä idnick on nimi jolla henkilö on tavallisesti rekisteröitynyt.
+
+
+
+REMOVEUSER 
+
+Poistaa käyttäjän kanavalta.
+
+Sinun pitäisi käyttää CHANLEV komentoa katsoaksesi/asettaaksesi lippuja, mutta tämä mahdollisuus poistaa kaikki 'liput'. (-abmnovt)
+
+Käyttö:
+/msg Q REMOVEUSER (#kanava) (nimi) Poistaa auth:attu. esim. /msg Q removeuser #johnschannel John
+
+/msg Q REMOVEUSER (#channel) (#nick) Poistaa käyttäjän (jos ei auth:attu). eg. /msg Q removeuser #johnschannel #John
+
+Huom: Nimi parametri voi myös olla annettu #idnick:inä missä idnick on nimi jolla henkilö on tavallisesti rekisteröitynyt.
+
+
+
+BAN 
+
+Bannaa hostmask perusteellisesti kanavalta.
+
+Käyttö:
+/msg Q BAN (#kanava) (hostmask) esim. /msg Q ban #johnschannel *!*billgates@microsoft.com 
+
+
+
+BANLIST 
+
+Listaa kaikki bannit kanavalta.
+
+Käyttö:
+/msg Q BANLIST (#kanava) eg. /msg Q banlist #johnschannel 
+
+
+
+BANDEL 
+
+Poistaa bannin listalta.
+
+Käyttö:
+/msg Q BANDEL (#kanava) (hostmask) esim. /msg Q bandel #johnschannel *!*billgates@microsoft.com 
+
+/msg Q BANDEL (#kanava) (#3) esim. /msg Q bandel #johnschannel #3
+
+Poistaa bannin listalta. Jos laitat '#3' se poistaa kolmannen hostmaskin listalta.
+
+
+
+BANCLEAR 
+
+Poistaa kaikki kanavan bannit.
+
+Ero UNBANALL verrattuna, on se että tämä komento poistaa kaikki pysyvät bannit myös.
+
+Käyttö:
+/msg Q BANCLEAR (#kanava) esim. /msg Q banclear #johnschannel
+
+
+
+CHANFLAGS 
+
+Vaihtaa/näyttää liput kanavalla.
+
+Ne määritellään normaaliin tapaan - esim. +a-b ja niin edelleen.
+
+käyttö:
+/msg Q CHANFLAGS (#kanava) eg. /msg Q chanflags #johnschannel
+/msg Q CHANFLAGS (#kanava) +-flag eg. /msg Q CHANFLAGS #johnschannel +b
+
+Liput ovat seuraavia:
+
++b - Bitch
+Estää niiden joilla ei ole OP oikeuksia saamasta OP:eja kanavalla.
+
++f - Force topic
+Estää käyttäjiä vaihtamasta topicia vain /topic komennolla - heidän täytyy käyttää SETTOPIC komentoa.
+
++k - Force key
+Laittaa salasanan pysyväksi kanavalla. - Aseta salasana KEY komennolla.
+
++l - Force limit
+Aseta pysyvä käyttäjäraja kanavalle . - Aseta käyttäjäraja LIMIT komennolla.
+
++p - Protect opers
+Estää ihmisiä joilla on OP oikeudet kanavalla tulemasta DEOP:atuksi. Lippuja voi olla useampia, mutta ne eivät ole sisällytetty tähän Help:iin
+
++w - Welcome message
+Lähettää Welcome viestin (asetetaan WELCOME komennolla) kaikille jotka liittyvät kanavalle.
+
+
+
+CHANLEV 
+
+Muuta/näytä jonkun oikeudet kanavalla.
+
+Ne ovat asetettu normaalilla tavalla - esim. +a-b jne.
+
+Käyttö:
+/msg Q CHANLEV (#kanava) (nimi) (+-liput) eg. /msg Q chanlev #johnschannel Grunt +o
+
+/msg Q CHANLEV (#kanava) Kaikkien kanavalla olevien käyttäjien lippu infoa 
+/msg Q CHANLEV (#kanava) (nimi) Näyttää käyttäjän liput (jos auth:attu)
+/msg Q CHANLEV (#kanava) (#nimi) Näyttää käyttäjän liput (jos ei auth:attu)
+/msg Q CHANLEV (#kanava) (nimi) +-lippu Vaihtaa käyttäjän lippuja kanavalla.
+
+Tällä hetkellä on valittavissa:
+
++a = auto-op/autovoice liittymisessä
++b = bannattu. (toimii vain jos he ovat auth:attu.)
++m = master(isäntä).
++n = owner(omistaja). (Voi tehdä isäntiä(isäntiä).)
++o = op.
++v = voice.
++t = oikeudet SETTOPIC -komentoon.
+
+Huom: Nimi parametri voi myös olla annettu #idnick :inä missä idnick on nimi jolla henkilö on tavallisesti rekisteröitynyt.
+
+
+
+CHATTR 
+
+Sama kuin CHANLEV. Lue ylhäältä
+
+/msg Q CHATTR (#kanava) (nimi) (+-liput) esim. /msg Q chattr #johnschannel Grunt +o
+
+
+CLEARCHAN 
+
+Poistaa kaikki modet kanavalta.
+
+Voidaan käyttää jos joku käyttäjä on asettanut Salasanan tai Invite onlyn kanavalle.
+
+Käyttö:
+/msg Q CLEARCHAN (#kanava) esim. /msg Q clearchan #johnschannel
+
+
+
+DEOPALL 
+
+DEOP:aa kaikki käyttäjät kanavalta.
+
+käyttö:
+/msg Q DEOPALL (#kanava) esim. /msg Q deopall #johnschannel
+
+
+
+KEY 
+
+Asettaa salasanan kanavalle.
+
+Käytä "/msg Q CHANFLAGS #kanava +k" kanssa pitääksesi salasanan pysyvänä.
+
+Käyttö:
+/msg Q KEY (#kanava) salasana eg. /msg Q key #johnschannel 8sk2ds
+
+
+
+LIMIT 
+
+Asettaa maksimi käyttäjämäärän kanavalle.
+
+Käytä "/msg Q CHANFLAGS #channel +l" kanssa, että käyttäjäraja säilytettäisiin.
+
+Käyttö:
+/msg Q LIMIT (#kanava) (nr.) esim. /msg Q limit #johnschannel 20
+
+
+
+NEWPASS 
+
+Muuttaa salasanasi.
+
+Uusi salasana pitää olla annettua kahdesti, kirjoitus virheiden varalta.
+
+Käyttö:
+/msg Q NEWPASS (uusi salasana) (uusi salasana) esim. /msg Q newpass 8sl3kd 8sl3kd
+
+
+
+OP 
+
+Antaa sinulle OP:it kanavalla missä botti on.
+
+Botin *täytyy* olla kanavalla, ja sinulla pitää olla tarpeeksi korkea taso kanavalla.
+
+Käyttö:
+/msg Q OP (#kanava) esim. /msg Q op #johnschannel
+
+
+
+SETTOPIC 
+
+Muuttaa kanavan oletus topiccia.
+
+Aseta molemmat oletus ja nykyinen topic kanavalle yksityiskohtaisesti.
+
+Käyttö:
+/msg Q SETTOPIC (#kanava) (topic) eg. /msg Q settopic #johnschannel Welcome to #johnschannel
+
+
+
+UNBANALL 
+
+Unban:aa kaikki tämänhetkiset bannit kanavalta.
+
+Perusteelliset bannit BAN:illa asetettuna pitää poistaa BANCLEAR:illa.
+
+Käyttö:
+/msg Q UNBANALL (#kanava) esim. /msg Q unbanall #johnschannel
+
+
+
+VOICE 
+
+Antaa sinulle +v kanavalla missä bot on.
+
+Botin *täytyy* olla kanavalla, ja sinulla pitää olla tarpeeksi korkea käyttötaso kanavalla.
+
+Käyttö:
+/msg Q VOICE (#kanava) esim. /msg Q voice #johnschannel
+
+
+
+WELCOME 
+
+Näyttää/asettaa tervetulo viestin kanavalle.
+
+Botin täytyy olla kanavalla, ja sinulla pitää olla tarpeeksi korkea käyttötaso kanavalla.
+Käytä "/msg Q CHANFLAGS #kanava +w" kanssa, aktivoidaksesi tervetuloa viestin.
+
+Käyttö:
+/msg Q WELCOME (#kanava) esim. /msg Q welcome #johnschannel
+/msg Q WELCOME (#kanava) (viesti) esim. /msg Q welcome #johnschannel Welcome to #johnschannel
+
+
+
+WHOIS 
+
+Kertoo kuka joku todella on.
+
+Kertoo millä nimellä käyttäjä on AUTH:annut itsensä, jos se ei ole sama kuin hänen nimensä. Nimi parametri voidaan myös antaa #idnick :inä missä idnick on nimi jolla käyttäjä on tavallisesti rekisteröitynyt.
+
+Käyttö:
+/msg Q WHOIS (nimi) eg. /msg Q whois John
+ 

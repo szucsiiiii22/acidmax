@@ -1,0 +1,16 @@
+/fkey discription: Function keys dialog. Enables you to customize your f-keys on your keyboard for acidmax. syntax: /fkey
+/ignoreall discription: Used for emergencies. This command enables you to ignore everything. Great when being flooded. Typing the command again disables this feature. To make this command more efficient place it as a fkey command (see /fkey). syntax: /ignoreall
+/mv discription: Mass voice. Applys mode +v to all regular users in channel. syntax: /mv
+/j discription: Shortcut for the command "/join" syntax: /join <channel> ie: /j #nexgen
+/numeric discription: displays the numeric raw. syntax: /numeric <on - off >
+/awaybox discription: dialog which enables you to set away with various functions. syntax: /awaybox
+/uptime discription: returns system uptime, amount of time your system has been running. syntax: /uptime
+/online discription: returns how long you been connected to the net. syntax: /online
+sounds in acidmax : acidmax sounds can be customize for any event. Type: /soundcon to enable or configure sounds.
+sounds in acidmax : acidmax sounds can be customize for any event. Type: /soundcon to enable or configure sounds.
+/acidmax : discription: gives you current version of acidmax.
+op controls : discription: voice, devoice, kick, ban, op ect will not show in popup if you are not oped. "control" will only show onced you have op status.
+op controls :
+/mdv discription: Mass devoice. Applys mode -v to all regular users in channel. syntax: /mdv
+msg relay : discription: messages will echoed to you in active when do whenever your nick is in text from a non-active chnanel. Switch can be found in /setup under channel tab.
+/font : changes font size or style

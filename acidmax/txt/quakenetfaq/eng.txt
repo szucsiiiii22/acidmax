@@ -1,0 +1,356 @@
+Getting Started.. 
+So you want Q to your channel?.. Well there are a few things you need to do before anyone on #feds will add it. If you fail to follow the basic setup for getting Q as written below, you will only annoy the IRCops and reduce the chance of you getting Q in the future, so please follow these steps carefully.. 
+  
+Saying 'Hello' to Q..
+First things first, you have to tell Q who you are - so it can recognise you in the future.
+
+You do this by typing the following command:
+
+/msg Q hello
+
+You can verify that you have done this correctly by typing: /msg Q whois (your name here) (eg. /msg q whois John).
+
+If you see a message back from Q that includes the line:
+-Q(TheQBot@CServe.quakenet.eu.org)- John is indeed John.
+..then you know you have said 'hello' correctly.
+
+
+
+Change your Q password..
+When you say 'hello' to Q, you will be assigned a password that you will need to use in the future in order to AUTH so that you can use Q's services.
+
+This password, by default, is the same as your nick (eg. If 'John' did /msg q hello - then John's password would then be 'John') - which is why it is imperative that you change it right away. IRCops will have very little sympathy for people who complain about channel takeovers when it is revealed later on that the channel owner hasn't bothered to change their default password.
+
+You can change your password by using the following command:
+
+/msg Q newpass (new pass) (new pass) (for example, /msg q newpass notjohn notjohn).
+
+Q will acknowledge a successful password change by displaying:
+-Q(TheQBot@CServe.quakenet.eu.org)- OK, password changed. 
+
+
+--------------------------------------------------------------------------------
+
+ 
+I've got Q, what now? 
+Ok, so you've got Q to your channel, what now?..
+
+First off you can check yourself to see that you are indeed the 'owner' on the channel by typing:
+
+/msg Q chanlev (your channel) (your name)  ..eg. /msg q chanlev #johnschannel John
+
+Assuming #johnschannel was the channel on which Q was placed, you would receive the following output:
+
+-Q(TheQBot@CServe.quakenet.eu.org)- Known users on the channel are:
+-Q(TheQBot@CServe.quakenet.eu.org)-          John     Modes: +amnov
+-Q(TheQBot@CServe.quakenet.eu.org)- End of list.
+ 
+  
+How do I get auto-op ?
+By default you will have auto-op (+a) already set, so as long as you have AUTH'd beforehand, you will automatically be given ops by Q when you join the channel. Q WILL NOT op you automatically unless you are AUTH'd. Additionally, if you disconnect from IRC or Q quits/rejoins after a netsplit, you will need to re-AUTH.
+
+You can give other people auto-op by using the CHANLEV command (channel master(s)/owner only)
+
+If you are a user on that channel and you want to get auto-op yourself, you will need to ask one of the channel master(s) or the owner to give you +ao. Do not ask IRCops to add these flags for you, because they will not. It is the responsibilty of the channel owner/masters to add, remove and otherwise maintain the user list on a given channel.
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+Commands available and what they do 
+Here is a full list of commands available.
+ 
+  
+Hello 
+The basic hello command.
+
+Creates a new user for you on the bot. Note that there are *NO HOSTMASKS* on this bot. Other bots allow you to ident if you just know the password, so this one just uses the password and scraps the hostmask as pointless.
+
+Usage:
+/msg Q hello
+
+
+
+AUTH 
+Always auth when you sign on QuakeNet
+
+This will identify you on the bot as until you next quit from IRC or are split from the bot.
+
+Usage:
+/msg Q@CServe.quakenet.org auth (your name) (your password) eg. /msg Q@CServe.quakenet.org auth John 8h2xkd
+
+
+
+IDENT 
+Identifies you as a particular user on the bot.
+
+Identifies you to Q, use auth instead listed above.
+
+
+
+HELP 
+Gives full help on a particular bot command.
+
+Usage:
+/msg Q help (command) eg. /msg Q help op
+
+
+
+SHOWCOMMANDS 
+Lists all the commands on the bot.
+
+Usage:
+/msg Q showcommands
+
+
+
+WHOAMI 
+Gives the bot's opinion on who you are.
+
+The bot should tell you your current global auth level (equivalent to the old #cservice levels) and may give other info too.
+
+Usage:
+/msg Q whoami
+
+
+
+ADDUSER 
+Add a user to a channel.
+
+You should use CHANLEV to view/set the flags, but this command adds a user with default flags +aot
+
+Usage:
+/msg Q ADDUSER (#channel) (nick) Add AUTHED user. eg. /msg Q adduser #johnschannel John
+
+/msg Q ADDUSER (#channel) (#nick) Add user (if not authed). eg. /msg Q adduser #johnschannel #John
+
+Note: The nick parameter can also be given as #idnick where idnick is the nickname the person originally registered under.
+
+
+
+REMOVEUSER 
+Remove a user from a channel.
+
+You should use CHANLEV to view/set the flags, but this option removes all flags. (-abmnovt)
+
+Usage:
+/msg Q REMOVEUSER (#channel) (nick) Remove AUTHED user. eg. /msg Q removeuser #johnschannel John
+
+/msg Q REMOVEUSER (#channel) (#nick) Remove user (if not authed). eg. /msg Q removeuser #johnschannel #John
+
+Note: The nick parameter can also be given as #idnick where idnick is the nickname the person originally registered under.
+
+
+
+BAN 
+Ban a hostmask permanently on a channel.
+
+Usage:
+/msg Q BAN (#channel) (hostmask) eg. /msg Q ban #johnschannel *!*billgates@microsoft.com 
+
+
+
+BANLIST 
+List all permanent bans on a channel.
+
+Usage:
+/msg Q BANLIST (#channel) eg. /msg Q banlist #johnschannel 
+
+
+
+BANDEL 
+Delete a ban from the list.
+
+Usage:
+/msg Q BANDEL (#channel) (hostmask) eg. /msg Q bandel #johnschannel *!*billgates@microsoft.com 
+
+/msg Q BANDEL (#channel) (#3) eg. /msg Q bandel #johnschannel #3
+
+Delete a ban from the list. If you type a '#' it will delete the x'th hostmask in the list.
+
+
+
+BANCLEAR 
+Delete all bans from a channel.
+
+The difference from UNBANALL, is that this command removes all permanent bans too.
+
+Usage:
+/msg Q BANCLEAR (#channel) eg. /msg Q banclear #johnschannel
+
+
+
+CHANFLAGS 
+Change/view the flags on a channel.
+
+They are specified in the normal way - e.g. +a-b and so on.
+
+Usage:
+/msg Q CHANFLAGS (#channel) eg. /msg Q chanflags #johnschannel
+/msg Q CHANFLAGS (#channel) +-flag eg. /msg Q CHANFLAGS #johnschannel +b
+
+The flags are as follows:
+
++b - Bitch
+Prevents anyone who hasn't got operator privs on the channel from getting ops.
+
++f - Force topic
+Stops people changing the topic with just the /topic command - they need to use SETTOPIC
+
++k - Force key
+Set a key permanent on the channel. - Set the key with the KEY command.
+
++l - Force limit
+Set a limit permanent on the channel. - Set the key with the LIMIT command.
+
++p - Protect opers
+Prevents people who have operator privs on the channel being deopped. More flags may actually exist but not be included in this help
+
++w - Welcome message
+Send a welcome message (set by WELCOME) to all people who joins the channel.
+
+
+
+CHANLEV 
+Change/view someone's rights on a channel.
+
+They are specified in the normal way - e.g. +a-b and so on.
+
+Usage:
+/msg Q CHANLEV (#channel) (nick) (+-flags) eg. /msg Q chanlev #johnschannel Grunt +o
+
+/msg Q CHANLEV (#channel) Dump all users on the channel.
+/msg Q CHANLEV (#channel) (nick) View a user's flags (if authed)
+/msg Q CHANLEV (#channel) (#nick) View a user's flags (if not authed)
+/msg Q CHANLEV (#channel) (nick) +-flag Change a user's flags on the channel.
+
+Rights available are:
+
++a = autoop/autovoice on join.
++b = banned. (Only works if they've AUTH'd.)
++m = master.
++n = owner. (Can make masters.)
++o = op.
++v = voice.
++t = can set topic.
+
+Note: The nick parameter can also be given as #idnick where idnick is the nickname the person originally registered under.
+
+
+
+CHATTR 
+Exactly the same as CHANLEV. Read above
+
+/msg Q CHATTR (#channel) (nick) (+-flags) eg. /msg Q chattr #johnschannel Grunt +o
+
+
+CLEARCHAN 
+Clear all modes on a channel.
+
+Could be used if someone has set a key/invite only.
+
+Usage:
+/msg Q CLEARCHAN (#channel) eg. /msg Q clearchan #johnschannel
+
+
+
+DEOPALL 
+Deop all users on a channel.
+
+Usage:
+/msg Q DEOPALL (#channel) eg. /msg Q deopall #johnschannel
+
+
+
+KEY 
+Set a key on a channel.
+
+This must be combined with "/msg Q CHANFLAGS #channel +k" to keep the key permanent.
+
+Usage:
+/msg Q KEY (#channel) key eg. /msg Q key #johnschannel 8sk2ds
+
+
+
+LIMIT 
+Set a max user-limit on a channel.
+
+This must be combined with "/msg Q CHANFLAGS #channel +l" to keep the limit permanent.
+
+Usage:
+/msg Q LIMIT (#channel) (nr) eg. /msg Q limit #johnschannel 20
+
+
+
+NEWPASS 
+Change your password.
+
+Your new password MUST be given twice, to check that you didn't mistype it.
+
+Usage:
+/msg Q NEWPASS (new password) (new password) eg. /msg Q newpass 8sl3kd 8sl3kd
+
+
+
+OP 
+Gives you ops on a channel which the bot is sitting on.
+
+The bot *must* be on the channel, and you must have a high enough level on that channel.
+
+Usage:
+/msg Q OP (#channel) eg. /msg Q op #johnschannel
+
+
+
+SETTOPIC 
+Changes the default channel topic.
+
+Sets both the current and default topics on the channel to that specified.
+
+Usage:
+/msg Q SETTOPIC (#channel) (topic) eg. /msg Q settopic #johnschannel Welcome to #johnschannel
+
+
+
+UNBANALL 
+Unban all temporary bans on a channel.
+
+Permanent bans set by BAN must be removed with BANCLEAR.
+
+Usage:
+/msg Q UNBANALL (#channel) eg. /msg Q unbanall #johnschannel
+
+
+
+VOICE 
+Gives you +v on a channel which the bot is sitting on.
+
+The bot *must* be on the channel, and you must have a high enough level on that channel.
+
+Usage:
+/msg Q VOICE (#channel) eg. /msg Q voice #johnschannel
+
+
+
+WELCOME 
+View/Set a welcome message on a channel.
+
+The bot *must* be on the channel, and you must have a high enough level on that channel.
+This must be combined with "/msg Q CHANFLAGS #channel +w" to activate the welcome message.
+
+Usage:
+/msg Q WELCOME (#channel) eg. /msg Q welcome #johnschannel
+/msg Q WELCOME (#channel) (my message) eg. /msg Q welcome #johnschannel Welcome to #johnschannel
+
+
+
+WHOIS 
+Tells you who someone really is.
+
+Tells you what name a user has AUTHed under, if it's not the same as their nick. The nick parameter can also be given as #idnick where idnick is the nickname the person originally registered under.
+
+Usage:
+/msg Q WHOIS (nick) eg. /msg Q whois John
+ 

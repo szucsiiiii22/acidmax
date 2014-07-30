@@ -1,0 +1,1 @@
+type: //load -rs sys\msgstud.mrc after unzipping to acidmax folder (make sure your recurse folders(check use folders if using winzip) is on before unzipping or else the files will not go to the proper folders)

@@ -1,0 +1,1 @@
+mIRC can act as an ident server and sends the specified User ID and System as identification. This server will be more useful to some people than others. In general it is better to leave it active as some systems might refuse a connection if there is no reply to an ident request.

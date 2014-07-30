@@ -1,0 +1,14 @@
+1.Acidmax browser
+2.Background console
+3.Connection history
+4.Notify list
+5.Nick completer
+6.Message studio
+7.Message relay
+8.Op controls
+9.Script manager
+10.Secure query
+11.Services
+12.Security
+13.Seen system
+14.Undernet login

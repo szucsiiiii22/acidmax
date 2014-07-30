@@ -1,0 +1,385 @@
+De Eerste Stappen.. 
+Je wil Q op je kanaal?.. Dan zjin er eerst een paar zaken die je moet doen voordat iemand van #feds je hem geeft. Als je er niet in slaagt om de basis setup van Q te voltooien zoals hieronder beschreven, zal je alleen maar de QuakeNet IRC Operators op de zenuwen werken en de kans verkleinen om Q in de toekomst te verkrijgen, dus volg nauwgezet deze stappen.. 
+ 
+'Dag' zeggen tegen Q.. 
+
+Het allereerste wat je moet doen, is tegen Q zeggen wie je bent - zodat hij je in de toekomst kan herkennen. 
+
+Je doet dit door het volgende commando te typen: 
+
+/msg Q hello 
+
+Typ het volgende om na te gaan of je het goed gedaan hebt: /msg Q whois (je naam hier) (bv. /msg q whois Jan). 
+
+Als je een bericht terug krijgt van Q waarin de volgende regel staat: 
+-Q(TheQBot@CServe.quakenet.eu.org)- Jan is indeed Jan. 
+..dan weet je dat je op een correcte manier "dag" hebt gezegd. 
+  
+  
+
+Je Q paswoord veranderen.. 
+
+Wanneer je "dag" zegt tegen Q, krijg je een paswoord dat je in de toekomst nodig zal hebben om te AUTH'en zodat je gebruik kan maken van de diensten van Q. 
+
+Dit paswoord is standaard hetzelfde als je bijnaam (bv. Als 'Jan' /msg q hello deed - dan is Jan zijn paswoord gelijk aan "Jan") - daarom is het noodzakelijk dat je het onmiddellijk verandert. IRCops hebben heel weinig begrip voor mensen die klagen over kanaal-overnames wanneer later blijkt dat de eigenaar van het kanaal niet de moeite had gedaan om zijn paswoord te wijzigen. 
+
+Je paswoord veranderen doe je op de volgende manier: 
+
+/msg Q newpass (nieuw paswoord) (nieuw paswoord) (bv. /msg q newpass nietjan nietjan). 
+
+Q zal het volgende zeggen indien het paswoord met success gewijzigd is: 
+-Q(TheQBot@CServe.quakenet.eu.org)- OK, password changed. 
+  
+  
+
+
+--------------------------------------------------------------------------------
+ 
+Ik heb Q, wat nu? 
+Ok, dus je hebt Q op je kanaal, wat nu?.. 
+Om te beginnen kan je voor jezelf nakijken dat je inderdaad de 'eigenaar'  bent van het kanaal door te typen: 
+
+/msg Q chanlev (je kanaal) (je naam)  ..bv. /msg q chanlev #janzijnkanaal Jan 
+
+In de veronderstelling dat #janzijnkanaal het kanaal is waar Q op geplaatst werd, zou je de volgende uitvoer moeten krijgen: 
+
+-Q(TheQBot@CServe.quakenet.eu.org)- Known users on the channel are: 
+-Q(TheQBot@CServe.quakenet.eu.org)-          Jan      Modes: +amnov 
+-Q(TheQBot@CServe.quakenet.eu.org)- End of list.
+ 
+ 
+Hoe krijg ik auto-op ? 
+
+Standaard staat auto-op (+a) reeds aan, dus zolang als je van tevoren hebt ge-AUTH'd, zal Q je automatisch oppen als je het kanaal binnen gaat. Q ZAL JE NIET automatisch oppen tenzij je ge-AUTH'd bent. Daar komt nog bij dat als je verbinding van IRC verbroken werd of als Q quit/rejoined na een netsplit, je opnieuw zal moeten authen. 
+
+Je kan andere mensen auto-op geven door gebruik te maken van het CHANLEV commando (alleen voor kanaal-meesters/eigenaars) 
+
+Als je een gewone gebruiker bent op het kanaal en je zou graag auto-op hebben, dan moet je een van de kanaal-meesters of de eigenaar vragen om je +ao te geven. Vraag dit niet aan de IRCOps want zij zullen dit toch niet doen. Het is de verantwoordelijkheid van de kanaal-meester en eigenaar om gebruikers toe te voegen, te verwijderen en de lijst van gebruikers na te kijken. 
+
+
+
+--------------------------------------------------------------------------------
+
+ 
+ 
+Beschikbare commando's en wat ze doen.. 
+Hier is een volledige lijst van alle beschikbare commando's. 
+ 
+Hello 
+
+Het basis commando om dag te zeggen tegen Q. 
+
+Maakt een nieuwe gebruiker aan op de bot (jij). Merk op dat er  *GEEN HOSTMASKS* zijn op deze bot. Andere bots laten toe om jezelf te identificeren alleen aan de hand van een paswoord, dus deze bot maakt alleen gebruik van een paswoord en laat de hostmask wegvallen. 
+
+Gebruik: 
+/msg Q hello 
+  
+
+
+AUTH 
+
+Voer dit commando steeds uit wanneer je op Quakenet komt 
+
+Hiermee herkent Q je als totdat je van IRC gaat of Q verlaat door een netsplit. 
+
+Gebruik: 
+/msg Q auth (je naam) (je paswoord) bv. /msg Q auth Jan 8h2xkd 
+  
+  
+
+IDENT 
+
+Identificeert jezelf als een bepaalde gebruiker op de bot. 
+
+Identificeert jezelf aan Q, gebruik liever auth zoals hierboven. 
+  
+  
+
+HELP 
+
+Geeft volledige uitleg over een bepaald commando. 
+
+Gebruik: 
+/msg Q help (commando) bv. /msg Q help op 
+  
+  
+
+SHOWCOMMANDS 
+
+Geeft een lijst van alle commando's. 
+
+Gebruik: 
+/msg Q showcommands 
+  
+  
+
+WHOAMI 
+
+Laat de bot zeggen wie je bent. 
+
+De bot vertelt je je huidige auth level (het equivalent van de oude #cservice levels) alsook andere informatie. 
+
+Gebruik: 
+/msg Q whoami 
+  
+  
+
+ADDUSER 
+
+Voeg een gebruiker toe aan het kanaal. 
+
+Je maakt best gebruik van CHANLEV om de gebruikers-settings/vlaggen te bekijken/wijzigen, maar dit commando zet ze standaard op +aot 
+
+Gebruik: 
+/msg Q ADDUSER (#kanaal) (bijnaam) Voeg een geauthentificeerde gebruiker toe. bv. /msg Q adduser #janzijnkanaal Jan 
+
+/msg Q ADDUSER (#kanaal) (#bijnaam)  Voeg een (niet-geauthentificeerde) gebruiker toe. bv. /msg Q adduser #janzijnkanaal #Jan 
+
+Opmerking: De bijnaam parameter kan ook gegeven worden als #idnick waarbij idnick de bijnaam van de persoon is waaronder hij is geregistreerd. 
+  
+  
+
+REMOVEUSER 
+
+Een gebruiker van een kanaal verwijderen. 
+
+Je maakt best gebruik van CHANLEV om de gebruikers-settings/vlaggen te bekijken/wijzigen, maar dit commando zet ze standaard allenaal af. (-abmnovt) 
+
+Gebruik: 
+/msg Q REMOVEUSER (#kanaal) (bijnaam) Verwijder een geauthentificeerde gebruiker. bv. /msg Q removeuser #janzijnkanaal Jan 
+
+/msg Q REMOVEUSER (#kanaal) (#bijnaam) Verwijder een (niet-geauthentificeerde) gebruiker. bv. /msg Q removeuser #janzijnkanaal #Jan 
+
+Opmerking: De bijnaam parameter kan ook gegeven worden als #idnick waarbij idnick de bijnaam van de persoon is waaronder hij is geregistreerd. 
+  
+
+
+BAN 
+
+Bant een hostmask permanent van een kanaal. 
+
+Gebruik: 
+/msg Q BAN (#kanaal) (hostmask) bv. /msg Q ban #janzijnkanaal *!*billgates@microsoft.com  
+  
+  
+
+BANLIST 
+
+Geef een lijst van alle bans op een kanaal. 
+
+Gebruik: 
+/msg Q BANLIST (#channel) bv. /msg Q banlist #janzijnkanaal  
+  
+  
+
+BANDEL 
+
+Verwijder een ban. 
+
+Gebruik: 
+/msg Q BANDEL (#kanaal) (hostmask) bv. /msg Q bandel #janzijnkanaal *!*billgates@microsoft.com  
+
+/msg Q BANDEL (#kanaal) (#3) bv. /msg Q bandel #janzijnkanaal #3 
+
+Verwijder een ban van de lijst. Als je een '#' typt, wordt de x-de hostmask verwijderd van de lijst. 
+  
+
+
+BANCLEAR 
+
+Verwijder alle bans van een kanaal. 
+
+Het verschil met UNBANALL, is dat dit commando ook alle permanente bans verwijdert. 
+
+Gebruik: 
+/msg Q BANCLEAR (#kanaal) bv. /msg Q banclear #janzijnkanaal 
+  
+  
+
+CHANFLAGS 
+
+Verander/toon de vlaggen van een kanaal. 
+
+Ze worden normaal gespecifieerd - bv. +a-b enz.. 
+
+Gebruik: 
+/msg Q CHANFLAGS (#kanaal) bv. /msg Q chanflags #janzijnkanaal 
+/msg Q CHANFLAGS (#kanaal) +-flag eg. /msg Q CHANFLAGS #janzijnkanaal +b 
+
+De mogelijke vlaggen: 
+
++b - Bitch 
+Verhindert iedereen die geen operator privileges heeft om operator privileges te krijgen. 
+
++f - Force topic 
+Verhindert het instellen van het onderwerp met /topic - het commando dat moet gebruikt worden is SETTOPIC 
+
++k - Force key 
+Zet een geheime sleutel op het kanaal. - Stel de sleutel in met het KEY commando. 
+
++l - Force limit 
+Zet een limiet op het aantal gebruikers van het kanaal. - Stel de limiet in met het LIMIT commando. 
+
++p - Protect opers 
+Verhindert dat mensen met operator privileges gede-opt worden.  
+
++w - Welcome message 
+Zend een welkomstbericht (in te stellen met WELCOME) naar iedereen die het kanaal binnenkomt. 
+  
+
+
+CHANLEV 
+
+Verander/toon iemand zijn rechten op een kanaal. 
+
+Ze worden normaal gespecifieerd - bv. +a-b enz.. 
+
+Gebruik: 
+/msg Q CHANLEV (#kanaal) (nick) (+-flags) bv. /msg Q chanlev #janzijnkanaal Grunt +o 
+
+/msg Q CHANLEV (#kanaal) Toon alle gebruikers van het kanaal 
+/msg Q CHANLEV (#kanaal) (bijnaam)  Toon de vlaggen van een gebruiker (geauthentificeerd) 
+/msg Q CHANLEV (#kanaal) (#bijnaam)  Toon de vlaggen van een gebruiker (niet geauthentificeerd) 
+/msg Q CHANLEV (#kanaal) (bijnaam) +-vlag Wijzig de vlaggen van een gebruiker 
+
+Beschikbare vlaggen: 
+
++a = Automatisch oppen/voicen bij binnenkomen kanaal. 
++b = geband. (Werkt alleen als ze geauthentificeerd zijn.) 
++m = meester. 
++n = eigenaar. (Kan meesters maken.) 
++o = op. 
++v = voice. 
++t = kan onderwerp instellen. 
+
+Opmerking: De bijnaam parameter kan ook gegeven worden als #idnick waarbij idnick de bijnaam van de persoon is waaronder hij is geregistreerd. 
+  
+  
+  
+
+CHATTR 
+
+Net hetzelfde als CHANLEV. Zie hierboven 
+
+/msg Q CHATTR (#kanaal) (bijnaam) (+-vlaggen) bv. /msg Q chattr #janzijnkanaal Grunt +o 
+  
+
+CLEARCHAN 
+
+Verwijdert alle modes van een kanaal. 
+
+Kan gebruikt worden indien iemand het kanaal op invite only heeft gezet of een key. 
+
+Gebruik: 
+/msg Q CLEARCHAN (#kanaal) eg. /msg Q clearchan #janzijnkanaal 
+  
+  
+
+DEOPALL 
+
+Deop iedereen. 
+
+Gebruik: 
+/msg Q DEOPALL (#kanaal) bv. /msg Q deopall #janzijnkanaal 
+  
+  
+
+KEY 
+
+Zet een sleutel op het kanaal. 
+
+dit moet gecombineerd worden met "/msg Q CHANFLAGS #channel +k"  om de sleutel permanent te maken. 
+
+Gebruik: 
+/msg Q KEY (#kanaal) key bv. /msg Q key #janzijnkanaal 8sk2ds 
+  
+  
+
+LIMIT 
+
+Stel het maximaal aantal gebruikers van een kanaal in. 
+
+Dit moet gecombineerd worden met "/msg Q CHANFLAGS #channel +l" om de limiet permanent te maken. 
+
+Gebruik: 
+/msg Q LIMIT (#kanaal) (nr) bv. /msg Q limit #janzijnkanaal 20 
+  
+  
+
+NEWPASS 
+
+Wijzig je paswoord. 
+
+Het nieuwe paswoord MOET 2 keer gegeven worden, om kans op een typfout te vermijden. 
+
+Gebruik: 
+/msg Q NEWPASS (nieuw paswoord) (nieuw paswoord) bv. /msg Q newpass 8sl3kd 8sl3kd 
+  
+  
+
+OP 
+
+Geef jezelf op status in een kanaal. 
+
+De bot moet op het kanaal zitten en je level moet hoog genoeg zijn. 
+
+Gebruik: 
+/msg Q OP (#kanaal) eg. /msg Q op #janzijnkanaal 
+  
+  
+
+SETTOPIC 
+
+Wijzig de standaard onderwerp van het kanaal. 
+
+Wijzigt zowel het huidige als standaard onderwerp. 
+
+Gebruik: 
+/msg Q SETTOPIC (#kanaal) (topic) eg. /msg Q settopic #janzijnkanaal Welcome to #janzijnkanaal 
+  
+
+
+UNBANALL 
+
+Maak alle tijdelijke bans ongedaan. 
+
+Permanente bans, gezet met BAN moeten werwijderd worden met BANCLEAR. 
+
+Gebruik: 
+/msg Q UNBANALL (#channel) bv. /msg Q unbanall #janzijnkanaal 
+  
+  
+
+VOICE 
+
+Geeft je +v op een kanaal waar de bot zit. 
+
+De bot moet op dat kanaal zitten en je level moet hoog genoeg zijn. 
+
+Gebruik: 
+/msg Q VOICE (#kanaal) bv. /msg Q voice #janzijnkanaal 
+  
+  
+
+WELCOME 
+
+Toon/plaats een welkomstbericht op het kanaal. 
+
+De bot moet op het kanaal staan, en je level moet hoog genoeg zijn. 
+Dit moet gecombineerd worden met "/msg Q CHANFLAGS #channel +w" om het welkomstbericht te activeren. 
+
+Gebruik: 
+/msg Q WELCOME (#kanaal) bv. /msg Q welcome #janzijnkanaal 
+/msg Q WELCOME (#kanaal) (mijn bericht) bv. /msg Q welcome #janzijnkanaal Welcome to #janzijnkanaal 
+  
+  
+
+WHOIS 
+
+Vertelt je wie iemand echt is. 
+
+Vertelt onder welke naam de gebruiker geauthentificeerd is, als die verschillend is van zijn bijnaam. De bijnaam parameter kan ook gegeven worden als #idnick waarbij idnick de bijnaam van de persoon is waaronder hij is geregistreerd. 
+
+Gebruik: 
+/msg Q WHOIS (bijnaam) bv. /msg Q whois Jan 
+ 

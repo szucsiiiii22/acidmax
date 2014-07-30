@@ -1,0 +1,628 @@
+ ___________                      _______                                       
+ \__    ___/___ _____    _____    \      \   ____ ___  ___  ____   ____   ____  
+   |    |_/ __ \\__  \  /     \   /   |   \_/ __ \\  \/  / / ___\_/ __ \ /    \ 
+   |    |\  ___/ / __ \|  Y Y  \ /    |    \  ___/ >    < / /_/  >  ___/|   |  \
+   |____| \___  >____  /__|_|  / \____|__  /\___  >__/\_ \\___  / \___  >___|  /
+              \/     \/      \/          \/     \/      \/_____/      \/     \/ 
+
+
+01/06/2007 - acidmax 2.1.21 (alpha 4)
+- Added new NexCam 1.0 (alpha)
+- Fixed 'how to change control panel' in cpanel
+
+01/01/2007 - acidmax 2.1.21 (alpha 2)
+- Added new Acidmax Player 1.0 to replace media player
+- Added new control panel
+- Removed: acidmax.dll, media player, bytecam
+
+07/22/2006 - acidmax 2.1.20 
+- Acidmax Browser 1.1 (rewritten, fixes to focus, new buttons, progress bar, more)
+- Acidmax Translator 1.1 with fixes to focus)
+- Acidmax Send Mail (fixes to focus)
+
+acidmax 2.1.19
+- Added DLL Acidmax Translator
+- Added translator to control panel
+- moved all new dll's to new location, \COM\
+- moved all new dll's and some old ones to the \Utilities\ menu in acidmax
+
+acidmax 2.1.18
+- Updated DLL Send Mail v1.1
+acidmax 2.1.17 (unreleased)
+- Added ListView as seen in Direct Update to the new Acidmax Send Mail
+acidmax 2.1.16 (unreleased)
+- New DLL Send Mail v1.0 added
+acidmax 2.1.15 
+- Changes to Direct Update
+
+
+1/24/2004 - acidmax v2.0.28.79
+
+fixed nonconformed path in control panel causing mirc to crash.
+added nicklist config to control panel.
+
+1/24/2004 - acidmax v2.0.28.78
+
+default start page url fixed.
+made @snotices defeault off.
+
+1/24/2004 - acidmax v2.0.28.77
+
+revised older direct update script. updated version was causing too many probs.
+
+1/23/2004 - acidmax v2.0.28.72-76
+
+don't ask :/
+
+1/23/2004 - acidmax v2.0.28.71
+
+added new nicklist icon dialog in /setup
+
+1/23/2004 - acidmax v2.0.28.70
+
+acidmax will now tell you via echo if your acidmax is not up-to-date on startup.
+added manual acidmax.dll update in direct update dialog.
+removed some acidmax.dll update checks - no longer needed.
+
+1/23/2004 - acidmax v2.0.28.69
+
+added new alias to manually update acidmax.dll /dll.update
+
+1/23/2004 - acidmax v2.0.28.68
+
+added newnet to use /msg nickserv and not /nickserv
+
+1/23/2004 - acidmax v2.0.28.67
+
+fixed a freakn typo which was causing a error /msg: insufficient parameters (line 80, nickservid.mrc)
+
+1/23/2004 - acidmax v2.0.28.66
+
+added IRC-HOLICS to use /msg nickserv and not /nickserv
+event colors were messed up when a text contained a numeric as first character.
+added SorceryNet numeric raw for mode lock.
+added URL spam blocker for query. switch added in /setup
+
+1/22/2004 - acidmax v2.0.28.65
+
+adjusted join/quit flood control.
+
+1/22/2004 - acidmax v2.0.28.64
+
+fixed bug in aliases.ini causing direct update from executing.
+adjusted join/quit flood control.
+
+1/20/2004 - acidmax v2.0.28.63
+
+adjusted nickservid.
+adjusted join/quit flood control.
+
+1/20/2004 - acidmax v2.0.28.62
+
+added nicklist icon switch in /setup
+
+1/20/2004 - acidmax v2.0.28.61
+
+added more languages in translator.
+fixed bug "line too long" in weather feature.
+removed dll version from mirc title, causing loop errors with acidmax.dll update.
+
+1/16/2004 - acidmax v2.0.28.60
+
+adjusted join/quit flood protection.
+added dll version to acidmax version.
+fixed * /dll: unable to open 'C:\path\sys\browser.dll' error in popup.
+
+1/14/2004 - acidmax v2.0.28.59
+
+acidmax.dll 2.3.8 update
+
+added a join/quit flood protection for testing reason on net splits to see if any lag is experienced.
+
+12/31/2003 - acidmax v2.0.28.58
+
+fixed connect history to show channel join history when feature is not enabled and dialog is active.
+
+12/30/2003 - acidmax v2.0.28.57
+
+just a test
+
+12/30/2003 - acidmax v2.0.28.56
+
+added startup page to replace nexnews. user can now customize own web start page.
+
+12/3-25/2003 - acidmax v2.0.28.51-55
+
+acidmax.dll updated.
+added extra whois info for opers.
+fixed "-at1" bug in awaybox, missing alias command.
+added !lastseen and services to control panel.
+fixed missing alias command for auto-voice list.
+
+12/2/2003 - acidmax v2.0.28.50
+
+fixed bug in direct update not cleaning cache from previous update.
+
+12/2/2003 - acidmax v2.0.28.49
+
+fixed blacklist, not able to ban blacklisted nicks (found by Da_Boom).
+
+12/2/2003 - acidmax v2.0.28.48
+
+fixed typo causing auto-join not to be anbled! oi!
+
+12/2/2003 - acidmax v2.0.28.47
+
+fixed code error in autojoin when adding channel.
+
+12/2/2003 - acidmax v2.0.28.46
+
+updated control panel.
+fixed address removal bug in auto-op.
+fixed direct update version history viewer bug.
+
+11/*/2003 - acidmax v2.0.28.45
+
+updated control panel.
+new toolbar,switchbar,status graphic added.
+added nexDVD player feature.
+11/24/2003 - acidmax v2.0.28.41
+
+fixed bug in timestamp when color event on input text is turned off.
+
+11/24/2003 - acidmax v2.0.28.40
+
+incorrect script code in acidmax media player.
+
+11/24/2003 - acidmax v2.0.28.38-39
+
+blacklist now bans user according to user list address ban.
+added quickbar to /setup dialog.
+added control panel switch to /setup dialog.
+fixed nick completor to accept null characters.
+
+11/11/2003 - acidmax v2.0.28.37
+
+if you are getting errors type: /cp then try /dupdate
+
+11/10/2003 - acidmax v2.0.28.36
+
+fixed weather report, will now say if location can not be reported if location is null.
+added manual away to awaybox. syntax: /away <reason>
+
+11/09/2003 - acidmax v2.0.28.35
+
+updated Dalnet nick info color to current.
+fixed color stripping of hdd stats.
+fixed * Invalid parameters: $lines (line 148, autojoin.mrc) when there is network does not exist in autojoin database.
+
+11/07/2003 - acidmax v2.0.28.32-34
+
+updated control panel. Now in new folder.
+added Webnet to auto id nickserv services.
+
+11/04/2003 - acidmax v2.0.28.31
+
+fixed bug in clone scan. Scan issuing incorrect alias. 
+
+11/04/2003 - acidmax v2.0.28.28-30
+
+fixed issues with controlpanel.ini *crossed fingers*
+
+11/04/2003 - acidmax v2.0.28.27
+
+added error trap if controlpanel.ini fails to copy to root folder of mirc.
+
+11/04/2003 - acidmax v2.0.28.26
+
+renamed clonescan alias to /cscan, conflict with services and counterstrike.
+
+11/04/2003 - acidmax v2.0.28.25
+
+fixed error in dclick icon in control panel.
+
+11/04/2003 - acidmax v2.0.28.24
+
+added missing keyboard.ico for control panel
+
+11/04/2003 - acidmax v2.0.28.23
+
+issue with users not getting acidmax.dll to update. added line to check version and update acidmax.dll when control panel is launched.
+
+11/04/2003 - acidmax v2.0.28.22
+
+fixed error in popup with control panel command.
+
+11/04/2003 - acidmax v2.0.28.19-21
+
+fixed incorrected paths with update.
+
+11/04/2003 - acidmax v2.0.28.18
+
+added control panel to popups.
+updated nexbar and added control panel.
+added control panel feature. syntax: /cp
+updated acidmax.dll for new control panel feature.
+
+11/02/2003 - acidmax v2.0.28.17
+
+fixed blacklist bug, was not adding blacklisted user to user.ini
+fixed mirc 6.12 dcc exploit protection blaclist.
+fixed Secure Query, updated old code...now ignores user if ignore is selcted.
+
+11/02/2003 - acidmax v2.0.28.16
+
+fixed typo in !lastseen script, causing error on trigger.
+fixed sonica from going "bonkers" when external player choosen. Wrong variable set.
+fixed bug in operator central where is topic disabled even if topic mode in channel is enabled.
+
+11/01/2003 - acidmax v2.0.28.15
+
+fixed exploit in an acidmax feature. Thanks to "Caleb" for discovery.
+
+10/29/2003 - acidmax v2.0.28.14
+
+new aliases (will add dialog on later date):
+	/listdir
+	Displays folder contents.
+	/messenger <start/stop>
+	Starts or stops the Messenger (spam) service.
+	/net-stat <server/workstation>
+	Shows network statistics.
+	/flushdns
+	Flushes your local dns cache.
+	/ddns <a/any/cname/mx/ns/ptr/soa/srv> <address/ip>
+	Looks up dns records.
+	/netstat
+	Displays current network connections.
+	/ipconfig
+	Displays network configuration.
+	
+
+updated nexcam to point to new server.
+nexcam database moved to differnt server.
+updated some old code related to auto-join.
+fixed blacklist from showing "blank" lines on list.
+
+10/29/2003 - acidmax v2.0.28.13
+
+fixed conflict with ctcp event with dcc exploit protection
+fixed "Invalid parameters: $lines (line 136, multiconnect.mrc)"
+
+10/28/2003 - acidmax v2.0.28.12
+
+readded clonescan for some reason it was missing?
+updated mirc 6.12 dcc exploit protection now blacklist/ignore abuser.
+added conversion tool feature under "ref. tools" (type: /conv).
+
+10/27/2003(11:13pm PST) - acidmax v2.0.28.11
+
+fixed Away nick for awaybox switching at wrong time.
+cleaned up some older code in awaybox.
+
+10/27/2003 - acidmax v2.0.28.10
+
+added dcc exploit protection for mIRC 6.12
+
+10/21/2003 - acidmax v2.0.28.10
+
+fixed ctcp's in query, now working
+
+08/21/2003 - acidmax v2.0.28.10
+
+added alias "loadnex" for /load.scripts alias
+
+03/14/2003 - acidmax v2.0.28.09
+
+added dynastynet to services.
+
+03/02/2003 - acidmax v2.0.28.08
+
+added BeyondIRC to services.
+
+03/01/2003 - acidmax v2.0.28.07
+
+added Telstra to services.
+
+02/28/2003 - acidmax v2.0.28.06
+
+added Templar-Rock-IRC to services.
+
+02/20/2003 - acidmax v2.0.28.05
+
+added ChatUniverse to services.
+
+02/19/2003 - acidmax v2.0.28.04
+
+fixed checkbox "send original text". Was not sending orginal text.
+
+02/19/2003 - acidmax v2.0.28.03
+
+now checks if any scripts are loaded from the temp dir and unloads them on start and connect event.
+updated version check for acidmax.dll
+
+02/18/2003 - acidmax v2.0.28.02
+
+fixed load.scripts alias from loading scripts from temp folder instaead of the correct location.
+
+02/18/2003 - acidmax v2.0.28.01
+
+direct update now cleans temp files in root directory.
+
+02/17/2003 - acidmax v2.0.28.00
+
+fixed "humidity" not giving report in weather report.
+added channel advertisment selection for weather report.
+
+02/16/2003 - acidmax v2.0.27.99
+
+fixed international weather not showing public.
+
+02/16/2003 - acidmax v2.0.27.98
+
+fixed * /did: 'weather' invalid id '12' (line 338, reftools.mrc) 
+
+02/16/2003 - acidmax v2.0.27.97
+
+Made a improved flood protect routine for weather report.
+
+02/15/2003 - acidmax v2.0.27.96
+
+Added differn't flood routine for weather.
+
+02/15/2003 - acidmax v2.0.27.95
+
+fixed weather advertisement.
+
+02/15/2003 - acidmax v2.0.27.94
+
+Changed weather servers, now does international weather.
+
+02/14/2003 - acidmax v2.0.27.93
+
+Added a "nicklist config" button in /setup
+
+02/13/2003 - acidmax v2.0.27.92
+
+Added language translator back to ref.tools (was removed awhile back due to server change).
+Fixed weather script to display weather in one line instead of multiple.
+
+02/12/2003 - acidmax v2.0.27.91
+
+fixed id3 editor not editing some mp3 files.
+
+02/07/2003 - acidmax v2.0.27.90
+
+Fixed nexcam submit to use default web browser instead of acidmax browser which caused window sizing issues.
+
+02/04/2003 - acidmax v2.0.27.89
+
+Some dude name "Stonegate" wanted the server name in the server notices ;)
+
+02/04/2003 - acidmax v2.0.27.88
+
+Fixed auto-connect from connecting when auto-join (/aj) feature is disabled.
+
+02/01/2003 - acidmax v2.0.27.87
+
+Added Aniverse network services.
+
+02/01/2003 - acidmax v2.0.27.86
+
+Fixed server notices not showing everthing on some servers.
+
+01/28/2003 - acidmax v2.0.27.85
+
+Fixed weather to show forecast properly(html change). Thanks "sloppysam" for quick fix.
+
+01/28/2003 - acidmax v2.0.27.84
+
+Added "show user address" checkbox in /setup > show events. (for join/part/quit events)
+
+01/28/2003 - acidmax v2.0.27.83
+
+Fixed "add" button not enabling on server auto-connect.
+
+01/27/2003 - acidmax v2.0.27.82
+
+Fixed weather feature send errors(?)
+
+01/27/2003 - acidmax v2.0.27.81
+
+Added missing popup for direct update.
+
+01/27/2003 - acidmax v2.0.27.80
+
+Checks on start if media.mrc is not loaded.
+
+11/20/2002 - acidmax v2.0.26.03
+
+Fixed updating probs, reverts back to old version (BAD).
+Fixed color problems on own text.
+
+11/20/2002 - acidmax v2.0.26.01
+
+Fixed "own color" text not changing when changed.
+Made direct update to open when a new update is available.
+Added /myinfo alias for those users who wanted it soo bad, it post your personal info.
+Fixed channel history to join correct channel on correct server.
+You can now right click on urls to get url popup(mirc default).
+Fixed remaining time not showing when a mp3 is played when sonica is not open then opening sonica.
+Added scrollbar in sonica.
+Fixed nickserv ident not closing on ident.
+Fixed stats again.
+Added mp3 list to sonica.
+Fixed stats on seeing certain brands of modems.
+Fixed awaybox from not showing public away.
+
+10/30/2002 - acidmax v2.0.25.15
+
+Updated direct update script.
+Fixed undernet login hide switch.
+Fixed Query pop switch.
+Updated acidmax.dll to accuratly download files. 
+
+10/30/2002 - acidmax v2.0.25
+
+acidmax.dll updated to work more effecient with updater.
+Fixed switch for query pop not working on a on open event.
+Made some adjustments how idle away is made.
+Added always on top switch in download list.
+Fixed /kb and /k aliases.
+Added Query Active pop switch.
+Added mode character when user msgs.
+Fixed stat cpu error if user cpu info is too long.
+
+10/23/2002 - acidmax v2.0.24
+
+Added sound stat.
+Fixed typo in stat popup for stat connection.
+Fixed acidmax.dll to not echo downlaoded files.
+Fixed display stat to show if multiple video exist.
+Added Undernet login.
+Fixed alias "dcclog" in quickbar to new name "downloadlist".
+Fixed direct update from opening on connect.
+
+10/22/2002 - acidmax v2.0.23
+
+Added "Direct Update" feature.
+Added more info for system stat.
+Renamed DCC Log to Download List.
+Fixed notice popup from showing twice.
+Renamed "shuffle" to "random" in sonica.
+Added cam submission to nexcam.
+Added update cam list feature in nexcam.
+Fixed so user can add their own cams without being overwritten from updates.
+Added Theme editor dialog into utilities popup.
+Added mp3 song title to active dclick window.
+Added error trap in sonica if path does not exist.
+Added /q query alias syntax: /q <nick>
+Added /k kick alias syntax: /k <nick>
+Added /kb kick ban  alias syntax: /kb <nick>
+Added more stats options in popup.
+Added color strip switch in /setup > misc for public version and stats.
+Added numeric raw 330(undernet) "username" now shows when you whois a user if registered.
+Added "add channel to auto-join" to channel popup.
+Added "invite" to nicklist popup.
+Fixed Lag Meter from not disabling on startup.
+Fixed enable/disable switch in auto-join.
+Added an "add" button to ignore list dialog.
+Added an "add" button to auto-op list dialog.
+Added an "add" button to auto-voice list dialog.
+Added an "add" button to blacklist dialog.
+Fixed services to work on other networks that have services that I know of.
+Fixed [connecting from] from showing on Austnet servers when motd(raw 378) is listed.
+Fixed secure query's ignore.
+Changed nickserv ident console switch to execute on nickserv notice instead of connect.
+Fixed nickserv ident console not loading on connect.
+Added join history feature.
+Added senders nick to dcclog.
+Fixed duplicate file names from showing from dcclog.
+Fixed Nick Completor click now shows in popup.
+Fixed files not showing on list when dcclog is already open.
+Added horizontal scroll for long file names in download log.
+Added msgpop from RAIN.
+Fixed color not changing for "own text".
+
+08/22/2002 - acidmax v2.0.22.2
+
+Fixed acidmax.dll to work with mIRC 6.03
+Add mIRC 6.03
+Fixed Download logger trying to view gifs(mirc 6.02 can't view gifs yet).
+Fixed connection dialog to show last connection used as first selection choice.
+Fixed sonica play error when loaded from quickbar.
+Fixed quickbar graphics in not loading when user has installed acidmax in a long pathname.
+Awaybox now set away on all activ connections (global away)
+Away nick if away nick is provided and checkbox enabled,awaybox will change nickname when away,to specified awaynick.
+Awaybox now makes anicks.txt file and writes all user nicknames from all active connections.
+awaybox When back it will change nicknames,in order how it was before away.
+Awaybox Idle away,will set autoaway,will disable setaway/setback button,and idleaway checkbox.
+Awaybox Idle timer is now associated with connections,it will show idle in awaybox for activ connection.
+Awaybox On input it will set back from away,and will not set autoaway again,also it will close awaydialog if open.
+  -Awaybox updated by RAIN 7/13/2002
+Fixed nexcam from not displaying nexcam favs.
+Fixed online record to write when new record has been achieved.
+Fixed uptime record to write when new record has been achieved.
+
+04/30/2002 - acidmax v2.0.22.1
+
+Officially not "beta".
+Fixed html change in translator server, this made parsing not reveal translation.
+Added error trap in dclick feature when double clicking channel when setting is on sonica play.
+Fixed system stats showing some unknown characters on some XP systems.
+
+04/23/2002 - acidmax v2.0.22
+
+Fixed !last seen not giving proper time last seen.
+Updated acidmax.dll to update check from tnexgen.com instead of nexgen-network.com.
+Fixed ignore dialog not ignoring in channel.
+Added system stats info.
+Removed html showing in translator.
+Updated popup loader to accept remote popups.
+Added network name on last notes for Last !Seen addon.
+Fixed jukebox not playing in query.
+Added show op controls switch in /setup.
+Fixed online display. Was outputing 0 secs.
+Fixed Lag Meter not unpausing on connect.
+Added stop button in nexcam.
+Added server connection dialog. Makes it easier for some users to connect to multiple servers.
+Changed nexcam graphic
+
+03/21/2002 - acidmax v2.0.20-21
+ 
+Renamed "default titlebar" in setup to "acidmax titlebar".
+Renamed popup catagory "controls" to "op con".
+Moved addons and features to new catagory in popup "utilities".
+Fixed nick completor displaying wrong characters for style.
+Fixed security from unsetting after reconnect.
+Added Last !seen addon.
+Added nexcam webcam viewer for testing.
+Added enable/disable switch to ignore and blacklist list.
+Added auto-op list dialog.
+Added auto-voice list dialog.
+Added auto-op dialog.
+Added auto-voice dialog.
+Added cf4 close window as a default ctrl - f4 key.
+Fixed Fkey bugs. Variables not showing correctly on display.
+Added blacklist dialog.
+Added a kick counter.
+Fixed msg studio not automating correctly. Did not set path correctly on long path names. $nick unsetting so no msg was sent to no one.
+Added highlight compatibility to custom events.
+Changed browse buttons to enable/disable when "all folder" is switched on/off.
+Fixed sonica, mp3 not showing verbose to selected channels.
+Disabled certain secure query buttons until users ip is resolved.
+Fixed nickserv id not showing on networks that have nickserv, and vice versa.
+
+02/22/2002 - acidmax v2.0.19
+
+Fixed ban from unbanning automatically.
+Added weather report in referance tools.
+Fixed acidmax from loading skins when user has changed or set background to none.
+Nickserv Id now closes when done identifying to nickserv.
+Extended the delay on auto-join to 30 secs.
+Added "notice" in query and channel popup.
+Added logging popup in query and channel under "utils".
+Added "utils" in channel and query popup.
+Fixed translator, new code on html on server, had to change parsing.
+Fixed awaybox not changing nick when idle away.
+Fixed error » unknown command "}	" appearing with ignore list.
+Fixed secure query to decline by address instead by nick. Solves issues of error appearing when user changes nick or goes off line.
+
+02/14/2002 - acidmax v2.0.18
+
+Fixes/Additions:
+Added ignore list.
+Fixed horizontal scrollbar in sonica.
+Fixed playlist in sonica.
+Added Dccallow popup in nicklist and query for DALnet users.
+Added kick/ban popup from old acidmax.
+Reorginized popup slightly.
+Readded lagmeter. Bug in mirc 6.0 had .raw privmsg in lagmeter send to query, mirc 6.01 fixed this problem.
+Changed acidmax theme song acidmax.mp3.
+Fixed secure query nick dupeing in log list.
+Fixed secure query to accept users on access. 
+Fixed voice to work with mirc 6.0+, was not voicing users.
+Added custom action(self only).
+mIRC 6.01 introduced.
+Fixed timestamp showing in msg when using nick completor.
+Increased auto-join delay from 5 secs to 10 secs.

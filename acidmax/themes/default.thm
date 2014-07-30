@@ -1,0 +1,22 @@
+/set %exjoin 3(..join..)
+/set %exnotice 8(..notice..)
+/set %exop 12(..op..)
+/set %nick.com1.1 4. ..:
+/set %nick.com1.2 4:.. .
+/set %meext.1 4•
+/set %meext.2 4•
+/set %exnick1 4·
+/set %exnick2 4·
+/set %expart 14(..part..)
+/set %exban 12(..ban..)
+/set %exkick 3(..kick..)
+/set %exunban 12(..unban..)
+/set %exmode 12(..mode..)
+/set %exvoice 12(..voice..)
+/set %extopic 3(..topic..)
+/set %exdeop 12(..deop..)
+/set %exquit 4(..quit..)
+/set %exdevoice 12(..devoices..)
+/set %exnew 3(..nick change..)
+/set %exhalfop 12(..half-op..)
+/set %exdehalfop 12(..dehalf-op..)

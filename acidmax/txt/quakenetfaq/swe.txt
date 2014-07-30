@@ -1,0 +1,357 @@
+Komma igång.. 
+Så, du vill ha Q till din kanal?.. Då är de några saker du måste göra före nån i #feds kommer lägga till den. Om du misslyckas att följa dom grundläggande inställningarna för Q som står här, så kommer du bara att skapa irritation hos IRCoparna och minska chansen att du får Q i framtiden, så följ dom här stegen noga.. 
+  
+Säg 'Hello' till Q..
+Det första du måste göra är att berätta för Q vem du är - så att den kan känna igen dig i framtiden.
+
+Detta gör du genom att skriva följande kommando:
+
+/msg Q hello
+
+Du kan verifiera att du har gjort detta rätt genom att skriva: /msg Q whois (ditt namn här) (ex. /msg q whois John).
+
+Om du ser ett meddelande från Q som inkluderar:
+-Q(TheQBot@CServe.quakenet.eu.org)- John is indeed John.
+..då vet du att du sagt 'hello' rätt.
+
+
+
+Byta ditt lösenord hos Q..
+När du sagt 'hello' till Q, så får du ett lösenord som du behöver använda i framtiden för att kunna använda kommandot AUTH så att du kan använda Q.
+
+Detta lösenord är från början detsamma som ditt nick (ex. Om 'John' gör /msg q hello - då skulle Johns lösenord vara 'John') - därför är de viktigt att du ändrar de på en gång. IRCop:ar kommer ha lite sympati för folk som klagar över takeover när de senare avslöjas att ägaren av kanalen inte brytt sig om att ändra sitt lösenord.
+
+Du kan ändra ditt lösenord genom att använda följande kommando:
+
+/msg Q newpass (nytt lösenord) (nytt lösenord) (t.ex, /msg q newpass hugo55 hugo55).
+
+Q kommer att svara att ditt lösenord är ändrat genom att visa följande meddelande:
+-Q(TheQBot@CServe.quakenet.eu.org)- OK, password changed. 
+
+
+
+--------------------------------------------------------------------------------
+
+ 
+Jag har Q, vad ska jag göra nu? 
+Ok, så du har Q i din kanal, vad ska du göra nu?..
+
+Först kan du kolla att du verkligen är ägaren (owner) av kanalen genom att skriva:
+
+/msg Q chanlev (din kanal) (ditt namn)  ..ex. /msg q chanlev #clan_internet John
+
+Förutsatt att #clan_internet var kanalen där Q placerades, då ska du få följande svar från Q:
+
+-Q(TheQBot@CServe.quakenet.eu.org)- Known users on the channel are:
+-Q(TheQBot@CServe.quakenet.eu.org)-          John     Modes: +amnov
+-Q(TheQBot@CServe.quakenet.eu.org)- End of list.
+ 
+  
+Hur får jag auto-op ?
+Från början kommer du ha auto-op (+a) redan inställt, så länge du har AUTH'at innan, du får automatiskt op av Q när du kommer in i kanalen. Q KOMMER INTE ge dig op automatiskt om du inte är AUTH'ad. Om du av nån anledning avslutar din IRC uppkoppling eller Q försvinner/kommer in efter en netsplit, då måste du AUTH'a igen.
+
+Du kan ge andra auto-op genom att använda kommandot CHANLEV (kan endast användas av master(s) och/eller owners)
+
+Om du är en användare på den kanalen och du vill ha auto-op, så behöver du fråga den som är master(s) eller ägare av kanalen att ge dig +ao. Fråga inte en IRCop att lägga till dom här flaggorna till dig för dom kommer ignorera din önskan. Det är upp till kanalens ägare (owner) eller en master (+m) att lägga till, ta bort eller på annat sätt underhålla användar listan på kanalen.
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+Kommandon som finns tillgängliga och vad dom gör 
+Här är en lista på kommadon i Q.
+ 
+  
+Hello 
+Det grundläggande hello kommandot.
+
+Skapar en ny användare i Q. Notera att det finns inga hostmasks in den här botten så du måste bara kunna ditt lösenord.
+
+Användning:
+/msg Q hello
+
+
+
+AUTH 
+Tillåter dig att auth:a när du kommer på QuakeNet
+
+Det här kommer att identifiera dig i Q som tills du nästa gång avslutar IRC.
+
+Användning:
+/msg Q auth (ditt namn) (ditt lösenord) ex. /msg Q auth John 8h2xkd
+
+
+
+IDENT 
+Identifierar dig som en användare i Q.
+
+Identifierar dig för Q, använd auth istället (se ovan).
+
+
+
+HELP 
+Ger dig hjälp om ett visst kommando.
+
+Användning:
+/msg Q help (kommandot) ex. /msg Q help op
+
+
+
+SHOWCOMMANDS 
+Listar alla kommandon som finns i Q.
+
+Användning:
+/msg Q showcommands
+
+
+
+WHOAMI 
+Ger Q en uppfattning om vem du är.
+
+Q ska berätta för dig vilken "global auth level" du har (liknande dom gamla #cservice) och i vilka kanaler du har vilka rättigheter.
+
+Användning:
+/msg Q whoami
+
+
+
+ADDUSER 
+Lägg till en avnändare i en kanal.
+
+Du ska använda CHANLEV för att titta eller sätta flaggor, men de här kommandot lägger till användare med default flaggorna +aot
+
+Användning:
+/msg Q ADDUSER (#kanal) (nick) Lägg till en användare som auth:at. ex. /msg Q adduser #clan_internet John
+
+/msg Q ADDUSER (#kanal) (#nick) Lägg till en användare (som inte auth:at). ex. /msg Q adduser #clan_internet #John
+
+Notera: Nick parametern kan också anges som #idnick där idnick är det nickname som personen registrerade i från början.
+
+
+
+REMOVEUSER 
+Ta bort en användare från en kanal.
+
+Du ska använda CHANLEV för att titta eller sätta flaggor, men de här kommandot tar bort alla flaggor. (-abmnovt)
+
+Användning:
+/msg Q REMOVEUSER (#kanal) (nick) Tar bort en AUTH:ad användare. ex. /msg Q removeuser #clan_internet John
+
+/msg Q REMOVEUSER (#channel) (#nick) Tar bort en användare (som inte auth:at). ex. /msg Q removeuser #clan_internet #John
+
+Notera: Nick parametern kan också anges som #idnick där idnick är det nickname som personen registrerade i från början.
+
+
+
+BAN 
+Bannar en hostmask permanent på en kanal.
+
+Användning:
+/msg Q BAN (#kanal) (hostmask) ex. /msg Q ban #clan_internet *!*billgates@microsoft.com 
+
+
+
+BANLIST 
+Listar alla permanenta bans på en kanal.
+
+Användning:
+/msg Q BANLIST (#kanal) ex. /msg Q banlist #clan_internet 
+
+
+
+BANDEL 
+Ta bort en ban från listan.
+
+Användning:
+/msg Q BANDEL (#kanal) (hostmask) ex. /msg Q bandel #clan_internet *!*billgates@microsoft.com 
+
+/msg Q BANDEL (#kanal) (#3) ex. /msg Q bandel #clan_internet #3
+
+Ta bort en ban från listan. Om du skriver en '#' så kommer den ta bort nummer x hostmask i listan.
+
+
+
+BANCLEAR 
+Ta bort alla ban från en kanal.
+
+Skillnaden från UNBANALL, är att de här kommandot också tar bort alla permanenta bans.
+
+Användning:
+/msg Q BANCLEAR (#kanal) ex. /msg Q banclear #clan_internet
+
+
+
+CHANFLAGS 
+Ändra/se flaggorna i en kanal.
+
+Dom är specifierade på vanligt sätt - ex. +a-b osv.
+
+Användning:
+/msg Q CHANFLAGS (#kanal) ex. /msg Q chanflags #clan_internet
+/msg Q CHANFLAGS (#kanal) +-flag ex. /msg Q CHANFLAGS #clan_internet +b
+
+Flaggorna är som följer:
+
++b - Bitch
+Förhindrar att nån som inte ska ha op i kanalen från att få de.
+
++f - Force topic
+Gör så att man inte kan ändra topic med /topic kommandot - man måste använda SETTOPIC
+
++k - Force key
+Sätter en nyckel på kanalen. - Sätt nyckeln med KEY kommandot.
+
++l - Force limit
+Sätt en permanent gräns på hur många som får vara i kanalen. - Sätt gränsen med LIMIT kommandot.
+
++p - Protect opers
+Förhindrar folk som har op i kanalen att bli deopade. Fler flaggor finns kanske men är inte inkluderade i denna hjälp
+
++w - Welcome message
+Skickar ett välkomstmeddelande (sätts med WELCOME kommandot) till alla som joinar kanalen.
+
+
+
+CHANLEV 
+Ändra/se någons rättigheter på en kanal.
+
+Dom är specifierade på vanligt sätt - ex. +a-b osv.
+
+Användning:
+/msg Q CHANLEV (#kanal) (nick) (+-flags) ex. /msg Q chanlev #clan_internet Grunt +o
+
+/msg Q CHANLEV (#kanal) Info om alla användare på kanalen.
+/msg Q CHANLEV (#kanal) (nick) Titta på en användares flaggor (om personen är auth:ad)
+/msg Q CHANLEV (#kanal) (#nick) Titta på en användares flaggor (om personen inte är auth:ad)
+/msg Q CHANLEV (#kanal) (nick) +-flag Ändra en användares flaggor på kanalen.
+
+Rättigheter som finns tillgängliga är:
+
++a = autoop/autovoice när man kommer in i kanalen.
++b = banned. (funkar bara om personen är auth:ad)
++m = master.
++n = owner. (kan göra master (+m))
++o = op.
++v = voice.
++t = kan sätta topic.
+
+Notera: Nick parametern kan också anges som #idnick där idnick är det nickname som personen registrerade i från början.
+
+
+
+CHATTR 
+Exakt samma som CHANLEV. Läs ovan
+
+/msg Q CHATTR (#kanal) (nick) (+-flags) ex. /msg Q chattr #clan_internet Grunt +o
+
+
+CLEARCHAN 
+Ta bort alla inställningar på kanalen.
+
+Kan användas om nån har satt en key (nyckel) eller invite only (+i).
+
+Användning:
+/msg Q CLEARCHAN (#kanal) ex. /msg Q clearchan #clan_internet
+
+
+
+DEOPALL 
+Deop:ar alla avändare på kanalen.
+
+Användning:
+/msg Q DEOPALL (#kanal) ex. /msg Q deopall #clan_internet
+
+
+
+KEY 
+Sätt en nyckel på kanalen.
+
+Det här kommandot måste kombineras med "/msg Q CHANFLAGS #kanal +k" för att behålla nyckeln permanent.
+
+Användning:
+/msg Q KEY (#kanal) key eg. /msg Q key #clan_internet 8sk2ds
+
+
+
+LIMIT 
+Sätt en max användar gräns på kanalen.
+
+Det här kommandot måste kombineras med "/msg Q CHANFLAGS #kanal +l" för att behålla gränsen permanent.
+
+Användning:
+/msg Q LIMIT (#kanal) (nr) eg. /msg Q limit #clan_internet 20
+
+
+
+NEWPASS 
+Ändra ditt lösenord.
+
+Ditt nya lösenord MÅSTE du ange två gånger, för att kontrollera att du inte skrev fel.
+
+Användning:
+/msg Q NEWPASS (nytt lösenord) (nytt lösenord) ex. /msg Q newpass 8sl3kd 8sl3kd
+
+
+
+OP 
+Ger dig op på en kanal där Q finns.
+
+Q *måste* finnas på kanalen, och du måste ha +o flaggan på den kanalen.
+
+Användning:
+/msg Q OP (#kanal) ex. /msg Q op #clan_internet
+
+
+
+SETTOPIC 
+Ändrar kanalens default topic.
+
+Sätter både den nuvarande och default topic på specificerad kanal.
+
+Användning:
+/msg Q SETTOPIC (#kanal) (topic) ex. /msg Q settopic #clan_internet Välkommen till #clan_internet
+
+
+
+UNBANALL 
+Tar bort alla temporära bans på kanalen.
+
+Permanenta bans som satts med BAN måste tas bort med BANCLEAR.
+
+Användning:
+/msg Q UNBANALL (#kanal) ex. /msg Q unbanall #clan_internet
+
+
+
+VOICE 
+Ger dig voice (+v) på en kanal där Q finns.
+
+Q *måste* finnas på kanalen, och du måste ha +v flaggan på den kanalen.
+
+Användning:
+/msg Q VOICE (#kanal) ex. /msg Q voice #clan_internet
+
+
+
+WELCOME 
+Sätt/se välkomst meddelandet på en kanal.
+
+Q *måste* finnas på kanalen, och du måste ha tillräckligt med rättighet för den kanalen.
+Det här kommandot måste kombineras med ""/msg Q CHANFLAGS #kanal +w" för att aktivera välkomst meddelandet.
+
+Användning:
+/msg Q WELCOME (#kanal) ex. /msg Q welcome #clan_internet
+/msg Q WELCOME (#kanal) (mitt meddelande) ex. /msg Q welcome #clan_internet Välkommen till #clan_internet
+
+
+
+WHOIS 
+Berättar för dig vem någon är.
+
+Berättar för dig vilket namn en användare har auth:ad som, om de inte är samma som deras nick. Notera: Nick parametern kan också anges som #idnick där idnick är det nickname som personen registrerade i från början.
+
+Användning:
+/msg Q WHOIS (nick) ex. /msg Q whois John
+ 

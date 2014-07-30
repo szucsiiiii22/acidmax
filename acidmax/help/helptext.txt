@@ -1,0 +1,20 @@
+Command:/acidmax > Description:Shows current acidmax version in active channel
+Command:/awaybox > Description:Dialoged Acidmax awaysystem,allow you to set yourself away with various functions.
+Command:/cycle #channelname > Description:This command allow you to part and rejoin specified channel without closing a channel window.
+Command:/dupdate > Description: This command will open Acidmax update dialog,and it will check is there new updates available,if there is new updates all will be listed.To update Acidmax click on update acidmax button.
+Command:/edittheme > Description:Acidmax theme editor let`s you make your own theme,(text display on certain events),with preview,apply save and load options.
+Command:/fkey > Description:Functions keys dialog.Enables you to customize your shortcuts on the keyboard for easy accessing Acidmax,commands.Usage example:Open fkeys setup dialog with /fkey,and enter command in editbox beside number of fkey you wish to use,and you are done.Everu time you press that fkey it will execute defined command.Note:If your defined command is channel related,make sure you press your fkey while channel window is active othervise you will get an error.
+Command:/font > Description:Enables you to change font style and size,to your taste.[Note:This will change font style and size for active window only].
+Command:/ignoreall > Description:This command is used in emergency situations,and it will ignore all events,great when being flooded.To make this command more efficient place it as a fkey (see Fkey).
+Command:/j #channelname > Description:Shortcut for mirc command /join./j #nexgen will join channel #nexgen.Also you can join multiple channels by typing /j #channel,#channel1,etc.
+Command:/mdv > Description:Mass devoice.Applys mode -v to all users in channel.
+Command:/mv > Description: Mass voice.Applys mode +v to all users in channel.
+Command:/nickservid > Description:Enables you identify your nickname on Networks/Servers with Chanserv/Nickserv as a services.Can be setup to do autoidentify or to popup on nickserv request.
+Command:/numeric <on - off> Description:displays the numeric raw.
+Command:/online > Description:Returns how long you`v been connected to Network/Server.
+Command:/setup > Description:Acidmax setup dialog.Enables you setup Acidmax behaviour with various options,separated in four categorys,[Core settings,Show events,Channel,Miscellaenous].
+Command:/sonica > Description:Acidmax mp3 player,with various options to make listening your mp3 files more enjoyable.
+Command:/soundcon > Descriptions:Sound console enables you setup sound notification for various events,when they happen.If you don`t want to sounds on events you can disable it,by unchecking box enable nexgen sounds,on the top of the dialog,or if you don`t want to here some of the sounds you can uncheck checkbox beside event to disable sound for that event.
+Command:/uptime > Description:Returns uptime of your computer.Uptime is amount of time your system has been running.
+Command:/version nickname > Description:It will send version reply request for specified nick,in case you wish to know what chat client specified nick running.This is also shortcut for mIRC command /ctcp nickname version.
+Command:/q nickname > Dscription:This command will open private chat window with specified nick,this is a shortcut for mirc command /query.Usage example: /q nickname message.
