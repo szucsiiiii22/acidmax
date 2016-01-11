@@ -1,2 +1,5 @@
 irc.ircsoulz.org
 hobana.freenode.net
+weber.freenode.net
+leguin.freenode.net
+sinisalo.freenode.net

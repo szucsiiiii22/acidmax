@@ -381,7 +381,6 @@ DoniRS - ~DaRamirez@ip4da37ebf.direct-adsl.nl Quit 1398436184 Last Note: pri
 ammar - ~ammar@182.185.138.12 Quit 1398436230 Last Note: private/secret channel Quit: (freenode) Ping timeout: 252 seconds
 Seranok - ~Seranok@unaffiliated/seranok Quit 1398436353 Last Note: private/secret channel Quit: (freenode) Quit: HydraIRC -> http:www.hydrairc.com <- Now with extra fish!
 sayan - ~sayan@fedora/sayan Quit 1398436359 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
-Gluesticky - ~IceChat9@unaffiliated/gluesticky Quit 1398436433 Last Note: private/secret channel Quit: (freenode) Quit: This is the end. Goodbye cruel world!
 Troll_Op - Metaleer@unaffiliated/metaleer Nick-Changed 1398436555 Last Note: *** Troll_Op is now known as Metaleer (freenode)
 Daimary - ~androirc@182.66.58.170 Quit 1398436603 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
 cagedwisdom - ~X@124.148.28.185 Quit 1398437109 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
@@ -720,7 +719,6 @@ Sample_ - ~Sample@unaffiliated/sample Quit 1398453083 Last Note: private/sec
 haemly - 4707c088@gateway/web/cgi-irc/kiwiirc.com/ip.71.7.192.136 Quit 1398453100 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
 ryannielson - ~ryanniels@blk-222-227-158.eastlink.ca Quit 1398453231 Last Note: private/secret channel Quit: (freenode)
 Neozonz|Disc - ~Neozonz@unaffiliated/neozonz Quit 1398453233 Last Note: private/secret channel Quit: (freenode) Ping timeout: 252 seconds
-decoponio - ~decoponio@pon059-128.kcn.ne.jp Quit 1398453245 Last Note: private/secret channel Quit: (freenode) Quit: Leaving...
 timbur - ~TimTim@cpe-098-026-150-050.triad.res.rr.com Quit 1398453299 Last Note: private/secret channel Quit: (freenode) Ping timeout: 252 seconds
 Mike3620 - ~Mike3620@unaffiliated/mike3620 Quit 1398453375 Last Note: private/secret channel Quit: (freenode) Quit: Colloquy for iPhone - http:colloquy.mobi
 pspace - ~pspace@76.14.65.87 Quit 1398453403 Last Note: private/secret channel Quit: (freenode) Quit: Peace and love.
@@ -761,7 +759,7 @@ Thalia - ~kadence@176.250.133.217 Left 1398455466 Last Note: Left private/se
 SuinDraw - ~Eyes@WiseOS/Founder/NiaTeppelin Nick-Changed 1398455548 Last Note: *** SuinDraw is now known as Eyes (freenode)
 Sajaki_ - ~Sajaki@82.161-200-80.adsl-dyn.isp.belgacom.be Nick-Changed 1398455764 Last Note: *** Sajaki_ is now known as Sajaki (freenode)
 mu - ~mu@unaffiliated/mu Quit 1398455815 Last Note: private/secret channel Quit: (freenode) Quit: Textual IRC Client: www.textualapp.com
-[n_n] - ~ircap@107-210-184-156.lightspeed.sntcca.sbcglobal.net Quit 1398455891 Last Note: private/secret channel Quit: (freenode) Quit: � IRcap � 8.5 �
+[n_n] - ~ircap@107-210-184-156.lightspeed.sntcca.sbcglobal.net Quit 1398455891 Last Note: private/secret channel Quit: (freenode) Quit:  IRcap  8.5 
 Vainoharhainen - ~Vainoharh@unaffiliated/skumt Quit 1398455959 Last Note: private/secret channel Quit: (freenode) Client Quit
 Rhino - 4b902cc5@gateway/web/cgi-irc/kiwiirc.com/ip.75.144.44.197 Quit 1398456043 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
 alienspy - ~alienspy@74-134-85-175.dhcp.insightbb.com Quit 1398456068 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
@@ -773,7 +771,6 @@ ale - ~Neat_ale@190.77.232.56 Left 1398456588 Last Note: Left private/secret
 tia_ - ~tia@unaffiliated/tia Quit 1398456661 Last Note: private/secret channel Quit: (freenode) Ping timeout: 276 seconds
 ToApolytoXaos - ~ToApolyto@46.21.62.128 Quit 1398456718 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
 jhw - ~jhw@unaffiliated/jhw Quit 1398456906 Last Note: private/secret channel Quit: (freenode) Quit: leaving
-albel727 - ~albel727@unaffiliated/albel727 Quit 1398456927 Last Note: private/secret channel Quit: (freenode) Quit: KVIrc 4.3.1 Aria http:www.kvirc.net
 RLa - ~RL@82.131.127.254.cable.starman.ee Quit 1398456948 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
 cjbottaro - ~textual@66-90-145-153.dyn.grandenetworks.net Left 1398456960 Last Note: Left private/secret channel (freenode)
 RonyRun|2 - ~Ronyrun@dau94-11-78-239-141-61.fbx.proxad.net Quit 1398456987 Last Note: private/secret channel Quit: (freenode) Quit: KVIrc 4.2.0 Equilibrium http:www.kvirc.net
@@ -808,7 +805,6 @@ Frostman - ~Frostman@93-35-216-144.ip56.fastwebnet.it Quit 1398458678 Last No
 the_f0ster - ~phlx@50-198-170-170-static.hfc.comcastbusiness.net Quit 1398458810 Last Note: private/secret channel Quit: (freenode) Ping timeout: 252 seconds
 cmircea - ~cmircea@79.117.202.28 Quit 1398458812 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
 AaronMT - ~AaronMT@66.207.208.102 Quit 1398458831 Last Note: private/secret channel Quit: (freenode) Quit: Textual IRC Client: www.textualapp.com
-dontknow - ~dontknow@unaffiliated/dontknow Left 1398458914 Last Note: Left private/secret channel (freenode)
 caisah - ~caisah@unaffiliated/caisah Quit 1398458929 Last Note: private/secret channel Quit: (freenode) Quit: Bye bye now...
 Brodingo - ~Brodingo@50.59.76.250 Quit 1398458954 Last Note: private/secret channel Quit: (freenode) Quit: (╯°□°）╯︵ǝpouǝǝɹɟ
 paika - ~androirc@192-0-236-195.cpe.teksavvy.com Quit 1398458969 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
@@ -1117,7 +1113,6 @@ Zonakusu - ~Zonakusu@213.208.225.218 Quit 1398473513 Last Note: private/secr
 Theoden - ~quassel@c-50-185-234-251.hsd1.ca.comcast.net Quit 1398473528 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
 dbz_evo - ~natural@unaffiliated/science-abc Quit 1398473541 Last Note: private/secret channel Quit: (freenode) Quit: SountOfHornQuit'nTime
 Hobogrammer - ~hobogramm@50-194-57-249-static.hfc.comcastbusiness.net Quit 1398473576 Last Note: private/secret channel Quit: (freenode) Ping timeout: 255 seconds
-ihon - 1@212.13.20.196 Quit 1398473688 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
 jtannenbaum - jtannenbau@bingcsmajors/stevie-might-be-a-bear-maybe Quit 1398473693 Last Note: private/secret channel Quit: (freenode) Quit: ~~ [] _[]
 AzaToth - ~azatoth@wikipedia/AzaToth Quit 1398473741 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
 oddalot - ~oddalot@apache2-phatenergy.dagon.dreamhost.com Quit 1398473846 Last Note: private/secret channel Quit: (freenode) Quit: WeeChat 0.3.2
@@ -1255,7 +1250,6 @@ Kproxy - ~zombie@201.190.18.189 Quit 1398485148 Last Note: private/secret ch
 Xgc - ~Xgc@p-68-237-137-154.dsl1.rtr.chat.fpma.frpt.net Quit 1398485249 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
 Adie - ~Adie@166.181.81.230 Quit 1398485376 Last Note: private/secret channel Quit: (freenode) Ping timeout: 252 seconds
 junx - ~junx@8.30.81.166 Quit 1398485402 Last Note: private/secret channel Quit: (freenode) Changing host
-CheckDavid - uid14990@gateway/web/irccloud.com/x-nxfdfiwlmkxuflhd Quit 1398485529 Last Note: private/secret channel Quit: (freenode) Quit: Connection closed for inactivity
 mthscndd - ~mthscndd@200-97-191-183.user.veloxzone.com.br Quit 1398485900 Last Note: private/secret channel Quit: (freenode) Quit: Lingo - http:www.lingoirc.com
 lasers - ~lasers@unaffiliated/lasers Quit 1398485915 Last Note: private/secret channel Quit: (freenode) Ping timeout: 252 seconds
 rorx - ~rorx@cypher.TrueStep.com Quit 1398486078 Last Note: private/secret channel Quit: (freenode) Ping timeout: 258 seconds
@@ -1284,7 +1278,6 @@ dryhten - ~dryhten@91.250.255.11 Quit 1398488904 Last Note: private/secret c
 duch_kazatel - ~robert0@unaffiliated/duch-kazatel/x-0361328 Quit 1398488958 Last Note: private/secret channel Quit: (freenode)
 squeakytoy2 - ~squeakyto@h87-96-232-107.dynamic.se.alltele.net Quit 1398489468 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
 Rou - ~Rou@pool-74-103-196-246.prvdri.fios.verizon.net Quit 1398489702 Last Note: private/secret channel Quit: (freenode) Quit: HydraIRC -> http:www.hydrairc.com <- Would you like to know more?
-Plasmastar - Plasma@unaffiliated/plasmastar Quit 1398490221 Last Note: private/secret channel Quit: (freenode) Ping timeout: 245 seconds
 tapout_ - ~tapout@unaffiliated/tapout Nick-Changed 1398491028 Last Note: *** tapout_ is now known as tapout (freenode)
 Ericx5x - ~textual@209-6-40-131.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com Nick-Changed 1398491052 Last Note: *** Ericx5x is now known as Ericx2x (freenode)
 fahq - nakedgoat@you.lust.my.nakedgoat.org Nick-Changed 1398491216 Last Note: *** fahq is now known as nakedgoat (freenode)
@@ -1315,7 +1308,6 @@ nakedgoat - ~bawt@botters/bot/ruby Kicked 1398493223 Last Note: Kicked from 
 Suterusu - ~Suterusu@unaffiliated/suterusu Quit 1398493307 Last Note: private/secret channel Quit: (freenode) Ping timeout: 252 seconds
 BitDestroyer - ~BitDestro@c-76-18-214-35.hsd1.fl.comcast.net Quit 1398493311 Last Note: private/secret channel Quit: (freenode) Quit: My MacBook has gone to sleep. ZZZzzz…
 crash_demons - ~crashdemo@unaffiliated/crashdemons Quit 1398493547 Last Note: private/secret channel Quit: (freenode) Quit: Solitude has long since turned brown and withered, sitting bitter in my mouth and heavy in my veins.
-iMin3Ra1n - ~Scott@c-71-63-252-235.hsd1.mn.comcast.net Quit 1398493842 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
 jje - ~jimericks@unaffiliated/jimerickson Quit 1398494162 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
 tegowai - ~tegowai@5.76.92.152 Quit 1398494253 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
 sluther - ~sluther@ip68-108-12-103.lv.lv.cox.net Quit 1398494486 Last Note: private/secret channel Quit: (freenode) Quit: Computer has gone to sleep.
@@ -1403,7 +1395,6 @@ TheJenks - ~quassel@24-119-123-21.cpe.cableone.net Quit 1398505994 Last Note:
 sh0lla - ~sh0lla@unaffiliated/sh0lla Nick-Changed 1398506228 Last Note: *** sh0lla is now known as sh0lla-afk (freenode)
 lionmac - ~lionmac@95.107.164.83 Quit 1398506419 Last Note: private/secret channel Quit: (freenode) Client Quit
 trev2600 - ~trevor@bcdf428c.skybroadband.com Left 1398506814 Last Note: Left private/secret channel (freenode)
-skribblezatcha - ~skribblez@unaffiliated/pencilandpaper Left 1398506926 Last Note: Left private/secret channel (freenode)
 UrijahFaber - ~u291187@2602:306:35cd:6a00:f015:6c73:a576:8656 Quit 1398506975 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
 wmnnd - ~philipp@host-188-174-197-235.customer.m-online.net Quit 1398506989 Last Note: private/secret channel Quit: (freenode) Ping timeout: 252 seconds
 ocdmw - ~ocdmw@c-50-174-188-88.hsd1.ca.comcast.net Quit 1398507070 Last Note: private/secret channel Quit: (freenode)
@@ -1649,8 +1640,6 @@ Neobenedict - ~ident@host109-145-103-84.range109-145.btcentralplus.com Quit 13
 roven - ~roven@78-20-24-80.access.telenet.be Quit 1398533092 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
 mloeff - ~mloeff@unaffiliated/mloeff Nick-Changed 1398533120 Last Note: *** mloeff is now known as mloeff` (freenode)
 MuffinMan` - ~muffin@dh207-49-166.xnet.hr Quit 1398533160 Last Note: private/secret channel Quit: (freenode) Quit: WeeChat 0.4.3
-user - ~owl@unaffiliated/energy-/x-7653247 Quit 1398533181 Last Note: private/secret channel Quit: (freenode) Ping timeout: 258 seconds
-lolcat - ~owl@37.191.218.187 Quit 1398533238 Last Note: private/secret channel Quit: (freenode) Changing host
 aslant - ~aslant@5751a00f.skybroadband.com Quit 1398533326 Last Note: private/secret channel Quit: (freenode) Client Quit
 waako_off - ~waako@198.46.159.160 Nick-Changed 1398533342 Last Note: *** waako_off is now known as waako (freenode)
 cyphase - ~cyphase@unaffiliated/cyphase Quit 1398533344 Last Note: private/secret channel Quit: (freenode) Max SendQ exceeded
@@ -1719,9 +1708,7 @@ dcervantes - ~dcervante@172-10-93-103.lightspeed.iplsin.sbcglobal.net Quit 139
 Yahkob - ~Yahkob@65.129.151.135 Quit 1398536921 Last Note: private/secret channel Quit: (freenode) Ping timeout: 276 seconds
 psd - ~psd@65.122.168.1 Quit 1398536937 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
 Yahkob_ - ~Yahkob@65.129.151.135 Quit 1398536937 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
-guideX - guideX@97-93-62-121.static.mtpk.ca.charter.com Left 1398536987 Last Note: Left private/secret channel (freenode)
 passiveobserver - Elite7783@gateway/shell/elitebnc/x-kempyktjzhhbrjir Quit 1398537359 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
-ezech - ~ezech@user-5-173-146-115.play-internet.pl Quit 1398537756 Last Note: private/secret channel Quit: (freenode) Ping timeout: 252 seconds
 netwalker - ~netwalker@modemcable238.107-37-24.static.videotron.ca Quit 1398538052 Last Note: private/secret channel Quit: (freenode) Client Quit
 user_____ - ~owl@unaffiliated/energy-/x-7653247 Left 1398538511 Last Note: Left private/secret channel (freenode)
 ZiggyZaggy - ~user@108.177.128.146 Quit 1398539498 Last Note: private/secret channel Quit: (freenode) Client Quit
@@ -1817,7 +1804,6 @@ FeatheredSerpent - ~Moai@unaffiliated/featheredserpent Quit 1398597425 Last N
 maysknot - 31b84d26@gateway/web/cgi-irc/kiwiirc.com/ip.49.184.77.38 Quit 1398597756 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
 pingfloyd - ~syd@unaffiliated/pingfloyd Quit 1398598368 Last Note: private/secret channel Quit: (freenode) Quit: ttyl
 youknow - f@i.bought.this.domain.fornoreason.net.au Nick-Changed 1398598525 Last Note: *** youknow is now known as James_T- (freenode)
-mapps - ~map@5ec206fe.skybroadband.com Quit 1398598534 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
 James_T - james@jtaylor.id.au Nick-Changed 1398598547 Last Note: *** James_T is now known as James_T- (freenode)
 James_T- - james@jtaylor.id.au Nick-Changed 1398598555 Last Note: *** James_T- is now known as James_T (freenode)
 Hwazengatzole - ~irc.freen@103.3.220.10 Quit 1398598555 Last Note: private/secret channel Quit: (freenode) Quit: Hwazengatzole
@@ -1867,13 +1853,11 @@ vassago - ~Fallen@unaffiliated/mythomaniac Quit 1398610437 Last Note: privat
 Mikie46 - ~anonymous@host81-155-73-25.range81-155.btcentralplus.com Left 1398610756 Last Note: Left private/secret channel (freenode)
 conan - ~conan@94.116.46.131 Quit 1398611091 Last Note: private/secret channel Quit: (freenode) Quit: Computer has gone to sleep.
 ThatOneRoadie - ~ThatOneRo@unaffiliated/thatoneroadie Nick-Changed 1398611206 Last Note: *** ThatOneRoadie is now known as Thor_Out (freenode)
-honey - ~wtf-honey@unaffiliated/wtf-honey Quit 1398611827 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
 ShenzhenZen - ~ShenzhenZ@c-24-127-122-112.hsd1.va.comcast.net Quit 1398611969 Last Note: private/secret channel Quit: (freenode) Ping timeout: 246 seconds
 hkr - ~hkr@unaffiliated/hkr Quit 1398612247 Last Note: private/secret channel Quit: (freenode) Quit: Probably dead, asleep or netsplit
 i-ghost - ~i-ghost@pdpc/supporter/active/i-ghost Quit 1398612520 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
 odsent - 467b692b@gateway/web/freenode/ip.70.123.105.43 Left 1398613042 Last Note: Left private/secret channel (freenode)
 dcprom0_ - ~dcprom0@96-42-70-76.dhcp.roch.mn.charter.com Quit 1398613046 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
-dcprom0 - ~dcprom0@96-42-70-76.dhcp.roch.mn.charter.com Quit 1398613047 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
 Noldorin - ~noldorin@unaffiliated/noldorin Quit 1398613167 Last Note: private/secret channel Quit: (freenode)
 lo - 75e3ecdb@gateway/web/freenode/ip.117.227.236.219 Nick-Changed 1398613664 Last Note: *** lo is now known as Guest18576 (freenode)
 VampireBOY16 - ~superior@host31-49-238-48.range31-49.btcentralplus.com Left 1398614053 Last Note: Left private/secret channel (freenode)
@@ -1929,12 +1913,10 @@ _leb - ~leb@pool-108-53-167-179.nwrknj.fios.verizon.net Quit 1398622280 Last 
 Guest72621 - ~misterno@unaffiliated/misterno Quit 1398622293 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
 Ziginox|Away - ~frozen@unaffiliated/kasm279 Nick-Changed 1398622418 Last Note: *** Ziginox|Away is now known as Ziginox (freenode)
 JeffW - ~Jeff@unaffiliated/jeffw Quit 1398622524 Last Note: private/secret channel Quit: (freenode) Quit: Textual IRC Client: www.textualapp.com
-astrofog - ~astrofog@178-221-122-114.dynamic.isp.telekom.rs Quit 1398622690 Last Note: private/secret channel Quit: (freenode) Quit: Quite
 ryaxnb - ~ryaxnb@2602:306:ce08:85c0:1e7:a448:2872:8970 Quit 1398622911 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
 [[lutchy]] - nonya@i.am.a.slave.at.bombshellz.net Nick-Changed 1398623083 Last Note: *** [[lutchy]] is now known as [{lutchy}] (freenode)
 metamaterial - ~rails@gateway/tor-sasl/metamaterial Quit 1398623122 Last Note: private/secret channel Quit: (freenode) Quit: Leaving.
 gigglyfluff - ~ritard@168.21.21.5 Quit 1398623125 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
-misterno - ~misterno@unaffiliated/misterno Quit 1398623232 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
 fireprfHydra - ~fireprfHy@pool-173-70-216-225.nwrknj.fios.verizon.net Quit 1398623397 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
 doublehp - ~DoubleHP@2a01:e35:8ba8:e140::52 Quit 1398623515 Last Note: private/secret channel Quit: (freenode) Quit: Leaving.
 fireprfHydra_ - ~fireprfHy@pool-173-70-216-225.nwrknj.fios.verizon.net Quit 1398623565 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
@@ -1978,7 +1960,6 @@ ScottO_ - ~Scott@unaffiliated/scotto/x-4000254 Quit 1398628844 Last Note: pr
 bebop\ - 5cef4ddf@gateway/web/cgi-irc/kiwiirc.com/ip.92.239.77.223 Nick-Changed 1398629078 Last Note: *** bebop\ is now known as bebop` (freenode)
 zr - ~zr@unaffiliated/zr Quit 1398629255 Last Note: private/secret channel Quit: (freenode) Ping timeout: 255 seconds
 snuffeluffegus - ~John@homie-vserver314.dreamhost.com Quit 1398629427 Last Note: private/secret channel Quit: (freenode) Quit: AFK
-Cirrus_Minor - ~Cirrus_Mi@CAcert/Cirrus-Minor Quit 1398629440 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
 bartas39 - ~bartas39@azureus/bartas39 Quit 1398630197 Last Note: private/secret channel Quit: (freenode) Ping timeout: 246 seconds
 flywhiz101 - ~flywhiz10@cpe-65-27-225-208.cinci.res.rr.com Left 1398630235 Last Note: Left private/secret channel (freenode)
 MFKai - ~MFKai3@ip-95-222-210-143.unitymediagroup.de Left 1398630340 Last Note: Left private/secret channel (freenode)
@@ -2001,8 +1982,6 @@ aberrant - ~aberrant@unaffiliated/aberrant Quit 1398632656 Last Note: privat
 pingfloyd - ~syd@unaffiliated/pingfloyd Left 1398632863 Last Note: Left private/secret channel (freenode)
 wxe - ~wxi@69.181.174.85 Quit 1398632868 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
 TakuyaKanbara - ~Thunder@unaffiliated/flamon Quit 1398633092 Last Note: private/secret channel Quit: (freenode) Quit: http:puu.sh7daPe.jpg
-prison_ - 615ae56c@gateway/web/cgi-irc/kiwiirc.com/ip.97.90.229.108 Quit 1398633316 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
-Mr_X - Mr_X@unaffiliated/mr-x/x-3310228 Quit 1398633496 Last Note: private/secret channel Quit: (freenode)
 icesword - ~icecold@unaffiliated/icesword Quit 1398633505 Last Note: private/secret channel Quit: (freenode) Client Quit
 itwasntme - ~itwasntme@unaffiliated/itwasntme Left 1398633568 Last Note: Left private/secret channel (freenode)
 nszceta - ~nszceta@c-71-206-246-109.hsd1.pa.comcast.net Quit 1398633602 Last Note: private/secret channel Quit: (freenode)
@@ -2011,7 +1990,6 @@ bca - uid1192@wikimedia/Joe-Gazz84 Quit 1398633996 Last Note: private/secret
 Bradford|Away - AlfonsoHer@unaffiliated/djmalik Nick-Changed 1398634006 Last Note: *** Bradford|Away is now known as Bradford (freenode)
 EasyAsPie - ~A@c-67-175-76-109.hsd1.il.comcast.net Quit 1398634396 Last Note: private/secret channel Quit: (freenode) Changing host
 Dragooon - ~Dragooon@122.177.188.38 Quit 1398634403 Last Note: private/secret channel Quit: (freenode) Quit: My MacBook Pro has gone to sleep. ZZZzzz…
-ThrobbingPython - ~kvirc@196-215-29-46.dynamic.isadsl.co.za Quit 1398634434 Last Note: private/secret channel Quit: (freenode) Quit: KVIrc 4.2.0 Equilibrium http:www.kvirc.net
 Danol - ~Danol@237.23.broadband3.iol.cz Left 1398634449 Last Note: Left private/secret channel (freenode)
 DanielParker - ~DP@ip54521268.speed.planet.nl Quit 1398634485 Last Note: private/secret channel Quit: (freenode) Quit: Lat0r!
 SunDwarf - ~Eyes@WiseOS/Founder/NiaTeppelin Quit 1398634858 Last Note: private/secret channel Quit: (freenode) Quit: <insert quit message here>
@@ -2039,7 +2017,6 @@ Bray90820_ - ~Bray90820@2601:d:5c80:36d:d83e:63d3:6aab:bf13 Quit 1398636935 L
 Macedonia-girl - ~androirc@46.217.74.164 Left 1398636963 Last Note: Left private/secret channel (freenode)
 rmx77 - ~rmx77@50-54-156-124.evrt.wa.frontiernet.net Left 1398637041 Last Note: Left private/secret channel (freenode)
 FoolsTP - ~FoolsTP@unaffiliated/foolstp Quit 1398637314 Last Note: private/secret channel Quit: (freenode) Quit: KVIrc 4.2.0 Equilibrium http:www.kvirc.net
-Tux[Qyou] - ~Tux@176.103.41.5 Quit 1398637355 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
 Bradford - AlfonsoHer@unaffiliated/djmalik Nick-Changed 1398637414 Last Note: *** Bradford is now known as Bradford|Away (freenode)
 njcomsec - ~kvirc@cpc1-seve21-2-0-cust532.13-3.cable.virginm.net Quit 1398637546 Last Note: private/secret channel Quit: (freenode) Quit: KVIrc 4.2.0 Equilibrium http:www.kvirc.net
 kaplejon - uid30402@gateway/web/irccloud.com/x-quhquahbzrkzjyuh Left 1398637569 Last Note: Left private/secret channel (freenode)
@@ -2067,7 +2044,6 @@ aardward - ~aardward@unaffiliated/hjaarnio Quit 1398640040 Last Note: privat
 Huntyz - ~Huntyz@w-230.cust-15818.ip.static.uno.uk.net Quit 1398640197 Last Note: private/secret channel Quit: (freenode) Quit: Leaving...
 Kleineganz - kleineganz@unaffiliated/gabs Quit 1398640206 Last Note: private/secret channel Quit: (freenode)
 annakitty - 470eb07a@gateway/web/cgi-irc/kiwiirc.com/ip.71.14.176.122 Left 1398640268 Last Note: Left private/secret channel (freenode)
-armyriad - ~armyriad@50.23.115.124 Quit 1398640309 Last Note: private/secret channel Quit: (freenode) Ping timeout: 252 seconds
 Da_QuiK - ~Da_QuiK@94-225-204-113.access.telenet.be Quit 1398640316 Last Note: private/secret channel Quit: (freenode) Ping timeout: 252 seconds
 MiracleMax - ~albatross@unaffiliated/miraclemax Left 1398640356 Last Note: Left private/secret channel (freenode)
 skasturi - srijayk@april-fools/2014/runnerup/skasturi Quit 1398640370 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
@@ -2088,12 +2064,10 @@ black_bird - ~black_bir@94.14.186.66 Quit 1398641540 Last Note: private/secr
 Not_Whatever - ~Wat@92.80.1.28 Quit 1398641600 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
 swordsmanz - ~swordsman@unaffiliated/swordsmanz Quit 1398641614 Last Note: private/secret channel Quit: (freenode) Read error: Operation timed out
 ryaxnb9 - ~ryan@107-203-107-137.lightspeed.sntcca.sbcglobal.net Quit 1398641761 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
-DarkUranium - ~quassel@cpe-77.38.77.88.cable.t-1.si Quit 1398641832 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
 root- - 4d62e74d@gateway/web/cgi-irc/kiwiirc.com/ip.77.98.231.77 Left 1398641986 Last Note: Left private/secret channel (freenode)
 johnfrc - 45c58fb2@gateway/web/freenode/ip.69.197.143.178 Nick-Changed 1398642037 Last Note: *** johnfrc is now known as gry (freenode)
 gry - 45c58fb2@gateway/web/freenode/ip.69.197.143.178 Left 1398642084 Last Note: Left private/secret channel (freenode)
 lubmil - ~lubmil@89.67.40.164 Quit 1398642136 Last Note: private/secret channel Quit: (freenode) Quit: noc, ppahttp:i.imgur.comUme347X.jpg
-junktext - ~junktext@unaffiliated/junktext Quit 1398642309 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
 HUGEROOSTER - ~TURN@c-50-187-50-62.hsd1.ma.comcast.net Nick-Changed 1398642370 Last Note: *** HUGEROOSTER is now known as floatingpoint (freenode)
 tErik - ~tErik@unaffiliated/terik Quit 1398642566 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
 funch - ~funch@251.239.191.90.dyn.estpak.ee Quit 1398642813 Last Note: private/secret channel Quit: (freenode) Quit: ( www.nnscript.com :: NoNameScript 4.22 :: www.esnation.com )
@@ -2110,3 +2084,396 @@ ohsnap - ~chatzilla@unaffiliated/ohsnap Quit 1398643712 Last Note: private/s
 whuffor - ~whuffor@c80-216-56-238.bredband.comhem.se Quit 1398643832 Last Note: private/secret channel Quit: (freenode) Quit: Leaving is dying a little...
 cool-cool - ~cool-cool@unaffiliated/moliza Quit 1398643835 Last Note: private/secret channel Quit: (freenode) Ping timeout: 255 seconds
 nimol - ~cool-cool@203.144.90.69 Nick-Changed 1398643913 Last Note: *** nimol is now known as Guest55194 (freenode)
+albel727 - ~albel727@unaffiliated/albel727 Quit 1452434754 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+Drkaonan - ~Drakonan@69-179-112-57.dyn.centurytel.net Quit 1452434958 Last Note: private/secret channel Quit: (freenode) Ping timeout: 265 seconds
+Usurp|zZz - ~syl@reactos/developer/Usurp Nick-Changed 1452435064 Last Note: *** Usurp|zZz is now known as Usurp_ (freenode)
+Talby - ~IceChat77@d24-141-25-71.home.cgocable.net Quit 1452435075 Last Note: private/secret channel Quit: (freenode) Quit: We be chillin - IceChat style
+chewier - 479c3098@gateway/web/cgi-irc/kiwiirc.com/ip.71.156.48.152 Left 1452435291 Last Note: Left private/secret channel (freenode)
+ImQ009 - ~ImQ009@unaffiliated/imq009 Quit 1452435305 Last Note: private/secret channel Quit: (freenode) Ping timeout: 246 seconds
+ThePendulum - ~ThePendul@54195732.cm-5-2b.dynamic.ziggo.nl Left 1452435323 Last Note: Left private/secret channel (freenode)
+sparetire - ~sparetire@unaffiliated/sparetire Quit 1452435446 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+kubanc - ~kubanc@unaffiliated/kubanc Quit 1452435782 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+franco - ~franco@190.195.6.248 Quit 1452435915 Last Note: private/secret channel Quit: (freenode) Ping timeout: 265 seconds
+cupole - c54f06c0@gateway/web/cgi-irc/kiwiirc.com/ip.197.79.6.192 Quit 1452435916 Last Note: private/secret channel Quit: (freenode) Client Quit
+godzilla__ - ~godzilla@111.73.242.68 Quit 1452436045 Last Note: private/secret channel Quit: (freenode) Quit: This computer has gone to sleep
+BenderRodriguez - ~BenderRod@unaffiliated/foxhoundz Quit 1452436272 Last Note: private/secret channel Quit: (freenode) Client Quit
+hunteriam - uid63798@gateway/web/irccloud.com/x-bfsegjbipswrgfsp Quit 1452436293 Last Note: private/secret channel Quit: (freenode) Quit: Connection closed for inactivity
+Nach0z - ~nach0z@unaffiliated/nach0z Quit 1452436306 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+Gluesticky - ~IceChat9@unaffiliated/gluesticky Quit 1452436390 Last Note: private/secret channel Quit: (freenode) Quit: This is the end. Goodbye cruel world!
+zacg - ~zacg@104.192.46.2 Quit 1452436421 Last Note: private/secret channel Quit: (freenode) Changing host
+break3r_ - ~break3r@p5B2C8667.dip0.t-ipconnect.de Quit 1452436746 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+zest - c54f06c0@gateway/web/cgi-irc/kiwiirc.com/ip.197.79.6.192 Nick-Changed 1452436777 Last Note: *** zest is now known as Guest26977 (freenode)
+jose11 - Oper@gateway/shell/elitebnc/x-yatjchsazfpmxjpd Left 1452437006 Last Note: Left private/secret channel (freenode)
+WinDu1965 - ~BSurinx@d54c1152a.access.telenet.be Quit 1452437064 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+Ramisat - ~Ramisat@60-240-105-144.static.tpgi.com.au Quit 1452437167 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+THE_GFR|HOME - THE_GFRHO@172.79.123.94 Quit 1452437171 Last Note: private/secret channel Quit: (freenode) Ping timeout: 255 seconds
+LiohAu - ~LiohAu@AToulon-651-1-271-54.w83-113.abo.wanadoo.fr Quit 1452437409 Last Note: private/secret channel Quit: (freenode) Quit: LiohAu
+Guest97277 - Bitgod@ool-45782a42.dyn.optonline.net Quit 1452437462 Last Note: private/secret channel Quit: (freenode)
+MJason - 7a95ee59@gateway/web/cgi-irc/kiwiirc.com/ip.122.149.238.89 Quit 1452437579 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
+Nach0z_ - ~nach0z@unaffiliated/nach0z Nick-Changed 1452438081 Last Note: *** Nach0z_ is now known as Nach0z (freenode)
+DeathOverLord - ~Think-Pan@ool-435407ea.dyn.optonline.net Quit 1452438116 Last Note: private/secret channel Quit: (freenode) Changing host
+yohnnyjoe - ~yohnnyjoe@2601:143:8201:585e:fa1e:dfff:fed7:1ace Quit 1452438135 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+Guest26977 - c54f06c0@gateway/web/cgi-irc/kiwiirc.com/ip.197.79.6.192 Quit 1452438195 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
+iLembus - ~iLembus@185.93.180.120 Quit 1452438200 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+newbie - ~Auggie@pool-108-28-85-249.washdc.fios.verizon.net Nick-Changed 1452438741 Last Note: *** newbie is now known as Guest33618 (freenode)
+Guest33618 - ~Auggie@pool-108-28-85-249.washdc.fios.verizon.net Quit 1452438767 Last Note: private/secret channel Quit: (freenode) Client Quit
+kish - ~oracle@unaffiliated/oracle Nick-Changed 1452438866 Last Note: *** kish is now known as loveyababy (freenode)
+hagb4rd2 - ~hagb4rd@89.204.153.197 Nick-Changed 1452439109 Last Note: *** hagb4rd2 is now known as hagb4rd (freenode)
+mmango - ~mmango@unaffiliated/asdfasdffdsa Quit 1452439332 Last Note: private/secret channel Quit: (freenode) Ping timeout: 256 seconds
+^Fenris^ - ~Fenris@unaffiliated/beetlejuice Quit 1452439350 Last Note: private/secret channel Quit: (freenode) Quit: WeeChat 1.3
+kleanchap - ~njones@c-73-191-98-88.hsd1.va.comcast.net Quit 1452439427 Last Note: private/secret channel Quit: (freenode) Client Quit
+Tin_man - ~Mr_Tin_ma@unaffiliated/tin-man/x-0046760 Quit 1452439455 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+Aoyagi - ~Aoyagi@unaffiliated/aoyagi Quit 1452439499 Last Note: private/secret channel Quit: (freenode) Quit: qat
+dmnmsc - ~dmnmsc@127.Red-88-17-4.dynamicIP.rima-tde.net Quit 1452439526 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+skribblezatcha - ~skribblez@unaffiliated/pencilandpaper Nick-Changed 1452439821 Last Note: *** skribblezatcha is now known as pencilandpaper (freenode)
+AGZ2 - ~AGZ@120.234.34.95.customer.cdi.no Nick-Changed 1452439827 Last Note: *** AGZ2 is now known as AGZ (freenode)
+GUYVER - ~GUYVER@ppp91-78-47-32.pppoe.mtu-net.ru Quit 1452440025 Last Note: private/secret channel Quit: (freenode) Client Quit
+DatBeeDoe - ~DatBeeDoe@unaffiliated/datbeedoe Quit 1452440092 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+oeuvre - ~Z620WRKST@unaffiliated/oeuvre Quit 1452440461 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+wakeatnight - ~wakeatnig@dslb-094-218-207-059.094.218.pools.vodafone-ip.de Quit 1452440590 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+sikici - ~user2075@195.175.17.174 Quit 1452440622 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+BGL - sixty@75-149-171-58-Washington.hfc.comcastbusiness.net Quit 1452440833 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+modj - 539b797e@gateway/web/cgi-irc/kiwiirc.com/ip.83.155.121.126 Quit 1452440966 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
+mwm55 - 60e21341@gateway/web/cgi-irc/kiwiirc.com/ip.96.226.19.65 Quit 1452441018 Last Note: private/secret channel Quit: (freenode) Client Quit
+metrixx - ~metrixx@88.252.121.155 Quit 1452441168 Last Note: private/secret channel Quit: (freenode) Ping timeout: 256 seconds
+FireBeard - ~FireBeard@46-129-122-188.dynamic.upc.nl Quit 1452441399 Last Note: private/secret channel Quit: (freenode) Changing host
+hojboj - ~jrvq@176-93-156-129.bb.dnainternet.fi Quit 1452441755 Last Note: private/secret channel Quit: (freenode) Client Quit
+pencilandpaper - ~skribblez@unaffiliated/pencilandpaper Quit 1452441827 Last Note: private/secret channel Quit: (freenode) Quit: Peace. :)
+pippple - 46609218@gateway/web/freenode/ip.70.96.146.24 Quit 1452442119 Last Note: private/secret channel Quit: (freenode) Ping timeout: 252 seconds
+bangubangu - ~zupoman@91.224.129.184 Quit 1452442339 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+Chips - 7ab19aff@gateway/web/cgi-irc/kiwiirc.com/ip.122.177.154.255 Quit 1452442552 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
+muxsey- - ~muxsey@93.191.202.4 Quit 1452442732 Last Note: private/secret channel Quit: (freenode) Ping timeout: 256 seconds
+GunArm1 - ~barrett@firewall.mitsi.com Quit 1452442882 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+muxsey` - ~muxsey@46.38.51.50 Quit 1452442962 Last Note: private/secret channel Quit: (freenode) Ping timeout: 265 seconds
+lolcat - ~user@unaffiliated/energy-/x-7653247 Quit 1452443100 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+user - ~user@unaffiliated/energy-/x-7653247 Nick-Changed 1452443160 Last Note: *** user is now known as lolcat (freenode)
+applegal - ~applegal@202.156.247.185 Quit 1452443226 Last Note: private/secret channel Quit: (freenode)
+si - ~si@unaffiliated/siofwolves Quit 1452443240 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+chipp - ~chipp@unaffiliated/chipp Quit 1452443335 Last Note: private/secret channel Quit: (freenode)
+GhostlySyntex - 48e7d3b8@gateway/web/freenode/ip.72.231.211.184 Quit 1452443384 Last Note: private/secret channel Quit: (freenode) Client Quit
+smirky - ~smirky@78.90.169.155 Left 1452443407 Last Note: Left private/secret channel (freenode)
+deniz1a - ~deniz1a@88.251.76.207 Quit 1452443590 Last Note: private/secret channel Quit: (freenode) Quit: I disconnected from this server.
+Rickmasta - ~Rick@pool-74-101-29-191.nycmny.fios.verizon.net Quit 1452444117 Last Note: private/secret channel Quit: (freenode) Quit: My MacBook Pro has gone to sleep. ZZZzzz…
+bren - ~UNIX@178.18.16.33 Quit 1452444328 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+ablest - ablest@unaffiliated/ablest Quit 1452444481 Last Note: private/secret channel Quit: (freenode) Client Quit
+Leates - uid102165@gateway/web/irccloud.com/x-pysirpfkndthcjec Quit 1452444512 Last Note: private/secret channel Quit: (freenode) Quit: Connection closed for inactivity
+Kristjan85 - ~Kristjan8@unaffiliated/kristjan85 Quit 1452444626 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+JaredTheWolf - c654aa2b@gateway/web/cgi-irc/kiwiirc.com/ip.198.84.170.43 Left 1452444897 Last Note: Left private/secret channel (freenode)
+ablest1980 - ablest1980@unaffiliated/ablest1980 Quit 1452444947 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+donguston - ~Leanpocke@cpc12-sprt2-2-0-cust478.17-2.cable.virginm.net Quit 1452445011 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+SAngeli - ~SAngeli@host242-77-static.82-94-b.business.telecomitalia.it Quit 1452445193 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+BizWarlock - b162981a@gateway/web/cgi-irc/kiwiirc.com/ip.177.98.152.26 Quit 1452445313 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
+dmnmsc__ - ~dmnmsc@127.Red-88-17-4.dynamicIP.rima-tde.net Quit 1452445386 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+LiveAndRare - ~Now@1.39.39.200 Quit 1452445515 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+darkside86 - ~darkside8@97-81-28-188.dhcp.kgpt.tn.charter.com Quit 1452445796 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+andirc8088 - ~opal@31.210.188.75 Nick-Changed 1452445842 Last Note: *** andirc8088 is now known as andirc8089 (freenode)
+Guest49566 - ~opal@31.210.188.75 Nick-Changed 1452445867 Last Note: *** Guest49566 is now known as andirc8089 (freenode)
+SonikkuAmerica - ~SonikkuAm@unaffiliated/sonikkuamerica Quit 1452445890 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+Guest10605 - ~opal@31.210.188.75 Nick-Changed 1452445893 Last Note: *** Guest10605 is now known as andirc8089 (freenode)
+Guest77278 - ~opal@31.210.188.75 Nick-Changed 1452445922 Last Note: *** Guest77278 is now known as andirc8089 (freenode)
+Guest64385 - ~opal@31.210.188.75 Nick-Changed 1452445948 Last Note: *** Guest64385 is now known as andirc8089 (freenode)
+Guest87125 - ~opal@31.210.188.75 Nick-Changed 1452445968 Last Note: *** Guest87125 is now known as andirc8089 (freenode)
+Guest48028 - ~opal@31.210.188.75 Nick-Changed 1452445995 Last Note: *** Guest48028 is now known as andirc8089 (freenode)
+Guest75957 - ~opal@31.210.188.75 Nick-Changed 1452446015 Last Note: *** Guest75957 is now known as andirc8089 (freenode)
+Guest91710 - ~opal@31.210.188.75 Nick-Changed 1452446041 Last Note: *** Guest91710 is now known as andirc8089 (freenode)
+Guest38864 - ~opal@31.210.188.75 Nick-Changed 1452446069 Last Note: *** Guest38864 is now known as andirc8089 (freenode)
+ismail58050 - 556556ec@gateway/web/cgi-irc/kiwiirc.com/ip.85.101.86.236 Quit 1452446180 Last Note: private/secret channel Quit: (freenode) Client Quit
+Abe_ - ~dustin@72.22.250.30 Quit 1452446319 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+mapps - map@195.166.213.150 Quit 1452446406 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+LarchOye - ~LarchOye@173-17-16-167.client.mchsi.com Quit 1452446956 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+joko_moko - 58e8383f@gateway/web/freenode/ip.88.232.56.63 Left 1452447071 Last Note: Left private/secret channel (freenode)
+Guest39726 - ~opal@31.210.188.75 Nick-Changed 1452447160 Last Note: *** Guest39726 is now known as andirc8089 (freenode)
+CaTtleyA_ - ~CaTtleyA@aputeaux-653-1-99-94.w86-195.abo.wanadoo.fr Quit 1452447163 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+gueriLLaPunK - ~hi@guerillapunk.backtraced.yo.ass.from.inside.ur.seriesoftub.es Quit 1452447181 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+Guest12230 - ~opal@31.210.188.75 Nick-Changed 1452447187 Last Note: *** Guest12230 is now known as andirc8089 (freenode)
+Guest85213 - ~opal@31.210.188.75 Nick-Changed 1452447217 Last Note: *** Guest85213 is now known as andirc8089 (freenode)
+Guest53901 - ~opal@31.210.188.75 Nick-Changed 1452447246 Last Note: *** Guest53901 is now known as andirc8089 (freenode)
+SlimmyJimmy - ~boogieTEY@2605:a601:733:9701:9c81:ab3:a90d:99ff Quit 1452447265 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+Guest57548 - ~opal@31.210.188.75 Nick-Changed 1452447275 Last Note: *** Guest57548 is now known as andirc8089 (freenode)
+Guest39649 - ~opal@31.210.188.75 Nick-Changed 1452447301 Last Note: *** Guest39649 is now known as andirc8089 (freenode)
+Guest94355 - ~opal@31.210.188.75 Nick-Changed 1452447330 Last Note: *** Guest94355 is now known as andirc8089 (freenode)
+Guest55549 - ~opal@31.210.188.75 Nick-Changed 1452447350 Last Note: *** Guest55549 is now known as andirc8089 (freenode)
+Guest7446 - ~opal@31.210.188.75 Nick-Changed 1452447376 Last Note: *** Guest7446 is now known as andirc8089 (freenode)
+I_Died_Once - ~I_Died_On@unaffiliated/idiedonce/x-1828535 Quit 1452447383 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+Guest34981 - ~opal@31.210.188.75 Nick-Changed 1452447400 Last Note: *** Guest34981 is now known as andirc8089 (freenode)
+Fighter - 1803be11@gateway/web/cgi-irc/kiwiirc.com/ip.24.3.190.17 Quit 1452447420 Last Note: private/secret channel Quit: (freenode) Client Quit
+loveyababy - ~oracle@unaffiliated/oracle Nick-Changed 1452447468 Last Note: *** loveyababy is now known as kish (freenode)
+CaTtleyA - ~CaTtleyA@aputeaux-653-1-99-94.w86-195.abo.wanadoo.fr Quit 1452447489 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+Guest11273 - ~opal@31.210.188.75 Quit 1452447512 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+shawniverson_ - ~shawniver@165.138.163.203 Nick-Changed 1452447528 Last Note: *** shawniverson_ is now known as shawniverson (freenode)
+hagb4rd - ~hagb4rd@89.204.153.197 Quit 1452447565 Last Note: private/secret channel Quit: (freenode) Ping timeout: 276 seconds
+Misfits138 - 971b7967@gateway/web/cgi-irc/kiwiirc.com/ip.151.27.121.103 Quit 1452447663 Last Note: private/secret channel Quit: (freenode) Client Quit
+jhg887 - 4cfe429a@gateway/web/cgi-irc/kiwiirc.com/ip.76.254.66.154 Quit 1452447965 Last Note: private/secret channel Quit: (freenode) Client Quit
+seattleite - ~user@71-212-29-141.tukw.qwest.net Quit 1452447986 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+DomaMuffin - ~BotaniCar@93-138-89-179.adsl.net.t-com.hr Quit 1452448066 Last Note: private/secret channel Quit: (freenode) Ping timeout: 265 seconds
+S_SubZero - ~S_SubZero@about/windows/regular/s-subzero Quit 1452448118 Last Note: private/secret channel Quit: (freenode) Quit: S_SubZero
+DarkUranium - ~DarkUrani@cpe-77.38.77.88.cable.t-1.si Quit 1452448128 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+Xanather - ~Xanather@unaffiliated/xanather Quit 1452448194 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+robzilla - ~androirc@2607:fb90:445b:ae7a:7df0:25e0:816d:d21e Quit 1452448275 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+intheworld - ~intheworl@5.52.78.8 Left 1452448367 Last Note: Left private/secret channel (freenode)
+ajacmac - ~ajacmac@blk-252-13-229.eastlink.ca Quit 1452448706 Last Note: private/secret channel Quit: (freenode) Quit: KVIrc 4.2.0 Equilibrium http:www.kvirc.net
+dontknow - ~dontknow@unaffiliated/dontknow Quit 1452449028 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+i_love_avril - ~angelslie@unaffiliated/marverick Nick-Changed 1452449243 Last Note: *** i_love_avril is now known as M4rv3r1c]{ (freenode)
+mexicanlover1998 - 6cff2781@gateway/web/cgi-irc/kiwiirc.com/ip.108.255.39.129 Quit 1452449310 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
+Ubik_ - ~Ubik@unaffiliated/ubik/x-9523073 Left 1452449320 Last Note: Left private/secret channel (freenode)
+IWishIKnew - ~IWishIKne@nv-71-52-56-106.dhcp.embarqhsd.net Quit 1452449330 Last Note: private/secret channel Quit: (freenode) Quit: Remember: With great power, comes great current squared times resistance.
+m0rd3cai - m0rd3cai@unaffiliated/m0rd3cai Quit 1452449395 Last Note: private/secret channel Quit: (freenode) Quit: Lost terminal
+ihon - we@212.13.9.84 Quit 1452449674 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+Matoro - ~Matoro@129.62.68.6 Quit 1452449804 Last Note: private/secret channel Quit: (freenode) Ping timeout: 256 seconds
+M4rv3r1c]{ - ~angelslie@unaffiliated/marverick Quit 1452449890 Last Note: private/secret channel Quit: (freenode) Quit: im not satanist, im the Tyrant
+SadSmile - ~nobody@user154.c1.hrastnik.kabelnet.net Quit 1452450136 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+MinkStoleAFK - ae5de0a4@gateway/web/cgi-irc/kiwiirc.com/ip.174.93.224.164 Nick-Changed 1452450236 Last Note: *** MinkStoleAFK is now known as MinkStole (freenode)
+rajrajraj - uid72176@gateway/web/irccloud.com/x-jhoyjdgpldzztbhu Quit 1452450362 Last Note: private/secret channel Quit: (freenode)
+K0JIbKA - ~nikobit@87.251.136.199 Quit 1452450529 Last Note: private/secret channel Quit: (freenode) Quit: K0JIbKA
+iamthehb - 8e71d5e3@gateway/web/cgi-irc/kiwiirc.com/ip.142.113.213.227 Quit 1452450549 Last Note: private/secret channel Quit: (freenode) Client Quit
+dmnmsc_ - ~dmnmsc@127.Red-88-17-4.dynamicIP.rima-tde.net Quit 1452450612 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+Angeris - ~poor@4548.s.time4vps.eu Left 1452450716 Last Note: Left private/secret channel (freenode)
+Aragnir - user@2a01:7e00::f03c:91ff:fee4:b560 Left 1452450934 Last Note: Left private/secret channel (freenode)
+wiiguy - ~fake@unaffiliated/wiiguy Quit 1452451279 Last Note: private/secret channel Quit: (freenode) Quit: The Kirito is always right foundation. Grand reopening.
+fahadash - uid44972@unaffiliated/fahadash Quit 1452451345 Last Note: private/secret channel Quit: (freenode) Changing host
+n1340 - ~user3031@93-44-39-227.ip95.fastwebnet.it Quit 1452451432 Last Note: private/secret channel Quit: (freenode) Quit: TurboIRC for Android. Available @ Google Play.
+uservbn - ~uservbn@unaffiliated/uservbn Quit 1452451533 Last Note: private/secret channel Quit: (freenode) Quit: uservbn
+Kaweni - ~sven@p2003005B4940AB8E7C68ECBA58B6119B.dip0.t-ipconnect.de Quit 1452451570 Last Note: private/secret channel Quit: (freenode) Quit: Verlassend
+Nice_Male|Away - ~LinuxMan@77-172-50-50.ip.telfort.nl Nick-Changed 1452451775 Last Note: *** Nice_Male|Away is now known as Nice_Male (freenode)
+armatechnicos - ~armatechn@CPE788df7e8bcb1-CM788df7e8bcb0.cpe.net.cable.rogers.com Quit 1452451869 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+guampa - ~guampa@unaffiliated/guampa Left 1452451878 Last Note: Left private/secret channel (freenode)
+Guina2e690e1Guin - ~Guina_32@189.78.178.100 Left 1452452025 Last Note: Left private/secret channel (freenode)
+GerryMander - ~quassel@unaffiliated/haxxed Quit 1452452058 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+bluepanther - ~tuttoirc@net-2-40-221-113.cust.dsl.teletu.it Left 1452452214 Last Note: Left private/secret channel (freenode)
+iH2O - ~chatzilla@unaffiliated/myfree Quit 1452452341 Last Note: private/secret channel Quit: (freenode) Quit: ChatZilla 0.9.92-rdmsoft [XULRunner 35.0.120150122214805]
+juozas - d9472fd0@gateway/web/cgi-irc/kiwiirc.com/ip.217.71.47.208 Quit 1452452362 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
+Dragon_Rainbow - ~Dragon_Ra@wikia/Dragon-Rainbow Left 1452452462 Last Note: Left private/secret channel (freenode)
+IronDev - ~IronDev@unaffiliated/optrusty Quit 1452452517 Last Note: private/secret channel Quit: (freenode) Quit: Be back later ...
+Matoro_ - ~Matoro@129.62.68.6 Quit 1452452555 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
+Sir_N - ~Now@1.39.38.55 Quit 1452452557 Last Note: private/secret channel Quit: (freenode) Quit: Quit
+mgorbach - ~mgorbach@pool-96-237-153-21.bstnma.ftas.verizon.net Quit 1452452557 Last Note: private/secret channel Quit: (freenode) Quit: ZNC - http:znc.in
+Gravitastic - ~Vivuto@ool-457be559.dyn.optonline.net Nick-Changed 1452452566 Last Note: *** Gravitastic is now known as Vivuto (freenode)
+Vivuto - ~Vivuto@ool-457be559.dyn.optonline.net Nick-Changed 1452452572 Last Note: *** Vivuto is now known as Vyvuto (freenode)
+Meorge_ - ~MalStar10@75-175-68-3.ptld.qwest.net Quit 1452452649 Last Note: private/secret channel Quit: (freenode) Quit: Textual IRC Client: www.textualapp.com
+ilMentore - ~ilMentore@unaffiliated/vladgobelen Quit 1452452791 Last Note: private/secret channel Quit: (freenode) Ping timeout: 276 seconds
+Zytho - ~Zytho@unaffiliated/zytho Quit 1452452882 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+df0 - ~df0@2a02:8109:8c40:3700:225:d3ff:fec3:c8dc Quit 1452452933 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+Nice_Male - ~LinuxMan@77-172-50-50.ip.telfort.nl Nick-Changed 1452452975 Last Note: *** Nice_Male is now known as Nice_Male|Away (freenode)
+comma8 - ~comma8@2601:1c2:801:a68f:8a53:2eff:fe0f:424 Quit 1452453110 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+Vyvuto - ~Vivuto@ool-457be559.dyn.optonline.net Nick-Changed 1452453374 Last Note: *** Vyvuto is now known as Gravitas (freenode)
+`z - ~zhaofeng@wikipedia/Zhaofeng-Li Quit 1452453403 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+blipz - ~blipz@97e4c384.skybroadband.com Quit 1452453489 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+rippa - ~rippa@ppp-vpdn-37.1.85.157.yarnet.ru Quit 1452453492 Last Note: private/secret channel Quit: (freenode) Quit: {#`%${%&`+'${`%&NO CARRIER
+scrubfest - 58593b45@gateway/web/freenode/ip.88.89.59.69 Quit 1452453530 Last Note: private/secret channel Quit: (freenode) Quit: Page closed
+WikiPuppies - ~cheese@wikipedia/WikiPuppies Quit 1452453530 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+Metacity - ~cheese@wikipedia/WikiPuppies Quit 1452453563 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
+moonbox - ~moonbox@192.40.89.11 Quit 1452453635 Last Note: private/secret channel Quit: (freenode) Client Quit
+NekoNii-Chan - be2d7ba5@gateway/web/cgi-irc/kiwiirc.com/ip.190.45.123.165 Quit 1452453654 Last Note: private/secret channel Quit: (freenode) Client Quit
+Fleet - ~james@cpe-72-224-222-74.maine.res.rr.com Quit 1452453916 Last Note: private/secret channel Quit: (freenode) Changing host
+geko - ~geko@c-75-69-71-95.hsd1.vt.comcast.net Quit 1452453924 Last Note: private/secret channel Quit: (freenode) Ping timeout: 265 seconds
+ezech - ~ezech@89-70-125-41.dynamic.chello.pl Quit 1452454031 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
+alexutzu02x - ~home@79.113.134.245 Quit 1452454083 Last Note: private/secret channel Quit: (freenode) Quit: Ex-Chat
+blip- - ~blip-@unaffiliated/blip- Quit 1452454116 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+rl0_ - ~rl0@unaffiliated/rl0 Quit 1452454166 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+fengshaun - ~fengshaun@unaffiliated/fengshaun Quit 1452454316 Last Note: private/secret channel Quit: (freenode) Ping timeout: 255 seconds
+DrCharlesT - ~DrCharles@gateway/vpn/privateinternetaccess/drcharlest Quit 1452454368 Last Note: private/secret channel Quit: (freenode) Quit: My Mac has gone to sleep. ZZZzzz…
+invit - bc9a44f7@gateway/web/cgi-irc/kiwiirc.com/ip.188.154.68.247 Quit 1452454449 Last Note: private/secret channel Quit: (freenode) Client Quit
+iraj - ~iraj@91.107.234.109 Quit 1452454475 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+MY123 - ~IceChat9@unaffiliated/kill--9-1/x-8776976 Quit 1452454524 Last Note: private/secret channel Quit: (freenode) Quit: Goodbye
+YelloBird_ - anonemoose@24-119-41-237.cpe.cableone.net Quit 1452454562 Last Note: private/secret channel Quit: (freenode) Ping timeout: 265 seconds
+burcuiela - ~0@176.43.140.50 Quit 1452454564 Last Note: private/secret channel Quit: (freenode) Ping timeout: 256 seconds
+pr0x1mu5 - ~pr0x1mu5@94.191.186.42.mobile.3.dk Quit 1452454633 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+zoidb0rg - ~zoidb0rg@gateway/vpn/privateinternetaccess/zoidb0rg Quit 1452454654 Last Note: private/secret channel Quit: (freenode) Quit: Textual IRC Client: www.textualapp.com
+iMin3Ra1n - ~Scott@104.240.12.49 Quit 1452454845 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+Gravitas - ~Vivuto@ool-457be559.dyn.optonline.net Quit 1452454916 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+Squishy - ~textual@162-223-221-68.cpe.ngl.ninja Quit 1452454949 Last Note: private/secret channel Quit: (freenode) Quit: Textual IRC Client: www.textualapp.com
+dasd - 4c073a16@gateway/web/cgi-irc/kiwiirc.com/ip.76.7.58.22 Quit 1452454997 Last Note: private/secret channel Quit: (freenode) Client Quit
+awkwardusername - ~namae_kun@180.191.74.198 Quit 1452455024 Last Note: private/secret channel Quit: (freenode) Ping timeout: 246 seconds
+dcprom0 - ~TheThe@unaffiliated/thethe Quit 1452455045 Last Note: private/secret channel Quit: (freenode) Ping timeout: 255 seconds
+Meow-J - uid69628@gateway/web/irccloud.com/x-znnamnicffrbizcx Quit 1452455067 Last Note: private/secret channel Quit: (freenode) Quit: Connection closed for inactivity
+solock - 4c073a16@gateway/web/cgi-irc/kiwiirc.com/ip.76.7.58.22 Left 1452455136 Last Note: Left private/secret channel (freenode)
+ferdna - ~ferdna@108-230-126-51.lightspeed.elpstx.sbcglobal.net Quit 1452455230 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+user123irc - ~quassel@78-62-111-164.static.zebra.lt Quit 1452455280 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+tekgeek2 - ~tekgeek@63-227-64-202.desm.qwest.net Quit 1452455287 Last Note: private/secret channel Quit: (freenode) Ping timeout: 265 seconds
+junktext - ~junktext@fsf/member/junktext Quit 1452455507 Last Note: private/secret channel Quit: (freenode) Quit: Fact: Did you know that recycling reduces CO2 emissions?
+aaronrodgersleft - textual@gateway/vpn/mullvad/x-askkxfvmzqqozcsm Nick-Changed 1452455736 Last Note: *** aaronrodgersleft is now known as arodsleftclavicl (freenode)
+arodsleftclavicl - textual@gateway/vpn/mullvad/x-askkxfvmzqqozcsm Nick-Changed 1452455749 Last Note: *** arodsleftclavicl is now known as user[GB] (freenode)
+dslev - ~dslev@ool-457278c3.dyn.optonline.net Quit 1452455833 Last Note: private/secret channel Quit: (freenode) Ping timeout: 276 seconds
+Xiti` - ~Xiti-@unaffiliated/xiti Quit 1452455908 Last Note: private/secret channel Quit: (freenode) Client Quit
+Xiti - ~Xiti-@unaffiliated/xiti Quit 1452455939 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
+user[GB] - textual@gateway/vpn/mullvad/x-askkxfvmzqqozcsm Quit 1452456040 Last Note: private/secret channel Quit: (freenode) Quit: My Mac has gone to sleep. ZZZzzz…
+Guest28 - textual@gateway/vpn/mullvad/x-axfxcsqpffmvpqby Quit 1452456050 Last Note: private/secret channel Quit: (freenode) Client Quit
+dreamcat4 - ~dreamcat4@62.49.10.154 Quit 1452456179 Last Note: private/secret channel Quit: (freenode) Quit: Lost terminal
+ThrobbingPython - ~kvirc@196-210-200-168.dynamic.isadsl.co.za Quit 1452456313 Last Note: private/secret channel Quit: (freenode) Quit: KVIrc 4.2.0 Equilibrium http:www.kvirc.net
+r44 - ~r44@546AE9EE.cm-12-3d.dynamic.ziggo.nl Quit 1452456317 Last Note: private/secret channel Quit: (freenode) Quit: back to society
+Private_User - ~Private_U@unaffiliated/private-user/x-9143494 Quit 1452456340 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+tehsma - ~tehsma@cpe-45-36-86-204.triad.res.rr.com Quit 1452456421 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+pskosinski - pskosinski@gateway/shell/mydevil.net/x-pkwwpptmhghdrzzc Quit 1452456537 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+me` - ~zeta@unaffiliated/frony0 Nick-Changed 1452456604 Last Note: *** me` is now known as xa0 (freenode)
+Enthralled - ~Enthralle@unaffiliated/dxdydz Quit 1452456683 Last Note: private/secret channel Quit: (freenode) Ping timeout: 250 seconds
+rowan7 - ~rowan7@unaffiliated/rowan7 Quit 1452456692 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+alex1 - ~alex@104.166.217.252 Quit 1452456695 Last Note: private/secret channel Quit: (freenode) Quit: WeeChat 1.3
+alex_ - ~alex@104.166.217.252 Quit 1452456729 Last Note: private/secret channel Quit: (freenode) Client Quit
+Mr_KaShAnA - ~Mr_KaShAn@178-37-244-197.adsl.inetia.pl Left 1452456869 Last Note: Left private/secret channel (freenode)
+betommin - ~betommin@2604:a880:800:10::27b:1001 Quit 1452456884 Last Note: private/secret channel Quit: (freenode) Quit: WeeChat 1.0.1
+THIS-NICK-SUCKS - ~nan@im.the.messiah.and.my.website.is.googolplex.ninja Quit 1452456905 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+phinxy - ~tehhhd@unaffiliated/phinxy Quit 1452456991 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+Allium - Allium@2a01:e35:2e20:dc10:b876:1769:1e95:8769 Quit 1452457006 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+campus - ~campus@85-76-0-63-nat.elisa-mobile.fi Quit 1452457120 Last Note: private/secret channel Quit: (freenode) Quit: Gonna out.
+LevaFresel - ~LevaFrese@xdsl-81-173-237-68.netcologne.de Quit 1452457170 Last Note: private/secret channel Quit: (freenode) Quit: Man who run behind car get exhausted
+LSDuser - ~blurredli@2602:ffc5:20::1:b7f4 Quit 1452457237 Last Note: private/secret channel Quit: (freenode) Quit: You're gonna carry that weight
+dbarros - ~DBarros@2804:90:11:dfe0:8184:7a4:6a4b:75f5 Quit 1452457418 Last Note: private/secret channel Quit: (freenode) Quit: Leaving Saindo
+Auggie - ~Auggie@pool-108-28-85-249.washdc.fios.verizon.net Quit 1452457494 Last Note: private/secret channel Quit: (freenode) Quit: KVIrc 4.2.0 Equilibrium http:www.kvirc.net
+Yamahapsr200 - ~Yamahapsr@p578a7541.dip0.t-ipconnect.de Quit 1452457510 Last Note: private/secret channel Quit: (freenode)
+coppercore - ~coppercor@quassel.coppercore.net Quit 1452457520 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+qualeboy - ~qualeboy@host86-159-78-38.range86-159.btcentralplus.com Quit 1452457527 Last Note: private/secret channel Quit: (freenode) Quit: Textual IRC Client: www.textualapp.com
+ZimbabweLegit - ~Yiomo@c-73-209-216-175.hsd1.il.comcast.net Quit 1452457608 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+dslevin_ - ~dslevin@ool-457278c3.dyn.optonline.net Quit 1452457695 Last Note: private/secret channel Quit: (freenode) Max SendQ exceeded
+vibrato_is_afk - ~Vivuto@ool-457be559.dyn.optonline.net Quit 1452457703 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
+Texas1 - ~androirc@66-169-196-103.dhcp.ftwo.tx.charter.com Quit 1452457716 Last Note: private/secret channel Quit: (freenode) Client Quit
+penguin1263 - ~Victor@107-132-61-47.lightspeed.clmboh.sbcglobal.net Quit 1452457768 Last Note: private/secret channel Quit: (freenode) Ping timeout: 272 seconds
+Land_O_Lakes_FL - ~cyber@dt0d3n86.tampabay.res.rr.com Quit 1452457818 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+svc - ~rmb@c-98-223-50-23.hsd1.il.comcast.net Quit 1452457854 Last Note: private/secret channel Quit: (freenode) Quit: - nbs-irc 2.39 - www.nbs-irc.net -
+Nightmare - ddoscomin@unaffiliated/thetfef Nick-Changed 1452457973 Last Note: *** Nightmare is now known as HaythamKenway (freenode)
+user123321 - ~user12332@unaffiliated/user123321 Quit 1452458008 Last Note: private/secret channel Quit: (freenode) Ping timeout: 250 seconds
+Rmarmorstein_ - ~rio@irc.riveris.sexy Nick-Changed 1452458029 Last Note: *** Rmarmorstein_ is now known as RiverM (freenode)
+Govvy - ~govvy@90.196.73.80 Quit 1452458030 Last Note: private/secret channel Quit: (freenode)
+RiverM - ~rio@irc.riveris.sexy Left 1452458035 Last Note: Left private/secret channel (freenode)
+dekiss - ~dekiss@77.28.1.227 Quit 1452458047 Last Note: private/secret channel Quit: (freenode)
+robotdevil1 - ~rd@142-165-27-45.estv.hsdb.sasknet.sk.ca Quit 1452458071 Last Note: private/secret channel Quit: (freenode) Quit: Konversation terminated!
+JinBaba - ~JinBaba@unaffiliated/jinbaba Quit 1452458100 Last Note: private/secret channel Quit: (freenode) Ping timeout: 256 seconds
+NotSmirks - ~Michelle@216.16.109.51 Quit 1452458187 Last Note: private/secret channel Quit: (freenode) Ping timeout: 265 seconds
+rl0 - ~rl0@unaffiliated/rl0 Quit 1452458231 Last Note: private/secret channel Quit: (freenode) Ping timeout: 255 seconds
+milky - ~discovery@textual/developer/mikeym Quit 1452458294 Last Note: private/secret channel Quit: (freenode) Ping timeout: 250 seconds
+unreal - ~unreal@unaffiliated/unreal Quit 1452458303 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+sphenxes01 - ~sphenxes@194-166-109-39.adsl.highway.telekom.at Quit 1452458398 Last Note: private/secret channel Quit: (freenode) Ping timeout: 250 seconds
+dingus - 68b07b0f@gateway/web/cgi-irc/kiwiirc.com/ip.104.176.123.15 Quit 1452458400 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
+sphenxes - ~sphenxes@194-166-109-39.adsl.highway.telekom.at Quit 1452458414 Last Note: private/secret channel Quit: (freenode) Ping timeout: 272 seconds
+kaepora - ~zxc@89-156-115-72.rev.numericable.fr Quit 1452458526 Last Note: private/secret channel Quit: (freenode) Changing host
+artois - ~artois@funtoo/user/artois Left 1452458537 Last Note: Left private/secret channel (freenode)
+GaryMedel982456 - c99d549e@gateway/web/cgi-irc/kiwiirc.com/ip.201.157.84.158 Quit 1452458604 Last Note: private/secret channel Quit: (freenode) Client Quit
+zupreme - ~zupreme@c-24-1-89-230.hsd1.il.comcast.net Nick-Changed 1452458632 Last Note: *** zupreme is now known as Zupreme (freenode)
+muxsey - ~muxsey@93.191.202.4 Quit 1452458699 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+Desaix - ~smuxi@71.15.211.233 Quit 1452458717 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+oneelsehere - ~oneelsehe@213.152.161.181 Quit 1452458734 Last Note: private/secret channel Quit: (freenode) Client Quit
+Thomas-0725 - ~thomas072@99-46-193-137.lightspeed.okcbok.sbcglobal.net Quit 1452458775 Last Note: private/secret channel Quit: (freenode) Client Quit
+SadHDDGuy_ - 18f6ec39@gateway/web/freenode/ip.24.246.236.57 Nick-Changed 1452458790 Last Note: *** SadHDDGuy_ is now known as SadHDGuy (freenode)
+SadHDGuy - 18f6ec39@gateway/web/freenode/ip.24.246.236.57 Nick-Changed 1452458810 Last Note: *** SadHDGuy is now known as SadHDDGuy_ (freenode)
+ghostboarder - ~johngalt@S010654a0506d3c21.va.shawcable.net Quit 1452458875 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+xcody - xcody@unaffiliated/xcody Left 1452459074 Last Note: Left private/secret channel (freenode)
+KingKeA - ~KingKeA@d60-65-14-232.col.wideopenwest.com Quit 1452459192 Last Note: private/secret channel Quit: (freenode) Changing host
+FRS - ~FRS@ppp-93-104-96-42.dynamic.mnet-online.de Quit 1452459405 Last Note: private/secret channel Quit: (freenode) Ping timeout: 265 seconds
+Haxor104 - ~Haxor104@ns3268460.ip-5-39-81.eu Quit 1452459434 Last Note: private/secret channel Quit: (freenode) Ping timeout: 245 seconds
+half_calf - ~halfcalf@199.48.246.3 Quit 1452459461 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+BOKALDO - ~BOKALDO@87.110.88.144 Quit 1452459464 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+Mr_X - Mr_X@unaffiliated/mr-x/x-3310228 Quit 1452460266 Last Note: private/secret channel Quit: (freenode)
+prison_ - ~yo@unaffiliated/prison-/x-47889596 Quit 1452460310 Last Note: private/secret channel Quit: (freenode) Ping timeout: 255 seconds
+DoNicksMatter - ~DoNicksMa@95-210-74-247.ip.skylogicnet.com Quit 1452460384 Last Note: private/secret channel Quit: (freenode) Quit: Lost terminal
+curryj102 - ~curryj102@c-68-47-205-233.hsd1.tn.comcast.net Quit 1452460603 Last Note: private/secret channel Quit: (freenode)
+gosview - ~gosse@c-68-55-246-64.hsd1.mi.comcast.net Quit 1452460797 Last Note: private/secret channel Quit: (freenode) Ping timeout: 265 seconds
+rafoulsky - ba2ecab7@gateway/web/cgi-irc/kiwiirc.com/ip.186.46.202.183 Left 1452460866 Last Note: Left private/secret channel (freenode)
+yongyung - ~vayne@pD9E44303.dip0.t-ipconnect.de Quit 1452460895 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+erynn - 186156ea@gateway/web/freenode/ip.24.97.86.234 Quit 1452460904 Last Note: private/secret channel Quit: (freenode) Quit: Page closed
+Laurenceb_ - ~Laurence@host86-179-254-234.range86-179.btcentralplus.com Left 1452460907 Last Note: Left private/secret channel (freenode)
+ibouvousaime - ~ibouvousa@41.82.51.73 Quit 1452460950 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+break3r - ~break3r@p5B2C8667.dip0.t-ipconnect.de Quit 1452460973 Last Note: private/secret channel Quit: (freenode) Quit: Konversation terminated!
+somis - ~somis@167.160.44.201 Quit 1452461128 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+jackbrown - ~se@unaffiliated/jackbrown Quit 1452461159 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
+MissBouncy - 2d218a0a@gateway/web/cgi-irc/kiwiirc.com/ip.45.33.138.10 Quit 1452461162 Last Note: private/secret channel Quit: (freenode) Killed (Sigyn (Spam is off topic on freenode.))
+Finetundra_ - ~James@107-130-112-19.lightspeed.tukrga.sbcglobal.net Quit 1452461299 Last Note: private/secret channel Quit: (freenode) Quit: Konversation terminated!
+shibboleth - ~shibbolet@unaffiliated/shibboleth Quit 1452461306 Last Note: private/secret channel Quit: (freenode) Quit: shibboleth
+volar - volar@114.56.22.95.dynamic.jazztel.es Quit 1452461368 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+Wizek - ~Wizek@catv-89-132-132-110.catv.broadband.hu Quit 1452461396 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+Pazician - ~pazician@unaffiliated/pazician Quit 1452461486 Last Note: private/secret channel Quit: (freenode)
+Speedy624 - ~Timslin@575184b2.skybroadband.com Quit 1452461492 Last Note: private/secret channel Quit: (freenode) Ping timeout: 250 seconds
+Treefingers - ~textual@host-84-13-239-153.opaltelecom.net Quit 1452461556 Last Note: private/secret channel Quit: (freenode) Quit: Goodbye
+orik - ~orik@50-46-140-220.evrt.wa.frontiernet.net Quit 1452461647 Last Note: private/secret channel Quit: (freenode) Quit: My laptop has been closed.
+hansert - 4c073a16@gateway/web/cgi-irc/kiwiirc.com/ip.76.7.58.22 Quit 1452461650 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
+decoponio - ~decoponio@pkmu001-226.kcn.ne.jp Quit 1452461685 Last Note: private/secret channel Quit: (freenode) Quit: Leaving...
+grant - ~grant@unaffiliated/grant Quit 1452461771 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
+danimal2 - ~danimal2@unaffiliated/danimal2 Quit 1452461809 Last Note: private/secret channel Quit: (freenode) Ping timeout: 245 seconds
+prohobo - ~prohobo@088156140102.dynamic-ra-3.vectranet.pl Quit 1452461935 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+DLSteve - ~DLSteve@c-73-239-22-33.hsd1.wa.comcast.net Quit 1452461957 Last Note: private/secret channel Quit: (freenode) Ping timeout: 276 seconds
+era - era@gateway/shell/elitebnc/x-llcujpfoybsrqsht Left 1452461983 Last Note: Left private/secret channel (freenode)
+wolfcub - ~henrique_@177.55.202.245 Quit 1452462035 Last Note: private/secret channel Quit: (freenode) Ping timeout: 276 seconds
+RingtailedFox - ~FoxFoxFox@2001:470:1d:c62:7db7:6d45:9e82:8cc6 Quit 1452462064 Last Note: private/secret channel Quit: (freenode) Ping timeout: 250 seconds
+unreal_ - ~unreal@unaffiliated/unreal Quit 1452462223 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+^elf^ - ~elf@unaffiliated/elf Quit 1452462227 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+andirc8089 - ~opal@2.54.0.199 Quit 1452462275 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
+MinkStole - ae5de0a4@gateway/web/cgi-irc/kiwiirc.com/ip.174.93.224.164 Left 1452462461 Last Note: Left private/secret channel (freenode)
+dionysus69 - ~Icedove@unaffiliated/dionysus69 Quit 1452462490 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+MikeBones - ~MikeBones@ip98-165-204-42.ph.ph.cox.net Quit 1452462588 Last Note: private/secret channel Quit: (freenode) Ping timeout: 256 seconds
+duckgoose - ~quack@unaffiliated/duckgoose Quit 1452462653 Last Note: private/secret channel Quit: (freenode) Ping timeout: 265 seconds
+derek01 - 4a43de97@gateway/web/cgi-irc/kiwiirc.com/ip.74.67.222.151 Quit 1452462825 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
+Finetundra - ~James@107-130-112-19.lightspeed.tukrga.sbcglobal.net Quit 1452462838 Last Note: private/secret channel Quit: (freenode) Quit: Konversation terminated!
+jnewt - ~jnewt@99-127-232-51.lightspeed.mssnks.sbcglobal.net Quit 1452462919 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+AGZ - ~AGZ@120.234.34.95.customer.cdi.no Quit 1452462946 Last Note: private/secret channel Quit: (freenode) Quit: Going offline, see ya! (www.adiirc.com)
+Merovoth - ~Merovoth@unaffiliated/merovoth Left 1452462969 Last Note: Left private/secret channel (freenode)
+ekaj - ~ekaj@floor-13.net Quit 1452463027 Last Note: private/secret channel Quit: (freenode) Changing host
+chalcedony - ~chalcedon@unaffiliated/chalcedony Quit 1452463046 Last Note: private/secret channel Quit: (freenode) Ping timeout: 246 seconds
+cyper - ~cyper@46.7.120.125 Quit 1452463278 Last Note: private/secret channel Quit: (freenode) Ping timeout: 272 seconds
+HidMov - ~HidMov@unaffiliated/hidmov Quit 1452463288 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+joze - ~joze@zed.n0p.at Quit 1452463373 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+Benn - ~AndChat23@188.29.164.180.threembb.co.uk Quit 1452463455 Last Note: private/secret channel Quit: (freenode) Disconnected by services
+vibrato - ~Vivuto@ool-457be559.dyn.optonline.net Quit 1452463459 Last Note: private/secret channel Quit: (freenode) Ping timeout: 245 seconds
+LucaTM - ~LucaTM@unaffiliated/lucatm Quit 1452463522 Last Note: private/secret channel Quit: (freenode) Quit: To infinity and beyond...
+Scatch - 974d4c60@gateway/web/cgi-irc/kiwiirc.com/ip.151.77.76.96 Quit 1452463536 Last Note: private/secret channel Quit: (freenode) Quit: http:www.kiwiirc.com - A hand crafted IRC client
+Rome - ~Roman@159.203.4.106 Quit 1452463557 Last Note: private/secret channel Quit: (freenode) Changing host
+guideX - guideX@66-214-229-26.dhcp.lnbh.ca.charter.com Left 1452464630 Last Note: Left private/secret channel (freenode)
+Platoza - ~u694458@165.255.112.32 Left 1452464647 Last Note: Left private/secret channel (freenode)
+redspartan - ~redsparta@c-50-185-28-178.hsd1.ca.comcast.net Quit 1452464715 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+armyriad - ~armyriad@71-83-188-91.dhcp.lnbh.ca.charter.com Quit 1452464921 Last Note: private/secret channel Quit: (freenode) Ping timeout: 276 seconds
+iamzorro - ~iamzorro@c-50-164-112-2.hsd1.pa.comcast.net Left 1452464971 Last Note: Left private/secret channel (freenode)
+AfroThundr - ~AfroThund@2601:147:c001:6667:fd06:1a9a:23b6:18b8 Quit 1452464974 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+corgi - ~corgi@botters/frogdr Nick-Changed 1452465001 Last Note: *** corgi is now known as frogdr (freenode)
+Kelshan - 52f2cc7a@gateway/web/cgi-irc/kiwiirc.com/ip.82.242.204.122 Quit 1452465036 Last Note: private/secret channel Quit: (freenode) Client Quit
+cvvjf - ~cvvjf@2a02:908:df53:ed40:6d4f:dc1d:dd24:cb0 Quit 1452465076 Last Note: private/secret channel Quit: (freenode) Quit: This computer has gone to sleep
+eligrey - ~Eli@oftn/board/eligrey Quit 1452465162 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+Sucks - ~quassel@187.39.13.235 Quit 1452465373 Last Note: private/secret channel Quit: (freenode) Quit: No Ping reply in 180 seconds.
+DrNick42 - ~DrNick42@w-250.cust-u527.ip.static.uno.uk.net Quit 1452465523 Last Note: private/secret channel Quit: (freenode) Quit: Zzz...
+AnkhX100 - ~textual@108-234-17-49.lightspeed.rcsntx.sbcglobal.net Quit 1452465587 Last Note: private/secret channel Quit: (freenode) Quit: Nap time.
+Benn_ - ~AndChat23@cpc11-kemp7-2-0-cust302.9-2.cable.virginm.net Quit 1452465732 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+tmitc - ~blue_like@216.108.215.28 Nick-Changed 1452465792 Last Note: *** tmitc is now known as Sux4U (freenode)
+pskosinski_ - pskosinski@gateway/shell/mydevil.net/x-oayrmkbvlhlalveh Nick-Changed 1452465801 Last Note: *** pskosinski_ is now known as pskosinski (freenode)
+Imek - ~Imek@5751c702.skybroadband.com Quit 1452466049 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+sssilver - ~sssilver@cpe-70-112-245-224.austin.res.rr.com Quit 1452466126 Last Note: private/secret channel Quit: (freenode) Quit: My Mac has gone to sleep. ZZZzzz…
+Tux[Qyou] - ~Tux@176.103.41.5 Quit 1452466276 Last Note: private/secret channel Quit: (freenode) Quit: Excess flood
+sud0 - ~Death@unaffiliated/sud0 Quit 1452466302 Last Note: private/secret channel Quit: (freenode) Ping timeout: 250 seconds
+Overand - ~overand@unaffiliated/overand Quit 1452466327 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+jimj - 4e167a03@gateway/web/freenode/ip.78.22.122.3 Quit 1452466329 Last Note: private/secret channel Quit: (freenode) Quit: Page closed
+diogenese - ~diogenese@diogenese.velotech.net Quit 1452466359 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+sagerdearia - ~necrodear@unaffiliated/necrodearia Quit 1452466482 Last Note: private/secret channel Quit: (freenode) Ping timeout: 260 seconds
+ilhami - ~ilhami@unaffiliated/ilhami Left 1452466557 Last Note: Left private/secret channel (freenode)
+Sux4U - ~blue_like@216.108.215.28 Left 1452466632 Last Note: Left private/secret channel (freenode)
+Cirrus_Minor - ~Cirrus_Mi@CAcert/Cirrus-Minor Quit 1452466745 Last Note: private/secret channel Quit: (freenode) Quit: ◀▬▬ ••••••ᗣ••••••ᗧ•ᗣᗣ••••◀▬▬ We Love You
+light^ - ~light^@5ec3eb52.skybroadband.com Quit 1452466960 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+Tobbi - ~tobbi@unaffiliated/tobbi Quit 1452467008 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection
+nadir` - ~ZNadir@unaffiliated/znadir Left 1452467024 Last Note: Left private/secret channel (freenode)
+weemsledeux - ~textual@unaffiliated/weems Quit 1452467063 Last Note: private/secret channel Quit: (freenode) Quit: My Mac has gone to sleep. ZZZzzz…
+nadir - uid134094@gateway/web/irccloud.com/x-xkbbjuuqlrhmaxcp Quit 1452467176 Last Note: private/secret channel Quit: (freenode) Disconnected by services
+CheckDavid - uid14990@gateway/web/irccloud.com/x-quecitpiztqsueun Quit 1452467360 Last Note: private/secret channel Quit: (freenode) Quit: Connection closed for inactivity
+n3892 - ~user819@tmo-111-13.customers.d1-online.com Left 1452467832 Last Note: Left private/secret channel (freenode)
+funkentelechrxp - ~rxp@unaffiliated/rxp Nick-Changed 1452467902 Last Note: *** funkentelechrxp is now known as rxp (freenode)
+tumbler - ~tumbler@unaffiliated/tumbler Quit 1452468254 Last Note: private/secret channel Quit: (freenode) Read error: Connection reset by peer
+mateusz_ - ~mateusz@user-94-254-211-184.play-internet.pl Quit 1452468298 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+sebot - ~bot.se@unaffiliated/sebie/bot/sebot Nick-Changed 1452468651 Last Note: *** sebot is now known as halp (freenode)
+Jin-Baba - ~JinBaba@unaffiliated/jinbaba Quit 1452468903 Last Note: private/secret channel Quit: (freenode) Quit: Leaving
+jsoh - ~jsoh@stjhnf0157w-142166159083.dhcp-dynamic.FibreOP.nl.bellaliant.net Quit 1452468909 Last Note: private/secret channel Quit: (freenode) Ping timeout: 245 seconds
+honey - ~honey@unaffiliated/wtf-honey Left 1452469169 Last Note: Left private/secret channel (freenode)
+someguyfromhell - ~someguyfr@net231-36-245-109.mbb.telenor.rs Left 1452469526 Last Note: Left private/secret channel (freenode)
+gloomy1 - ~gloomy81@broadband-178-140-46-0.nationalcablenetworks.ru Quit 1452469549 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
+Scourje - uid63311@unaffiliated/scourje Quit 1452469781 Last Note: private/secret channel Quit: (freenode) Changing host
+Dinux - ~Dinux@ip-213-127-99-108.ip.prioritytelecom.net Quit 1452469835 Last Note: private/secret channel Quit: (freenode) Ping timeout: 264 seconds
+Jacobtheplayer - ~holoirc@162.72.3.125 Left 1452469933 Last Note: Left private/secret channel (freenode)
+Ray^ - ~someguyfr@net59-36-245-109.mbb.telenor.rs Quit 1452469979 Last Note: private/secret channel Quit: (freenode) Client Quit
+crypto-dmtized - ~hydra@213.152.162.181 Quit 1452470014 Last Note: private/secret channel Quit: (freenode) Quit: Konversation terminated!
+sebie - ~sebie@freenude/regular/sebie Left 1452470198 Last Note: Left private/secret channel (freenode)
+aliendough - ~aliendoug@unaffiliated/aliendough Quit 1452470274 Last Note: private/secret channel Quit: (freenode) Quit: Hello sir, thank you very much, did you have a very good day? Thank you.
+PlasmaStar - Plasma@unaffiliated/plasmastar Quit 1452470354 Last Note: private/secret channel Quit: (freenode) Ping timeout: 255 seconds
+BillyPi - ~siriuss@CPE602ad0897db5-CM602ad0897db2.cpe.net.cable.rogers.com Quit 1452470408 Last Note: private/secret channel Quit: (freenode) Ping timeout: 256 seconds
+centrinia - ~centrinia@2602:306:bd0d:a690:ad02:a077:6a63:3b96 Quit 1452470435 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+jakr - ~Matt@2606:a000:6705:7e00:1db4:7c2f:c4b9:8769 Quit 1452470615 Last Note: private/secret channel Quit: (freenode) Ping timeout: 240 seconds
+yennifer - ~jennifer@190.97.244.2 Left 1452470665 Last Note: Left private/secret channel (freenode)
+TheAngie - ~angie@cpe-76-185-218-86.satx.res.rr.com Quit 1452470704 Last Note: private/secret channel Quit: (freenode) Disconnected by services
+Ruff-Rydah - 18e42552@gateway/web/cgi-irc/kiwiirc.com/ip.24.228.37.82 Left 1452470905 Last Note: Left private/secret channel (freenode)
+psf - ~psf@unaffiliated/couldbe-maybe/x-1604174 Left 1452470927 Last Note: Left private/secret channel (freenode)
+astrofog - ~astrofog@unaffiliated/astrofog Quit 1452470995 Last Note: private/secret channel Quit: (freenode) Quit: Quite
+SPF|Cloud - uid11755@wikipedia/Southparkfan Quit 1452471027 Last Note: private/secret channel Quit: (freenode) Quit: Connection closed for inactivity
+misterno - ~misterno@unaffiliated/misterno Left 1452471034 Last Note: Left private/secret channel (freenode)
+houndedshrue - ~use@CPE-121-222-1-115.lnse1.cha.bigpond.net.au Quit 1452471056 Last Note: private/secret channel Quit: (freenode) Quit: AtomicIRC: The nuclear option.
+clarjon1 - ~clarjon1@unaffiliated/clarjon1 Quit 1452471105 Last Note: private/secret channel Quit: (freenode) Remote host closed the connection

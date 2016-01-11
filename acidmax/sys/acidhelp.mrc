@@ -41,10 +41,10 @@ on *:dialog:achlp:menu:*: {
   if ($did == 3) { bback | set %aol 1 | did -e achlp 18 }
   if ($did == 7) { bback1 | set %aol 2 }
   if ($did == 8) { bback2 | set %aol 3 | did -e achlp 18 }
-  if ($did == 11) { www http://www.team-nexgen.org/scripts.php }
-  if ($did == 13) { www http://www.team-nexgen.org/forum/viewforum.php?f=1 }
-  if ($did == 22) { www http://www.team-nexgen.org/members.php }
-  if ($did == 20) { www http://www.team-nexgen.org/forum/viewforum.php?f=1 }
+  if ($did == 11) { www http://team-nexgen.org/mircscripts }
+  if ($did == 13) { www http://team-nexgen.org/forum }
+  if ($did == 22) { www http://team-nexgen.org/ }
+  if ($did == 20) { www http://team-nexgen.org/forum }
   if ($did == 9) { bback3 | set %aol 4 | did -b achlp 18 | did -e achlp 4 }
 }
 on *:dialog:achlp:sclick:4: {

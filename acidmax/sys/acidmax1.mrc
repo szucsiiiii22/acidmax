@@ -46,10 +46,10 @@ alias skin.load {
   }
 }
 alias a.logo {
-  return $nex2 v2.1.21 (mirc $version $+ )  ©2006, by team nexgen - www.team-nexgen.org
+  return $nex2 v2.1.22 (mirc $version $+ )  ©2014, by team nexgen - www.team-nexgen.org
 }
 alias a.logo2 {
-  return $nex v2.1.21 (mirc $version $+ ) ©2006, by team nexgen - www.team-nexgen.org
+  return $nex v2.1.22 (mirc $version $+ ) ©2014, by team nexgen - www.team-nexgen.org
 }
 alias acidmax {
   if ($server != $null) && ($_vr(version,color) == $null) { .msg $active $a.logo | echo -at %meext.1 $+ $me $+ %meext.2 $a.logo | snexgen }
@@ -374,13 +374,13 @@ dialog about {
   tab "about", 14, 6 72 147 123
   link "www.team-nexgen.org", 13, 48 148 60 8, tab 14
   text "Nexgen Acidmax created by", 17, 28 116 70 8, tab 14
-  link "KnightFal", 18, 100 116 30 8, tab 14
+  link "guideX", 18, 100 116 30 8, tab 14
   text "email", 19, 33 140 12 8, tab 14
   text "web", 20, 35 148 10 8, tab 14
-  link "knightfal@tnexgen.com", 21, 48 140 70 8, tab 14
+  link "guide_X@live.com", 21, 48 140 70 8, tab 14
   text "irc", 22, 39 156 6 8, tab 14
-  link "undernet", 23, 48 156 25 8, tab 14
-  link "#nexgen", 24, 71 156 25 8, tab 14
+  link "freenode", 23, 48 156 25 8, tab 14
+  link "#defocus", 24, 71 156 25 8, tab 14
   text "version:", 37, 52 128 19 8, tab 14
   text "", 38, 73 128 46 8, tab 14
   check "open on start", 39, 12 88 42 10, tab 14
@@ -415,9 +415,9 @@ on *:dialog:about:init:*:{
 on *:dialog:about:sclick:*:{
   if ($did == 8) { www $update.site $+ acidmax.txt }
   if ($did == 13) { www http://www.team-nexgen.org }
-  if ($did == 21) { run mailto:knightfal@tnexgen.com }
-  if ($did == 23) { server us.undernet.org:6661 }
-  if ($did == 24) && ($network == undernet) { join #nexgen }
+  if ($did == 21) { run mailto:guide_X@live.com }
+  if ($did == 23) { server irc.freenode.net:6661 }
+  if ($did == 24) && ($network == freenode) { join #defocus }
   if ($did == 39) { 
     if ($_vr(general,about) == off) { _vw general about on }
     else { _vw general about off }
@@ -786,7 +786,7 @@ alias nexnews {
   www $_vr(general,startpage)
 }
 alias nexnews2 {
-  www www.team-nexgen.org\nexgennews.shtml 
+  www www.team-nexgen.org 
 }
 alias nexnews.d {
   if ($dialog(nexnews.d) == $null) { dialog -m nexnews.d nexnews.d }
@@ -802,7 +802,7 @@ dialog nexnews.d {
   button "Button", 5, 11 64 37 12, ok
 }
 on *:dialog:nexnews.d:sclick:*:{
-  if ($did == 2) { _vw general news on | .timer 1 1 _vw general startpage www.team-nexgen.org/nexgennews.shtml }
+  if ($did == 2) { _vw general news on | .timer 1 1 _vw general startpage www.team-nexgen.org }
   if ($did == 3) { _vw general news off } 
   .timer -m 1 1 dialog -x nexnews.d 
 }
