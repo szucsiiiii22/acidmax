@@ -6,5 +6,5 @@ On Local Error GoTo ErrHandler
 
 Exit Sub
 ErrHandler:
-    Err.Clear
+    If Err.Number <> 0 Then Err.Clear
 End Sub

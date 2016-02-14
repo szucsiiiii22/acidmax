@@ -1,10 +1,10 @@
-mdlFiles = 18, 137, 877, 915, C
+mdlFiles = 18, 137, 877, 915, 
 mdlWindowStuff = 90, 49, 686, 814, C
 mdlMain = 50, 120, 705, 764, C
 XPButton = 44, 58, 759, 713, C, 22, 29, 737, 684, C
 clsAB11 = 104, 0, 857, 780, C
 mdlFormStuff = 74, 94, 609, 535, C
 mdlCommonDialog = 152, 260, 867, 915, C
-frmMain = 183, 168, 792, 786, , 72, 69, 683, 546, C
+frmMain = 183, 168, 792, 786, Z, 4, 0, 798, 581, C
 mdlProfileStrings = 88, 88, 702, 732, C
 XP_ProgressBar = 0, 0, 0, 0, C, 308, 308, 922, 952, C

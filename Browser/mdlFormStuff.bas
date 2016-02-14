@@ -8,21 +8,25 @@ Private lStartUrl As String
 Public Function ReturnMainFormWidth() As Long
 On Local Error Resume Next
 ReturnMainFormWidth = lMainForm.Width
+If Err.Number <> 0 Then Err.Clear
 End Function
 
 Public Function ReturnMainFormHeight() As Long
 On Local Error Resume Next
 ReturnMainFormHeight = lMainForm.Height
+If Err.Number <> 0 Then Err.Clear
 End Function
 
 Public Function ReturnMainFormLeft() As Long
 On Local Error Resume Next
 ReturnMainFormLeft = lMainForm.Left
+If Err.Number <> 0 Then Err.Clear
 End Function
 
 Public Function ReturnMainFormTop() As Long
 On Local Error Resume Next
 ReturnMainFormTop = lMainForm.Top
+If Err.Number <> 0 Then Err.Clear
 End Function
 
 Public Sub SetMainFormBackground(lBackground As String)
@@ -74,6 +78,7 @@ If ReturnSettingsUseThemeColor = True Then
         .Refresh
     End With
 End If
+If Err.Number <> 0 Then Err.Clear
 End Sub
 
 Public Function DoesListBoxItemExist(lText As String, lListBox As ListBox) As Boolean
@@ -85,6 +90,7 @@ For i = 0 To lListBox.ListCount
         Exit For
     End If
 Next i
+If Err.Number <> 0 Then Err.Clear
 End Function
 
 Public Function FindListBoxIndex(lText As String, lListBox As ListBox) As Integer
@@ -96,31 +102,37 @@ For i = 0 To lListBox.ListCount
         Exit Function
     End If
 Next i
+If Err.Number <> 0 Then Err.Clear
 End Function
 
 Public Function GetMainFormButtonType() As Integer
 On Local Error Resume Next
 GetMainFormButtonType = lButtonType
+If Err.Number <> 0 Then Err.Clear
 End Function
 
 Public Sub SetMainFormButtonType(lType As Integer)
 On Local Error Resume Next
 lButtonType = lType
+If Err.Number <> 0 Then Err.Clear
 End Sub
 
 Public Function ReturnMainFormCaption() As String
 On Local Error Resume Next
 ReturnMainFormCaption = lMainForm.Caption
+If Err.Number <> 0 Then Err.Clear
 End Function
 
 Public Sub CloseMainForm()
 On Local Error Resume Next
 Unload lMainForm
+If Err.Number <> 0 Then Err.Clear
 End Sub
 
 Public Function ReturnMainForm() As Form
 On Local Error Resume Next
 Set ReturnMainForm = lMainForm
+If Err.Number <> 0 Then Err.Clear
 End Function
 
 Public Sub LoadMainForm(lHwnd As Long)
@@ -137,6 +149,7 @@ ReturnStartURL = lStartUrl
 Exit Function
 ErrHandler:
     Err.Clear
+    If Err.Number <> 0 Then Err.Clear
 End Function
 
 Public Sub GoURL1(lUrl As String)
@@ -146,4 +159,5 @@ lMainForm.ctlBrowser.Navigate lUrl
 Exit Sub
 ErrHandler:
     Err.Clear
+    If Err.Number <> 0 Then Err.Clear
 End Sub

@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}#1.1#0"; "shdocvw.dll"
+Object = "{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}#1.1#0"; "ieframe.dll"
 Begin VB.Form frmMain 
    AutoRedraw      =   -1  'True
    BackColor       =   &H00000000&
@@ -169,7 +169,7 @@ Begin VB.Form frmMain
          Height          =   315
          Left            =   3840
          TabIndex        =   2
-         Text            =   "http://www.tnexgen.com"
+         Text            =   "http://team-nexgen.com"
          Top             =   240
          Width           =   3615
       End
@@ -533,7 +533,7 @@ msg = ReturnStartURL
 If Len(msg) <> 0 Then
     ctlBrowser.Navigate msg
 Else
-    ctlBrowser.Navigate "http://www.tnexgen.com"
+    ctlBrowser.Navigate "http://team-nexgen.com"
 End If
 imgStop.Picture = imgStopNormal.Picture
 Me.Width = CLng(ReadINI(App.Path & "\ab.ini", "Settings", "Width", 8000))
