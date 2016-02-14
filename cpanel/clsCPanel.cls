@@ -19,7 +19,7 @@ On Local Error GoTo ErrHandler
 
 Exit Sub
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Sub
 
@@ -46,7 +46,7 @@ lData = Replace(lData, Chr(34), "")
 LoadPanel lData
 Exit Sub
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Sub
 
@@ -59,6 +59,6 @@ DestroyMainForm
 CoFreeUnusedLibraries
 Exit Sub
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Sub

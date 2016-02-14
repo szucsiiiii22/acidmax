@@ -73,7 +73,7 @@ SetParent CLng(Trim(lWindowHwnd)), lParenthWnd
 SetWindowText CLng(Trim(lParenthWnd)), "acidmax control panel"
 Exit Sub
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Sub
 

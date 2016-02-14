@@ -28,7 +28,7 @@ Set lcpanel = New frmMain
 ShowNonModalForm lcpanel
 Exit Sub
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Sub
 
@@ -37,7 +37,7 @@ On Local Error GoTo ErrHandler
 Unload lcpanel
 Exit Sub
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Sub
 
@@ -46,7 +46,7 @@ On Local Error GoTo ErrHandler
 lcpanel.Visible = lVisible
 Exit Sub
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Sub
 

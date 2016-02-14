@@ -4,10 +4,10 @@ Begin VB.Form frmMain
    BackColor       =   &H00000000&
    BorderStyle     =   0  'None
    Caption         =   "control panel"
-   ClientHeight    =   5565
+   ClientHeight    =   5625
    ClientLeft      =   0
    ClientTop       =   0
-   ClientWidth     =   7665
+   ClientWidth     =   7785
    ClipControls    =   0   'False
    ControlBox      =   0   'False
    BeginProperty Font 
@@ -24,9 +24,9 @@ Begin VB.Form frmMain
    MaxButton       =   0   'False
    MinButton       =   0   'False
    MouseIcon       =   "frmMain.frx":000C
-   ScaleHeight     =   371
+   ScaleHeight     =   375
    ScaleMode       =   3  'Pixel
-   ScaleWidth      =   511
+   ScaleWidth      =   519
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
    Begin VB.Timer tmrResize 
@@ -195,7 +195,7 @@ Private Const WM_GETTEXT = &HD
 Private Declare Function SendMessageLong& Lib "user32" Alias "SendMessageA" (ByVal hWnd As Long, ByVal wMsg As Long, ByVal wParam As Long, ByVal lParam As Long)
 Private Declare Function SendMessageByString Lib "user32" Alias "SendMessageA" (ByVal hWnd As Long, ByVal wMsg As Long, ByVal wParam As Long, ByVal lParam As String) As Long
 Private Declare Function FindWindowEx Lib "user32" Alias "FindWindowExA" (ByVal hWnd1 As Long, ByVal hWnd2 As Long, ByVal lpsz1 As String, ByVal lpsz2 As String) As Long
-Private Declare Function FindWindow Lib "user32" Alias "FindWindowA" (ByVal lpClassName As String, ByVal lpWindowName As String) As Long
+Private Declare Function FindWindow Lib "user32" Alias "FindWindowA" (ByVal lpClassName As String, ByVal lpWindowName As String) As Integer
 Private Declare Sub ReleaseCapture Lib "user32" ()
 Private Declare Function SendMessage Lib "user32" Alias "SendMessageA" (ByVal hWnd As Long, ByVal wMsg As Long, ByVal wParam As Integer, ByVal lParam As Long) As Long
 Private Declare Function SetParent Lib "user32.dll" (ByVal hWndChild As Long, ByVal hWndNewParent As Long) As Long
@@ -299,7 +299,7 @@ End If
 End Function
 
 Public Sub LoadItems(Optional lINI As String)
-'On Local Error Resume Next
+On Local Error Resume Next
 Dim msg As String, msg2 As String, msg3 As String, c As Integer, i As Integer, lDone As Boolean
 ClearItems
 If Len(lINI) = 0 Then
@@ -333,9 +333,12 @@ Do Until lDone = True
         If Len(.lTitle) <> 0 Then
             If Len(.lImage) <> 0 Then
                 Load imgCPanelList(c)
-                imgCPanelList(c).Picture = LoadPicture(App.Path & "\" & .lImage)
-                ctlCPanel.ImageListLarge_AddBitmap imgCPanelList(c).Picture, vbBlack
-                DoEvents
+                If DoesFileExist(App.Path & "\" & .lImage) Then
+                    imgCPanelList(c).Picture = LoadPicture(App.Path & "\" & .lImage)
+                    ctlCPanel.ImageListLarge_AddBitmap imgCPanelList(c).Picture, vbBlack
+                    DoEvents
+                End If
+                
             End If
             ctlCPanel.ItemAdd i, .lTitle, 0, .lImageIndex
         Else
@@ -418,7 +421,7 @@ On Local Error Resume Next
 Dim msg As String
 lTitleBarHeight = ReturnWindowTitleBarHeight(ReturnParentWindow)
 File1.Path = App.Path
-msg = App.Path & "\cpanel.ini"
+msg = App.Path & "\cp.ini"
 SetWindowToChild Me.hWnd
 LoadCPanelOptions
 LoadItems (msg)
@@ -557,7 +560,7 @@ Dim lmIRC As Long, lMdiClient As Long, lmIRCStatus As Long, lEditBox As Long
 lmIRC = FindWindow("mIRC", vbNullString)
 lMdiClient = FindWindowEx(lmIRC, 0&, "MdiClient", vbNullString)
 lmIRCStatus = FindWindowEx(lMdiClient, 0&, "mIRC_Status", vbNullString)
-lEditBox = FindWindowEx(lmIRCStatus, 0&, "RichEdit20A", vbNullString)
+lEditBox = FindWindowEx(lmIRCStatus, 0&, "RichEdit20W", vbNullString)
 Call SendMessageByString(lEditBox, WM_SETTEXT, 0&, lData)
 If lEditBox = 0 Then Exit Sub
 Do
@@ -565,7 +568,7 @@ Do
     lmIRC = FindWindow("mIRC", vbNullString)
     lMdiClient = FindWindowEx(lmIRC, 0&, "MdiClient", vbNullString)
     lmIRCStatus = FindWindowEx(lMdiClient, 0&, "mIRC_Status", vbNullString)
-    lEditBox = FindWindowEx(lmIRCStatus, 0&, "RichEdit20A", vbNullString)
+    lEditBox = FindWindowEx(lmIRCStatus, 0&, "RichEdit20W", vbNullString)
     Call SendMessageLong(lEditBox, WM_CHAR, 13, 0&)
 Loop Until lEditBox <> 0
 End Sub

@@ -31,7 +31,7 @@ With IPAOHookStruct
 End With
 Exit Sub
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Sub
 
@@ -43,7 +43,7 @@ With IPAOHookStruct
 End With
 Exit Sub
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Sub
 
@@ -69,7 +69,7 @@ End If
 GetVTable = VarPtr(m_IPAOVTable(0))
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -78,7 +78,7 @@ On Local Error GoTo ErrHandler
 AddressOfFunction = lpfn
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -87,7 +87,7 @@ On Local Error GoTo ErrHandler
 AddRef = This.IPAOReal.AddRef
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -96,7 +96,7 @@ On Local Error GoTo ErrHandler
 Release = This.IPAOReal.Release
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -111,7 +111,7 @@ Else
 End If
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -120,7 +120,7 @@ On Local Error GoTo ErrHandler
 GetWindow = This.IPAOReal.GetWindow(phwnd)
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -129,7 +129,7 @@ On Local Error GoTo ErrHandler
 ContextSensitiveHelp = This.IPAOReal.ContextSensitiveHelp(fEnterMode)
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -142,7 +142,7 @@ Else
 End If
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -151,7 +151,7 @@ On Local Error GoTo ErrHandler
 OnFrameWindowActivate = This.IPAOReal.OnFrameWindowActivate(fActivate)
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -160,7 +160,7 @@ On Local Error GoTo ErrHandler
 OnDocWindowActivate = This.IPAOReal.OnDocWindowActivate(fActivate)
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -169,7 +169,7 @@ On Local Error GoTo ErrHandler
 ResizeBorder = This.IPAOReal.ResizeBorder(VarPtr(prcBorder), puiWindow, fFrameWindow)
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -178,6 +178,6 @@ On Local Error GoTo ErrHandler
 EnableModeless = This.IPAOReal.EnableModeless(fEnable)
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function

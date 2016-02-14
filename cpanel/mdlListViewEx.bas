@@ -46,7 +46,7 @@ ElseIf (lParam1 < lParam2) Then
 End If
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -62,7 +62,7 @@ ElseIf (msg < msg2) Then
 End If
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -78,7 +78,7 @@ ElseIf (msg < msg2) Then
 End If
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -94,7 +94,7 @@ ElseIf (msg < d) Then
 End If
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -110,7 +110,7 @@ ElseIf (a < t) Then
 End If
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -127,7 +127,7 @@ o = SendMessage(hWnd, LVM_GETITEMTEXT, lParam, m_uLVI)
 pvGetItemText = Left$(StrConv(B(), vbUnicode), o)
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -148,7 +148,7 @@ Else
 End If
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -168,7 +168,7 @@ If (IsDate(sText)) Then
 End If
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -177,7 +177,7 @@ On Local Error GoTo ErrHandler
 AddressOfFunction = lpfn
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
 
@@ -207,6 +207,6 @@ End Select
 Sort = CBool(l)
 Exit Function
 ErrHandler:
-    'MsgBox Err.Description
+    
     Err.Clear
 End Function
