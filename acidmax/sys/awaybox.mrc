@@ -1,7 +1,7 @@
 ;User Away Box v1.3
 ;Team Nexgen 2003 by KnightFal
 ;Updates by RAIN
-;www.team-nexgen.org
+;team-nexgen.com
 
 on *:load:{
   if ($version < 5.61) echo -a  $+ $colour(info2) $+ *** You need mirc 5.91 or greator in order to use this addon. | beep 

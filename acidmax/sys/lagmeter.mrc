@@ -1,6 +1,6 @@
 ;LagMeter v1.64
 ;Team Nexgen 2002 by BlackWidow & KnightFal
-;www.team-nexgen.org
+;team-nexgen.com
 
 on *:load:{ echo -a 4TEAM NEXGEN'S LAGMETER v1.64 | echo -a 4Please type: /lag.open to begin. }
 
@@ -229,7 +229,7 @@ dialog lagsetup {
   tab "about", 9
   text "version: 1.64", 10, 8 36 33 8, tab 9
   text "author: BlkWidow, KnightFal", 11, 8 44 73 8, tab 9
-  link "www.team-nexgen.org", 12, 16 59 62 8, tab 9
+  link "team-nexgen.com", 12, 16 59 62 8, tab 9
   button "ok", 13, 33 74 21 8, ok
 }
 on *:dialog:lagsetup:init:*:{

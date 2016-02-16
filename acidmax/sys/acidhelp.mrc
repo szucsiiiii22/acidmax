@@ -8,7 +8,7 @@ dialog achlp {
   icon help.ico, 0
   button "< Back", 4, 202 203 60 20
   button "Close", 5, 330 203 60 20, cancel
-  text "www.team-nexgen.org", 6, 6 206 123 16, disable
+  text "team-nexgen.com", 6, 6 206 123 16, disable
   icon 1, -1 0 396 196,  help\status1.jpg, 0, hide
   icon 10, -1 0 396 196,  help\status2.jpg, 0, hide
   list 14, 3 3 115 196, hide size
@@ -41,10 +41,10 @@ on *:dialog:achlp:menu:*: {
   if ($did == 3) { bback | set %aol 1 | did -e achlp 18 }
   if ($did == 7) { bback1 | set %aol 2 }
   if ($did == 8) { bback2 | set %aol 3 | did -e achlp 18 }
-  if ($did == 11) { www http://team-nexgen.org/mircscripts }
-  if ($did == 13) { www http://team-nexgen.org/forum }
-  if ($did == 22) { www http://team-nexgen.org/ }
-  if ($did == 20) { www http://team-nexgen.org/forum }
+  if ($did == 11) { www http://team-nexgen.com/scripts }
+  if ($did == 13) { www http://team-nexgen.com/forum }
+  if ($did == 22) { www http://team-nexgen.com/members }
+  if ($did == 20) { www http://team-nexgen.com/forum }
   if ($did == 9) { bback3 | set %aol 4 | did -b achlp 18 | did -e achlp 4 }
 }
 on *:dialog:achlp:sclick:4: {

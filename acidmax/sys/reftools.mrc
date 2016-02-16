@@ -22,7 +22,7 @@ dialog translate {
   button "close", 12, 300 120 58 16, ok cancel
   list 13, 260 150 132 76, sort size vsbar
   text "select language:", 14, 269 33 79 16
-  link "www.tnexgen", 16, 274 88 120 16
+  link "team-nexgen.com", 16, 274 88 120 16
   check "include original text", 17, 271 232 116 20
 }
 on *:dialog:translate:init:*: { 
@@ -54,7 +54,7 @@ on *:dialog:translate:sclick:*: {
   if ($did == 11) { $d(-ra) 1 stopped | sockclose translate | unset %trans* } 
   if ($did == 13) { $d(-e) 7 }
   if ($did == 15) { _vw translate lang $did(translate,15).sel } 
-  if ($did == 16) { run http://www.team-nexgen.org }
+  if ($did == 16) { run http://team-nexgen.com }
   if ($did == 17) { 
     if ($_vr(translate,orig) == off) { _vw translate orig on }
     else { _vw translate orig off }

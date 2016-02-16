@@ -1,5 +1,5 @@
 ; acidmax player
-; guidex@tnexgen.com
+; guide_X@live.com
 
 menu query,channel,status,menubar {
   • media

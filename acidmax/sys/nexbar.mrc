@@ -143,12 +143,12 @@ menu @nexbar {
   .[buttons]:halt 
   .-
   .(1) Minimize:halt
-  .(2) Control Panel:cp
+  .(2) Control Panel:frmCP.Load
   .(3) Audio Settings:soundcon
   .(4) Auto-join:aj
   .(5) Script Manager:scriptman
   .(6) Sonica:sonica
-  .(7) Direct Update Check:du
+  .(7) Direct Update Check:frmDU.Load
   .(8) Background:backg
   .(9) Event Theme:colortheme
   .(10) DCC Log:dcclog

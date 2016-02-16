@@ -1,0 +1,12 @@
+Form1 = 44, 44, 867, 520, C, 22, 22, 845, 498, C
+ctlFTP = 0, 0, 0, 0, C, 44, 44, 867, 520, C
+mdlCommonDialog = 66, 66, 889, 542, C
+mdlFiles = 44, 44, 867, 520, C
+mdlFormStuff = 22, 22, 845, 498, 
+mdlListViewEx = 0, 0, 823, 476, C
+mdlMain = 176, 176, 999, 652, C
+mdlProba = 0, 0, 0, 0, C
+mdlReadINI = 0, 0, 0, 0, C
+mdlWindowStuff = 0, 0, 0, 0, C
+clsDU298 = 22, 22, 845, 498, C
+frmMain = 0, 0, 0, 0, C, 44, 44, 956, 617, C

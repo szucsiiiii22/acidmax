@@ -28,9 +28,9 @@ On Local Error GoTo ErrHandler
 If Len(lData) <> 0 Then
     SetParentHwnd CLng(Trim(lData))
 Else
-    'mIRCStatusSend "//window -KBR D @controlpanel acidmax.ico"
-    'SetParentHwnd CLng(Trim(lData))
-    'MsgBox "No @window could be found, unable to start!"
+    mIRCStatusSend "//window -KBR D @controlpanel acidmax.ico"
+    SetParentHwnd CLng(Trim(lData))
+    MsgBox "No @window could be found, unable to start!"
     Exit Sub
 End If
 InitMainForm

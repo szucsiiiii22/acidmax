@@ -1,6 +1,6 @@
 ;Nickserv-id v1.2
 ;Team Nexgen 2002 by KnightFal
-;www.team-nexgen.org
+;team-nexgen.com
 
 menu channel,status {
   $iif($nickn == $true, $network ident):nickservid

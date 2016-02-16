@@ -1,6 +1,6 @@
 ;Security v1.0
 ;Team Nexgen 2000 by KnightFal
-;www.team-nexgen.org
+;team-nexgen.com
 
 
 alias pr {

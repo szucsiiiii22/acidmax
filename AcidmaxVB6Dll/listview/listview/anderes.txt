@@ -1,0 +1,6 @@
+Sortieralgorithmus geschrieben von Rde:
+http://pscode.com/vb/scripts/ShowCode.asp?txtCodeId=65107&lngWId=1
+
+Scrollbars von VBAccelerator
+
+In Scrollbars.cls verwendetes Sub-Classing geschrieben von Paul Caton

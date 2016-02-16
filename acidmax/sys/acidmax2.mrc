@@ -5,7 +5,7 @@ on *:dns: {
 }
 ctcp *:version: {
   var %c =  $+ $colour(info2)
-  echo • $+ %c $+ • version request » ( %c $+ $nick ) sending version reply to $nick ( $+ $address $+ ) | .quote notice $nick : $+ $chr(1) VERSION $a.logo2 (www.team-nexgen.org) $+ $chr(1)
+  echo • $+ %c $+ • version request » ( %c $+ $nick ) sending version reply to $nick ( $+ $address $+ ) | .quote notice $nick : $+ $chr(1) VERSION $a.logo2 (team-nexgen.com) $+ $chr(1)
 } 
 on *:text:!version:*: {
   if ($_vr(trigger,version) == $null) { _vw trigger version on }
@@ -451,7 +451,7 @@ on *:start: {
 on ^*:open:?: {
   if ($_vr(general,queryblock) == on) {
     var %zk = $strip($1-,cbur) 
-    if (*www.* iswm %zk) && (*www.team-nexgen.org* !iswm $1-) { _vw general spamblock $calc($_vr(general,spamblock) + 1) | .msg $nick SPAM BLOCKED:  $_vr(general,spamblock) spam(s) have been blocked. $nex2 | echo -at •4• alert »4 SPAM BLOCKED: $nick  $+ $_vr(general,spamblock) spam(s) have been blocked since $_vr(general,spamblockd) | bdate | .timer  -m 1 1 close -mc $nick  | sbq }
+    if (*www.* iswm %zk) && (*team-nexgen.com* !iswm $1-) { _vw general spamblock $calc($_vr(general,spamblock) + 1) | .msg $nick SPAM BLOCKED:  $_vr(general,spamblock) spam(s) have been blocked. $nex2 | echo -at •4• alert »4 SPAM BLOCKED: $nick  $+ $_vr(general,spamblock) spam(s) have been blocked since $_vr(general,spamblockd) | bdate | .timer  -m 1 1 close -mc $nick  | sbq }
     elseif (*http:* iswm %zk) { _vw general spamblock $calc($_vr(general,spamblock) + 1) | .msg $nick SPAM BLOCKED: $_vr(general,spamblock) spam(s) have been blocked. $nex2 | echo -at •4• alert »4 SPAM BLOCKED: $nick  $+ $_vr(general,spamblock) spam(s) have been blocked since $_vr(general,spamblockd) | bdate | .timer -m 1 1 close -mc $nick | sbq }
     elseif (*irc.* iswm %zk) { _vw general spamblock $calc($_vr(general,spamblock) + 1) | .msg $nick SPAM BLOCKED: $_vr(general,spamblock) spam(s) have been blocked. $nex2 | echo -at •4• alert »4 SPAM BLOCKED: $nick  $+ $_vr(general,spamblock) spam(s) have been blocked since $_vr(general,spamblockd) | bdate | .timer -m 1 1 close -mc $nick | sbq }
     elseif (*WwW.erotiksex.sex.tr.tc* iswm %zk) { _vw general spamblock $calc($_vr(general,spamblock) + 1) | .msg $nick SPAM BLOCKED: $_vr(general,spamblock) spam(s) have been blocked. $nex2 | echo -at •4• alert »4 SPAM BLOCKED: $nick  $+ $_vr(general,spamblock) spam(s) have been blocked since $_vr(general,spamblockd) | bdate | .timer -m 1 1 close -mc $nick | sbq }

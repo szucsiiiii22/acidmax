@@ -1,0 +1,10 @@
+clsCPanel = 330, 160, 872, 639, C
+mdlFormStuff = 22, 22, 493, 498, C
+mdlMain = 132, 174, 673, 660, C
+mdlINI = 0, 0, 471, 476, C
+mdlWindowStuff = -14, 4, 525, 493, C
+mdlListViewEx = 132, 174, 673, 660, C
+ctlListView = 44, 58, 585, 544, C, 0, 0, 541, 486, C
+mdlOLE = 110, 145, 651, 631, C
+frmMain = 100, 27, 714, 608, Z, 28, 14, 636, 495, C
+mdlWindowsControlPanel = 67, 88, 553, 507, C

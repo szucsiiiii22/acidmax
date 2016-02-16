@@ -1,0 +1,11 @@
+frmMain = 97, 11, 689, 589, , 82, 17, 674, 539, C
+mdlListViewEx = 101, 34, 723, 677, C
+ctlListView = 286, 286, 900, 930, C, 264, 264, 878, 908, C
+mdlOLE = 81, 30, 703, 673, 
+isButton = 176, 176, 790, 820, C, 132, 132, 746, 776, C
+mdlWindowStuff = 132, 144, 768, 782, C
+clsSystemStats20 = 108, 64, 738, 698, 
+mdlFormStuff = 84, 25, 722, 659, 
+mdlINI = 125, 125, 381, 591, 
+frmStyle = 22, 29, 614, 551, C, 0, 0, 592, 522, C
+Module1 = 75, 75, 331, 541, 

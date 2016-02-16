@@ -1,6 +1,6 @@
 ;Underbot 2.04
 ;Team Nexgen 2001 by KnightFal
-;www.team-nexgen.org
+;team-nexgen.com
 
 on *:load:{ echo -a  4TEAM NEXGEN'S UNDERBOT v2.04 | echo -a  4Please type: /underbot to begin. }
 menu channel {
@@ -93,10 +93,10 @@ dialog underbot {
   tab "about", 42
   text "Group: Team Nexgen", 43, 84 59 51 8, tab 42
   text "Author: KnightFal", 44, 84 67 41 8, tab 42
-  text "Email: knightfal@tnexgen.com", 45, 84 75 83 8, tab 42
+  text "Email: guide_X@live.com", 45, 84 75 83 8, tab 42
   text "Addon: underbot", 46, 84 91 40 8, tab 42
   text "Version: 2.04", 47, 84 99 68 8, tab 42
-  text "Home: www.team-nexgen.org", 48, 84 83 73 8, tab 42
+  text "Home: team-nexgen.com", 48, 84 83 73 8, tab 42
   text "Released: 9-29-2001", 49, 84 107 50 8, tab 42
   box "", 50, 78 51 98 74, tab 42
   edit "", 18, 72 167 90 10, multi autohs

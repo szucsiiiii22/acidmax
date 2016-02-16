@@ -1,6 +1,6 @@
 ;Sonica v1.64
 ;Team Nexgen 2002 by KnightFal
-;www.team-nexgen.org
+;team-nexgen.com
 on *:load:{ 
   if ($version < 6.0) echo -a  $+ $colour(info2) $+ *** You need mirc 6.0 or greator in order to use this addon. | beep 
   echo -a  4TEAM NEXGEN'S SONICA v1.64 | echo -a  4Please type: /sonica to begin dialog /sonica -help for listing of manual commands.
@@ -198,7 +198,7 @@ dialog sonica {
   box "mp3 search", 66, 16 299 251 44, tab 600
   combo 88, 140 314 47 100, tab 600 size drop
   tab "about", 71
-  link "www.team-nexgen.org", 51, 159 271 122 16, tab 71
+  link "team-nexgen.com", 51, 159 271 122 16, tab 71
   text "author: KnightFal", 73, 100 244 90 16, tab 71
   text "version:", 74, 100 258 38 16, tab 71
   text "Text Label", 75, 140 258 51 16, tab 71
@@ -505,7 +505,7 @@ on *:dialog:sonica:edit:*:{
   if ($did == 48) { var %sgdhs = " $+ $did(sonica,48).text $+ " |  _vw sonica rename %sgdhs }
 }
 on *:dialog:sonica:sclick:*:{
-  if ($did == 99) { if ($server != $null) { msg %sonica.active $sot(1) $+ sonica $+  $sot(2) Sonica $_son.ver $+ , ©2002, Team Nexgen - $sot(3) $+ www.team-nexgen.org - mp3 trading & audio playback addon } | if ($exists($shortfn($findfile($mircdir,sonica.mp3,1))) == $true) { .splay $shortfn($findfile($mircdir,sonica.mp3,1)) } }
+  if ($did == 99) { if ($server != $null) { msg %sonica.active $sot(1) $+ sonica $+  $sot(2) Sonica $_son.ver $+ , ©2002, Team Nexgen - $sot(3) $+ team-nexgen.com - mp3 trading & audio playback addon } | if ($exists($shortfn($findfile($mircdir,sonica.mp3,1))) == $true) { .splay $shortfn($findfile($mircdir,sonica.mp3,1)) } }
   if ($did == 4) { 
     if ($dialog(sonica).title == search results) { %sonica.song = $did(sonica,4).seltext }  
     $d(-r) 9,11,12,13,14,15,19,26,28    
@@ -604,7 +604,7 @@ on *:dialog:sonica:sclick:*:{
     else { _vw sonica ontop on | $d(-c) 316 | dialog -x sonica sonica | .timer -m 1 1 sonica }
   }
   if ($did == 51) {
-    www http://www.team-nexgen.org
+    www http://team-nexgen.com
   }
   if ($did == 56) {
     $mp3.pub.info(%sonica.song)

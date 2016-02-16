@@ -206,7 +206,7 @@ dialog -l Acid.setup {
   box "About", 55, 6 14 162 88, tab 54
   text "Script name:", 56, 12 23 35 8, tab 54
   text "Acid popups", 57, 52 23 110 8, tab 54 right
-  link "http://tnexgen.com", 58, 105 53 57 8, tab 54
+  link "http://team-nexgen.com", 58, 105 53 57 8, tab 54
   text ".", 59, 52 63 110 34, tab 54 right
   text "Description:", 60, 12 63 35 8, tab 54
   text "Homepage:", 61, 12 53 35 8, tab 54
@@ -263,7 +263,7 @@ on *:dialog:ppop.setup:*:*:{
     elseif ($did == 9) { did $iif($did($did).state,-e,-b) $dname 10,11 }
     elseif ($did == 23) { did $iif($did($did).state,-e,-b) $dname 24,25,26,27 }
     elseif ($did == 52) { did $iif($did($did).state,-e,-b) $dname 53 }
-    elseif ($did == 58) { url -an http://tnexgen.com }
+    elseif ($did == 58) { url -an http://team-nexgen.com }
     elseif ($did == 66) || ($did == 69) { ppop.setup.apply }
     elseif ($did == 67) {
       ppop.doclose -s

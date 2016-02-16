@@ -6,6 +6,10 @@
               \/     \/      \/          \/     \/      \/_____/      \/     \/ 
 
 
+01/31/2016 - acidmax 2.1.21 (alpha 5)
+- Fixed some links and e-mail addresses
+- Included new version of Control Panel with mIRC 7 support and other fixes
+
 01/06/2007 - acidmax 2.1.21 (alpha 4)
 - Added new NexCam 1.0 (alpha)
 - Fixed 'how to change control panel' in cpanel

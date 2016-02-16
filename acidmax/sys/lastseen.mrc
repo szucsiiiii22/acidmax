@@ -1,6 +1,6 @@
 ;Last !Seen v1.15
 ;Team Nexgen 2002-04 by KnightFal
-;www.team-nexgen.org
+;team-nexgen.com
 
 on *:load:{ 
   echo -a 4TEAM NEXGEN'S LAST !SEEN v1.15 | echo -a  4Please type: /lastseen to launch dialog.

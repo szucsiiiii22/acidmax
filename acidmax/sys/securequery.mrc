@@ -1,6 +1,6 @@
 ;Secure Query v2.2
 ;Team Nexgen 2002 by KnightFal
-;www.team-nexgen.org
+;team-nexgen.com
 
 on *:load:{ 
   if ($version < 5.91) echo -a  $+ $colour(info2) $+ *** This addon will not work properly with mIRC $version $+ , you need latest mirc in order to use this addon. | beep 
@@ -22,26 +22,26 @@ alias _vrem {
 menu query,menubar {
   secure query
   .config:secure.query
-  .add access:.auser -a securequery $address($1,3) | .msg $1 [automated msg] You have free access to message me. | $ae •12• user added » (12 $address($1,3) ) | if ($dialog(querycon) != $null) { did -r querycon 45 | s.levels } 
+  .add access:.auser -a securequery $address($1,3) | .msg $1 [automated msg] You have free access to message me. | $ae Â•12Â• user added Â» (12 $address($1,3) ) | if ($dialog(querycon) != $null) { did -r querycon 45 | s.levels } 
   .on $sqo: _vw querycon switch on 
   .off $sqf: _vw querycon switch off
 }
 menu channel,query {
-  $iif($acid == $true,• $l(26,utilities))
+  $iif($acid == $true,Â• $l(26,utilities))
   .secure query
   ..config:secure.query
-  ..add access:.auser -a securequery $address($1,3) | .msg $1 [automated msg] You have free access to message me. | $ae •12• user added » (12 $address($1,3) ) | if ($dialog(querycon) != $null) { did -r querycon 45 | s.levels } 
+  ..add access:.auser -a securequery $address($1,3) | .msg $1 [automated msg] You have free access to message me. | $ae Â•12Â• user added Â» (12 $address($1,3) ) | if ($dialog(querycon) != $null) { did -r querycon 45 | s.levels } 
   ..on $sqo: _vw querycon switch on 
   ..off $sqf: _vw querycon switch off
   $iif($acid != $true,secure query)
   .secure query
   ..config:secure.query
-  ..add access:.auser -a securequery $address($1,3) | .msg $1 [automated msg] You have free access to message me. | echo -a •12• user added » (12 $address($1,3) ) | if ($dialog(querycon) != $null) { did -r querycon 45 | s.levels } 
+  ..add access:.auser -a securequery $address($1,3) | .msg $1 [automated msg] You have free access to message me. | echo -a Â•12Â• user added Â» (12 $address($1,3) ) | if ($dialog(querycon) != $null) { did -r querycon 45 | s.levels } 
   ..on $sqo: _vw querycon switch on 
   ..off $sqf: _vw querycon switch off
 }
 menu status,menubar {
-  $iif($acid == $true,• $l(26,utilities))
+  $iif($acid == $true,Â• $l(26,utilities))
   .secure query
   ..config:secure.query
   ..on $sqo: _vw querycon switch on 
@@ -142,7 +142,7 @@ dialog querycon {
   box "", 55, 30 23 106 70, tab 54
   text "author:", 56, 60 31 17 8, tab 54
   text "version", 58, 60 42 17 8, tab 54
-  link "www.team-nexgen.org", 59, 56 80 59 8, tab 54
+  link "team-nexgen.com", 59, 56 80 59 8, tab 54
   text "KnightFal", 60, 84 31 22 8, tab 54
   text "v2.2", 61, 84 42 14 8, tab 54
   text "It is important to keep your Team Nexgen addon's updated. You will find them on our web site.", 63, 34 55 97 20, tab 54

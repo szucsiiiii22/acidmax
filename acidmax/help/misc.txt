@@ -2,7 +2,7 @@ This is miscellaenous section of Acidmax help file,that will give you some tips,
 
 First time downloaded Acidmax script.The best way is to exctract all files on your hard drive.Example if your hard drive is C:\ make sure you extract Acidmax in C:\Acidmax2,then start mirc.
 
-If you wish to load some of the theme for Acidmax Default,Zephyr,Cooperdeck,or Gabriel (You  can download those theme from www.tnexgen.com scripts section).Type /nexskin goto graphics folder and select theme you wish to use.Acidmax will load it for you.
+If you wish to load some of the theme for Acidmax Default,Zephyr,Cooperdeck,or Gabriel (You  can download those theme from team-nexgen.com scripts section).Type /nexskin goto graphics folder and select theme you wish to use.Acidmax will load it for you.
 
 A good cure to solve these DCC problems is to start with this: 1) Disconnect from your IRC server. 2) Go to File + Setup + Local Info, then Clear the current text in the Local Host and IP Address boxes under File/Setup in the Local_Info dialog. 3) Select both 'On connect, Always get' Local Host and IP Address options in the Local_Info dialog. 4) Set 'Method' to Normal. 5) Leave the Local_Info dialog and the File/Setup menu both with 'OK'. 6) Reconnect to your IRC server.
 

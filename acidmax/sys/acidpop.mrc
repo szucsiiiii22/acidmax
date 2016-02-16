@@ -13,7 +13,7 @@ on *:input:@snotices:{
 }
 menu query {
   • clear:clear 
-  • control panel:frmCP.Reload
+  • control panel:frmCP.Load
   • uwho:uwho $$1
   • dns:dns $$1
   • notice:.notice $$1 $$?="notice message user"
@@ -39,6 +39,10 @@ menu query {
   .-
   .custom:ctcp $1 $?=" $l(81,please enter a ctcp request) "
   • utilities
+  .control panel:frmCP.Load
+  .system stats
+  ..cpu info: echo -3 -s *** $frmSystemStats.GetProcessorInfo
+  .audica: RunAudica
   .log $1
   ..on:log on $1  
   ..off:log off $1  
@@ -66,14 +70,14 @@ menu channel {
   -
   • clear:clear
   • $l(2,tray):showmirc -t | tray -i1 acidmax.ico
-  • $l(1,control panel):cp  
+  • $l(1,control panel):frmCP.Load  
   • nexgen
-  .home: var %k = $com(lAB,GoUrl,1,bstr,http://www.team-nexgen.org)
-  .forum: var %k = $com(lAB,GoUrl,1,bstr,http://www.team-nexgen.org/forum)
-  .software: var %k = $com(lAB,GoUrl,1,bstr,http://www.team-nexgen.org/software.php)
-  .scripts: var %k = $com(lAB,GoUrl,1,bstr,http://www.team-nexgen.org/scripts.php)
-  .guest book: var %k = $com(lAB,GoUrl,1,bstr,http://www.team-nexgen.org/vgb/)
-  .staff: var %k = $com(lAB,GoUrl,1,bstr,http://www.team-nexgen.org/members.php)
+  .home: var %k = $com(lAB,GoUrl,1,bstr,http://team-nexgen.com)
+  .forum: var %k = $com(lAB,GoUrl,1,bstr,http://team-nexgen.com/forum)
+  .software: var %k = $com(lAB,GoUrl,1,bstr,http://team-nexgen.com/software)
+  .scripts: var %k = $com(lAB,GoUrl,1,bstr,http://team-nexgen.com/scripts)
+  .guest book: var %k = $com(lAB,GoUrl,1,bstr,http://team-nexgen.com/guestbook/)
+  .staff: var %k = $com(lAB,GoUrl,1,bstr,http://team-nexgen.com/members)
   • setup
   .timestamping $chr(91) $+ $_vr(general,timestamp) $+ $chr(93): {
     if ($_vr(general,timestamp) == on) { _vw general timestamp off | timestamp off | haltdef }
@@ -301,7 +305,7 @@ menu menubar {
   .$l(53,status)
   ..$l(54,hide):scid -a window -hn "Status Window"
   ..$l(55,show):scid -a window -aw "Status Window"
-  • $l(1,control panel):cp 
+  • $l(1,control panel):frmCP.Load 
   • $l(56,about):about
   • $l(57,debug):debug @debug
   • nexgen
@@ -495,7 +499,7 @@ menu status {
   ...-
   ...connect server:connect $$?="server name ie: roa*"
   ...reHash:rehash
-  • $l(1,control panel):frmCP.Reload
+  • $l(1,control panel):frmCP.Load
   • nexgen
   .home: frmAB.Homepage
   .forum: frmAB.Forum

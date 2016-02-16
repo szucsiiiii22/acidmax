@@ -1,5 +1,8 @@
 irc.ircsoulz.org
-hobana.freenode.net
 weber.freenode.net
-leguin.freenode.net
+adams.freenode.net
+wolfe.freenode.net
+rajaniemi.freenode.net
+tepper.freenode.net
+asimov.freenode.net
 sinisalo.freenode.net

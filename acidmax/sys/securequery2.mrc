@@ -1,6 +1,6 @@
 ;Secure Query v2.2
 ;Team Nexgen 2002 by KnightFal
-;www.team-nexgen.org
+;team-nexgen.com
 
 alias secure.version { return v2.2a }
 on *:load:{ 
@@ -146,7 +146,7 @@ dialog querycon {
   text "Version:", 58, 97 60 21 8, tab 7 right
   text $secure.version, 61, 125 60 14 8, tab 7
   text "It is important to keep your Team Nexgen addon's updated. You will find them at the Team Nexgen web site.", 63, 62 73 116 20, tab 7
-  link "www.team-nexgen.org", 59, 91 96 59 8, tab 7
+  link "team-nexgen.com", 59, 91 96 59 8, tab 7
   text "Customized by:", 8, 79 49 39 8, tab 7 right
   link "GeSpot", 9, 125 49 19 8, tab 7
 }
@@ -321,7 +321,7 @@ on *:dialog:*:sclick:*:{
       else { _vw querycon netflood off | did -u querycon 219 | did -b querycon 211,217,212,214 }
     }
     if ($did == 9) { run mailto:gespot@laggyservers.com?Subject=Secure Query $secure.version - GeSpot Edition }
-    if ($did == 59) { run http://www.team-nexgen.org }
+    if ($did == 59) { run http://team-nexgen.com }
   }
 }
 alias -l sr {

@@ -1,6 +1,6 @@
-alias www {
-  if ($_vr(general,browser) == on) { AB }
-}
+;alias www {
+;  if ($_vr(general,browser) == on) { AB }
+;}
 [read write data/setting.ini]
 alias _vr {
   if ($exists(data\setting.ini) == $false) { mkdir data | write -c data\setting.ini }
@@ -46,10 +46,10 @@ alias skin.load {
   }
 }
 alias a.logo {
-  return $nex2 v2.1.22 (mirc $version $+ )  ©2014, by team nexgen - www.team-nexgen.org
+  return $nex2 v2.1.21 (mirc $version $+ )  ©2016, by team nexgen - team-nexgen.com
 }
 alias a.logo2 {
-  return $nex v2.1.22 (mirc $version $+ ) ©2014, by team nexgen - www.team-nexgen.org
+  return $nex v2.1.21 (mirc $version $+ ) ©2016, by team nexgen - team-nexgen.com
 }
 alias acidmax {
   if ($server != $null) && ($_vr(version,color) == $null) { .msg $active $a.logo | echo -at %meext.1 $+ $me $+ %meext.2 $a.logo | snexgen }
@@ -62,7 +62,7 @@ alias topic {
   elseif ($2 == $null) { echo -at •3• $1 topic »3 $chan($1).topic }
   else { topic $1- }
 } 
-alias nexgensite return www.team-nexgen.org
+alias nexgensite return team-nexgen.com
 
 alias nex return .::nexgen·acidmax::.
 alias nex2 return 12.::nexgen12·acidmax12::.
@@ -104,15 +104,14 @@ on *:load:{
 }
 alias script.val {
   if ($alias(aliases.ini) == $null) { load -a sys\aliases.ini }
-  if ($script(du.mrc) == $null) { load -rs du\du.mrc }
-  if ($script(dupreupdate.mrc) == $null) { load -rs DUPreUpdate\dupreupdate.mrc }
+  ;if ($script(du.mrc) == $null) { load -rs du\du.mrc }
+  ;if ($script(dupreupdate.mrc) == $null) { load -rs DUPreUpdate\dupreupdate.mrc }
   if ($script(nexcam.mrc) == $null) { load -rs com\nexcam.mrc }
   if ($script(ab.mrc) == $null) { load -rs com\ab.mrc }
   if ($script(at.mrc) == $null) { load -rs com\at.mrc }
   if ($script(ap.mrc) == $null) { load -rs com\ap.mrc }
   if ($script(asm.mrc) == $null) { load -rs com\asm.mrc }
-  if ($script(cpanel.mrc) == $null) { load -rs cpanel\cpanel.mrc }
-  if ($script(tetris.mrc) == $null) { load -rs games\tetris\tetris.mrc }
+  if ($script(cp.mrc) == $null) { load -rs cpanel\asm.mrc }
   if ($script(acidpop.mrc) == $null) { load -rs sys\acidpop.mrc }
   if ($script(nexbar.mrc) == $null) { load -rs sys\nexbar.mrc } 
   if ($script(acidmax2.mrc) == $null) { load -rs sys\acidmax2.mrc }
@@ -152,12 +151,11 @@ alias script.val {
 }
 on *:start: {
   var %kickcount = 3000
-  if ($version < 6.12) { echo -a •4• warning »4 you will need to upgrade to mirc v6.17 and above to use all the features in acidmax. www.mirc.com }
+  if ($version < 7.32) { echo -a •4• warning »4 you will need to upgrade to mirc v7.32 and above to use all the features in acidmax. www.mirc.com }
   script.val
   if  ($_vr(setup,controlpanel) == on) { frmCP.Load }  
   frmAP.Init
   frmAB.Init
-  frmTetris.Init
   dscript.check 
   if ($script(media.mrc) != $null) { .unload -rs sys\media.mrc | .remove sys\media.mrc }
   unset %ctcps* 
@@ -207,7 +205,7 @@ on *:connect: {
   if ($_vr(general,wallops) == on) { mode $me +w }
   if ($_vr(general,snotices) == on) { mode $me +s }
   if ($_vr(setup,antiidle) == on) { .timeridle 0 10 reset.idle }
-  if ($_vr(general,startpage) == $null) { _vw general startpage www.team-nexgen.org }                                                                                                       
+  if ($_vr(general,startpage) == $null) { _vw general startpage team-nexgen.com }                                                                                                       
   if ($_vr(general,news) == $null) { nexnews.d } 
   elseif ($_vr(general,news) == on) { nexnews }
 }
@@ -372,15 +370,15 @@ dialog about {
   option dbu
   icon 4, 7 0 149 69
   tab "about", 14, 6 72 147 123
-  link "www.team-nexgen.org", 13, 48 148 60 8, tab 14
+  link "team-nexgen.com", 13, 48 148 60 8, tab 14
   text "Nexgen Acidmax created by", 17, 28 116 70 8, tab 14
-  link "guideX", 18, 100 116 30 8, tab 14
+  link "KnightFal", 18, 100 116 30 8, tab 14
   text "email", 19, 33 140 12 8, tab 14
   text "web", 20, 35 148 10 8, tab 14
   link "guide_X@live.com", 21, 48 140 70 8, tab 14
   text "irc", 22, 39 156 6 8, tab 14
   link "freenode", 23, 48 156 25 8, tab 14
-  link "#defocus", 24, 71 156 25 8, tab 14
+  link "##chat", 24, 71 156 25 8, tab 14
   text "version:", 37, 52 128 19 8, tab 14
   text "", 38, 73 128 46 8, tab 14
   check "open on start", 39, 12 88 42 10, tab 14
@@ -414,10 +412,10 @@ on *:dialog:about:init:*:{
 }
 on *:dialog:about:sclick:*:{
   if ($did == 8) { www $update.site $+ acidmax.txt }
-  if ($did == 13) { www http://www.team-nexgen.org }
+  if ($did == 13) { www http://team-nexgen.com }
   if ($did == 21) { run mailto:guide_X@live.com }
-  if ($did == 23) { server irc.freenode.net:6661 }
-  if ($did == 24) && ($network == freenode) { join #defocus }
+  if ($did == 23) { server irc.freenode.org:6667 }
+  if ($did == 24) && ($network == freenode) { join ##chat }
   if ($did == 39) { 
     if ($_vr(general,about) == off) { _vw general about on }
     else { _vw general about off }
@@ -577,8 +575,8 @@ alias me {
 }
 alias load.scripts {
   echo -a 3[NOTE: You are loading all acidmax based scripts, your computer MAY freeze momentarily while loading, please be patient.]
-  load -rs DUPreUpdate\dupreupdate.mrc
-  load -rs du\du.mrc
+  ;load -rs DUPreUpdate\dupreupdate.mrc
+  ;load -rs du\du.mrc
   load -rs com\ab.mrc
   load -rs cpanel\cp.mrc
   load -rs com\ap.mrc
@@ -782,11 +780,11 @@ alias reload.update {
 
 }
 alias nexnews {
-  if ($_vr(general,startpage) == $null) { _vw general startpage www.team-nexgen.org\nexgennews.shtml }
+  if ($_vr(general,startpage) == $null) { _vw general startpage team-nexgen.com/news }
   www $_vr(general,startpage)
 }
 alias nexnews2 {
-  www www.team-nexgen.org 
+  www team-nexgen.com/news
 }
 alias nexnews.d {
   if ($dialog(nexnews.d) == $null) { dialog -m nexnews.d nexnews.d }
@@ -802,7 +800,7 @@ dialog nexnews.d {
   button "Button", 5, 11 64 37 12, ok
 }
 on *:dialog:nexnews.d:sclick:*:{
-  if ($did == 2) { _vw general news on | .timer 1 1 _vw general startpage www.team-nexgen.org }
+  if ($did == 2) { _vw general news on | .timer 1 1 _vw general startpage team-nexgen.com/news }
   if ($did == 3) { _vw general news off } 
   .timer -m 1 1 dialog -x nexnews.d 
 }
@@ -842,5 +840,5 @@ alias cp {
 alias nver return v2.1
 alias build return 21
 alias update.site {
-  return http://www.team-nexgen.org/
+  return http://team-nexgen.com/
 }

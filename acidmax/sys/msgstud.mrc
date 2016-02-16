@@ -1,6 +1,6 @@
 ;Message Studio v1.14
 ;Team Nexgen 2003 by KnightFal
-;www.team-nexgen.org
+;team-nexgen.com
 
 on *:load:{ 
   if ($version < 5.91) echo -a  $+ $colour(info2) $+ *** This addon will not work properly with mIRC $version $+ , you need latest mirc in order to use this addon. | beep 
@@ -95,7 +95,7 @@ dialog message.stud {
   check "enable automated", 97, 7 16 58 10, tab 70
   check "active when closed", 100, 7 25 58 10, tab 70
   list 22, 73 24 74 82, sort size hsbar
-  link "tnexgen.com", 61, 10 174 45 8
+  link "team-nexgen.com", 61, 10 174 45 8
   box "catagory", 69, 109 109 42 74
   check "support", 62, 113 117 34 10
   check "comedy", 63, 113 126 34 10
@@ -215,7 +215,7 @@ on *:dialog:message.stud:sclick:*:{
     if ($_vr(message.stud,multiline) == on) { _vw message.stud multiline off }
     else { _vw message.stud multiline on | did -c message.stud 54 | did -r message.stud 7 }
   }
-  if ($did == 61) { run http://www.team-nexgen.org }
+  if ($did == 61) { run http://team-nexgen.com }
   if ($did == 62) { _vw message.stud cat support | did -c message.stud 42 | did -u message.stud 43,63,44,64,45,65,46,66,47,67,49,68 | msg.list | check } 
   if ($did == 63) { _vw message.stud cat comedy | did -c message.stud 43 | did -u message.stud 42,62,44,64,45,65,46,66,47,67,49,68 | msg.list | check } 
   if ($did == 64) { _vw message.stud cat greet | did -c message.stud 44 | did -u message.stud 43,63,42,62,45,65,46,66,47,67,49,68 | msg.list | check } 

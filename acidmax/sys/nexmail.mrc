@@ -1,6 +1,6 @@
 ;nexMAIL v1.01 beta
 ;Team Nexgen 2002 by KnightFal
-;www.team-nexgen.org
+;team-nexgen.com
 
 on *:load:{ echo -a  4TEAM NEXGEN'S NEXMAIL v1.0 beta | echo -a  4Please type: /nexmail to send e-mail. Type: /nexmail-set to configure. }
 
@@ -96,7 +96,7 @@ alias MailRead {
   if (%mail.i == 3) sockwrite -n mail RCPT TO: %nexmail_to
   if (%mail.i == 4) {
     sockwrite -n mail DATA
-    sockwrite -n mail  X-Mailer: nexMAIL e-mail script dialog www.team-nexgen.org
+    sockwrite -n mail  X-Mailer: nexMAIL e-mail script dialog team-nexgen.com
     sockwrite -n mail FROM: $_vr(nexmail,from)    
     sockwrite -n mail TO: %nexmail_to   
     sockwrite -n mail Subject: %nexmail_sub

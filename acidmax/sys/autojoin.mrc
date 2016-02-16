@@ -1,6 +1,6 @@
 ;Auto-Join v3.01
 ;Team Nexgen 2002 by KnightFal
-;www.team-nexgen.org
+;team-nexgen.com
 
 on *:load:{ 
   if ($version < 5.91) echo -a  $+ $colour(info2) $+ *** You need mirc 5.91 or greator in order to use this addon. | beep 

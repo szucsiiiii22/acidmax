@@ -1,0 +1,4 @@
+Common = 36, 94, 564, 560, C
+frmControlPanel = 100, 100, 628, 566, C, 6, 22, 635, 607, C
+ControlPanel = 125, 125, 653, 591, 
+SystemStats = 75, 75, 542, 660, 

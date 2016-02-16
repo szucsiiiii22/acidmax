@@ -1,5 +1,5 @@
 ;Advanced System Stats
-;guidex@tnexgen.com
+; guide_X@live.com
 
 on 1:CLOSE:@ASS:.comclose lASS
 

@@ -110,7 +110,7 @@ dialog setup {
   check "use windows default browser instead of acidmax", 105, 20 191 259 20, tab 73
 }
 on *:dialog:setup:init:*:{
-  if ($_vr(general,startpage) == $null) { _vw general startpage www.team-nexgen.org }
+  if ($_vr(general,startpage) == $null) { _vw general startpage team-nexgen.com }
   if ($_vr(general,queryblock) == on) { did -c setup 97 }
   if ($_vr(nexbar,switch) == on) { did -c setup 86 }
   if ($_vr(general,spamblock) == $null) { _vw general spamblock 0 } 
@@ -153,7 +153,7 @@ on *:dialog:setup:init:*:{
   if ($_vr(lastseen,switch) == 1) { did -c setup 98 }
   if ($_vr(version,color) == off) { did -c setup 78 }
   if ($_vr(general,startpage) != $null) { did -o setup 94 1 $_vr(general,startpage) }
-  else did -o setup 94 1 www.team-nexgen.org
+  else did -o setup 94 1 team-nexgen.com
   did -o setup 10 1 $_vr(info,age) 
   did -o setup 14 1 $_vr(info,country) 
   did -o setup 12 1 $_vr(info,city) 

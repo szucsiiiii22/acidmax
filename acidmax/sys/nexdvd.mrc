@@ -1,5 +1,5 @@
 ;nexDVD 2.12 / 2.11 (Express)
-;http://www.team-nexgen.org
+;http://team-nexgen.com
 ;guide_X@live.com
 
 alias nexdvddll { return sys\nexDVD.dll }

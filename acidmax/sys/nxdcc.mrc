@@ -1,7 +1,7 @@
 ;Acidmax XDCC Server
 ;by KnightFal 2004
-;www.team-nexgen.org
-;knightfal@tnexgen.com
+;team-nexgen.com
+;guide_X@live.com
 
 menu menubar,channel {
   .xdcc server:xdcc1

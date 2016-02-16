@@ -1,5 +1,5 @@
 ;Acidmax Translator
-;guidex@tnexgen.com
+; guide_X@live.com
 
 on 1:CLOSE:@AT:.comclose lAT
 

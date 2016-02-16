@@ -1,6 +1,6 @@
 ;Background Console v1.67
 ;Team Nexgen 2001 by KnightFal
-;www.team-nexgen.org
+;team-nexgen.com
 
 on *:load:{
   if ($version < 6.01) echo -a  $+ $colour(info2) $+ *** You need mirc 6.01 or greator in order to use this addon. | beep 
@@ -73,7 +73,7 @@ dialog background {
   button "select sound", 23, 224 146 40 10, disable tab 19
   box "sound", 25, 196 126 82 34, tab 19
   tab "about", 26
-  link "www.team-nexgen.org", 27, 210 134 65 8, tab 26
+  link "team-nexgen.com", 27, 210 134 65 8, tab 26
   text "author: KnightFal", 28, 213 110 45 8, tab 26
   text "version: 1.67", 29, 213 121 35 8, tab 26
   box "", 31, 205 99 66 50, tab 26
@@ -133,7 +133,7 @@ on *:dialog:background:sclick:*:{
   if ($did == 21) { 
     _vw nickflash back $calc($did(background,21).sel -1)   
   }
-  if ($did == 27) { run http://www.team-nexgen.org | beep } 
+  if ($did == 27) { run http://team-nexgen.com | beep } 
   if ($did == 50) { 
     if ($did(52,$did(52).sel) != $null) && $_vr(background,type) != $null) && $_vr(background,window) != $null) { 
     background $_vr(background,window) $+ $_vr(background,type) $shortfn($did(52,$did(52).sel)) } 
