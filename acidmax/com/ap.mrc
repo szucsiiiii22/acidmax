@@ -7,10 +7,10 @@ menu query,channel,status,menubar {
 }
 
 alias frmAP.Init {
-  comopen lAP AcidmaxPlayer.clsAP13
+  .comopen lAP AcidmaxPlayer.clsAP13
   if ($comerr) {
-    comreg com\ap13.dll
-    comopen lAP AcidmaxPlayer.clsAP13
+    .comreg com\ap13.dll
+    .comopen lAP AcidmaxPlayer.clsAP13
     if ($comerr) halt
   }
 }

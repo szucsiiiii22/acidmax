@@ -6,3 +6,10 @@ rajaniemi.freenode.net
 tepper.freenode.net
 asimov.freenode.net
 sinisalo.freenode.net
+kornbluth.freenode.net
+hitchcock.freenode.net
+barjavel.freenode.net
+sendak.freenode.net
+cameron.freenode.net
+leguin.freenode.net
+verne.freenode.net
