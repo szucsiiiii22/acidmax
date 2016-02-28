@@ -4,14 +4,14 @@ Begin VB.Form frmMain
    BackColor       =   &H00000000&
    BorderStyle     =   0  'None
    Caption         =   "control panel"
-   ClientHeight    =   5625
+   ClientHeight    =   5655
    ClientLeft      =   0
    ClientTop       =   0
-   ClientWidth     =   7785
+   ClientWidth     =   7815
    ClipControls    =   0   'False
    ControlBox      =   0   'False
    BeginProperty Font 
-      Name            =   "Tahoma"
+      Name            =   "Raleway"
       Size            =   8.25
       Charset         =   0
       Weight          =   400
@@ -24,9 +24,9 @@ Begin VB.Form frmMain
    MaxButton       =   0   'False
    MinButton       =   0   'False
    MouseIcon       =   "frmMain.frx":000C
-   ScaleHeight     =   375
+   ScaleHeight     =   377
    ScaleMode       =   3  'Pixel
-   ScaleWidth      =   519
+   ScaleWidth      =   521
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
    Begin VB.Timer tmrResize 
@@ -48,6 +48,15 @@ Begin VB.Form frmMain
    Begin VB.PictureBox picBottom 
       BackColor       =   &H00404040&
       BorderStyle     =   0  'None
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   255
       Left            =   0
       ScaleHeight     =   255
@@ -59,10 +68,10 @@ Begin VB.Form frmMain
          BackStyle       =   0  'Transparent
          Caption         =   "cpanel"
          BeginProperty Font 
-            Name            =   "Tahoma"
+            Name            =   "Raleway"
             Size            =   8.25
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
@@ -84,6 +93,15 @@ Begin VB.Form frmMain
    Begin VB.PictureBox picOtherPanels 
       BackColor       =   &H00000000&
       BorderStyle     =   0  'None
+      BeginProperty Font 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   5295
       Left            =   0
       Picture         =   "frmMain.frx":015E
@@ -105,7 +123,7 @@ Begin VB.Form frmMain
          BackStyle       =   0  'Transparent
          Caption         =   "How to modify Control Panel"
          BeginProperty Font 
-            Name            =   "Tahoma"
+            Name            =   "Raleway"
             Size            =   9.75
             Charset         =   0
             Weight          =   400
@@ -114,7 +132,7 @@ Begin VB.Form frmMain
             Strikethrough   =   0   'False
          EndProperty
          ForeColor       =   &H00FFFFFF&
-         Height          =   495
+         Height          =   735
          Index           =   0
          Left            =   840
          MouseIcon       =   "frmMain.frx":35CB4
