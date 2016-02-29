@@ -13,3 +13,5 @@ sendak.freenode.net
 cameron.freenode.net
 leguin.freenode.net
 verne.freenode.net
+orwell.freenode.net
+holmes.freenode.net
