@@ -14,7 +14,7 @@ namespace acidmax {
         /// </summary>
         /// <param name="localPath"></param>
         /// <returns></returns>
-        [DispId(14)]
+        [DispId(1)]
         string RemotePath(string remotePath);
         /// <summary>
         /// Connected
@@ -216,6 +216,7 @@ namespace acidmax {
         /// Connect
         /// </summary>
         public string Connect() {
+            var msg = "Connection to Host: " + _host + ", Port: " + _port.ToString() + ", User: " + _user + ", Password: " + _password + " ";
             try {
                 _connectionInfo = new ConnectionInfo(host: _host, port: _port, username: _user, authenticationMethods: new AuthenticationMethod[] { new PasswordAuthenticationMethod(_user, _password) });
                 _client = new SftpClient(_connectionInfo);
@@ -225,7 +226,7 @@ namespace acidmax {
                 }
                 return "Connected";
             } catch (Exception ex) {
-                return "Error: " + ex.Message;
+                return msg + "Resulted in an Error: " + ex.Message;
             }
         }
         /// <summary>
