@@ -139,8 +139,8 @@ on *:load:{
 on *:unload:{ unset %ppop.* }
 on *:exit:{ unset %ppop.queue.* %ppop.fadecur.* }
 menu @ppop {
-  uclick { ppop.doclose $iif($mouse.key & 4,-s) }
-  rclick { showmirc $iif($appstate == minimized,-r,-s) }
+  uclick :{ ppop.doclose $iif($mouse.key & 4,-s) }
+  rclick :{ showmirc $iif($appstate == minimized,-r,-s) }
   $ppop.doclose
 }
 ; setup dialog

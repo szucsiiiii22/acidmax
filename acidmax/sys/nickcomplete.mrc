@@ -226,4 +226,4 @@ alias -l nc.style {
   window -rak0 @nick completor style 500 475 450 60 
   aline @nick completor style %nick.com1.1 $+ $me $+ %nick.com1.2 This is a sample of your nick completor
 }
-alias -l win.check34 { if $dialog(nc.setup) == $null) || ($window(@nick completor style) == $null) { window -c @nick completor style | .timernc off } 
+alias -l win.check34 { if ($dialog(nc.setup) == $null) || ($window(@nick completor style) == $null) { window -c @nick completor style | .timernc off } }

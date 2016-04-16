@@ -54,7 +54,7 @@ alias -l _arem {
 }
 alias aj {
   if ($version < 5.91) { echo -a 4This addon will not work properly with mIRC $version $+ , please upgrade to latest mIRC www.mirc.com | beep | halt }
-  if $dialog(_ajoin) == $null) { dialog -m _ajoin _ajoin } 
+  if ($dialog(_ajoin) == $null) { dialog -m _ajoin _ajoin } 
 }
 on *:connect: {
   if ($_ar(general,switch) == on) {

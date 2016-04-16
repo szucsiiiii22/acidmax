@@ -51,7 +51,7 @@ raw 366:*:{
   _vw names switch on
   haltdef
 }
-raw 317: * {
+raw 317:*: {
   $echon $space(4) 12»14 idle 12: $duration($3) | $echon $space(4) 12»14 signon 12: $asctime($4,mmmm dd yyyy) | $echon $space(4) 12»14 resolved 12: $duration($calc($ctime - %s.whois)) | $echon $space(1) 12[14end12]
   haltdef
 }

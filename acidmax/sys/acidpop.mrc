@@ -48,10 +48,10 @@ menu query {
   ..off:log off $1  
   • media 
   .jukebox
-  ..wav { var %wav $$hfile="Select wave file to play" $wavedir | _vw jukebox wavdir $nofile(%wav) $+ *.wav | jukebox $$1 $shortfn(%wav) } 
-  ..midi { var %mid $$hfile="Select midi file to play " $mididir | _vw jukebox middir $nofile(%mid) $+ *.mid | jukebox $$1 $shortfn(%mid) } 
-  ..mp3 { var %mp3 $$hfile="Select mp3 file to play" $mp3dir | _vw jukebox mp3dir $nofile(%mp3) $+ *.mp3 | jukebox $$1 $shortfn(%mp3) }
-  ..wma { var %wma $$hfile="Select wma file to play" $_vr(jukebox,wmadir) | _vw jukebox wmadir $nofile(%wma) $+ *.wma | run $shortfn(%wma) | say 15..12wma15.. $nopath(%wma) } 
+  ..wav :{ var %wav $$hfile="Select wave file to play" $wavedir | _vw jukebox wavdir $nofile(%wav) $+ *.wav | jukebox $$1 $shortfn(%wav) } 
+  ..midi :{ var %mid $$hfile="Select midi file to play " $mididir | _vw jukebox middir $nofile(%mid) $+ *.mid | jukebox $$1 $shortfn(%mid) } 
+  ..mp3 :{ var %mp3 $$hfile="Select mp3 file to play" $mp3dir | _vw jukebox mp3dir $nofile(%mp3) $+ *.mp3 | jukebox $$1 $shortfn(%mp3) }
+  ..wma :{ var %wma $$hfile="Select wma file to play" $_vr(jukebox,wmadir) | _vw jukebox wmadir $nofile(%wma) $+ *.wma | run $shortfn(%wma) | say 15..12wma15.. $nopath(%wma) } 
   • stats
   .$chr(164) system:stat 
   .os:stat -os  
@@ -83,8 +83,8 @@ menu channel {
     if ($_vr(general,timestamp) == on) { _vw general timestamp off | timestamp off | haltdef }
     else { _vw general timestamp on | timestamp on | haltdef }
   } 
-  .event color theme $chr(91) $+ $group(#colortheme) $+ $chr(93): { if ($group(#colortheme) == on) { .disable #colortheme | if $dialog(color) != $null) { did -b color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } | echo -a •03• event color theme » (03 off ) }
-    else { .enable #colortheme | if $dialog(color) != $null) { did -e color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } | echo -a •03• event color theme » (03 on ) }
+  .event color theme $chr(91) $+ $group(#colortheme) $+ $chr(93): { if ($group(#colortheme) == on) { .disable #colortheme | if ($dialog(color) != $null) { did -b color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } | echo -a •03• event color theme » (03 off ) }
+    else { .enable #colortheme | if ($dialog(color) != $null) { did -e color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } | echo -a •03• event color theme » (03 on ) }
   }   
   .nexgen sounds $chr(91) $+ $_vr(setup,sound) $+ $chr(93): { if ($_vr(setup,sound) == on) { _vw setup sound off | echo -a •03• nexgen sounds » (03 off ) }
     else { _vw setup sound on | echo -a •03• nexgen sounds » (03 on ) }
@@ -270,10 +270,10 @@ menu channel {
   ..$l(8,off):log off #  
   • $l(28,media) 
   .$l(29,jukebox)
-  ..wav { var %wav $$hfile=" $l(30,Select wave file to play) " $wavedir | _vw jukebox wavdir $nofile(%wav) $+ *.wav | jukebox # $shortfn(%wav) } 
-  ..midi { var %mid $$hfile=" $l(31,Select midi file to play) " $mididir | _vw jukebox middir $nofile(%mid) $+ *.mid | jukebox # $shortfn(%mid) } 
-  ..mp3 { var %mp3 $$hfile=" $l(32,Select mp3 file to play) " $mp3dir | _vw jukebox mp3dir $nofile(%mp3) $+ *.mp3 | jukebox # $shortfn(%mp3) }
-  ..wma { var %wma $$hfile=" $l(33,Select wma file to play) " $_vr(jukebox,wmadir) | _vw jukebox wmadir $nofile(%wma) $+ *.wma | run $shortfn(%wma) | say 15..12wma15.. $nopath(%wma) } 
+  ..wav :{ var %wav $$hfile=" $l(30,Select wave file to play) " $wavedir | _vw jukebox wavdir $nofile(%wav) $+ *.wav | jukebox # $shortfn(%wav) } 
+  ..midi :{ var %mid $$hfile=" $l(31,Select midi file to play) " $mididir | _vw jukebox middir $nofile(%mid) $+ *.mid | jukebox # $shortfn(%mid) } 
+  ..mp3 :{ var %mp3 $$hfile=" $l(32,Select mp3 file to play) " $mp3dir | _vw jukebox mp3dir $nofile(%mp3) $+ *.mp3 | jukebox # $shortfn(%mp3) }
+  ..wma :{ var %wma $$hfile=" $l(33,Select wma file to play) " $_vr(jukebox,wmadir) | _vw jukebox wmadir $nofile(%wma) $+ *.wma | run $shortfn(%wma) | say 15..12wma15.. $nopath(%wma) } 
   • $l(34,stats)
   .$chr(164) $l(35,system):stat 
   .os:stat -os  
@@ -320,8 +320,8 @@ menu menubar {
     if ($_vr(general,timestamp) == on) { _vw general timestamp off | timestamp off | haltdef }
     else { _vw general timestamp on | timestamp on | haltdef }
   } 
-  .$l(5,event color theme) $chr(91) $+ $group(#colortheme) $+ $chr(93): { if ($group(#colortheme) == on) { .disable #colortheme | if $dialog(color) != $null) { did -b color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } | echo -a •3• $l(5,event color theme) » (3 $l(8,off) ) }
-    else { .enable #colortheme | if $dialog(color) != $null) { did -e color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } | echo -a •3• $l(5,event color theme) » ( 3$l(7,on) ) }
+  .$l(5,event color theme) $chr(91) $+ $group(#colortheme) $+ $chr(93): { if ($group(#colortheme) == on) { .disable #colortheme | if ($dialog(color) != $null) { did -b color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } | echo -a •3• $l(5,event color theme) » (3 $l(8,off) ) }
+    else { .enable #colortheme | if ($dialog(color) != $null) { did -e color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } | echo -a •3• $l(5,event color theme) » ( 3$l(7,on) ) }
   }   
   .nexgen $l(6,sounds) $chr(91) $+ $_vr(setup,sound) $+ $chr(93): { if ($_vr(setup,sound) == on) { _vw setup sound off | echo -a •3• nexgen $l(6,sounds) » (3 $l(8,off) ) }
     else { _vw setup sound on | echo -a •3• nexgen $l(6,sounds) » ( 3$l(7,on) ) }
@@ -513,11 +513,11 @@ menu status {
     if ($_vr(general,timestamp) == on) { _vw general timestamp off | timestamp off | haltdef }
     else { _vw general timestamp on | timestamp on | haltdef }
   } 
-  .$l(5,event color theme) $chr(91) $+ $group(#colortheme) $+ $chr(93): { if ($group(#colortheme) == on) { .disable #colortheme | if $dialog(color) != $null) { did -b color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } | echo -a •3• $l(5,event color theme) » (3 $l(8,off) ) }
-    else { .enable #colortheme | if $dialog(color) != $null) { did -e color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } | echo -a •3• $l(5,event color theme) » ( 3$l(7,on) ) }
+  .$l(5,event color theme) $chr(91) $+ $group(#colortheme) $+ $chr(93): { if ($group(#colortheme) == on) { .disable #colortheme | if ($dialog(color) != $null) { did -b color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } | echo -a •3• $l(5,event color theme) » (3 $l(8,off) ) }
+    else { .enable #colortheme | if ($dialog(color) != $null) { did -e color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } | echo -a •3• $l(5,event color theme)  » ( 3$l(7,on) ) }
   }   
   .nexgen $l(6,sounds) $chr(91) $+ $_vr(setup,sound) $+ $chr(93): { if ($_vr(setup,sound) == on) { _vw setup sound off | echo -a •3• nexgen $l(6,sounds) » (3 $l(8,off) ) }
-    else { _vw setup sound on | echo -a •3• nexgen $l(6,sounds) » ( 3$l(7,on) ) }
+    else { _vw setup sound on | echo -a •3• nexgen $l(6,sounds)  » ( 3$l(7,on) ) }
   }
   .ctcp $l(15,cloak) $chr(91) $+ $_vr(general,cloak) $+ $chr(93): { if ($_vr(general,cloak) == on) { cloak off }
     else { cloak on }

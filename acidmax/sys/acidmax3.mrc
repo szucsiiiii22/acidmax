@@ -274,8 +274,8 @@ on *:dialog:setup:sclick:*:{
     else { _vw general timestamp on | timestamp on | haltdef }
   }
   if ($did == 27) { 
-    if ($group(#colortheme) == on) { .disable #colortheme | if $dialog(color) != $null) { did -b color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } }
-    else { .enable #colortheme | if $dialog(color) != $null) { did -e color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } }
+    if ($group(#colortheme) == on) { .disable #colortheme | if ($dialog(color) != $null) { did -b color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } }
+    else { .enable #colortheme | if ($dialog(color) != $null) { did -e color 2,3,4,5,7,9,11,13,15,17,19,21,27,25,29,23,31,37,39,33,35 } }
   }
   if ($did == 28) { 
     if ($_vr(setup,sound) == on) { _vw setup sound off }
@@ -591,7 +591,7 @@ on *:notify:{
     n.olist 
   }
 }
-on *:unnotify:{
+on *:unotify:{
   if ($dialog(notalist) != $null) {
     n.olist 
   }

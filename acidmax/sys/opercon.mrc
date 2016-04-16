@@ -24,7 +24,7 @@ on *:dialog:oper.ini:edit:*:{
   if ($did == 2) { if ($did(oper.ini,2).text != $null) { _vw oper.ini userid $did(oper.ini,2).text } | else _vrem oper.ini userid }
   if ($did == 1) { if ($did(oper.ini,1).text != $null) { _vw oper.ini pass $did(oper.ini,1).text } | else _vrem oper.ini pass }
 }
-menu gchannel {
+menu channel {
   &deoper: deoper
   -
   &config stats

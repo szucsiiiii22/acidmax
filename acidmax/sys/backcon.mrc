@@ -135,7 +135,7 @@ on *:dialog:background:sclick:*:{
   }
   if ($did == 27) { run http://team-nexgen.com | beep } 
   if ($did == 50) { 
-    if ($did(52,$did(52).sel) != $null) && $_vr(background,type) != $null) && $_vr(background,window) != $null) { 
+    if ($did(52,$did(52).sel) != $null) && ($_vr(background,type) != $null) && ($_vr(background,window) != $null) { 
     background $_vr(background,window) $+ $_vr(background,type) $shortfn($did(52,$did(52).sel)) } 
     cl.apply 
   }
@@ -317,7 +317,7 @@ on *:join:#:{
   if ($_vr(nicklist,me) == $null) { _vw nicklist me 4 }
   cl.nick $chan $nick
   if ($nick == $me) && ($_vr(background,channel) == on) { 
-    if ($exists($_vr(background,channelback)) == $true) { .background - $+ $_vr(background,channeltype) $chan $_vr(background,channelback)" }
+    if ($exists($_vr(background,channelback)) == $true) { .background - $+ $_vr(background,channeltype) $chan $_vr(background,channelback) " }
     elseif ($exists($_vr(background,channelback)) == $false) _vrem background channelback
   }
 }

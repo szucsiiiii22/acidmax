@@ -524,7 +524,7 @@ on *:dialog:wxchanpass:edit:*:{
 on *:nick:if ($dialog(underbot) != $null) .timer 1 1 ch.count
 on *:part:%cbc:if ($dialog(underbot) != $null) .timer 1 1 ch.count
 on *:quit:if ($dialog(underbot) != $null) .timer 1 1 ch.count
-on *:kick:if ($dialog(underbot) != $null) .timer 1 1 ch.count
+on *:kick:%cbc:if ($dialog(underbot) != $null) .timer 1 1 ch.count
 on *:op:%cbc:if ($dialog(underbot) != $null) .timer 1 1 ch.count
 on *:deop:%cbc:if ($dialog(underbot) != $null) .timer 1 1 ch.count
 on *:voice:%cbc:if ($dialog(underbot) != $null) .timer 1 1 ch.count

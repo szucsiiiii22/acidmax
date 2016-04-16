@@ -7,7 +7,7 @@ on *:load:{
   if ($version < 5.61) echo -a  $+ $colour(info2) $+ *** You need mirc 5.91 or greator in order to use this addon. | beep 
   echo -a  4TEAM NEXGEN'S AWAY BOX v1.3 | echo -a  4Please type: /awaybox to begin. 
 }
-alias time.away { set %time.away1 $?="Away interval in minute(s):"  | set %time.away2 .timer22 0 $calc(%time.away1 * 60) } | echo -a 14Away Intervals will be displayed in channel(s) for %time.away1 minunte(s)
+alias time.away { set %time.away1 $?="Away interval in minute(s):"  | set %time.away2 .timer22 0 $calc(%time.away1 * 60) | echo -a 14Away Intervals will be displayed in channel(s) for %time.away1 minunte(s) }
 ;[read write data/setting.ini]
 alias _vr {
   if ($exists(data\setting.ini) == $false) { mkdir data | write -c data\setting.ini }

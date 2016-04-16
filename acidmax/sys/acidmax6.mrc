@@ -58,7 +58,7 @@ alias kick {
 }
 alias kickcount {
   if ($_vr(stats,kicksw) == on) {
-  _vw stats kicks $calc($_vr(stats,kicks) + 1) | return $chr(91) $+ kick count: $+ $_vr(stats,kicks)) $+ $chr(93) }
+  _vw stats kicks $calc($_vr(stats,kicks) + 1) | return $chr(91) $+ kick count: $+ $_vr(stats,kicks) $+ $chr(93) }
 }
 alias blacklist {
   if ($dialog(blacklist) == $null)  { dialog -m blacklist blacklist }
@@ -255,10 +255,10 @@ dialog opcon {
   check "registered users only", 42, 6 396 124 20, hide
 }
 on *:nick: if ($dialog(opcon) != $null)  { updatenl | if ($_vr(opcon,refresh) == on) { opcon.refresh } }
-on *:join:   if ($dialog(opcon) != $null) && ($nick ison %cbc) { did -i opcon 4 1 -  $nick | updatenl  | if ($_vr(opcon,refresh) == on) { opcon.stat } }
-on *:part: if ($dialog(opcon) != $null) && ($nick ison %cbc) { did -d opcon 4 1 $nick(%cbc,%cbn.1) | updatenl | if ($_vr(opcon,refresh) == on) { opcon.stat } } 
+on *:join:%cbc: if ($dialog(opcon) != $null) && ($nick ison %cbc) { did -i opcon 4 1 -  $nick | updatenl  | if ($_vr(opcon,refresh) == on) { opcon.stat } }
+on *:part:%cbc: if ($dialog(opcon) != $null) && ($nick ison %cbc) { did -d opcon 4 1 $nick(%cbc,%cbn.1) | updatenl | if ($_vr(opcon,refresh) == on) { opcon.stat } } 
 on *:quit: if ($dialog(opcon) != $null) && ($nick ison %cbc) { did -d opcon 4 1 $ov $nick(%cbc,%cbn.1) | updatenl | if ($_vr(opcon,refresh) == on) { opcon.stat } }
-on *:kick: if ($dialog(opcon) != $null) && ($nick ison %cbc) { did -d opcon 4 1 $ov $nick(%cbc,%cbn.1) | updatenl |if ($_vr(opcon,refresh) == on) {  opcon.stat } }
+on *:kick:%cbc: if ($dialog(opcon) != $null) && ($nick ison %cbc) { did -d opcon 4 1 $ov $nick(%cbc,%cbn.1) | updatenl | if ($_vr(opcon,refresh) == on) {  opcon.stat } }
 on *:op:%cbc: if ($dialog(opcon) != $null)  { if ($_vr(opcon,refresh) == on) { opcon.refresh } }
 on *:deop:%cbc: if ($dialog(opcon) != $null) { if ($_vr(opcon,refresh) == on) { opcon.refresh } }
 on *:voice:%cbc: if ($dialog(opcon) != $null) { if ($_vr(opcon,refresh) == on) { opcon.refresh } }

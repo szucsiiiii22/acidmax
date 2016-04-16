@@ -15,4 +15,3 @@ leguin.freenode.net
 verne.freenode.net
 orwell.freenode.net
 holmes.freenode.net
-wilhelm.freenode.net

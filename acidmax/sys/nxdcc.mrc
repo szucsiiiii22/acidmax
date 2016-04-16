@@ -1012,7 +1012,7 @@ alias  -l q.remind {
   if ($xr(info,queuenotice) != off) {
     if (%l1 = $null) { %l1 = 1 }
     if ($read(data\xdccq.txt,%l1) != $null) {
-      if (%l1 <= $lines(data\xdccq.txt)) && ($nopath($xr(pack $+ $read(data\xdccpk.txt,%l1),file))) != $null) { notice $read(data\xdccq.txt,%l1) $logo1 You are $chr( 35) $+ %l1 out of $xr(info,oqueue) in queue to receive " $+ $nopath($xr(pack $+ $read(data\xdccpk.txt,%l1,file)) $+ ". Thankyou for your patience. $logo | $xdccwin SENT QUEUE REMIND $+ : $read(data\xdccq.txt,%l1) | jis | haltdef }
+      if (%l1 <= $lines(data\xdccq.txt)) && ($nopath($xr(pack $+ $read(data\xdccpk.txt,%l1),file)) != $null) { notice $read(data\xdccq.txt,%l1) $logo1 You are $chr(35) $+ %l1 out of $xr(info,oqueue) in queue to receive " $+ $nopath($xr(pack $+ $read(data\xdccpk.txt,%l1,file))) $+ ". Thankyou for your patience. $logo | $xdccwin SENT QUEUE REMIND $+ : $read(data\xdccq.txt,%l1) | jis | haltdef }
       else { unset %l1 }
     }
     else { unset %l1 | haltdef }
@@ -1071,7 +1071,7 @@ alias -l slots {
 }
 alias -l logo1 return $c2 $+ xdcc service $c2 $+ » $+ $c1 $+ »
 alias -l logo return $c1 $+ » $+ $c2 $+ » $+ $c1 $+ acidmax $+ $c2 $+ « $+ $c1 $+ « 
-ctcp *:xdcc: { 
+ctcp *:xdcc:*: { 
   if ($1 == xdcc) {    
     if ($xr(info,switch) == on) { 
       if ($xr(info,ctcp) == on) { 

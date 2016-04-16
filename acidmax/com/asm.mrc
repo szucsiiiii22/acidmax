@@ -1,4 +1,4 @@
-:SEND MAIL
+; SEND MAIL
 ; guide_X@live.com
 
 on 1:CLOSE:@ASM:.comclose lASM

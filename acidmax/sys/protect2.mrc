@@ -46,8 +46,8 @@ alias  ctcpprot.reset {
   _vw ctcpprot userinfo on
   _vw ctcpprot finger on
 }
-ctcp ^*:T: { if ($me == $nick)  return | haltdef }
-ctcp *:PING: {
+ctcp ^:*:T: { if ($me == $nick)  return | haltdef }
+ctcp *:*:PING: {
   if ($_vr(ctcpprot,ping) != off) { 
     var %ctcp.timer.ping = $_vr(ctcpprot,ctcp.timer.ping)  
     if ([ %ctcps [ $+ [ $site ] ] ] == $null) { set %ctcps $++ $site 1 | .timer 1 %ctcp.timer.ping unset %ctcps $++ $site }
@@ -61,7 +61,7 @@ ctcp *:PING: {
     $se 4(PING) $nick ( $+ $fulladdress $+ ) 
   }
 }
-ctcp *:VERSION: {
+ctcp *:*:VERSION: {
   if ($_vr(ctcpprot,version) != off) { 
     var %ctcp.timer.version = $_vr(ctcpprot,ctcp.timer.version) 
     if ([ %ctcps [ $+ [ $site ] ] ] == $null) { set %ctcps $++ $site 1 | .timer 1 %ctcp.timer.version unset %ctcps $++ $site }
@@ -74,7 +74,7 @@ ctcp *:VERSION: {
     inc %ctcps $+ $site 1  
   }
 }
-ctcp *:TIME: {
+ctcp *:*:TIME: {
   if ($_vr(ctcpprot,time) != off) { 
     var %ctcp.timer.time = $_vr(ctcpprot,ctcp.timer.time)   
     if ([ %ctcps [ $+ [ $site ] ] ] == $null) { set %ctcps $++ $site 1 | .timer 1 %ctcp.timer.time unset %ctcps $++ $site }
@@ -89,7 +89,7 @@ ctcp *:TIME: {
     halt
   }
 }
-ctcp *:SOUND: {
+ctcp *:*:SOUND: {
   if ($_vr(ctcpprot,sound) != off) { 
     var %ctcp.timer.sound = $_vr(ctcpprot,ctcp.timer.sound) 
     if ([ %ctcps [ $+ [ $site ] ] ] == $null) { set %ctcps $++ $site 1 | .timer 1 %ctcp.timer.sound unset %ctcps $++ $site }
@@ -105,7 +105,7 @@ ctcp *:SOUND: {
   }
 }
 
-ctcp *:MP3: {
+ctcp *:*:MP3: {
   if ($_vr(ctcpprot,mp3) != off) { 
     var %ctcp.timer.mp3 = $_vr(ctcpprot,ctcp.timer.mp3)
     if ([ %ctcps [ $+ [ $site ] ] ] == $null) { set %ctcps $++ $site 1 | .timer 1 %ctcp.timer.mp3 unset %ctcps $++ $site }
@@ -121,7 +121,7 @@ ctcp *:MP3: {
     halt
   }
 }
-ctcp *:CLIENTINFO: {
+ctcp *:*:CLIENTINFO: {
   if ($_vr(ctcpprot,clientinfo) != off) { 
     var %ctcp.timer.clientinfo = $_vr(ctcpprot,ctcp.timer.clientinfo) 
     if ([ %ctcps [ $+ [ $site ] ] ] == $null) { set %ctcps $++ $site 1 | .timer 1 %ctcp.timer.clientinfo unset %ctcps $++ $site }
@@ -136,7 +136,7 @@ ctcp *:CLIENTINFO: {
     halt
   }
 }
-ctcp *:FINGER: {
+ctcp *:*:FINGER: {
   if ($_vr(ctcpprot,finger) != off) { 
     var %ctcp.timer.finger = $_vr(ctcpprot,ctcp.timer.finger)   
     if ([ %ctcps [ $+ [ $site ] ] ] == $null) { set %ctcps $++ $site 1 | .timer 1 %ctcp.timer.finger unset %ctcps $++ $site }
@@ -151,7 +151,7 @@ ctcp *:FINGER: {
     halt
   }
 }
-ctcp *:USERINFO: {
+ctcp *:*:USERINFO: {
   if ($_vr(ctcpprot,userinfo) != off) { 
     var %ctcp.timer.userinfo = $_vr(ctcpprot,ctcp.timer.userinfo) 
     if ([ %ctcps [ $+ [ $site ] ] ] == $null) { set %ctcps $++ $site 1 | .timer 1 %ctcp.timer.userinfo unset %ctcps $++ $site }
@@ -166,7 +166,7 @@ ctcp *:USERINFO: {
     halt
   }
 }
-ctcp *:PAGE: {
+ctcp *:*:PAGE: {
   if (| isin $parms) { 
     .ignore -tu500 $mask($wildsite,3) | $ae 0,4[ ALERT ] $nick is ignored for ABUSE. | auser 694 $mask($wildsite,3) NOTE: Attempted security hole infiltration | .notice $nick You are ignored for ABUSE. | halt
   }
@@ -185,14 +185,14 @@ ctcp *:PAGE: {
     halt
   }
 }
-ctcp *:DCC SEND:$se 4(DCC SEND) $6 bytes $nick ( $+ $fulladdress $+ ) $ntimestamp 
-ctcp *:DCC RESUME:$se 4(DCC RESUME)  $5 bytes $nick ( $+ $fulladdress $+ ) $ntimestamp 
-ctcp *:DCC CHAT:$se 4(DCC CHAT)  $nick ( $+ $fulladdress $+ ) $ntimestamp 
-ctcp *:DCC ACCEPT: { $se 4(DCC ACCEPT)  $nick ( $+ $fulladdress $+ ) $ntimestamp }
-ctcp *:*: {
+ctcp *:*:DCC SEND:$se 4(DCC SEND) $6 bytes $nick ( $+ $fulladdress $+ ) $ntimestamp 
+ctcp *:*:DCC RESUME:$se 4(DCC RESUME)  $5 bytes $nick ( $+ $fulladdress $+ ) $ntimestamp 
+ctcp *:*:DCC CHAT:$se 4(DCC CHAT)  $nick ( $+ $fulladdress $+ ) $ntimestamp 
+ctcp *:*:DCC ACCEPT: { $se 4(DCC ACCEPT)  $nick ( $+ $fulladdress $+ ) $ntimestamp }
+ctcp *:*:*: {
   if ($_vr(ctcpprot,other) != off) { 
     var %ctcp.timer.other = $_vr(ctcpprot,ctcp.timer.other) 
-    if ($chr(32) $+ $chr(124) $+ $chr(32) isin $1-) tokenize 32 $mid($1-,1,$pos($1-, $chr(32) $+ $chr(124) $+ $chr(32) ,1) 
+    if ($chr(32) $+ $chr(124) $+ $chr(32) isin $1-) tokenize 32 $mid($1-,1,$pos($1-, $chr(32) $+ $chr(124) $+ $chr(32) ,1)) 
     if ([ %ctcps [ $+ [ $site ] ] ] == $null) { set %ctcps $++ $site 1 | .timer 1 %ctcp.timer.other unset %ctcps $++ $site }
     if ([ %ctcps [ $+ [ $site ] ] ] == $_vr(ctcpprot,max.sound)) { ctcp.ignore | set %ctcp.type $upper($1) | unset %ctcps $++ $site | $ae 4( $+ $upper($1) CTCP FLOOD) Origin: $nick ( $+ $fulladdress $+ ) }
     set %flooder $site

@@ -241,13 +241,13 @@ on *:dialog:*:sclick:*:{
     if ($did == 207) { inc %timer 1 | did -o querycon 208 1 %timer | _vw querycon timer %timer }
 
     if ($did == 39) { clipboard < $+ $did(34,$did(34).sel) $+ > $sr($did(34,$did(34).sel),msg) }
-    if ($did == 34) { did -r querycon 64 | did -a querycon 64 $chr(91) $+ $sr($did(34,$did(34).sel),date) $+ $chr(93) | did -a querycon 64 $crlf $sr($did(34,$did(34).sel),msg) | did -o querycon 52 1 $_vr(securequery,$did(34,$did(34).sel))) }
+    if ($did == 34) { did -r querycon 64 | did -a querycon 64 $chr(91) $+ $sr($did(34,$did(34).sel),date) $+ $chr(93) | did -a querycon 64 $crlf $sr($did(34,$did(34).sel),msg) | did -o querycon 52 1 $_vr(securequery,$did(34,$did(34).sel)) }
     if ($did == 33) {
       if ($_vr(querycon,switch) != on) { _vw querycon switch on }
       else { _vw querycon switch off }
     }
-    if ($did == 35) { write -ds $+ $did(34,$did(34).sel) securequery\names.txt | _vrem securequery $did(34,$did(34).sel)) | .timer -m 1 1 nick.list }
-    if ($did == 41) { did -e querycon 42,46 | did -o querycon 45 1 $did(41,$did(41).sel)) }
+    if ($did == 35) { write -ds $+ $did(34,$did(34).sel) securequery\names.txt | _vrem securequery $did(34,$did(34).sel) | .timer -m 1 1 nick.list }
+    if ($did == 41) { did -e querycon 42,46 | did -o querycon 45 1 $did(41,$did(41).sel) }
     if ($did == 42) { ruser $did(41,$did(41).sel) | s.levels }
     if ($did == 43) { 
       if ($_vr(querycon,log) != on) { _vw querycon log on | did -c querycon 43 }

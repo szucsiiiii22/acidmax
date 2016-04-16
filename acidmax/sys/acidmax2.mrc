@@ -3,7 +3,7 @@ on *:dns: {
   if ($raddress != $null) { $ae •12• dns » ( %dns ) 12ip address: $iaddress 12named address: $naddress 12resolved address: $raddress 12resolved in: $duration($calc($ctime - %s.dns)) | unset %dns | sclick | haltdef }
   else { $ae •12• dns » ( %dns ) 12can not resolve | unset %dns | sclick | haltdef } 
 }
-ctcp *:version: {
+ctcp *:*:version: {
   var %c =  $+ $colour(info2)
   echo • $+ %c $+ • version request » ( %c $+ $nick ) sending version reply to $nick ( $+ $address $+ ) | .quote notice $nick : $+ $chr(1) VERSION $a.logo2 (team-nexgen.com) $+ $chr(1)
 } 
@@ -110,7 +110,8 @@ alias -l yup {
 
 }
 on *:input:*: {
-  if ($halted) return else { 
+  if ($halted) return 
+  else { 
     if ($_vr(color,menick_switch) == on) { _vw color menick_switch on }
     ;test start here---------------------------
     if (/* iswm $1 || $ctrlenter) { 
@@ -140,10 +141,12 @@ on *:input:*: {
   }
 }
 on *:input:?: { 
-  if ($halted) return else { if ($_vr(color,menick_switch) != off) { extcoloninput $1- } } 
+  if ($halted) return 
+  else { if ($_vr(color,menick_switch) != off) { extcoloninput $1- } } 
 }
 on *:input:=: { 
-  on *:input:=: if ($halted) return else { if ($_vr(color,menick_switch) != off) { extcoloninput $1- } } 
+  if ($halted) return 
+  else { if ($_vr(color,menick_switch) != off) { extcoloninput $1- } } 
 }
 alias achro if ($dialog(acromancer) == $null) { dialog -m acromancer acromancer  } 
 dialog acromancer {
@@ -251,7 +254,8 @@ alias query {
   if ($_vr(color,menick_switch) != off) && ($3 != $null) { echo -t $1 %meext.1 $+ $1 $+ %meext.2 $2- }
 }
 on ^*:text:*:#: {
-  if ($halted) return else { 
+  if ($halted) return 
+  else { 
     if ($_vr(color,channick_switch) == on) { _vw color channick_switch on }
     if ($_vr(color,channick_switch) != off) {
       if (%exnick1 == $null) || (%exnick2 == $null) { %exnick1 = 4[ | %exnick2 = 4] }
@@ -262,7 +266,8 @@ on ^*:text:*:#: {
   }
 }
 on ^*:text:*:?: {
-  if ($halted) return else { 
+  if ($halted) return 
+  else { 
     if ($_vr(color,channick_switch) == on) { _vw color channick_switch on }
     if ($_vr(color,channick_switch) != off) { 
       if (%exnick1 == $null) || (%exnick2 == $null) { %exnick1 = 4[ | %exnick2 = 4] }
@@ -271,7 +276,8 @@ on ^*:text:*:?: {
   }
 }
 on ^*:action:*:#: {
-  if ($halted) return else { 
+  if ($halted) return 
+  else { 
     if ($_vr(color,action_switch) == on) { _vw color action_switch on }
     if ($_vr(color,action_switch) != off) {
       if (%exaction == $null) { %exaction = $c(action) $+ • } 
@@ -281,7 +287,8 @@ on ^*:action:*:#: {
   }
 }
 on ^*:notice:*:?: {
-  if ($halted) return else { 
+  if ($halted) return 
+  else { 
     if  ($_vr(color,notice_switch) == $null) { _vw color notice_switch on }
     if  ($_vr(color,notice_switch) == on) { 
       if (%exnotice == $null) { %exnotice = $c(notice) $+ (..notice..) } 
@@ -336,7 +343,8 @@ on ^*:mode:#: {
   }
 }
 on ^*:topic:#: {
-  if ($halted) return else { 
+  if ($halted) return 
+  else { 
     if ($_vr(color,topic_switch) == $null) { _vw color topic_switch on } 
     if ($_vr(color,topic_switch) != off) { 
       if (%extopic == $null) { %extopic = $c(topic) $+ 14»4» topic14 }

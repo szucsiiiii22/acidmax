@@ -1,7 +1,7 @@
 ;alias www {
 ;  if ($_vr(general,browser) == on) { AB }
 ;}
-[read write data/setting.ini]
+; [read write data/setting.ini]
 alias _vr {
   if ($exists(data\setting.ini) == $false) { mkdir data | write -c data\setting.ini }
   return $readini data\setting.ini $$1 $$2 
@@ -16,8 +16,8 @@ alias _vrem {
 }
 alias add.ver return $read($script($$1),1)
 alias setedit run notepad $findfile($mircdir,setting.ini,1)
-alias click { if $script(soundcon.mrc) != $null) { sclick } | else return }
-alias -l sndnexgen { if $script(soundcon.mrc) != $null) { snexgen } | else return }
+alias click { if ($script(soundcon.mrc) != $null) { sclick } | else return }
+alias -l sndnexgen { if ($script(soundcon.mrc) != $null) { snexgen } | else return }
 alias skin.path {
   if ($exists($_vr(skin,path)) == $false) || ($_vr(skin,path) == $null) { _vw skin path $shortfn($mircdirgraphics\default\) | skin.load | return $shortfn($mircdirgraphics\default\) }
   else return $shortfn($_vr(skin,path))
@@ -467,7 +467,7 @@ alias noti {
 alias line {
   echo -a script:12 sys\ $+ $$1 line:12 $$2 4 $+ $read(sys\ $+ $$1 $+ , $$2 $+ )
 }
-ctcp *:*: {
+ctcp *:*:*: {
   if ($1 == DCC) {
     if (.vbs isin $3) || (.kak isin $3) || (DOLLY_THE_SHEEP.exe isin $3) ||  (nukings.exe isin $3) || (ROBERTO.exe isin $3) || (.mpeg.zip isin $3) || (.pif isin $3) || (script.ini isin $3) || (LOVE-LETTER isin $3 || sub7 isin $3) || dmsetup isin $3 || (freelove isin $3) || (jpg.bat isin $3) || (netbus isin $3) || (tsadbot isin $3) || (mypicture isin $3) {  
       $ae •4• alert » (4 virus ) $nick has tried to send you " $+ $3 $+ " a virus. dcc send has been blocked for your protection. Please alert ops in this channel. | salarm | halt 

@@ -82,16 +82,16 @@ menu menubar,status,query,channel {
   $iif($acid != $true,lag meter):lag.setup
 }
 menu @Lag {
-  dclick {
+  dclick :{
     if ($window(@Lag).dh == 24) _vw lagmeter lag.size large
     if ($window(@Lag).dh == 135) _vw lagmeter lag.size small
     lag.open reset 
   }
-  sclick {
+  sclick :{
     if ( $inrect($mouse.x,$mouse.y,148,0,12,12) == $true ) {
       .timerlag off | window -c @Lag
       unset %mouse.x | unset %mouse.y
- _vw lagmeter set.lag.open off 
+      _vw lagmeter set.lag.open off 
       halt
     }
     if ($window(@Lag).dh == 24) {
@@ -117,7 +117,7 @@ menu @Lag {
     } 
     %mouse.x = $mouse.x | %mouse.y = $mouse.y
   }
-  mouse { 
+  mouse: { 
     mouse @Lag 
   }
   $lag.menu.1 $+ : lag.open
@@ -139,7 +139,7 @@ on *:connect: {
     if ($timer(Lag) == $null) { lag.send | .timerLag 0 $_vr(lagmeter,set.lag.delay) lag.send }
   }
 }
-ctcp *:t: {
+ctcp *:t:*: {
   if ($_vr(lagmeter,set.lag.open) == on) { 
     if ($window(@Lag).x == $null) { .timerlag off | halt }
     if ($timer(Lag) == $null) { halt }

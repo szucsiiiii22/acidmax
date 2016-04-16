@@ -354,10 +354,9 @@ alias -l active.send {
   var %a = 0
   :active
   inc %a 
-  if (%a <= 7) { var %c.act = $c.act(%a) {
-      if ($_vr(message.stud,resp) == %c.act) { goto next } 
-      else goto active  
-    }   
+  if (%a <= 7) { var %c.act = $c.act(%a)
+    if ($_vr(message.stud,resp) == %c.act) { goto next } 
+    else goto active  
   }
   else return
   :next

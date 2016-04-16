@@ -308,7 +308,7 @@ on *:dialog:nl.icon:sclick:*: {
 ;  if ($did == 7) { 
 ;    if ($_vr(general,nlicons) == on) { _vw general nlicons off  | did -b nl.icon 13 | scon -a dll $adll nicklist 0  }
 ;    else { _vw general nlicons on | did -e nl.icon 13 | scon -a dll $adll nicklist 1 }
-  }
+;  }
 }
 menu menubar,status,channel {
   $iif($acid == $true,• utilities)
@@ -317,9 +317,9 @@ menu menubar,status,channel {
 
 ;[read write data/setting.ini]
 on *:connect:{
-  _vrem nickretrieve nick | if $dialog(nickret) != $null) { did -e nickret 100 1 | did -r nickret 100 1 | did -e nickret 18 | did -b nickret 19 | dialog -t nickret Nick Retriever v1.1 }
+  _vrem nickretrieve nick | if ($dialog(nickret) != $null) { did -e nickret 100 1 | did -r nickret 100 1 | did -e nickret 18 | did -b nickret 19 | dialog -t nickret Nick Retriever v1.1 }
 }
-alias nickret { if $dialog(nickret) == $null) { dialog -m nickret nickret } }
+alias nickret { if ($dialog(nickret) == $null) { dialog -m nickret nickret } }
 dialog nickret {
   title "nick retriever"
   size -1 -1 179 184
