@@ -1,0 +1,18 @@
+ByteCam 2.4
+
+Description:
+
+Broadcast and view live streaming video on IRC.  Use your WebCam or other video device to broadcast.  Built-in client can view an unlimited number of broadcasts.  Capture remote video and snapshots.
+
+
+
+Installation:
+
+1. Unzip the contents of this archive to your mIRC folder.
+2. In mIRC, type /load -rs ByteCam.mrc
+
+
+Usage:
+
+ByteCam.mrc adds various menus in mIRC to control ByteCam.
+

@@ -1,0 +1,280 @@
+;fmod_mIRC.dll v 1.00 - example script by "captainEO"
+;08/05/03
+
+on *:START: { $fmod_start }
+on *:UNLOAD: { dll -u sys\dlls\fmod\bin\fmod_mIRC.dll }
+on *:CLOSE:@: {
+  if ($target == @fmod_mIRC_spectrum)           { $fmod_mod_spect_stop     }
+  elseif ($target == @fmod_mIRC_cback)          { $fmod_mod_cback_stop     }
+  elseif ($target == @fmod_ogg_spect)           { $fmod_ogg_spect_stop     }
+  elseif ($target == @fmod_midi)                { $fmod_midi_stop          }
+  elseif ($target == @fmod_mp3)                 { $fmod_mp3_stop           }
+  elseif ($target == @fmod_stream_choose_osc)   { $fmod_stream_choose_stop }
+  elseif ($target == @fmod_stream_choose_spect) { $fmod_stream_choose_stop }
+}
+
+alias fmod {
+  if ($isid) { return $dll(sys\dlls\fmod\bin\fmod_mIRC.dll,$1,$2-) } 
+  else { echo -s fmod: $dll(sys\dlls\fmod\bin\fmod_mIRC.dll,$1,$2-) } 
+}
+alias fmod_start {
+  echo -a $str(-,80)
+  echo -a fmod_mIRC v 1.00 example script
+  echo -a - this does not do everything, just a few of the things that would most likely be
+  echo -s - questioned on.  The rest is in your hands.  This is no fancy dialog or anything
+  echo -s - so you can go through the code easy.
+  $fmodm_stype
+  echo -s - Preparing fmod now...
+  if ($fmod(FMOD_Connect,sys\dlls\fmod\bin\fmod.dll)!=0) {
+    echo -s - fmod_mIRC now connected to sys\dlls\fmod\bin\fmod.dll
+    if ($fmod(SOUND_Init,44100 64 0)) {
+      echo -s - fmod sound has been initialized, now ready 
+    }
+    else { echo -s - fmod couldn't initialize...do you even have a sound card buddy? }
+  }
+  else { echo -s ERROR: fmod couldn't connect to the dll...is $fmod_path even there?  im too lazy to check }
+  echo -s $str(-,80)
+  echo -s - To unload this script type /unload -rs $script
+  echo -s - Visit <http://www.banditos.us/> for the latest updates.
+  echo -s $str(-,80)
+}
+alias fmodm_stype {
+  echo -s $str(-,80)
+  echo -s - Type "/fmod_mod_spect" to do playback of a mod file with spectrum on
+  echo -s - Type "/fmod_mod_cback" to do playback of a mod with a sample/instrument callback test
+  echo -s - Type "/fmod_ogg_spect" to do playback of a ogg file with spectrum on -spectrum by Misanthrop
+  echo -s - Type "/fmod_midi" to do playback of a midi file
+  echo -s - Type "/fmod_mp3" to do playback of a mp3 file with loop on, with auto draw spectrum (with lines close)
+  echo -s - Type "/fmod_stream_choose" to choose a sound file to play with auto draw oscilloscope and spectrum (bar lines)
+  echo -s - 
+  echo -s - To stop a example add _stop to the end, ex: "/fmod_mod_spect_stop"
+  echo -s $str(-,80)
+  echo -s - For lots of other features, read the documentation.
+  echo -s $str(-,80)
+}
+;--------------------------------------------------------------------
+alias fmod_mod_spect {
+  echo -s (USER) /fmod_mod_spect
+  echo -s (plugin)load:                                   $fmod(Plugin_Load,1 " $+ sys\dlls\fmod\bin\plugins\fmm_util_spectrum.dll $+ ")
+  echo -s (music)loadsong:                                $fmod(MUSIC_LoadSong,2 " $+ sys\dlls\fmod\dat\HOUSE.MOD $+ ")
+  echo -s (music)playsong:                                $fmod(MUSIC_PlaySong,2)
+  echo -s (plugin)send: spectrum on:                      $fmod(Plugin_Send,1 Spectrum 1)
+  spect
+}
+alias fmod_mod_spect_stop {
+  echo -s (USER) /fmod_mod_spect_stop
+  .window -c @fmod_mIRC_spectrum
+  echo -s (music)stopsong:                                $fmod(MUSIC_StopSong,2)
+  echo -s (plugin)send: spectrum off:                     $fmod(Plugin_Send,1 Spectrum 0)
+  echo -s (plugin)unload: Spectrum:                       $fmod(Plugin_UnLoad,1)
+  echo -s -
+  $fmodm_stype
+}
+alias spect {
+  .window -aCdk0uo -td @fmod_mIRC_spectrum 0 0 500 208 Fixedsys
+  var %t = 11
+  var %c = 1
+  while (%c <= %t) {
+    .aline @fmod_mIRC_spectrum .
+    inc %c
+  }
+  $spect_loop
+}
+
+;remember this can get from 0-511, but im only getting about half that much
+alias spect_loop {
+  if ($window(@fmod_mIRC_spectrum)) {
+    var %r = 25
+    var %l = 1
+    var %c = 0
+    var %t = 274
+    while (%c < %t) {
+      var %c = $calc(%r + %c)
+      .rline 1 @fmod_mIRC_spectrum %l  $+ $str(,$round($calc($fmod(Plugin_Send,1 Spectrum_add $calc(%c - %r) $calc(%c - 1)) * %r),0))
+      inc %l
+    }
+    .timer -m 1 25 spect_loop
+  }
+}
+;--------------------------------------------------------------------
+alias fmod_mod_cback {
+  echo -s (USER) /fmod_mod_cback
+  echo -s (music)loadsong:                                $fmod(MUSIC_LoadSong,2 " $+ sys\dlls\fmod\dat\ECSTACY.MOD $+ ")
+  echo -s (music)playsong:                                $fmod(MUSIC_PlaySong,2)
+  var %c = 1
+  var %t = 15
+  while (%c <= %t) {
+    echo -s set instrument callback for %c $+ :           $fmod(MUSIC_SetInstCallback,2 $chr(36) $+ samples_trigger %c)
+    inc %c
+  }
+  samples
+}
+alias fmod_mod_cback_stop {
+  echo -s (USER) /fmod_mod_cback_stop
+  .window -c @fmod_mIRC_cback
+  echo -s (music)stopsong:                                $fmod(MUSIC_StopSong,2)
+  echo -s (music)freesong:                                $fmod(MUSIC_FreeSong,2)
+  echo -s -
+  $fmodm_stype
+}
+
+;this sets up the window
+alias samples {
+  .window -aCdk0uo -td @fmod_mIRC_cback 0 0 600 408 Fixedsys
+  var %t = 15
+  var %c = 1
+  while (%c <= %t) {
+    .aline @fmod_mIRC_cback 
+    inc %c
+  }
+}
+
+;everytime a "sample" from the mod that i told it to watch earlier through the
+;instrument callback is triggered here...But then why does it trigger for "samples" =)
+alias samples_trigger {
+  tokenize 32 $1
+  if ($window(@fmod_mIRC_cback)) {
+    .rline 1 @fmod_mIRC_cback $2  $+ $2, $+ $2 $+ $str(,75)
+    .timer -m 1 100 samples_clear $1 $2
+  }
+}
+
+;clears the recently called sample
+alias samples_clear { if ($window(@fmod_mIRC_cback)) { rline 1 @fmod_mIRC_cback $2   } }
+;--------------------------------------------------------------------
+alias fmod_ogg_spect {
+  echo -s (USER) /fmod_ogg_spect
+  if (!$window(@test)) { window -apdoC @fmod_ogg_spect 0 0 115 53 }
+  echo -s (plugin)load:                                   $fmod(Plugin_Load,1 " $+ sys\dlls\fmod\bin\plugins\fmm_util_spectrum.dll $+ ")
+  echo -s (sound)load sound:                              $fmod(SOUND_Sample_Load,2 " $+ sys\dlls\fmod\dat\CZdmstp.ogg" 2 $file(sys\dlls\fmod\dat\CZdmstp.ogg).size)
+  echo -s (sound)play sound:                              $fmod(SOUND_PlaySound,2 1)
+  echo -s (plugin)send: spectrum on:                      $fmod(Plugin_Send,1 Spectrum 1)
+  .timerfschoose -m 0 25 writespec
+}
+alias fmod_ogg_spect_stop {
+  echo -s (USER) /fmod_ogg_spect_stop
+  .window -c @fmod_ogg_spect
+  .timerfschoose off
+  echo -s (sound)stop sound :                             $fmod(SOUND_StopSound,2)
+  echo -s (sound)sample free:                             $fmod(SOUND_Sample_Free,2)
+  echo -s (plugin)send: spectrum off:                     $fmod(Plugin_Send,1 Spectrum 0)
+  echo -s (plugin)unload: Spectrum                        $fmod(Plugin_UnLoad,1)
+  echo -s -
+  $fmodm_stype
+}
+alias writespec { 
+  clear -n @fmod_ogg_spect
+  var %x = 1 , %i = 0 , %color = $rgb(210,210,210)
+  while (%i < 128) { 
+    ;var %result =                                         $fmod(Plugin_Send,1 Spectrum_addR %i $calc(%i +4))
+    ;var %result = $calc(%result * -6)
+    var %result =                                          $fmod(Plugin_Send,1 Spectrum_add %i $calc(%i +4))
+    var %result = $round($calc(%result * -6))
+    drawrect -fnr @fmod_ogg_spect %color 1 %x 23 3 %result 
+    inc %i 5 
+    inc %x 4 
+  }
+  drawdot @fmod_ogg_spect
+}
+;--------------------------------------------------------------------
+alias fmod_midi {
+  echo -s (USER) /fmod_midi
+  window -adoC @fmod_midi 0 0 500 53
+  .aline @fmod_midi Close this window to stop the midi.
+  echo -s (music)loadsong:                                $fmod(MUSIC_LoadSong,2 " $+ sys\dlls\fmod\dat\bjorn_lynne-12th_warrior.mid")
+  echo -s (music)playsong:                                $fmod(MUSIC_PlaySong,2)
+}
+alias fmod_midi_stop {
+  .window -c @fmod_midi
+  echo -s (USER) /fmod_midi_stop
+  echo -s (music)stopsong:                                $fmod(MUSIC_StopSong,2)
+  echo -s (music)freesong:                                $fmod(MUSIC_FreeSong,2)
+  echo -s -
+  $fmodm_stype
+}
+;--------------------------------------------------------------------
+alias fmod_mp3 {
+  echo -s (USER) /fmod_mp3
+  window -apdo @fmod_mp3 0 0 310 230
+  echo -s (sound)sample load:                           $fmod(SOUND_Sample_Load,2 " $+ sys\dlls\fmod\dat\DrJandH.mp3" 2 $file($scriptdirdat\DrJandH.mp3).size)
+  echo -s (sound)play sound :                           $fmod(SOUND_PlaySound,2 1)
+  echo -s (plugin)load:                                 $fmod(Plugin_Load,1 " $+ sys\dlls\fmod\bin\plugins\fmm_vis_spectrum.dll $+ ")
+  echo -s (plugin)send: Spectrum on:                    $fmod(Plugin_Send,1 Spectrum 1 1 @fmod_mp3 25)
+
+  echo -s (plugin)send: Spectrum Set_NumFades:          $fmod(Plugin_Send,1 Set_NumFades 10)
+  echo -s (plugin)send: Spectrum Set_NumColors:         $fmod(Plugin_Send,1 Set_NumColors 4)
+  echo -s (plugin)send: Spectrum Set_HeightColoring:    $fmod(Plugin_Send,1 Set_HeightColoring 0)
+  echo -s (plugin)send: Spectrum Set_YSpace_Every:      $fmod(Plugin_Send,1 Set_YSpace_Every 0)
+  echo -s (plugin)send: Spectrum Set_YSpace_Height:     $fmod(Plugin_Send,1 Set_YSpace_Height 0)
+  echo -s (plugin)send: Spectrum Set_Barwidth:          $fmod(Plugin_Send,1 Set_Barwidth 1)
+  echo -s (plugin)send: Spectrum Set_Barspace:          $fmod(Plugin_Send,1 Set_Barspace 1)
+  echo -s (plugin)send: Spectrum Set_Start:             $fmod(Plugin_Send,1 Set_Start 10)
+  echo -s (plugin)send: Spectrum Set_End:               $fmod(Plugin_Send,1 Set_End 320)
+  echo -s (plugin)send: Spectrum Set_Avg:               $fmod(Plugin_Send,1 Set_Avg 4)
+  echo -s (plugin)send: Spectrum Set_BounceRate:        $fmod(Plugin_Send,1 Set_BounceRate 4.0)
+  echo -s (plugin)send: Spectrum Set_Dim:               $fmod(Plugin_Send,1 Set_Dim 0 0 300 200)
+  echo -s (plugin)send: Spectrum Set_Bgcolor:           $fmod(Plugin_Send,1 Set_Bgcolor 220/0/0)
+  echo -s (plugin)send: Spectrum color shifting on:     $fmod(Plugin_Send,1 Set_CShift 1 2 1)
+}
+alias fmod_mp3_stop {
+  echo -s (USER) /fmod_mp3_stop
+  echo -s (sound)stop sound :                             $fmod(SOUND_StopSound,2)
+  echo -s (sound)sample free:                             $fmod(SOUND_Sample_Free,2)
+  echo -s (plugin)send: Spectrum off:                     $fmod(Plugin_Send,1 Spectrum off)
+  echo -s (plugin)send: Spectrum color shifting on:       $fmod(Plugin_Send,1 Set_CShift 0)
+  echo -s (plugin)unload: Spectrum:                       $fmod(Plugin_UnLoad,1)
+  echo -s -
+  $fmodm_stype
+}
+;--------------------------------------------------------------------
+alias fmod_stream_choose { 
+  if (!$isfile(sys\dlls\fmod\bin\fmod.dll)) { echo -s ERROR | halt } 
+  var %file = $+(",$sfile(C:\,Choose a mp3 $+ $chr(44) $+ ogg $+ $chr(44) $+ wav(sound file) to stream,Play It),")
+  if ($isfile(%file)) {
+    window -apdo @fmod_stream_choose_spect 0 0 300 230
+    window -apdoC @fmod_stream_choose_osc 0 0 300 230
+    echo -s (sound)stream open:                           $fmod(SOUND_Stream_Open,1 %file 1 $file(%file).size 0)
+    echo -s (sound)stream play:                           $fmod(SOUND_Stream_Play,1 1)
+    echo -s (plugin)load:                                 $fmod(Plugin_Load,1 " $+ sys\dlls\fmod\bin\plugins\fmm_vis_spectrum.dll $+ ")
+    echo -s (plugin)load:                                 $fmod(Plugin_Load,2 " $+ sys\dlls\fmod\bin\plugins\fmm_vis_oscilloscope.dll $+ ")
+    echo -s (plugin)send: Spectrum on:                    $fmod(Plugin_Send,1 Spectrum 1 1 @fmod_stream_choose_spect 25)
+    echo -s (plugin)send: Spectrum Set_NumFades:          $fmod(Plugin_Send,1 Set_NumFades 20)
+    echo -s (plugin)send: Spectrum Set_NumColors:         $fmod(Plugin_Send,1 Set_NumColors 4)
+    echo -s (plugin)send: Spectrum Set_HeightColoring:    $fmod(Plugin_Send,1 Set_HeightColoring 0)
+    echo -s (plugin)send: Spectrum Set_YSpace_Every:      $fmod(Plugin_Send,1 Set_YSpace_Every 5)
+    echo -s (plugin)send: Spectrum Set_YSpace_Height:     $fmod(Plugin_Send,1 Set_YSpace_Height 1)
+    echo -s (plugin)send: Spectrum Set_Barwidth:          $fmod(Plugin_Send,1 Set_Barwidth 20)
+    echo -s (plugin)send: Spectrum Set_Barspace:          $fmod(Plugin_Send,1 Set_Barspace 1)
+    echo -s (plugin)send: Spectrum Set_Start:             $fmod(Plugin_Send,1 Set_Start 0)
+    echo -s (plugin)send: Spectrum Set_End:               $fmod(Plugin_Send,1 Set_End 300)
+    echo -s (plugin)send: Spectrum Set_Avg:               $fmod(Plugin_Send,1 Set_Avg 4)
+    echo -s (plugin)send: Spectrum Set_BounceRate:        $fmod(Plugin_Send,1 Set_BounceRate 7.0)
+    echo -s (plugin)send: Spectrum Set_Dim:               $fmod(Plugin_Send,1 Set_Dim 0 0 300 200)
+    echo -s (plugin)send: Spectrum Set_Bgcolor:           $fmod(Plugin_Send,1 Set_Bgcolor 220/0/0)
+    echo -s (plugin)send: Spectrum Set_Bgbmp:             $fmod(Plugin_Send,1 Set_Bgbmp sys\dlls\fmod\dat\party.bmp)
+
+    echo -s (plugin)send: Oscilloscope Set_Dim:           $fmod(Plugin_Send,2 Set_Dim 0 0 300 200)
+    echo -s (plugin)send: Oscilloscope Set_Bgcolor:       $fmod(Plugin_Send,2 Set_Bgcolor 220/0/0)
+    echo -s (plugin)send: Oscilloscope Set_Bgbmp:         $fmod(Plugin_Send,2 Set_Bgbmp sys\dlls\fmod\dat\party.bmp)
+    echo -s (plugin)send: Oscilloscope on:                $fmod(Plugin_Send,2 Oscilloscope 1 1 @fmod_stream_choose_osc 25)
+    echo -s (plugin)send: Oscilloscope Set_NumFades:      $fmod(Plugin_Send,2 Set_NumFades 10)
+    echo -s (plugin)send: Oscilloscope Set_NumColors:     $fmod(Plugin_Send,2 Set_NumColors 4)
+    echo -s (plugin)send: Oscilloscope Set_YSpace_Every:  $fmod(Plugin_Send,2 Set_YSpace_Every 0)
+    echo -s (plugin)send: Oscilloscope Set_YSpace_Height: $fmod(Plugin_Send,2 Set_YSpace_Height 0)
+    echo -s (plugin)send: Oscilloscope Set_BounceRate:    $fmod(Plugin_Send,2 Set_BounceRate 3.0)
+    echo -s (plugin)send: Oscilloscope color shifting on: $fmod(Plugin_Send,2 Set_CShift 1 2 1)
+  }
+}
+alias fmod_stream_choose_stop {
+  echo -s (sound)stream stop :                            $fmod(SOUND_Stream_Stop,1) 
+  echo -s (sound)stream close:                            $fmod(SOUND_Stream_Close,1)
+  echo -s (plugin)send: Spectrum off:                     $fmod(Plugin_Send,1 Spectrum off)
+  echo -s (plugin)unload: Spectrum:                       $fmod(Plugin_UnLoad,1)
+  echo -s (plugin)send: Oscilloscope off:                 $fmod(Plugin_Send,2 Oscilloscope 0)
+  echo -s (plugin)send: Oscilloscope color shifting off:  $fmod(Plugin_Send,2 Set_CShift 0)
+  echo -s (plugin)unload: Oscilloscope:                   $fmod(Plugin_UnLoad,2)
+  .window -c @fmod_stream_choose_spect
+  .window -c @fmod_stream_choose_osc
+  $fmodm_stype
+}
+;--------------------------------------------------------------------

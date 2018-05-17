@@ -1,0 +1,69 @@
+fmod_mIRC.dll - Change Log
+NOTE: Syntax may change between releases, so read to know what you are updating into.
+
+--------------------------------------------------------------------------------
+Version 1.00  [08/05/03] -It's party time :)
+
+-File Versions now are just a floating point number by request; no two periods.
+-Downloading fmod api is not neccessary for compile anymore...I made my own, better than the stinkin api's =P
+-The main dll size is much smaller now by about 30K
+-Plugin System is implemented (Many of the functions in the plugins have changed syntax)
+--The background color bug has been fixed
+--Background images can be loaded now
+--Removed the random color fill function
+-Padded/moved around everything in fmod_mIRC so you can remark one line out from fmod_mIRC_exports.h and recompile
+ so you don't have to have that code included = very easy way to cut out stuff you don't use to
+ minimize dll size.
+-Changed fmod.dll thats included in the package from 3.6.2.0 to 3.7.0.0(beta)
+-Implemented fmod's SOUND_GetCurrentLevels.
+-Fixed SOUND_Sample_GetLoopPoints (pointer passing error).
+-Fixed Sound_GetDriverCaps
+-Fixed the "1 no errors" bug in many functions, there still might be more...too many functions to check
+-Fixed a small small bug in StrGetTok
+-Using static library files now for parts of the compile
+-Updated to api LoadSongMemory to LoadSongEx
+--------------------------------------------------------------------------------
+Version 0.92.2[04/19/03]
+-Added AD_SetBG function...I forgot to add this in earlier
+-Added a note about 25ms in documentation, didn't really change anything.
+--------------------------------------------------------------------------------
+Version 0.92  [04/17/03]
+-Added Auto Draw functions for a spectrum analyzer and oscilloscope.  These two
+ are very well done.  They have plenty of effects you can do through them which
+ have been made for it as well.
+--------------------------------------------------------------------------------
+Version 0.88  [04/14/03]
+-Added the fmod built in GetError routine into most of the fmod_mIRC routines so
+ that newbie users can detect their mistakes faster.
+-Fixed some functions return type mistakes...
+-Added some of the return length in ms commands to have optional last value of 1
+ to return the milliseconds length formatted.
+--------------------------------------------------------------------------------
+Version 0.87  [04/08/03] -No crashing related to streams, more error checking.
+-Took out .isloaded from structs...they weren't needed since a pointer of 0/NULL
+ would just mean the same thing.
+-Added lots more error checking for to the functions that would need it.
+-Fixed some stream free'ing/playing bugs.
+--------------------------------------------------------------------------------
+Version 0.86  [04/07/03]
+-Changed fmod.dll thats included in the package from 3.6.1.0 to 3.6.2.0
+-Added a check for if they didn't "connect" to a fmod.dll instance, then it
+ won't let them run the command, to prevent a lot of accidental crashes.
+-Remade the project in VC.  The original one I had used that stupid "template"
+ Which made me think I needed MFC.(im new to c++!!!)  So now the .dll is smaller
+ And it unloads properly without freezing up.  I like this much better now.
+ 100K Smaller.
+-Fixed unloading loop bug, i had < instead of <=
+-Changed DLLVersion to DLL_Version, Changed DLLInfo to DLL_Info,  and added 
+ edition DLL_Edition function
+--------------------------------------------------------------------------------
+Version 0.85  [04/06/03] -You better update...old versions had bad memory leaks
+-Fixed massive amounts of memory leaks...(hey im new to c++!!!give me a break:))
+ So...I don't think there is any memory leaks now :)
+-Rewrote StrGetTok function (part of the dealing with memory leaks)
+-Fixed lots of typos in code :/ like some hwnd's which were supposed to be awnd
+-Changed Spectrum_on and Spectrum_off return value from OK to 1 ($true)
+ This just makes it easier for you to code statement's for it in mIRC(less code)
+--------------------------------------------------------------------------------
+Version 0.8   [03/25/03]
+-Initial Public Pre-Release

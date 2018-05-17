@@ -1,0 +1,288 @@
+<html><head><title>UltraDock DLL v0.12 by ClickHeRe</title>
+<style type='text/css'>
+body { font-size: 8pt; background: #ffffff; font-family: tahoma; color: #000000; }
+table { font-size: 8pt; font-family: tahoma }
+
+table.bar { border-right: #000000 1px solid; border-top: #000000 1px solid; font-size: 8pt; background: #eeeeee; border-left: #000000 1px solid; border-bottom: #000000 1px solid; font-family: tahoma }
+
+a.i3 { font-weight: bold; font-size: 8pt; color: #EE9900; font-family: tahoma; text-decoration: none }
+a.i2 { font-weight: bold; font-size: 8pt; color: #009900; font-family: tahoma; text-decoration: none }
+a.i2:link { font-weight: bold; font-size: 8pt; color: #009900; font-family: tahoma; text-decoration: none }
+a.i2:active { font-weight: bold; font-size: 8pt; color: #009900; font-family: tahoma; text-decoration: none }
+a.i2:visited { font-weight: bold; font-size: 8pt; color: #009900; font-family: tahoma; text-decoration: none }
+a.i2:hover { font-weight: bold; font-size: 8pt; color: #009900; font-family: tahoma; text-decoration: none }
+a.i { font-weight: bold; font-size: 8pt; color: #D60000; font-family: tahoma; text-decoration: none }
+a.i:link { font-weight: bold; font-size: 8pt; color: #D60000; font-family: tahoma; text-decoration: none }
+a.i:active { font-weight: bold; font-size: 8pt; color: #D60000; font-family: tahoma; text-decoration: none }
+a.i:visited { font-weight: bold; font-size: 8pt; color: #D60000; font-family: tahoma; text-decoration: none }
+a.i:hover { font-weight: bold; font-size: 8pt; color: #D60000; font-family: tahoma; text-decoration: none }
+a { font-weight: bold; font-size: 8pt; color: #002980; font-family: tahoma; text-decoration: none }
+a:link { font-weight: bold; font-size: 8pt; color: #002980; font-family: tahoma; text-decoration: none }
+a:visited { font-weight: bold; font-size: 8pt; color: #002980; font-family: tahoma; text-decoration: none }
+a:active { font-weight: bold; font-size: 8pt; color: #002980; font-family: tahoma; text-decoration: none }
+a:hover { font-weight: bold; font-size: 8pt; color: #002980; font-family: tahoma; text-decoration: underline }
+hr { font-weight: bold; font-size: 8pt; color: #002980; }
+hr.t { font-weight: bold; font-size: 8pt; color: #D60000; }
+</style>
+</head>
+<body topmargin="0" leftmargin="5">
+<table border="0" width="100%" cellspacing="0" cellpadding="0" BGCOLOR=#FFFFFF>
+<tr><td heigth=200 align=left valign=middle>&nbsp;
+<!--<IMG SRC="sdb_tutos_php.png"> -->
+</td></tr></table>
+<table class=bar width=100%><tr>
+<td align=left width=33%><nobr><a href='UltraDock.htm'> Subjects </a></nobr></td>
+<td align=center width=33%><nobr><b>UltraDock DLL</b> </nobr></td>
+<td align=right width=33%><b> Version 0.12 </b></td></tr></table><br /><table border=0 width="100%" cellspacing=2 cellpadding=2><tr valign=top><td><nobr>
+<a class=i href="#1">Introduction</a><br />
+<br />
+<a class=i href="#2">General Commands</a><br />
+• <a href="#2.1">ShowSwitchbar</a><br />
+• <a href="#2.2">ShowToolbar</a><br />
+• <a href="#2.3">ShowMenubar</a><br />
+• <a href="#2.4">IsSwitchbar</a><br />
+• <a href="#2.5">IsToolbar</a><br />
+• <a href="#2.6">IsMenubar</a><br />
+• <a href="#2.7">SBSize</a><br />
+• <a href="#2.8">TBSize</a><br />
+• <a href="#2.9">SBPos</a><br />
+• <a href="#2.10">Version</a><br />
+<br />
+<a class=i href="#12">Docking Commands</a><br />
+• <a href="#12.1">Dock</a><br />
+• <a href="#12.2">UnDock</a><br />
+• <a href="#12.3">DockPos</a><br />
+• <a href="#12.4">DockSide</a><br />
+<br />
+<a class=i href="#11">DLL Signals</a><br />
+• <a href="#11.1">SIZEEND</a><br />
+<br />
+<a class=i href="#13">Futur Expansions</a><br />
+
+</nobr></td><td>&nbsp;</td><td width=100%>
+<p align=justify><a><b>&gt;&gt;</b></a> <a class=i name="1" href=#>Introduction</a><hr class=t><br />
+This DLL lets you dock dialogs around the mIRC window.<br /><br/ >
+
+Every function in this DLL returns a value if used with the $dll identifier. <a class=i2>U_OK</a> if successful, <a class=i2>U_ERROR</a> otherwise.<br /><br/ >
+
+<a class=i2>N.B. This DLL is meant to replace my old docking DLL called </a><a class=i>RebaR.dll.</a>
+</p>
+
+<p align=justify><a><b>&gt;&gt;</b></a> <a class=i name="2" href=#>General Commands</a><hr class=t><br />
+These general commands affect how mIRC will look like. You can disable the mIRC toolbar and/or switchbar with some commands. Some other commands let you dock a dialog on each of the four sides of the mIRC window.
+</p>
+
+
+<p align=justify><a><b>• </b></a> <a name="2.1" href=#>ShowSwitchbar</a><hr><br />
+This command lets you hide/show the mIRC Switchbar. (<a class=i2>1: show - 0: hide</a>)<br /><br />
+
+<b>Command:</b><br /><br />
+<a class=i3>/dll UltraDock.dll ShowSwitchbar [1|0]</a><br />
+<a class=i3>$dll(UltraDock.dll,ShowSwitchbar,[1|0])</a>
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+U_OK
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="2.2" href=#>ShowToolbar</a><hr><br />
+This command lets you hide/show the mIRC Toolbar. (<a class=i2>1: show - 0: hide</a>)<br /><br />
+
+<b>Command:</b><br /><br />
+<a class=i3>/dll UltraDock.dll ShowToolbar [1|0]</a><br />
+<a class=i3>$dll(UltraDock.dll,ShowToolbar,[1|0])</a>
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+U_OK
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="2.3" href=#>ShowMenubar</a><hr><br />
+This command lets you hide/show the mIRC Menubar. (<a class=i2>1: show - 0: hide</a>)<br /><br />
+
+<b>Command:</b><br /><br />
+<a class=i3>/dll UltraDock.dll ShowMenubar [1|0]</a><br />
+<a class=i3>$dll(UltraDock.dll,ShowMenubar,[1|0])</a>
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+U_OK
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="2.4" href=#>IsSwitchbar</a><hr><br />
+This command returns wether the switchbar is visible or not.<br /><br />
+
+<b>Command:</b><br /><br />
+<a class=i3>$dll(UltraDock.dll,IsSwitchbar,.)</a>
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+$true or $false
+
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="2.5" href=#>IsToolbar</a><hr><br />
+This command returns wether the toolbar is visible or not.<br /><br />
+
+<b>Command:</b><br /><br />
+<a class=i3>$dll(UltraDock.dll,IsToolbar,.)</a>
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+$true or $false
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="2.6" href=#>IsMenubar</a><hr><br />
+This command returns wether the menubar is visible or not.<br /><br />
+
+<b>Command:</b><br /><br />
+<a class=i3>$dll(UltraDock.dll,IsMenubar,.)</a>
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+$true or $false
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="2.7" href=#>SBSize</a><hr><br />
+This command returns mIRC's Switchbar width and height.<br /><br />
+
+<b>Command:</b><br /><br />
+<a class=i3>$dll(UltraDock.dll,SBSize,.)</a>
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+W H
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="2.8" href=#>TBSize</a><hr><br />
+This command returns mIRC's Toolbar width and height.<br /><br />
+
+<b>Command:</b><br /><br />
+<a class=i3>$dll(UltraDock.dll,TBSize,.)</a>
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+W H
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="2.9" href=#>SBPos</a><hr><br />
+This command returns the mIRC Switchbar position.<br /><br />
+
+<b>Command:</b><br /><br />
+<a class=i3>$dll(UltraDock.dll,SBPos,.)</a>
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+<ul>
+<li>0 - no switchbar</li>
+<li>1 - left</li>
+<li>2 - right</li>
+<li>3 - top</li>
+<li>4 - bottom</li>
+</ul>
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="2.10" href=#>Version</a><hr><br />
+This command returns information on the DLL version.<br /><br />
+
+<b>Command:</b><br /><br />
+<a class=i3>$dll(UltraDock.dll,Version,.)</a>
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+DLL Version and author information
+</p>
+
+<p align=justify><a><b>&gt;&gt; </b></a> <a class=i name="12" href=#>Docking Commands</a><hr class=t><br />
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="12.1" href=#>Dock</a><hr><br />
+This command lets you dock a dialog on mIRC's Client window.  You can dock any number of dialogs you want. The dialog docking around the window follows a docking order list which means the first docked dialog gets the fullsize dimensions of the window, the second the remaining dismensions and so on until the last one is reached.
+
+<br /><br />
+<b>Command:</b><br /><br />
+<a class=i3>$dll(UltraDock.dll,Dock, N [HWND] [POSITION] [NAME])</a><br />
+<a class=i3>/dll UltraDock.dll Dock N [HWND] [POSITION] [NAME]</a>
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+U_OK
+<br /><br />
+<b>Values:</b><br /><br />
+<ul>
+<li><b>N</b> - N is the index in which the dialog will be inserted in the docking order. Index 0 is the first dialog. If the index value is -1 then the dialog is added at the end of the docking order.
+<li><b>HWND</b> - Handle to the dialog window as given by the mIRC identifier $dialog(name).hwnd
+<li><b>POSITION</b> - Docking position of the dialog (top, bottom, left, right)
+<li><b>NAME</b> - Dialog name.
+</ul>
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="12.2" href=#>UnDock</a><hr><br />
+This command lets you release from it's docking position a dialog and restore it to it's original floating state.
+
+<br /><br />
+<b>Command:</b><br /><br />
+<a class=i3>$dll(UltraDock.dll,UnDock, N)</a><br />
+<a class=i3>/dll UltraDock.dll UnDock N</a>
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+U_OK
+<br /><br />
+<b>Values:</b><br /><br />
+<ul>
+<li><b>N</b> - Docked index of the dialog in the current order list
+</ul>
+
+<a class=i2>N.B. Remember the first POSITION has index 0 and when you undock an item, the remaining indexes are from [0->N-1]</a>
+<a class=i2>N.B. You must undock the dialog before closing it or else the docking order list will be "fucked up".</a>
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="12.3" href=#>DockPos</a><hr><br />
+This command lets you retrieve the docking index of a dialog based on it's name.
+
+<br /><br />
+<b>Command:</b><br /><br />
+<a class=i3>$dll(UltraDock.dll,DockPos,[NAME])</a><br />
+<br /><br />
+<b>Succes Return Value:</b><br /><br />
+N or -1 if fails
+<br /><br />
+<b>Values:</b><br /><br />
+<ul>
+<li><b>NAME</b> - Dialog name.
+</ul>
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="12.4" href=#>DockSide</a><hr><br />
+This command lets you retrieve the docking position of a dialog baed on it's name.
+
+<br /><br />
+<b>Command:</b><br /><br />
+<a class=i3>$dll(UltraDock.dll,DockSide,[NAME])</a><br />
+<br />
+<b>Succes Return Value:</b><br /><br />
+[left|right|top|bottom] or -1 if fails
+<br /><br />
+<b>Values:</b><br /><br />
+<ul>
+<li><b>NAME</b> - Dialog name.
+</ul>
+</p>
+
+<p align=justify><a><b>&gt;&gt; </b></a> <a class=i name="11" href=#>DLL Signals</a><hr class=t><br />
+The DLL sends some signals on certain events. You can capture the signal event using <b>ON *:SIGNAL:UltraDock:*: { }</b>. The parameter <b>$1</b> will contain the signal description of the given signals below.
+</p>
+
+<p align=justify><a><b>• </b></a> <a name="11.1" href=#>SIZEEND</a><hr><br />
+This signal is sent when mIRC's resizing is finished.
+
+<p align=justify><a><b>&gt;&gt;</b></a> <a class=i name="13" href=#>Future Expansions</a><hr class=t><br />
+Comments, Suggestions and Ideas on commands I could integrate in the DLL are welcome.<br /><br />
+</p>
+
+<p align=justify>
+<b><a class=i>UltraDock DLL</a></b><hr><br />
+- <b>ClickHeRe</b><br />
+- <b>&copy; 2004</b><br />
+- <b>Testing</b> -> McFly, Huzard, elizio<br />
+- <b>Compiled with</b> -> Visual Studio .NET 2003<br />
+- #scriptsdb.org @ Undernet @ Webnet<br />
+- <a href='http://scriptsdb.org' target="_blank">http://scriptsdb.org</a><br />
+</p>
+
+<br /></td></tr></table>
+<table class=bar width=100%><tr>
+<td width=33% align=left><nobr><a href='UltraDock.htm'> Tha... Help </a></nobr></td>
+<td width=33% align=center><nobr><b>SDB mIRC Group</b></nobr></td>
+<td width=33% align=right><nobr><a href='mailto:panodude@videotron.ca'>Contact</a></nobr></td>
+</tr></table><br />
+</body></html>

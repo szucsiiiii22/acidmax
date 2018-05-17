@@ -1,0 +1,1380 @@
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+fmod_mIRC Readme                                           Last Updated 08/06/03
+________________________________________________________________________________
+
+	  0.	Notice
+	  1.	What is fmod_mIRC?
+          2.    System Requirements
+          3.    Usage
+          4.    Future Plans
+          5.    Questions and Answers
+          6.    Links
+          7.    Contact Information
+          8.    Credits
+          9.    Authors Comments.
+         10.    Legal
+________________________________________________________________________________
+
+  (0)	NOTICE
+
+        fmod_mIRC is created by me.  But fmod.dll isn't created by me! So you 
+        must follow that author(s)' terms and conditions for usage on fmod.dll.
+
+  (1)	WHAT IS fmod_mIRC?
+
+        fmod_mIRC, a .dll created in c/c++ for using the FMOD music and sound 
+        effects system (fmod.dll) through mIRC.  It was compiled in Microsoft
+        Visual C++ .NET.
+
+  (2)   SYSTEM REQUIREMENTS
+
+        In order to use fmod_mIRC.dll you probably need to have:
+
+        -A version of mIRC that supports current mIRC .dll usage standards. 
+           (You should be using the latest version of mIRC anyway! :))
+        -Windows 95 or higher.
+           (3.1x or lower might give us some problems ya know...)
+        -fmod.dll 
+           (a unmodified version of the latest release at the time of this 
+            release should be included with this package in the \bin directory.)
+
+        Tested on: Windows 98, mIRC 6.03.
+                   Windows 2k +sp3
+                   Windows XP
+                   Windows 2003 Server
+
+  (3)   USAGE
+
+        REMEMBER: mIRC's $true, really just stands for 1 or -1, and $false just
+                  stands for 0.  This is for all languages.
+
+        Frequently you will see SongNumber, StreamNumber, or SampleNumber.  Those
+        are slots you can put your songs in.  From 0 to 63 are available slots
+        you can use for EACH of the 3 song types seperately.
+
+        For .wav,.mp3,.mp2,.ogg,.raw,etc (sound files)   SOUND_* functions
+        Use Stream's to stream the song from the disk.
+        Use Sample's to load the entire song into memory first.
+        For the rest (mod's and midi "music files") use  MUSIC_* functions.
+
+        For a lot of things i just put "see FMOD API Documentation".  Its
+        better for you and me if you refer to it for those parts.  The format of
+        those parameters should follow the same syntax as the other ones though.
+        FMOD API Documentation: http://www.fmod.org/docs/
+
+        There are a lot of features in FMOD, so all of this might be a bit 
+        confusing to a new kid in town.  But coolio things aren't supposed to be
+        easy to do, or everyone would be cool =P
+
+        Yeah I included a cheap little example script that does a few of the
+        functions.  I won't make/include a big example player for this, that is
+        your job.  /load -rs path\example.script 
+       
+        If you want to write a better documentation for me for this, go ahead :)
+
+        $dll(path\fmod_mIRC.dll,Function,Parameters)
+
+        \DLL FUNCTIONS
+        Function  : FMOD_Connect
+        Parameter : path\fmod.dll
+        Returns   : not 0 if successfull.(i hope)
+        Note      : Connects fmod_mIRC to fmod.dll
+                    You first use this, then FSOUND_Init, then other stuff.
+
+        Function  : DLL_Info
+        Parameter : -None Required-
+        Returns   : fmod_mIRC by captainEO  <-- it better return that!
+        Example   : $dll($fmod_mIRC.dll,DLL_Info,.)
+        Note      : :)
+
+        Function  : DLL_Version
+        Returns   : The version number
+
+        Function  : DLL_Edition
+        Returns   : The edition
+
+        ------------------------------------------------------------------------
+        ------------------------------------------------------------------------
+        NOTE FOR RETURN VALUES: you should tokenize (32) the return for a lot 
+        that are $true/$false, and get the first token to know if it was a 
+        success or not.  Even if it says $true/$false, that could just be the
+        1st token, of the return.  The rest of the tokens could be the error msg
+        describing an error if any.
+        ------------------------------------------------------------------------
+        ------------------------------------------------------------------------
+
+
+        \FMUSIC
+        \FMUSIC\Music control Functions
+        ------------------------------------------------------------------------
+        Function  : MUSIC_FreeSong
+        Parameter : SongNumber
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_FreeSong,3)
+        Note      : Free's a loaded song from memory.
+
+        Function  : MUSIC_LoadSong
+        Parameter : SongNumber Path\SongName
+        Returns   : $true MemoryLocation/$false
+        Example   : $fmod(MUSIC_LoadSong,0 D:\superpiano.mod)
+        Note      : You must load the song before you can play it.  This loads a
+                    song into the SongNumber.  If erroneous songnumber is given
+                    it defaults to slot 0.  If a song is playing in a SongNumber
+                    currently, fmod_mIRC will stop the playing of it then load
+                    the new song.
+
+        Function  : MUSIC_LoadSongMemory
+        Note      : NOT SUPPORTED/IMPLEMENTED.
+
+        Function  : MUSIC_OptimizeChannels
+        Parameter : see FMOD API Documentation
+        Returns   : $true/$false
+
+        Function  : MUSIC_PlaySong
+        Parameter : SongNumber
+        Returns   : $true/$false
+        Example   : $dll(fmod_mIRC.dll,MUSIC_PlaySong,2)
+        Note      : Plays the song you loaded.
+
+        Function  : MUSIC_SetCallbackMethods
+        Parameter : MethodNumber
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetCallbackMethods,1)
+        Note      : When doing Callback commands, if you set the MethodNumber to
+                    1 it will call with SongNumber instead of MemoryLocation.  If
+                    you set the MethodNumber to 2 it will call with the
+                    MemoryLocation.
+
+        Function  : MUSIC_SetInstCallback
+        Parameter : SongNumber mIRCAliasToCall InstrumentNumber
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetInstCallback,3 $chr(36) $+ cool 1 1)
+        Note      : You can set it to trigger a mIRC alias everytime that 
+                    instrument is played in a song.  The values that are passed to
+                    the mIRC alias are: $1=(MemoryLocation or SongNumber), it is
+                    determined by the MUSIC_SetCallbackMethods, and
+                    $2=InstrumentNumber.  You can set the instrument call back 
+                    for up to all the instruments in all songs.  Note: really it
+                    is all passed in $1, but it is meant $1,$2 after you perform
+                    tokenize 32 $1
+
+        Function  : MUSIC_SetLooping
+        Parameter : SongNumber (0/1)<-Defaults to 0
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetLooping,2 1)
+        Note      : Set 1 to loop the song and 0 to not loop it.
+
+        Function  : MUSIC_SetMasterSpeed
+        Parameter : SongNumber (0-10)<-Defaults to 1
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetMasterSpeed,2 5)
+        Note      : Sets a songs master speed scale.  0-10 can be a float.
+
+        Function  : MUSIC_SetMasterVolume
+        Parameter : SongNumber (0-256)<-Defaults to 256
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetMasterVolume,2 100)
+        Note      : Sets the songs master volume level.
+
+        Function  : MUSIC_SetOrder
+        Parameter : SongNumber OrderNumber
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetOrder,2 6)
+        Note      : Sets the order number playing position in the song.
+
+        Function  : MUSIC_SetOrderCallback
+        Parameter : SongNumber mIRCAliasToCall OrderStep
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetOrderCallback,1 $chr(36) $+ sup 1)
+        Note      : This is similar to SetInstCallback except it is for orders.
+                    OrderStep = Call the callback every multiple of this number 
+                    of orders. (see MUSIC_SetInstCallback for related info)  It
+                    returns the Song(MemLocation/Number) and then Order Number 
+                    on call.
+
+        Function  : MUSIC_SetPanSeperation
+        Parameter : SongNumber (0.0-1.0)<-Defaults to 1
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetPanSeperation,2 1)
+        Note      : This sets the master pan seperation. 1.0 is full seperation,
+                    0 is mono.  It is a float value.
+                    FSOUND_SetPanSeperation says for return value TRUE/FALSE
+                    when it should be void.
+
+        Function  : MUSIC_SetPaused
+        Parameter : SongNumber
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetPaused,2)
+        Note      : If the song is paused, it unpauses it, if not paused it then
+                    pauses it.
+
+        Function  : MUSIC_SetReverb
+        Parameter : (0/1)
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetReverb,0)
+        Note      : 1 for Reverb on, 0 for off.  This is for midi/rmi files.
+
+        Function  : MUSIC_SetRowCallback
+        Parameter : SongNumber mIRCAliasToCall RowStep
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetRowCallback,1 $chr(36) $+ sup 1)
+        Note      : This is similar to SetInstCallback except it is for rows.
+                    RowStep = Call the callback every multiple of this number of
+                    rows (see MUSIC_SetInstCallback for related info)  It 
+                    returns the Song(MemLocation/Number) and then Row Number 
+                    on call.
+
+        Function  : MUSIC_SetUserData
+        Parameter : SongNumber UserData
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetUserData,1 324)
+        Note      : Sets some junk for User Data into a Song.  The UserData is
+                    really a unsigned integer.
+
+        Function  : MUSIC_SetZxxCallback
+        Parameter : SongNumber mIRCAliasToCall
+        Returns   : $true/$false
+        Example   : $fmod(MUSIC_SetZxxCallback,0 $chr(36) $+ coolman)
+        Note      : This is similar to SetInstCallback except it is for every
+                    Zxx commands it finds in the song.
+
+        Function  : MUSIC_StopAllSongs
+        Parameter : -None Required-
+        Returns   : -Nothing-
+        Example   : $fmod(MUSIC_StopAllSongs)
+        Note      : Stops all the music songs.
+
+        Function  : MUSIC_StopSong
+        Parameter : SongNumber
+        Returns   : $true/$false
+        Example   : $dll($fmod_mIRC.dll,MUSIC_StopSong,2)
+        Note      : Stops playing the song.
+        ------------------------------------------------------------------------
+
+        \FMUSIC\Information Functions
+        ------------------------------------------------------------------------
+        Function  : MUSIC_GetBPM
+        Parameter : SongNumber
+        Returns   : The Bpm/-1
+        Example   : $dll($fmod_mIRC.dll,MUSIC_GetBPM)
+        Note      : Returns the Song's Beats Per Minute if successful, or -1 if
+                    an error.
+
+        Function  : MUSIC_GetGlobalVolume
+        Parameter : SongNumber (Defaults to 0)
+        Returns   : Songs current global volume
+        Note      : See API documentation for details.
+
+        Function  : MUSIC_GetMasterVolume
+        Parameter : SongNumber (Defaults to 0)
+        Returns   : -1 if its a valid SongNumberSlot but no song loaded
+                    0 -> 255 if valid SongNumberSlot and song is loaded
+
+        Function  : MUSIC_GetName
+        Parameter : SongNumber (Defaults to 0)
+        Returns   : The song's name.
+
+        Function  : MUSIC_GetNumChannels
+        Parameter : SongNumber (Defaults to 0)
+        Returns   : Number of channels within this songs pattern data
+
+        Function  : MUSIC_GetNumInstruments
+        Parameter : SongNumber (Defaults to 0)
+        Returns   : The number of instruments in this song
+
+        Function  : MUSIC_GetNumOrders
+        Parameter : SongNumber
+        Returns   : The number of orders in this song/0
+        Note      : If fails, it returns 0.
+
+        Function  : MUSIC_GetNumPatterns
+        Parameter : SongNumber
+        Returns   : The number of patterns in this song/0
+        Note      : If fails, it returns 0($false)
+
+        Function  : MUSIC_GetNumSamples
+        Parameter : SongNumber
+        Returns   : The number of samples in this song/0
+        Note      : If fails, it returns 0($false)
+
+        Function  : MUSIC_GetOrder
+        Parameter : SongNumber
+        Returns   : The songs current order/-1
+        Note      : If fails, it returns -1
+
+        Function  : MUSIC_GetPattern
+        Parameter : SongNumber
+        Returns   : The songs current pattern/-1
+        Note      : If fails, it returns -1
+
+        Function  : MUSIC_GetPatternLength
+        Parameter : SongNumber OrderNumber
+        Returns   : The songs pattern length at specified order./0
+        Note      : If fails, it returns 0
+
+        Function  : MUSIC_GetPaused
+        Parameter : SongNumber
+        Returns   : $true/$false
+        Note      : true is paused, false if not.
+
+        Function  : MUSIC_GetRow
+        Parameter : SongNumber
+        Returns   : Current row
+        Note      : If fails, it returns -1
+
+        Function  : MUSIC_GetSample
+        Parameter : SongNumber IndexToSample
+        Returns   : A sample handle/$null
+
+        Function  : MUSIC_GetSpeed
+        Parameter : SongNumber
+        Returns   : Song's current speed/-1
+        Note      : If fails, it returns -1
+
+        Function  : MUSIC_GetTime
+        Parameter : SongNumber (1)
+        Returns   : Time in ms song was started/-1
+        Note      : If fails, it returns -1
+                    You can pass it an (optional) value of 1 to
+                    have it return the time in a formatted format.
+
+        Function  : MUSIC_GetType
+        Parameter : SongNumber
+        Returns   : a FMUSIC_TYPES value for the type of song.
+        Note      : See API documentation for more info.
+
+        Function  : MUSIC_GetUserData
+        Parameter : SongNumber
+        Returns   : Userdata set by MUSIC_SetUserData/$false
+        Note      : Returns 0/$false if fails.
+
+        Function  : MUSIC_IsFinished
+        Parameter : SongNumber
+        Returns   : $true/$false
+        Note      : True is song is finished playing, false if not
+
+        Function  : MUSIC_IsPlaying
+        Parameter : SongNumber
+        Returns   : $true/$false
+        Example   : $dll(fmod_mIRC.dll,MUSIC_IsPlaying,2)
+        Note      : Returns if the song is playing or not.
+
+
+        \FSOUND
+        \FSOUND\Initialization/Enumeration Functions
+        ------------------------------------------------------------------------
+        Function  : SOUND_Init
+        Parameter : mixrate maxsoftwarechannels flags
+        Returns   : $true/$false
+        Example   : $fmod(SOUND_Init,44100 64 0)
+        Note      : You must do this after you connect to the .dll, and before
+                    you do any playing of the sounds.
+                    see FMOD API Documentation for more details.
+
+        Function  : SOUND_Close
+        Parameter : -none required-
+        Returns   : $null
+        Note      : Shuts down the entire fmod system.
+
+        Function  : SOUND_SetBufferSize
+        Parameter : The buffer size in milliseconds (an integer value)
+        Returns   : $true/$false
+
+        Function  : SOUND_SetDriver
+        Parameter : DriverNumber (an integer value)
+        Returns   : $true/$false
+
+        Function  : SOUND_SetHWND
+        Parameter : Pointer to a HWND windows handle of your application
+        Returns   : $true/$false
+        Note      : see FMOD API Documentation for more details.
+
+        Function  : SOUND_SetMaxHardwareChannels
+        Parameter : max number of hardware channels to allocate
+        Returns   : $true/$false
+
+        Function  : SOUND_SetMinHardwareChannels
+        Parameter : min number of hardware channels to allocate before it can
+                    use the software engine.
+        Returns   : $true/$false
+
+        Function  : SOUND_SetMixer
+        Parameter : MixerType
+        Returns   : $true/$false
+        Note      : See FSOUND_MIXERTYPES in api documentation.
+
+        Function  : SOUND_SetOutput
+        Parameter : OutputType
+        Returns   : $true/$false
+        Note      : See FSOUND_OUTPUTTYPES in api documentation.
+
+        Function  : SOUND_SpecifyEffectsImage
+        Note      : NOT SUPPORTED/IMPLEMENTED.
+
+
+        \FSOUND\Information Functions
+        ------------------------------------------------------------------------
+        Function  : SOUND_GetChannelsPlaying
+        Parameter : -nothing required-
+        Returns   : Number of active channels
+
+        Function  : SOUND_GetMaxSamples
+        Parameter : -nothing required-
+        Returns   : Maximum sample index
+
+        Function  : SOUND_GetMaxChannels
+        Parameter : -nothing required-
+        Returns   : Number of channels allocated
+
+        Function  : SOUND_GetNumDrivers
+        Parameter : -nothing required-
+        Returns   : Total number of enumerated sound devices
+
+        Function  : SOUND_GetOutput
+        Parameter : -nothing required-
+        Returns   : current id to output type
+
+        Function  : SOUND_GetOutputHandle
+        Parameter : -nothing required-
+        Returns   : Pointer to output handle specific to the device
+
+        Function  : SOUND_GetOutputRate
+        Parameter : -nothing required-
+        Returns   : Currently set output rate in Hz
+
+        Function  : SOUND_GetDriver
+        Parameter : -nothing required-
+        Returns   : Currently selected driver id
+
+        Function  : SOUND_GetDriverName
+        Parameter : Enumerated driver id (an integer value)
+        Returns   : The driver/device name or $null.
+		
+        \FSOUND\Sample Functions
+        ------------------------------------------------------------------------
+        Function  : SOUND_Sample_Alloc
+        Parameter : see FMOD API Documentation
+        Returns   : $true pointer_to_SampleNumber/$false
+
+        Function  : SOUND_Sample_Free
+        Parameter : SampleNumber
+        Returns   : $true/$false
+
+        Function  : SOUND_Sample_Get
+        Parameter : SampleNumber
+        Returns   : pointer_to_SampleNumber
+
+        Function  : SOUND_Sample_GetDefaults
+        Parameter : see FMOD API Documentation
+        Returns   : all 4 in order, space deliminated
+
+        Function  : SOUND_Sample_GetLength
+        Parameter : SampleNumber
+        Returns   : (int)length of sample in SAMPLES/0
+
+        Function  : SOUND_Sample_GetLoopPoints
+        Parameter : see FMOD API Documentation
+        Returns   : all 2 in order, space deliminated
+
+        Function  : SOUND_Sample_GetMode
+        Parameter : SampleNumber
+        Returns   : loop end value/0
+        Note      : see FSOUND API REFERENCE>DEFINES>FSOUND_MODES
+
+        Function  : SOUND_Sample_GetName
+        Parameter : SampleNumber
+        Returns   : SampleName/NULL
+
+        Function  : SOUND_Sample_Load
+        Parameter : SampleNumber "path\filename" inputmode length_in_bytes
+        Returns   : $true SamplePointer/$false
+        Example   : $fmod(SOUND_Sample_Load,2 " $+ $scriptdirdat\soadloz.ogg"
+                     2 $file($scriptdirdat\soadloz.ogg).size)
+        Note      : the filename stuff must be in " " quotes
+                    see FSOUND API REFERENCE>DEFINES>FSOUND_MODES for input
+                    modes.
+
+        Function  : SOUND_Sample_Lock
+        Note      : NOT SUPPORTED/IMPLEMENTED.
+
+        ------------------------------------------------------------------------
+
+        Function  : SOUND_Sample_SetDefaults
+        Parameter : see FMOD API Documentation
+        Returns   : $true/$false
+
+        Function  : SOUND_Sample_SetMaxPlaybacks
+        Parameter : SampleNumber Max
+        Returns   : $true/$false
+        Note      : Max is max times a sample can be played back at once, its
+                    an integer of course.
+
+        Function  : SOUND_Sample_SetMinMaxDistance
+        Parameter : see FMOD API Documentation
+        Returns   : $true/$false
+
+        Function  : SOUND_Sample_SetMode
+        Parameter : SampleNumber Mode
+        Returns   : $true/$false
+        Note      : see FSOUND API REFERENCE>DEFINES>FSOUND_MODES for input
+                    modes.
+
+        Function  : SOUND_Sample_SetLoopPoints
+        Parameter : SampleNumber loopstart loopend
+        Returns   : $true/$false
+        Note      : see FMOD API Documentation
+
+        Function  : SOUND_Sample_Unlock
+        Note      : NOT SUPPORTED/IMPLEMENTED.
+
+        Function  : SOUND_Sample_Upload
+        Note      : NOT SUPPORTED/IMPLEMENTED.
+
+
+        \FSOUND\Channel Functions
+        ------------------------------------------------------------------------
+        Function  : SOUND_PlaySound
+        Parameter : SampleNumber channel
+        Returns   : $true channelhandle/$false
+        Example   : $fmod(SOUND_PlaySound,2 1)
+        Note      : FSOUND_FREE has a int value of -1 if you want fmod to
+                    select a channel for you (so put -1 for channel if this
+                    is what you want).
+
+        Function  : SOUND_PlaySoundEx
+        Note      : NOT SUPPORTED/IMPLEMENTED
+
+        Function  : SOUND_StopSound
+        Parameter : channel(an integer value)
+        Returns   : $true/$false
+        Note      : Stops a sound channel from playing and free's it for use.
+
+        Function  : SOUND_SetFrequency
+        Parameter : channel frequency
+        Returns   : $true/$false
+        Note      : valid frequency ranges are from +/-100 to +/-705600.
+                    channel is a integer value.  you can put -3 for channel
+                    to make it affect all channels.
+
+        Function  : SOUND_SetLevels
+        Note      : NOT SUPPORTED/IMPLEMENTED(XBOX ONLY)
+
+        Function  : SOUND_SetLoopMode
+        Parameter : channel loopmode
+        Returns   : $true/$false
+        Note      : loopmode can be FSOUND_LOOP_NORMAL(1), FSOUND_LOOP_BIDI(2), 
+                    FSOUND_LOOP_OFF (4)
+
+        Function  : SOUND_SetMute
+        Parameter : channel mute
+        Returns   : $true/$false
+        Note      : the channel to mute/unmute.
+                    channel is a integer value.  you can put -3 for channel
+                    to make it affect all channels.  put 1 for mute to make it
+                    mute, or 0 to unmute.
+
+        Function  : SOUND_SetPan
+        Parameter : channel pan
+        Returns   : $true/$false
+        Note      : Sets a channel's pan position linearly.  0 for pan is full
+                    left, and 255 is full right. -1 is for stereopanning which
+                    makes both left and right full volume, instead of 50/50
+                    like middle panning does.  you can put -3 for channel
+                    to make it affect all channels.
+
+        Function  : SOUND_SetPaused
+        Parameter : channel paused
+        Returns   : $true/$false
+        Note      : -3 for channel to make affect all channels. 1 for paused
+                    pauses it, 0 unpauses it.
+
+        Function  : SOUND_SetPriority
+        Parameter : channel priority
+        Returns   : $true/$false
+        Note      : Sets a channel's priority.  -3 for channel to make affect 
+                    all channels.  priority is an integer value from 0 (lowest
+                    priority) to 255(highest).
+
+        Function  : SOUND_SetReserved
+        Parameter : channel reserved
+        Returns   : $true/$false
+        Note      : Sets the reserved status of a channel.  Put 1 for reserved
+                    to make it reserved or 0 to unreserve it.  -3 for channel
+                    to make affect all channels.
+
+        Function  : SOUND_SetSurround
+        Parameter : channel surround
+        Returns   : $true/$false
+        Note      : -3 for channel to make affect all channels.  Put 1 for
+                    surround to make it surround and 0 to disable surround
+                    sound.
+
+        Function  : SOUND_SetVolume
+        Parameter : channel volume
+        Returns   : $true/$false
+        Note      : -3 for channel to make affect all channels.  volume is an
+                    integer value from 0 (silent) to 255(max volume).
+
+        Function  : SOUND_SetVolumeAbsolute
+        Parameter : channel volume
+        Returns   : $true/$false
+        Note      : This is not affected by sfxmastervolume.  -3 for channel 
+                    to make affect all channels.  Read FMOD Api for more info
+                    on setting volumes.
+
+        Function  : SOUND_GetVolume
+        Parameter : channel
+        Returns   : An integer from 0 to 255, or 0 if an error.
+        Note      : Returns the volume for the current channel.
+                    Use FSOUND_GetError to check if it was really an error.
+
+        Function  : SOUND_SetCurrentPosition
+        Parameter : channel pos
+        Returns   : $true/$false
+        Note      : Set the current position of the sound in SAMPLES.
+                    pos is an unsigned integer.  It is the offset of the sound
+                    in SAMPLES, not bytes.
+
+        Function  : SOUND_GetCurrentPosition
+        Parameter : channel
+        Returns   : the play cursor position in SAMPLES, if fails it returns 0.
+
+        Function  : SOUND_GetCurrentSample
+        Parameter : channel
+        Returns   : a pointer to the sample handle, or null if it fails
+
+        Function  : SOUND_GetCurrentLevels
+        Parameter : Channel
+        Returns   : LeftChannelLevel RightChannelLevel
+        Note      : Returs the current VU/Level readings of the left and right
+                    sound readings for a specific channel.
+
+        Function  : SOUND_GetFrequency
+        Parameter : channel
+        Returns   : $true/$false
+        Note      : Frequency in Hz of the channel
+
+        Function  : SOUND_GetLoopMode
+        Parameter : channel
+        Returns   : 0 if fails, else it returns the loop mode
+
+        Function  : SOUND_GetMixer
+        Parameter : -none required-
+        Returns   : mixer_type
+        Note      : SEE FMOD API > FSOUND_MIXERTYPES
+
+        Function  : SOUND_GetMute
+        Parameter : channel
+        Returns   : $true/$false
+        Note      : Returns 0 if it isn't muted, 1 if it is.
+
+        Function  : SOUND_GetPan
+        Parameter : channel
+        Returns   : Returns the current pan as a integer.
+
+        Function  : SOUND_GetPaused
+        Parameter : channel
+        Returns   : Returns 0 if it is paused, 1 if it is.
+
+        Function  : SOUND_GetPriority
+        Parameter : channel
+        Returns   : A channels sound priority.
+
+        Function  : SOUND_GetReserved
+        Parameter : channel
+        Returns   : $true/$false
+        Note      : Returns a sounds reserved status for a channel
+
+        Function  : SOUND_GetSurround
+        Parameter : channel
+        Returns   : $true/$false
+        Note      : Returns is surround sound is on or off for a channel
+
+        Function  : SOUND_IsPlaying
+        Parameter : channel
+        Returns   : $true/$false
+        Note      : Returns is a channel is playing or not.
+
+
+        \FSOUND\3D Sound Functions
+        ------------------------------------------------------------------------
+        Function  : SOUND_3D_Listener_GetAttributes
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+        Function  : SOUND_3D_Listener_SetAttributes
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+        Function  : SOUND_3D_GetAttributes
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+        Function  : SOUND_3D_Listener_SetCurrent
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+        Function  : SOUND_3D_SetDistanceFactor
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+        Function  : SOUND_3D_SetDopplerFactor
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+        Function  : SOUND_3D_SetRolloffFactor
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+        Function  : SOUND_3D_SetAttributes
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+        Function  : SOUND_Update
+        Parameter : -none required-
+        Returns   : $null
+        Example   : Updates the 3d sound engine and DMA engine
+	
+
+        \FSOUND\Stream Functions
+        ------------------------------------------------------------------------
+        Function  : SOUND_Stream_AddSynchPoint
+        Parameter : StreamNumber pcmoffset userdata
+        Returns   : a sync point index/-1 if failed
+        Note      : Adds a user syncronization callback point into the stream
+
+        Function  : SOUND_Stream_Close
+        Parameter : StreamNumber
+        Returns   : $true/$false
+        Note      : Shuts down and releases a stream
+
+        Function  : SOUND_Stream_Create
+        Note      : NOT SUPPORT/IMPLEMENTED YET
+
+        Function  : SOUND_Stream_CreateDSP
+        Note      : NOT SUPPORT/IMPLEMENTED YET
+
+        Function  : SOUND_Stream_DeleteSynchPoint
+        Parameter : StreamNumber IndexToDelete
+        Returns   : $true/$false
+        Note      : Deletes a synch point from a stream.
+
+        Function  : SOUND_Stream_GetLength
+        Parameter : StreamNumber
+        Returns   : The size o the stream in BYTES/0 if fail
+
+        Function  : SOUND_Stream_GetLengthMs
+        Parameter : StreamNumber (1)
+        Returns   : The size of the stream in milliseconds/0 if fail
+                    You can pass it an (optional) value of 1 to
+                    have it return the time in a formatted format.
+
+        Function  : SOUND_Stream_GetNumSubStreams
+        Parameter : StreamNumber
+        Returns   : The number of sub streams inside a multi-stream 
+                    FSB file/0 if failed
+
+        Function  : SOUND_Stream_GetNumSynchPoints
+        Parameter : StreamNumber
+        Returns   : The number of synch points/-1 if failed
+
+        Function  : SOUND_Stream_GetOpenState
+        Parameter : StreamNumber
+        Returns   : Returns the state of the stream
+        Note      : 0 if ready, -1 stream handle is invalid, -2
+                    stream still opening, -3 failed to open.
+
+        Function  : SOUND_Stream_GetPosition
+        Parameter : StreamNumber
+        Returns   : The current stream's position in BYTES
+
+        Function  : SOUND_Stream_GetSample
+        Parameter : StreamNumber
+        Returns   : A stream's internal sample pointer
+
+        Function  : SOUND_Stream_GetTime
+        Parameter : StreamNumber (1)
+        Returns   : The current stream's position in milliseconds
+                    You can pass it an (optional) value of 1 to
+                    have it return the time in a formatted format.
+
+        Function  : SOUND_Stream_Open
+        Parameter : StreamNumber "path\filename" mode length_in_bytes dataoffset
+        Returns   : $true StreamPointer/$false
+        Example   : $fmod(SOUND_Stream_Open,0 "D:\cool.mp3" 1 $file(D:\cool.mp3).size 0)
+        Note      : Read API documentation for different modes.  You give the
+                    integer value of the mode, not the defined name.
+                    -------FOR NOW-------just set the dataoffset to 0
+
+        Function  : SOUND_Stream_Play
+        Parameter : StreamNumber ChannelYouWantItToPlayIn
+        Returns   : Channel/-1
+        Example   : $fmod(SOUND_Stream_Play,0 3)
+        Note      : FSOUND_FREE has a int value of -1 if you want fmod to
+                    select a channel for you (so put -1 for channel if this
+                    is what you want).  It returns the channel, if the
+                    channel returned is -1, it didn't work right.
+
+        Function  : SOUND_Stream_PlayEx
+        Note      : NOT SUPPORTED/IMPLEMENTED
+
+        Function  : SOUND_Stream_SetBufferSize
+        Parameter : Time in ms between stream updates(a integer value)
+        Returns   : $true/$false
+
+        Function  : SOUND_Stream_SetEndCallback
+        Parameter : StreamNumber mIRCAliasToCall UserData
+        Returns   : $true/$false
+        Example   : $fmod(SOUND_Stream_SetEndCallback,2 $chr(36) $+ sup hi)
+        Note      : For when a non looping song ends.
+                    UserData is data that should be passed to the callback at
+                    the end of the stream.  SEE MUSIC_SetInstCallback example.
+                    The callback passes back in a space deliminated $1 to the alias,
+                    streampointer or streamnumber, pointer to stream data buffer,
+                    length of buffer specified in bytes, userdata value.
+
+        Function  : SOUND_Stream_SetLoopPoints
+        Parameter : StreamNumber loopstart loopend
+        Returns   : $true/$false
+        Note      : Loopstart and loopend are integer datatype specified in PCM
+                    SAMPLES.
+
+        Function  : SOUND_Stream_SetPosition
+        Parameter : StreamNumber position
+        Returns   : $true/$false
+        Note      : Position is offset in bytes, integer value datatype.
+
+        Function  : SOUND_Stream_SetSubStream
+        Parameter : StreamNumber index
+        Returns   : $true/$false
+        Note      : Index is index of the stream within the FSB file.
+
+        Function  : SOUND_Stream_SetSynchCallback
+        Parameter : StreamNumber mIRCAliasToCall UserData
+        Returns   : $true/$false
+        Example   : $fmod(SOUND_Stream_SetSynchCallback,2 $chr(36) $+ sup hi)
+        Note      : For when a stream passes over a wav tag/marker.
+                    SEE SOUND_Stream_SendEndCallback.
+                    SEE FMOD API Documentation.
+
+        Function  : SOUND_Stream_SetTime
+        Parameter : StreamNumber ms
+        Returns   : $true/$false
+        Note      : Sets the current stream file's playing position in 
+                    milliseconds.  ms is a integer value.
+
+        Function  : SOUND_Stream_Stop
+        Parameter : StreamNumber
+        Returns   : $true/$false
+        Note      : Stops playing the stream.  Don't forget SOUND_Stream_Close
+                    for when you are done with the stream.
+
+        \FSOUND\CD Functions  (for drive letters, just put letter, not :)
+        ------------------------------------------------------------------------
+        Function  : SOUND_CD_Eject
+        Parameter : cd_drive_letter
+        Returns   : $true/$false
+
+        Function  : SOUND_CD_GetNumTracks
+        Parameter : cd_drive_letter
+        Returns   : # of cd tracks
+        Example   : 
+
+        Function  : SOUND_CD_GetPaused
+        Parameter : cd_drive_letter
+        Returns   : $true/$false
+
+        Function  : SOUND_CD_GetTrack
+        Parameter : cd_drive_letter
+        Returns   : track # currently playing
+
+        Function  : SOUND_CD_GetTrackLength
+        Parameter : cd_drive_letter track# (1)
+        Returns   : length of the current track in milliseconds
+                    You can pass it an (optional) value of 1 to the end
+                    to have it return the time in a formatted format.
+
+        Function  : SOUND_CD_GetTrackTime
+        Parameter : cd_drive_letter (1)
+        Returns   : position of the current playing track in milliseconds
+                    You can pass it an (optional) value of 1 to the end
+                    to have it return the time in a formatted format.
+
+        Function  : SOUND_CD_Play
+        Parameter : cd_drive_letter track#
+        Returns   : $true/$false
+        Example   : $fmod(SOUND_CD_Play,e 13)
+
+        Function  : SOUND_CD_SetPaused
+        Parameter : cd_drive_letter paused
+        Returns   : $true/$false
+        Example   : $fmod(SOUND_CD_SetPaused,E 1)
+        Note      : pass it 1 for paused to pause it, and 0 to unpause it.
+
+        Function  : SOUND_CD_SetPlayMode
+        Parameter : cd_drive_letter mode
+        Returns   : $true/$false
+        Example   : $fmod(SOUND_CD_SetPlayMode,E 1)
+        Note      : These are the number 0,1,2,3 modes
+                    FSOUND_CD_PLAYCONTINUOUS 0 /* Starts from the current track 
+                                                  and plays to end of CD. */  
+                    FSOUND_CD_PLAYONCE 1       /* Plays the specified track then 
+                                                  stops. */  
+                    FSOUND_CD_PLAYLOOPED 2     /* Plays the specified track 
+                                                  looped, forever until stopped
+                                                  manually. */  
+                    FSOUND_CD_PLAYRANDOM 3     /* Plays tracks in random order  
+
+        Function  : SOUND_CD_SetVolume
+        Parameter : cd_drive_letter volume
+        Returns   : $true/$false
+        Note      : Volume is from 0-255
+
+        Function  : SOUND_CD_Stop
+        Parameter : cd_drive_letter
+        Returns   : $true/$false
+	
+        \FSOUND\DSP Functions
+        ------------------------------------------------------------------------
+        Function  : SOUND_DSP_ClearMixBuffer
+        Parameter : -none required-
+        Returns   : $null
+        Note      : Clears the mix buffer
+
+        Function  : SOUND_DSP_Create
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_Free
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_SetActive
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_GetActive
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_GetBufferLength
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_GetBufferLengthTotal
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_SetPriority
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_GetPriority
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_GetClearUnit
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_GetClipAndCopyUnit
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_GetMusicUnit
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_GetSFXUnit
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_GetFFTUnit
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_GetSpectrum
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_DSP_MixBuffers
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+
+        \FSOUND\FX Functions (All 11 implemented, see FMOD API Documentation)
+        ------------------------------------------------------------------------
+                      Everything from this section returns $true/$false except
+                      SOUND_FX_Enable, which returns FXID $true/$false
+
+
+
+        \FSOUND\Recording functions
+        ------------------------------------------------------------------------
+        Function  : SOUND_Record_GetDriver
+        Parameter : -none required-
+        Returns   : Currently selected driver id
+
+        Function  : SOUND_Record_GetDriverName
+        Parameter : DriverID
+        Returns   : The driver name
+
+        Function  : SOUND_Record_GetNumDrivers
+        Parameter : -none required-
+        Returns   : The total number of enumerated sound devices
+
+        Function  : SOUND_Record_GetPosition
+        Returns   : offset in record buffer that recording device has just
+                    written upto.  if fail returns -1.
+
+        Function  : SOUND_Record_SetDriver
+        Parameter : Driver (an integer value, 0 selects default, >0 other valid
+                    drivers)
+        Returns   : $true/$false
+        Note      : Selects a soundcard recording driver
+
+        Function  : SOUND_Record_StartSample
+        Parameter : SampleNumber loop
+        Returns   : $true/$false
+        Note      : loop=1(for true),0(for false) for whether recorder should
+                    keep recording once it has hit the end.
+
+        Function  : SOUND_Record_Stop
+        Parameter : -none required-
+        Returns   : $true/$false
+        Note      : Halts the recording to the specified sample.
+
+
+        \FSOUND\Reverb Functions
+        ------------------------------------------------------------------------
+        Function  : SOUND_Reverb_SetProperties
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+        Function  : SOUND_Reverb_GetProperties
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_Reverb_SetChannelProperties
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        Function  : SOUND_Reverb_GetChannelProperties
+        Note      : NOT IMPLEMENTED/SUPPORTED -YET-
+
+
+        \FSOUND\Miscallaneous system functions and information functions
+        ------------------------------------------------------------------------
+        Function  : SOUND_File_SetCallbacks
+        Note      : NOT SUPPORTED/IMPLEMENTED.
+
+        Function  : SOUND_GetCPUUsage
+        Parameter : -none required-
+        Returns   : CPU Usage as a floating point value from 0.0 to 100.0
+        Example   : $fmod(SOUND_GetCPUUsage,)
+
+        Function  : SOUND_GetDriverCaps
+        Parameter : Enumerated driver id
+        Returns   : $true CapsBit/$false
+        Note      : see FMOD API Documentation
+
+        Function  : SOUND_GetError
+        Parameter : -none required-
+        Returns   : An error code set by FMOD.
+        Note      : see FMOD API Documentation (FMOD_ERRORS).
+
+        Function  : SOUND_GetMemoryStats
+        Note      : NOT SUPPORTED/IMPLEMENTED.
+
+        Function  : SOUND_GetNumHardwareChannels
+        Parameter : -none required-
+        Returns   : The number of available hardware mixed 3d channels.
+
+        Function  : SOUND_GetSFXMasterVolume
+        Parameter : -none required-
+        Returns   : SFX Master Volume from 0-255.
+
+        Function  : SOUND_GetVersion
+        Parameter : -none required-
+        Returns   : FMOD Version Number
+
+        Function  : SOUND_SetMemorySystem
+        Note      : NOT SUPPORTED/IMPLEMENTED.
+
+        Function  : SOUND_SetPanSeperation
+        Parameter : Pan seperation
+        Returns   : $null
+        Note      : API documentation says it returns a value but it lied.  
+                    Pan seperation is a float value from 0 to 1.  1 is full 
+                    seperation and 0 is mono.
+
+        Function  : SOUND_SetSFXMasterVolume
+        Parameter : volume
+        Returns   : $null
+        Note      : FSOUND_SetSFXMasterVolume says for return value TRUE/FALSE 
+                    when it should be void.  Volume is a integer value from 0 to
+                    255.
+
+        Function  : SOUND_SetSpeakerMode
+        Parameter : speakermode
+        Returns   : $null
+        Note      : See API (FSOUND_SPEAKERMODES) speakermode is a unsigned 
+                    integer value.
+
+
+        ------------------------------------------------------------------------
+        ------------------------------------------------------------------------
+        fmod_mIRC PLUGIN SYSTEM FUNCTIONS
+        ------------------------------------------------------------------------
+        ------------------------------------------------------------------------
+        Function  : Plugin_Load
+        Parameter : pluginslot pathtoplugin
+        Returns   : 1/0
+        Example   : $fmod(Plugin_Load,1 " $+ $scriptdirbin\plugins\fmm_vis_spectrum.dll $+ ")
+        Note      : Loads the plugin int a pluginslot.  Pluginslot can be 0->63.
+                    The pathtoplugin must be in quotes.
+
+        Function  : Plugin_UnLoad
+        Parameter : pluginslot
+        Returns   : 1/0
+        Example   : $fmod(Plugin_UnLoad,1)
+        Note      : Manually unloads a plugin that is loaded.
+
+        Function  : Plugin_Send
+        Parameter : pluginslot function_in_plugin datatosend
+        Returns   : stuff
+        Example   : $fmod(Plugin_Send,1 dosomething 5 73 15 5)
+        Note      : Calls a function in that plugin and passes it information.
+        ------------------------------------------------------------------------
+        ------------------------------------------------------------------------
+
+
+  (4)   FUTURE PLANS
+
+        Not much more yet...Just to add in remaining missing api features, and
+        fix current ones when bugs/mistakes are discovered.
+
+  (5)   QUESTIONS AND ANSWERS
+
+        Q."Hi, I am new to fmod.  Which are the basic commands I need."
+        A."Ok, theres 3 types of "song types" you can load into fmod. MUSIC,
+           SOUND, and STREAM.  Music is for midis/mods, Sounds and Streams play
+           the same type of mp3/wav/etc, but what makes them different is that
+           when you open a sound, it loads into the entire memory, and when you
+           open a stream fmod reads it while its playing.  So the basic
+           commands that you should learn first are:
+
+           Starting Commands: FMOD_CONNECT       "connects to fmod.dll"
+                              SOUND_Init         "initializes fmod"
+                              SOUND_Close        "shuts down fmod, it doesn't
+                                                  close fmod_mIRC.dll"
+                              to "unconnect" to the fmod.dll, you can just
+                              /dll -u path\fmod_mIRC.dll
+
+           Music Commands   : MUSIC_LoadSong     "loads a song from a file"
+                              MUSIC_PlaySong     "plays a song"
+                              MUSIC_StopSong     "stops playing a song"
+                              MUSIC_FreeSong     "frees a song from memory"
+
+           Sample Commands  : SOUND_Sample_Load  "loads the file into memory"
+                              SOUND_PlaySound    "plays a sample"
+                              SOUND_StopSound    "stops playing a sample"
+                              SOUND_Sample_Free  "frees the file from memory"
+
+           Stream Commands  : SOUND_Stream_Open   "opens a file/http to get ready
+                                                     to play as a stream"
+                              SOUND_Stream_Play     "plays a stream"
+                              SOUND_Stream_Stop     "stops playing a stream"
+                              SOUND_Stream_Close    "closes a stream"
+
+
+        Q."Is there a virus or backdoor or sumfin in here?"
+        A."If you believe there is, don't use it.  Does this look like a bonzai
+           buddy or some gator.com or gozilla type crap???  Haha, if you are
+           asking me that, I don't want you to use this.  I even gave you the
+           stinkin source code (which you probably don't know what to do with)."
+
+        Q."Whats a mod...where can I get them"
+        A."A mod can be thought of like a midi file but can use samples from
+           things like .wav files (instead of from your sound card).  Check 
+           the links section for links for places to them."
+
+        Q."Whats the demo scene?"
+        A."Well...it isn't a bunch of people from the "warez scene" who turned
+           legal and now only deal with shareware!  Just look at the links
+           section and find out for yourself.  If you think your really into
+           the warez scene you probably saw those .exe files included with the
+           crack or somethin that showed dancing text/pictures and played funky
+           music...well if you are into that stuff then youll be into the demo
+           scene."
+
+        Q."Why did you make this when there was already something like this for
+           mIRC to use fmod.dll?"
+        A."Because rkzad and his Rkmp3Play DLL have faded away into nowhereland
+           where only a few people probably knew about it.  So I just made
+           this one with a almost all of the fmod api features and didn't do the
+           socket transfer option stuff he was doing in his.  This does auto
+           drawing as well :]"
+
+        Q."Why would somebody want to listen to music through mIRC?"
+        A."Im not sure, but hey, EVERYDAY somebody tries to make another mp3
+           player for it :)  They probably did it to learn and have fun.  I 
+           made this for the same reason."
+
+        Q."I want to recompile the source but I can't find a few of the files."
+        A."It should be all there now.  As of version 1.00, fmod_mIRC does not
+           need the fmod api for compilation."
+
+  (6)   LINKS
+
+        Some links for your gateway to a different world.
+
+        http://www.banditos.us/  (might not be up yet)
+             The future official site for Banditos Software.  The latest updates
+             for fmod_mIRC will be posted here first.
+        http://www.fmod.org/
+             Fmod's site
+        http://www.google.com
+             Should be first place you go for almost everything smartie pants.
+        http://www.modarchive.com/
+             Sometimes fun.
+        http://www.hornet.org/
+             I use to go there all the time!  But its gone now :<
+        http://www.scene.org/
+             Hornet's replacement hehe
+        http://www.ojuice.net/
+             Another place.
+        http://ftp.uni-paderborn.de/aminet/browse.html
+             Aminet...good stuff too...
+        http://www.skale.org/
+             Awwww hellz yeah!  fast tracker 3 never was finished, so these
+             cool doodz are takin over where it left off.
+
+  (7)   CONTACT INFORMATION
+
+        captainEO@hush.ai
+
+  (8)   CREDITS
+
+        Music Credits
+        ------------------------------------------------------------------------
+        Filename(s)                                                       Artist
+        ------------------------------------------------------------------------
+        bjorn_lynne-12th_warrior.mid        Music by Bjorn Lynne / "Dr. Awesome"
+        ECSTACY.MOD                                    http://www.lynnemusic.com
+        HOUSE.MOD
+         
+        CZdmstp.ogg            clubzone-dont miss the partyline 2002 (house mix)
+                                                                      Sound Clip
+
+        DrJandH.mp3                                          Dr. Jekyll And Hyde
+                                                         Genius Of Love Rap Clip
+
+
+        Other Credits
+        ------------------------------------------------------------------------
+        Name                                                            What for
+        ------------------------------------------------------------------------
+        Misanthrop                   Helped a LOT with finding memory leak bugs,
+                                     and stream file/unloading bugs, and came up
+                                     with lots of ideas to add-like the Auto 
+                                     Draw feature, formatted time length, and
+                                     documentation additions.
+
+        PsykoMnky                                                         Tester
+
+        Khabz                                        Helped on a few hwnd things
+                                        and to get rid of compiling probs/Tester
+
+        Narusegawa-Naru                      Answered two c++ .dll questions for
+                                                me on http://www.mircscripts.org
+
+
+  (9)   AUTHORS COMMENTS
+
+        The only warez "scene", is the scene of the crime!  Leave before they
+        catch you next time.
+ 
+            -"captainEO"
+
+        for all you Rip'ers.
+        Your selfish greed,
+        makes you pitiful indeed.
+        At least I can die,
+        without telling myself a lie.
+        In the end,
+        I always win.
+        for all you Rip'ers,
+        R.I.P.
+
+            -"captainEO"
+
+        ^---You could even try to rip that if you dare, I don't really care.
+            For I am always one step ahead, won't tell you my secrets until you
+            are dead.
+
+ (10)   LEGAL
+
+        You can use fmod_mIRC.dll as much as you wan't, in whatever you want,
+        as long as you give credit where its due.  (besides...credits make your 
+        project look more professional =P).  all new content in the fmod_mIRC 
+        main .dll and its native plugins are copyright 2003, Banditos Software.
+        You can add and recompile the code freely.  Just edit the 
+        #define EDITION="standard edition" in fmod_mIRC.h to "modified by your 
+        nick /w blah blah "; something like that so people know the differences
+        between the .dll's. Thats all for fmod_mIRC, but for using fmod.dll, a
+        requirement of fmod_mIRC you MUST FOLLOW its author(s) terms and 
+        conditions. Visit http://www.fmod.org for detailed information on its 
+        usage.
+
+        I'll just paste this in here for whatever applies to fmod.dll
+
+        ------------------------------------------------------------------------
+        FMOD End User License Agreement
+        ------------------------------------------------------------------------
+        
+        FMOD's names, sources, documentation and binaries contained within the 
+        distributed archive are copyright © Firelight Technologies, Pty, Ltd. 
+        1994-2002.
+        
+        The contents of the FMOD distribution archive may not be redistributed, 
+        reproduced, modified, transmitted, broadcast, published or adapted in 
+        any way, shape or form, without the prior written consent of the owner, 
+        Firelight Technologies, be it by tangible or non tangible media.
+        
+        The FMOD.DLL file may be redistributed without the authors prior 
+        permission, and must remain unmodified.  The use of dll 'static linking'
+        tools is strictly forbidden.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+        ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+        LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+        A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR
+        CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+        EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+        PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+        PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+        LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+        NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+        SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+        ------------------------------------------------------------------------
+        Ogg Vorbis License
+        ------------------------------------------------------------------------
+        Portions Copyright (c) 2001, Xiphophorus
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions
+        are met:
+        
+        - Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+        - Redistributions in binary form must reproduce the above copyright
+        notice, this list of conditions and the following disclaimer in the
+        documentation and/or other materials provided with the distribution.
+        - Neither the name of the Xiphophorus nor the names of its contributors
+        may be used to endorse or promote products derived from this software
+        without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+        ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+        LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+        A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR
+        CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+        EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+        PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+        PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+        LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+        NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+        SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

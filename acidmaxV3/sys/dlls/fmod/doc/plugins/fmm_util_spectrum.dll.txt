@@ -1,0 +1,22 @@
+        ------------------------------------------------------------------------
+        PLUGIN FILENAME   : fmm_util_spectrum.dll
+               TITLE      : Spectrum Utility Plugin
+               DESCRIPTION: Provides access to the fmod spectrum.
+               VERSION    : 0.30
+        ------------------------------------------------------------------------
+
+        Function  : Spectrum
+        Parameter : 0/1
+        Returns   : 1
+        Note      : Turns the spectrum analysis on if you pass it 1, off if 0.
+
+        Function  : Spectrum_add
+        Parameter : starting ending
+        Note      : Adds all the spectrum data from start to end integer values
+                    values can be from (0-511)
+                    Returns floating point value.
+                    See example script.
+
+        Function  : Spectrum_at
+        Parameter : point
+        Note      : Returns the spectrum at a point. (0-511)

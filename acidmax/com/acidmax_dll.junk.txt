@@ -1,0 +1,19 @@
+alias SSH.Password {
+  var %result = $com(adll, Password, 1, bstr, $2)
+  echo -s 12ssh password set to 12 » $com(adll).result $1 
+}
+
+;alias SSH.Connected {
+  ;var %result = $com(adll,Connected, 1)
+  ;echo -s 12ssh connected12 » $com(adll).result $1 
+;}
+
+;alias SSH.SetConnectionInfo {
+  ;var %result = $com(adll, SetConnectionInfo, $2, $3, $4, 1)
+  ;echo -s 12ssh connected12 » $com(adll).result $1 
+;}
+
+;alias SSH.TestMessage {
+  ;var %result = $com(adll,TestMessage, 1)
+  ;echo -s 12ssh test message12 » $com(adll).result $1 
+;}

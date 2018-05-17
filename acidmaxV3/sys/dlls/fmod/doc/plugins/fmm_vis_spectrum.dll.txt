@@ -1,0 +1,147 @@
+        ------------------------------------------------------------------------
+        PLUGIN FILENAME   : fmm_vis_spectrum.dll
+               TITLE      : Spectrum Visualization Plugin
+               DESCRIPTION: Provides a customizable visualization using the
+                            spectrum readings.
+               VERSION    : 1.00
+        ------------------------------------------------------------------------
+        Note: For TimerRate values for the spectrum data, a rate of <25ms is 
+              worthless to add because fmod engine doesn't update faster than 
+              this.  (Set_CShift TimerRate isn't affected by this, because it
+              does not use values from the fmod engine).
+        ------------------------------------------------------------------------
+        Function  : Spectrum
+        Parameter : 1 1/2 @WINDOWNAME/HWND TimerRate
+                    0
+        Returns   : the first token is either 1 or 0 for success or not
+        Example   : $fmod(Spectrum,1 1 @tezt 25)
+                    $fmod(Spectrum,0)
+        Note      : This is for auto draw spectrum.
+                    0 is off, 1 is on
+                    1/2  <---if you put 1 you put the windowname as the 3rd token
+                             if you put 2 you put the hwnd as the 3rd token
+                    TimerRate is in milliseconds of how often to draw
+
+        Function  : Set_Color
+        Parameter : ColorSlot R/G/B
+        Returns   : 1 color copied to array slot.
+        Example   : $fmod(Plugin_Send,1 Set_Color 0 2 255/0/0)
+        Note      : ColorSlot is default from 0 to 63, R/G/B each go from 0
+                    to 255.
+
+        Function  : Set_Colors
+        Parameter : R0/G0/B0 R1/G1/B1 R2/G2/B2 R3/G3/B3 etc
+        Returns   : X colors copied to array.
+        Example   : $fmod(Plugin_Send,1 Set_Colors 0 255/0/0 0/255/0 0/0/255 255/255/255)
+        Note      : ColorSlots are default from 0 to 63, R/G/B each go from 0
+                    to 255.  By default, 4 colors out of 64 are thrown into color slots 
+                    0,1,2,3
+
+        Function  : Set_CShift
+        Parameter : 0/1 (TimerRate Direction)
+        Returns   : $null
+        Example   : $fmod(Plugin_Send,1 Set_CShift 1 25 1)
+        Note      : 0 is off,1 is on
+                    Shifts the color array up or down on a timer.
+                    The direction is either 1 for shifting up or -1 for
+                    shifting down (errors default to 1).
+
+        Function  : Set_NumFades
+        Parameter : NumFades
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_NumFades 20)
+        Note      : Number of transitions of color blocks to draw do between colors.
+                    (its the level of color blending/mixing between colors)
+                    With      fading: RED             YELLOW             BLUE
+                    Without   fading: RED RED--YELLOW YELLOW YELLOW-BLUE BLUE
+
+                    0 =the last color in the NumColors current value is
+                       only shown, well sorta, even if not, you can easily
+                       figure out how to make it 1 color =P
+                    1 =no fading, just the NumColors all displayed
+                       Any other number puts that many fades-1 between the
+                       Number of Colors.
+
+        Function  : Set_NumColors
+        Parameter : NumColors
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_NumColors 4)
+        Note      : Number of Colors that are in the Color Slots to use
+
+        Function  : Set_HeightColoring
+        Parameter : HeightColoring
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_HeightColoring 0)
+        Note      : Put 1 to turn this coloring mode on, 0 for off
+
+        Function  : Set_YSpace_Every
+        Parameter : SkipYSpaceEvery
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_YSpace_Every 5)
+        Note      : How tall you want filled blocks to be before a space(if Set_YSpace_Height>0)
+
+        Function  : Set_YSpace_Height
+        Parameter : SkipYSpaceHeight
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_YSpace_Height 1)
+        Note      : The number of y pixels of skipping you want with a space(if Set_YSpace_Every>0)
+
+        Function  : Set_Barwidth
+        Parameter : Barwidth
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_Barwidth 20)
+        Note      : How big you want your bar to be in pixels
+
+        Function  : Set_Barspace
+        Parameter : Barspace
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_Barspace 1)
+        Note      : How big of a space between bars you want
+
+        Function  : Set_Start
+        Parameter : Start
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_Start 0)
+        Note      : Starting place in the spectrum data to use (0 to 511)
+
+        Function  : Set_End
+        Parameter : End
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_End 300)
+        Note      : Ending place in the spectrum data to use (0 to 511)
+
+        Function  : Set_Avg
+        Parameter : AverageSpectDataRate
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_Avg 4)
+        Note      : How many spectrum data values at a time do you want to
+                    average for a bar's height data.
+
+        Function  : Set_BounceRate
+        Parameter : bouncerate
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_BounceRate 7.0)
+        Note      : If you want the lines to bounce higher , increase it.
+                    You must type the decimal values.
+
+        Function  : Set_Dim
+        Parameter : x y w h
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_Dim 0 0 200 116)
+                    $fmod(Plugin_Send,1 Set_Dim 10 31 511 200)
+        Note      : This sets the window settings.
+                    x=x position to draw in window, y=position to draw in window
+                    w=width to draw h=height to draw
+
+        Function  : Set_Bgcolor
+        Parameter : R/G/B
+        Returns   : 1
+        Example   : $fmod(Plugin_Send,1 Set_Bgcolor 0 255/255/255)
+        Note      : Sets the background color of the auto draw.
+
+        Function  : Set_Bgbmp
+        Parameter : pathtobmpfile
+        Returns   : 1/0
+        Example   : $fmod(Plugin_Send,1 Set_Bgbmp $scriptdirdat\party.bmp)
+        Note      : Sets the background to a .bmp image
+

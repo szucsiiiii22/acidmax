@@ -1,0 +1,5 @@
+LIBRARY	fmod_mIRC
+
+EXPORTS
+	LoadDll
+	UnloadDll
